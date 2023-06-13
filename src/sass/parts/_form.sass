@@ -1,0 +1,262 @@
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output
+	font-size: 12px
+	line-height: 24px
+	letter-spacing: 0.05em
+	color: #E85757
+.wpcf7-response-output
+	border: 0px !important
+	padding: 0px !important
+	display: none !important
+
+.form
+	*
+		font-family: $font-family-base
+	&>div
+		padding-top: rem(12px)
+		padding-bottom: rem(12px)
+		&.form__label-row
+			padding-top: rem(30px)
+			padding-bottom: rem(30px)
+		&:not(.form__label-row) + .form__label-row
+			padding-top: rem(48px)
+		&.form__button-row
+			padding-top: rem(30px)
+	.content-block &
+		h6
+			padding-top: rem(24px)
+	input[type=text],input[type=email],input[type=tel],input[type=url],textarea,.wpcf7-select
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		width: 100%
+		height: rem(60px)
+		border: 1px solid #E8E8E8
+		border-radius: 0
+		background: #E8E8E8
+		color: $color-primary
+		font-size: rem(18px)
+		padding: rem(25px)
+		padding-bottom: rem(16px)
+		transition: color 0.3s , border 0.3s
+		&:focus
+			color: $color-primary
+		&::placeholder
+			color: $color-black
+		&.wpcf7-not-valid
+			border: 1px solid #E85757
+	textarea
+		height: auto
+		resize: none
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+	button.button
+		margin-top: 0
+		margin-bottom: 0
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		+max-screen($breakpoint-sm)
+			
+	&__label-row
+		.row
+			align-items: center
+		&__label
+			margin-bottom: -0.2em
+			+max-screen($breakpoint-lg)
+				padding-bottom: rem(18px)
+		.wpcf7-form-control-wrap
+	&__label
+		padding-bottom: rem(18px)
+		display: block
+	.wpcf7-form-control-wrap
+		display: block
+	.wpcf7-not-valid-tip
+		font-size: 12px
+		line-height: 24px
+		letter-spacing: 0.05em
+		color: #E85757
+	.wpcf7-select
+		-webkit-appearance: none
+		-moz-appearance: none
+		background-image: url(../assets/images/form-arrow.svg)
+		background-repeat: no-repeat
+		background-position: top 27px right 15px
+	.wpcf7-checkbox
+		display: block
+		margin-top: rem(-12px)
+		margin-bottom: rem(-12px)
+		.wpcf7-list-item
+			display: block
+			margin-left: 0
+			padding: rem(12px 0)
+			input
+				opacity: 0
+				transform: translate3d(-99999999px,0,0)
+				position: absolute
+
+			label
+				display: flex
+				align-items: center
+				.wpcf7-list-item-label
+					display: flex
+					align-items: center
+					position: relative
+					transition: all 0.3s
+					&:before
+						display: block
+						width: rem(30px)
+						min-width: rem(30px)
+						height: rem(30px)
+						//border: 4px solid $color-black
+						border: 1px solid $color-primary
+						background-color: #E8E8E8
+						opacity: 1
+						margin-right: rem(42px)
+						margin-bottom: rem(10px)
+						transition: border .3s ease-out 0s
+
+				input:checked+.wpcf7-list-item-label
+					color: $color-primary
+					&:before
+						border: 4px solid #E8E8E8
+						background-color: $color-primary
+						opacity: 1
+
+	.codedropz-upload-handler
+		border-radius: 0
+		position: relative
+		border: 1px dashed #B5B5B5
+		transition: border 0.3s , background 0.3s
+		+min-screen($breakpoint-md)
+			&:hover,&.codedropz-dragover
+				border: 1px dashed $color-primary
+				background: transparentize($color-primary, 0.9)
+				.upload-icon
+					svg
+						.arrow
+							animation: uploadArrow 0.8s linear infinite
+							animation-delay: -1s
+		//background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%B5B5B5' stroke-width='1' stroke-dasharray='15%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+		.codedropz-upload-container
+			padding: rem(25px)
+			padding-bottom: rem(20px)
+			padding-right: 60px
+			cursor: pointer
+		.codedropz-upload-inner
+			display: flex
+			flex-wrap: wrap
+			font-size: rem(18px)
+			.codedropz-btn-wrap
+				order: -1
+				line-height: 1.2em
+				margin-bottom: -0.2em
+			h3
+				order: 2
+				font-size: rem(18px)
+				line-height: 1.2em
+				padding: 0
+				margin: 0
+				margin-bottom: -0.2em
+				font-weight: 400
+				text-transform: lowercase
+			span
+				font-size: rem(18px)
+				line-height: 1.2em
+				margin-bottom: -0.2em
+				margin-left: rem(5px)
+				margin-right: rem(5px)
+		.dnd-upload-counter
+			display: none
+		.upload-icon
+			position: absolute
+			top: 50%
+			right: 25px
+			transform: translate3d(0,-50%,0)
+			width: 25px
+			height: auto
+			line-height: 0
+			svg
+				width: 100%
+				height: auto
+		.cd-upload-btn
+			text-decoration: none !important
+			+min-screen($breakpoint-md)
+				&:hover
+					color: $color-primary !important
+
+	.dnd-upload-status
+		.dnd-upload-image
+			display: none
+		.dnd-upload-details
+			padding-left: 0
+			width: 100%
+			.name
+				color: $color-black
+				font-style: initial
+			.dnd-progress-bar
+				border-radius: 0
+				span
+					background: $color-primary
+					line-height: 18px
+
+@keyframes uploadArrow
+	0%
+		transform: translate3d(0%,-100%,0)
+	50%
+		transform: translate3d(0,0,0)
+	100%
+		transform: translate3d(0,100%,0)
+
+.vi-select
+	cursor: pointer
+	position: relative
+	&--hidden
+		visibility: hidden
+		padding-right: 10px
+	&--select
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		border: 1px solid #E8E8E8
+		border-radius: 0
+		background: #E8E8E8
+		color: $color-black
+		font-size: rem(18px)
+		line-height: 0.9em
+		padding: rem(25px)
+		padding-bottom: rem(20px)
+		transition: color 0.3s
+		background-image: url(../assets/images/form-arrow.svg)
+		background-repeat: no-repeat
+		background-position: top 50% right 15px
+		.selected &
+			color: $color-primary	
+	.vi-select &__options
+		display: none
+		position: absolute
+		top: 100%
+		right: 0
+		left: 0
+		z-index: 5
+		margin: 0
+		padding: 0 !important
+		margin-top: 12px !important
+		list-style: none
+		box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.07)
+		li
+			padding: rem(16px 25px)
+			padding-bottom: 12px
+			margin: 0 0
+			color: $color-black
+			font-size: rem(18px)
+			background: #E8E8E8
+			+min-screen($breakpoint-md)
+				&:hover
+					background-color: $color-primary
+					color: $color-white
+			&:before
+				content: none !important

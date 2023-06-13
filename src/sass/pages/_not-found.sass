@@ -1,0 +1,49 @@
+.not-found
+    &__title
+
+    &__animation
+        padding: rem(44px 0)
+        &-2
+            position: relative
+            p
+                font-weight: bold
+                font-size: 250px
+                line-height: 1.05em
+                max-height: 160px
+                +max-screen($breakpoint-sm)
+                    font-size: 160px
+                    line-height: 1.05em
+                    max-height: 100px
+            .animation-404
+                position: absolute
+                width: 220px
+                height: auto
+                top: 55%
+                left: 56%
+                transform: translate3d(-50%,-50%,0)
+        &-3
+            position: relative
+            padding: rem(84px 0)
+            p
+                font-weight: bold
+                font-size: 160px
+                line-height: 1.05em
+                max-height: 100px
+                display: inline-block
+                margin: auto
+                +max-screen($breakpoint-sm)
+                    font-size: 120px
+                    line-height: 1.05em
+                    max-height: 80px
+            .animation-404
+                position: absolute
+                width: 415px
+                height: auto
+                top: 50%
+                left: 50%
+                transform: translate3d(-50%,-50%,0)
+                +max-screen($breakpoint-sm)
+                    width: 325px
+
+    &__text
+        padding-bottom: rem(40px)

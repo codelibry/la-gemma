@@ -1,0 +1,96 @@
+.footer
+  background: $color-green
+  color: #fff2d9
+  padding: 54px 0 58px 0
+  text-align: center
+  &-logo
+    margin-bottom: 74px
+    display: block
+    img
+      max-width: 170px
+      height: auto
+  a
+    color: #fff2d9
+  &-description
+    font-size: 34px
+    line-height: 48px
+    margin-bottom: 92px
+    +max-screen($breakpoint-md)
+      font-size: 18px
+      line-height: 24px
+  &-menu
+    min-height: 100px
+    display: flex
+    justify-content: center
+    max-width: 1326px
+    margin-bottom: 115px
+    +max-screen($breakpoint-xl)
+      min-height: 60px
+    +max-screen($breakpoint-md)
+      flex-direction: column
+    li
+      display: flex
+      align-items: center
+      padding: 0 90px
+      border-right: 1px solid $color-grey
+      +max-screen($breakpoint-lg)
+        padding: 0 24px
+      +max-screen($breakpoint-md)
+        padding: 0
+        border-right: none
+        display: flex
+        justify-content: center
+        margin-bottom: 40px
+      a
+        font-size: 24px
+        font-family: $font-family-base-bold
+        color: $color-grey
+        +max-screen($breakpoint-xl)
+          font-size: 18px
+          line-height: 28px
+        +max-screen($breakpoint-md)
+          font-size: 27px
+        &:hover
+          color: $color-yellow
+      &:first-child
+        padding-left: 0
+        padding-right: 90px
+        +max-screen($breakpoint-lg)
+          padding-right: 24px
+        +max-screen($breakpoint-md)
+          padding: 0
+      &:last-child
+        padding-left: 90px
+        padding-right: 0
+        border-right: none
+        +max-screen($breakpoint-lg)
+          padding-left: 24px
+        +max-screen($breakpoint-md)
+          padding: 0
+          margin-bottom: 0
+
+  &-title
+    font-size: 34px
+    font-family: $font-family-base-bold
+    margin-bottom: 42px
+    text-transform: uppercase
+  &-text
+    font-size: 34px
+    +max-screen($breakpoint-md)
+      font-size: 18px
+  &-hotel
+    margin-bottom: 86px
+  &-contacts
+    margin-bottom: 94px
+  &-email
+    margin-bottom: 14px
+  &-social
+    margin-bottom: 59px
+    display: flex
+    justify-content: center
+    li
+      margin-right: 56px
+      &:last-child
+        margin-right: 0
+  &-copy
+    font-size: 17px

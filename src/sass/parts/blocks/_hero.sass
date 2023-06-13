@@ -1,0 +1,138 @@
+.hero
+  height: 100vh
+  padding-top: 0
+  padding-bottom: 0
+  position: relative
+  &-list
+    width: 100%
+    height: 100%
+    li
+      width: 100%
+      height: 100%
+    &__item
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
+      position: relative
+      overflow: hidden
+      &__image
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transform: scale(1.15)
+        transition: 3s ease-out
+        .site-loaded .slick-active &
+          transform: scale(1)
+    &__title
+      padding: 74px 21px
+      color: white
+      text-align: center
+      height: 100%
+      width: 100%
+      position: relative
+      z-index: 10
+      +max-screen($breakpoint-md)
+        display: flex
+        align-items: center
+        justify-content: center
+      &-wrapper
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          //background: $color-yellow
+          //mix-blend-mode: multiply
+          background: rgba(226, 211, 184, .6)
+        +max-screen($breakpoint-md)
+          width: 100vw
+          height: 100%
+      h1
+        max-width: 548px
+  .slick-list, .slick-track, .slick-slide, .slick-slide > div
+    height: 100%
+  .slick-dots
+    position: absolute
+    bottom: 21px
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    li
+      width: 19px
+      margin-right: 17px
+      background: none
+      +max-screen($breakpoint-md)
+        margin-right: 5px
+      &:last-child
+        margin-right: 0
+      button
+        width: 19px
+        height: 19px
+        list-style-type: none
+        background: #707070
+        border-radius: 50%
+        color: transparent
+        border: none
+        +max-screen($breakpoint-md)
+          width: 12px
+          height: 12px
+    .slick-active
+      button
+        background: $color-white
+  &-dropdown
+    position: absolute
+    z-index: 1
+    top: 110px
+    right: 46px
+    color: $color-white
+    padding: 15px 66px 15px 15px
+    border: 2px solid $color-white
+    border-radius: 20px
+    width: 640px
+    cursor: pointer
+    transition: 0.3s
+    &:hover
+      color: $color-green
+      background: $color-white
+      .hero-dropdown__title
+        &:after
+          background: url("../assets/image/button-open-green.svg")
+    +max-screen-height(800px)
+      display: none
+    +max-screen($breakpoint-md)
+      display: none
+      max-width: 80vw
+    &__title
+      font-size: 25px
+      font-family: $font-family-secondary
+      position: relative
+      width: 100%
+      line-height: 32px
+      &:after
+        position: absolute
+        content: ''
+        background: url("../assets/image/button-open.svg")
+        width: 39px
+        height: 39px
+        top: -3px
+        right: -55px
+    &__description
+      display: none
+  .open-dropdown
+    background: $color-white
+    color: $color-green
+    .hero-dropdown__title
+      margin-bottom: 27px
+      &:after
+        background: url("../assets/image/button-close.svg")
+    .hero-dropdown__description
+      display: block

@@ -1,0 +1,51 @@
+.container
+	padding-left: 30px
+	padding-right: 30px
+	+min-screen($breakpoint-xxl)
+		max-width: 1735px
+	+max-screen($breakpoint-md)
+		padding-left: 15px
+		padding-right: 15px
+
+.row 
+	&--x
+		&--center
+			justify-content: center
+	&--y
+		&--middle
+			align-items: center
+		&--top
+			align-items: flex-start
+		&--bottom
+			align-items: flex-end
+
+.section
+	padding-top: rem(60px)
+	padding-bottom: rem(60px)
+	+max-screen($breakpoint-lg)
+		padding-top: rem(60px)
+		padding-bottom: rem(60px)
+	+max-screen($breakpoint-md)
+		padding-top: rem(45px)
+		padding-bottom: rem(45px)
+	+max-screen($breakpoint-sm)
+		//padding-top: rem(30px)
+		//padding-bottom: rem(30px)
+
+.page-blocks
+	padding-top: rem(45px)
+	padding-bottom: rem(45px)
+	+max-screen($breakpoint-md)
+		padding-bottom: 0
+	.header-transparent &
+		padding-top: 0
+
+	&>*
+		&:not(.banner)
+			opacity: 0
+			.loaded:not(.loading) &
+				opacity: 1
+				transition-delay: 1s
+				transition: opacity 0.5s ease-out
+		&.heroBanner
+			opacity: 1	

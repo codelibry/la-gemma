@@ -1,0 +1,7 @@
+<svg id="Компонент_2_1" data-name="Компонент 2 – 1" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+  <rect id="Прямоугольник_33" data-name="Прямоугольник 33" width="22" height="2" rx="1" transform="translate(9 19)" fill="#456d63" opacity="0.822"/>
+  <g id="Эллипс_13" data-name="Эллипс 13" fill="none" stroke="#456d63" stroke-width="2" opacity="0.884">
+    <circle cx="19.5" cy="19.5" r="19.5" stroke="none"/>
+    <circle cx="19.5" cy="19.5" r="18.5" fill="none"/>
+  </g>
+</svg>

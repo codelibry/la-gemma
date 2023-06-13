@@ -1,0 +1,49 @@
+.button
+    padding: 0 16px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $color-green
+    border-radius: 20px
+    color: $color-white
+    font-family: $font-family-secondary
+    font-weight: 400
+    text-transform: uppercase
+    font-size: 27px
+    width: 467px
+    max-width: 100%
+    transition: 0.3s
+    +max-screen($breakpoint-md)
+        padding: 0 10px
+        height: 50px
+    +max-screen($breakpoint-sm)
+        height: 38px
+    &:hover
+        background: $color-yellow
+        color: $color-green
+        transform: scale(0.98)
+    +max-screen($breakpoint-xl)
+        font-size: 18px
+    +max-screen($breakpoint-sm)
+        font-size: 16px
+    &-section
+        margin-bottom: 60px
+        background: #efebe2
+
+    &:hover span > span
+        display: inline-block
+        animation: fadeToTop 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035) 1 forwards, fadeFromBottom 0.3s cubic-bezier(0.19, 1, 0.22, 1) 1 forwards
+
+@keyframes fadeToTop
+    to
+        transform: translate3d(0, -10px, 0)
+        opacity: 0
+
+@keyframes fadeFromBottom
+    from
+        transform: translate3d(0, 10px, 0)
+        opacity: 0
+    to
+        transform: translate3d(0, 0, 0)
+        opacity: 1
