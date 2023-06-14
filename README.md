@@ -1,4 +1,4 @@
-# hechicera
+# Hotel La Gemma
  
  Instruction for running gulp:
  1. Open the terminal
