@@ -1,20 +1,20 @@
 import $  from 'jquery';
 
 function header(){
-    const logoWhite = $('#white-logo');
-    const logoGreen = $('#green-logo');
-    const header = $('header');
-    $(window).on('scroll', function () {
-        if (window.pageYOffset !== 0) {
-            header.addClass('active');
-            logoWhite.removeClass('show');
-            logoGreen.addClass('show');
-        } else {
-            header.removeClass('active');
-            logoWhite.addClass('show');
-            logoGreen.removeClass('show');
+    const headerToggle = $('.header__toggle');
+    const headerMenu = $('.header__menu');
+
+    $(document).on('click', function (e) {
+        if(!headerMenu.is(e.target) && !headerToggle.is(e.target)) {
+            headerMenu.removeClass('open');
+            $('body, html').removeClass('no-scroll');
         }
-    })
+    });
+
+    headerToggle.on('click', function () {
+        headerMenu.toggleClass('open');
+        $('body, html').toggleClass('no-scroll');
+    });
 }
 
 

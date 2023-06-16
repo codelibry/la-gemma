@@ -1,0 +1,49 @@
+section.banner
+    max-height: 1080px
+    .banner
+        &__slider
+            .slider-item
+                display: block !important
+                position: relative
+                height: 0
+                padding-bottom: 56.25%
+                overflow: hidden
+                &__bg
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                &__logo
+                &__text
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    color: #E5E3DA
+
+
+
+.home
+    section.banner
+        .banner
+            &__slider
+                .slider-item__text
+                    span, blockquote, h1
+                        line-height: 1.35
+                    span, blockquote
+                        display: block
+                        text-align: center
+                        font-weight: 300
+                        text-transform: uppercase
+                    span
+                        font-size: 50px
+                    h1
+                        font-size: 120px
+                        margin: -55px 0 20px -65px
+                    blockquote
+                        font-size: 30px

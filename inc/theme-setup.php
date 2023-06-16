@@ -9,8 +9,8 @@ function theme_setup(){
 	
 	register_nav_menus(
 		array( 
-			 'main-menu' => __( 'Main Menu', 'vi' ),
-             'footer-bottom-menu' => __( 'Footer Bottom Menu', 'vi'),
+			 'header-menu' => __( 'Header Menu', 'la_gemma' ),
+             'footer-menu' => __( 'Footer Menu', 'la_gemma'),
 		)
     );
 }
