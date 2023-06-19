@@ -1,10 +1,9 @@
-<?php
-/**
- * Index template
- */
-?>
-<?php get_header(); ?>
+<?php get_header();?>
 
-123
+<?php if(have_rows('blocks')) :?>
+    <?php while(have_rows('blocks')) : the_row()?>
+        <?php get_template_part('template-parts/acf-block/' . get_row_layout());?>
+    <?php endwhile;?>
+<?php endif; ?>
 
-<?php get_footer(); ?>
+<?php get_footer();?>

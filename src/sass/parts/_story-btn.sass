@@ -1,0 +1,31 @@
+.story-btn
+    position: absolute
+    right: 4.94%
+    bottom: 3.65%
+    &__icon
+        width: 76px
+        height: 76px
+        background: #E5E3DA
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        +max-screen($breakpoint-lg)
+            width: 40px
+            height: 40px
+        img
+            width: 48px
+            height: 42px
+            object-fit: cover
+            +max-screen($breakpoint-lg)
+                width: 26px
+                height: auto
+    &__text
+        margin-top: 6px
+        font-size: 20px
+        text-align: center
+        text-transform: uppercase
+        color: #DFDACD
+        +max-screen($breakpoint-lg)
+            font-size: 12px
+            margin-top: 2px

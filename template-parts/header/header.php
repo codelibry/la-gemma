@@ -1,6 +1,14 @@
 <?php
     $logo_white = get_field('logo_white', 'option');
-
+    $logo_green = get_field('logo_green', 'option');
+    
+    $logo_icon = '';
+    
+    if (is_front_page() && $logo_white) {
+        $logo_icon = $logo_white;
+    } elseif (!is_front_page() && $logo_green) {
+        $logo_icon = $logo_green;
+    }
 ?>
 
 <header class="header">
@@ -20,18 +28,20 @@
                     ]);
                 ?>
             </nav>
-            <?php if (is_front_page() && $logo_white) : ?>
+            <?php if($logo_icon) :?>
                 <div class="header__logo logo-white">
-                    <img src="<?php echo $logo_white['url']; ?>"
-                         alt="<?php echo $logo_white['alt'] ?: $logo_white['title']; ?>">
+                    <a href="<?php echo get_home_url();?>">
+                        <img src="<?php echo $logo_icon['url']; ?>"
+                             alt="<?php echo $logo_icon['alt'] ?: $logo_icon['title']; ?>">
+                    </a>
                 </div>
             <?php endif; ?>
 
             <div class="header__btn">
-                <a href="#" class="button button-white-transparent">
+                <a href="#" class="button button-<?php echo is_front_page() ? 'white-transparent' : 'green-transparent';?>">
                     <span>Language</span>
                 </a>
-                <a href="#" class="button button-white">
+                <a href="#" class="button button-<?php echo is_front_page() ? 'white' : 'green';?>">
                     <span>Book now</span>
                 </a>
             </div>
