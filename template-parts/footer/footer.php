@@ -17,11 +17,11 @@
                 
                 <?php if ($footer_info) : ?>
                     <div class="footer__info">
-                        <ul class="info__list">
+                        <ul class="info__list flex-wrap">
                             <?php foreach ($footer_info as $info_item) : ?>
                                 <?php $info = $info_item['info_item']; ?>
                                 <li class="info__list-item">
-                                    <a href="<?php echo preg_match("/@|\.com/", $info) ? 'mailto:' . $info : 'tel: ' . $info; ?>">
+                                    <a href="<?php echo preg_match("/@|\.com/", $info) ? 'mailto:' . $info : 'tel:' . $info; ?>">
                                         <?php echo $info; ?>
                                     </a>
                                 </li>

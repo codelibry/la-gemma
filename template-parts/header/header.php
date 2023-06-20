@@ -42,7 +42,7 @@
                     <span>Language</span>
                 </a>
                 <a href="#" class="button button-<?php echo is_front_page() ? 'white' : 'green';?>">
-                    <span>Book now</span>
+                    Book now
                 </a>
             </div>
         </div>

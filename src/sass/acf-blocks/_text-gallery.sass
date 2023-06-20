@@ -1,0 +1,58 @@
+section.text-gallery
+    padding: 81px 0 60px
+    +max-screen($breakpoint-lg)
+        padding: 60px 0
+    .text-gallery
+        &__wrap
+            position: relative
+        &__slider
+            width: 52.38%
+            +max-screen($breakpoint-xl)
+                width: 50%
+            +max-screen($breakpoint-lg)
+                width: 100%
+        &__slider-item
+            position: relative
+            width: 100%
+            height: 0
+            overflow: hidden
+            padding-bottom: 72.74%
+            img
+                position: absolute
+                left: 0
+                top: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &__content
+            max-width: calc(525px + 40px + 100px)
+            width: calc(100% - 52.38%)
+            padding: 0 40px 0 100px
+            text-align: center
+            +max-screen($breakpoint-xl)
+                padding: 0 20px
+                width: 50%
+            +max-screen($breakpoint-lg)
+                width: 100%
+                margin: 40px auto 0
+        &__title
+            font-size: 95px
+            line-height: 0.84
+            +max-screen($breakpoint-xl)
+                font-size: 80px
+            +max-screen($breakpoint-md)
+                font-size: 68px
+            span
+                font-size: 120px
+                display: block
+                +max-screen($breakpoint-xl)
+                    font-size: 101px
+                +max-screen($breakpoint-md)
+                    font-size: 86px
+        &__text
+            font-size: 25px
+            margin-top: 32px
+        &__btn
+            margin-top: 55px
+            .button
+                font-size: 22px

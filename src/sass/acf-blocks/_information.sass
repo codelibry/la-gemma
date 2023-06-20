@@ -1,0 +1,53 @@
+section.information
+    padding: 150px 0
+    +max-screen($breakpoint-xl)
+        padding: 80px 0
+    +max-screen($breakpoint-lg)
+        padding: 60px 0
+    .information
+        &__wrap
+        &__list
+            +max-screen($breakpoint-md)
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+            &:not(:last-of-type)
+                +max-screen($breakpoint-md)
+                    margin-bottom: 25px
+            .list-item
+                +max-screen($breakpoint-md)
+                    flex: 0 0 100%
+                &:not(:last-of-type)
+                    margin-bottom: 25px
+                &__title
+                    font-size: 40px
+                    text-transform: uppercase
+                    +max-screen($breakpoint-xl)
+                        font-size: 32px
+                    +max-screen($breakpoint-lg)
+                        font-size: 24px
+                    +max-screen($breakpoint-md)
+                        text-align: center
+                &__text
+                    font-size: 25px
+                    min-height: calc(25px * 1.8 * 2)
+                    margin-top: 20px
+                    line-height: 1.8
+                    +max-screen($breakpoint-xl)
+                        font-size: 22px
+                        min-height: calc(22px * 1.8 * 2)
+                    +max-screen($breakpoint-lg)
+                        font-size: 16px
+                        min-height: calc(16px * 1.8 * 2)
+                        margin-top: 10px
+                    +max-screen($breakpoint-md)
+                        display: flex
+                        flex-wrap: wrap
+                        justify-content: center
+                        gap: 0 20px
+                        min-height: unset
+                    span
+                        display: block
+                    br
+                        +max-screen($breakpoint-md)
+                            display: none

@@ -25,7 +25,9 @@
                     <?php endif; ?>
                     <?php if ($text) : ?>
                         <div class="slider-item__text">
-                            <?php echo $text; ?>
+                            <div class="container">
+                                <?php echo $text; ?>
+                            </div>
                         </div>
                     <?php endif; ?>
                 </div>

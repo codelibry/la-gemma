@@ -1,5 +1,5 @@
 section.banner
-    max-height: 1080px
+    //max-height: 1080px
     .banner
         &__slider
             .slider-item
@@ -25,34 +25,23 @@ section.banner
                 &__logo
                 &__text
                     position: absolute
-                    left: 50%
+                    left: 0
                     top: 50%
-                    transform: translate(-50%, -50%)
+                    width: 100%
+                    transform: translateY(-50%)
                     color: #E5E3DA
-                    +max-screen($breakpoint-md)
-                        width: 100%
 
-            .slick-dots
-                position: absolute
-                bottom: 41px
-                width: 100%
-                display: flex
-                justify-content: center
-                gap: 11px
-                li
-                    width: 14px
-                    height: 14px
-                    border-radius: 50%
-                    border: 1px solid #EFEEEC
-                    &.slick-active
-                        background: #EFEEEC
-                    button
-                        font-size: 0
-                        width: 100%
-                        height: 100%
-                        border: none
-                        background: transparent
-
+                    span
+                        display: block
+                        font-size: 46px
+                        text-align: center
+                        +max-screen($breakpoint-lg)
+                            font-size: 36px
+                        +max-screen($breakpoint-md)
+                            font-size: 28px
+                    br
+                        +max-screen($breakpoint-sm)
+                            display: none !important
 
 .home
     section.banner
@@ -76,10 +65,11 @@ section.banner
                             font-size: 20px
                     h1
                         font-size: 120px
-                        margin: -55px 0 20px -65px
+                        text-align: center
+                        margin: -55px 0 20px -132px
                         +max-screen($breakpoint-lg)
                             font-size: 68px
-                            margin: -31px 0 20px 4px
+                            margin: -31px 0 20px -80px
                         +max-screen($breakpoint-md)
                             width: fit-content
                             font-size: 60px

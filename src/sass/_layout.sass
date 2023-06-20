@@ -2,7 +2,7 @@
 	padding-left: 30px
 	padding-right: 30px
 	+min-screen($breakpoint-xxl)
-		max-width: 1735px
+		max-width: 1850px
 	+max-screen($breakpoint-md)
 		padding-left: 15px
 		padding-right: 15px
@@ -28,9 +28,19 @@
 	+max-screen($breakpoint-md)
 		padding-top: rem(45px)
 		padding-bottom: rem(45px)
-	+max-screen($breakpoint-sm)
-		//padding-top: rem(30px)
-		//padding-bottom: rem(30px)
+
+section
+	position: relative
+	&:not(:last-of-type):not(:first-of-type)
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			width: 98.64%
+			height: 2px
+			background: $color-green
 
 .page-blocks
 	padding-top: rem(45px)
@@ -48,4 +58,4 @@
 				transition-delay: 1s
 				transition: opacity 0.5s ease-out
 		&.heroBanner
-			opacity: 1	
+			opacity: 1
