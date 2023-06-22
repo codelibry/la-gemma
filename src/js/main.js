@@ -1,14 +1,18 @@
 import $ from "jquery";
 
+// Parts
 import { header } from './template-parts/header/header';
 import { getSlider } from './template-parts/slider';
-import { setDropdownClass } from './template-parts/dropdown';
+import { toggleDropdown } from './template-parts/dropdown';
 import { getFormAccept } from './template-parts/formAccept';
+import { postFilter } from './template-parts/post-filter';
+
+// Animations
 import './animations/appearence';
 
 
-
-getSlider();
-setDropdownClass();
-getFormAccept();
 header();
+getSlider();
+toggleDropdown();
+getFormAccept();
+postFilter();

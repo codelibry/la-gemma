@@ -11,3 +11,5 @@ require get_template_directory().'/inc/acf.php';
 require get_template_directory().'/inc/blocks.php';
 require get_template_directory().'/inc/theme-functions.php';
 require get_template_directory().'/inc/theme-shortcodes.php';
+
+require get_template_directory().'/inc/filter.php';

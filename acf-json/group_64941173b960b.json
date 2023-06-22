@@ -1,0 +1,110 @@
+{
+    "key": "group_64941173b960b",
+    "title": "Single Room",
+    "fields": [
+        {
+            "key": "field_6494118b7c12a",
+            "label": "Facilities",
+            "name": "facilities",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_649412977c12b",
+                    "label": "Rooms amenities",
+                    "name": "rooms_amenities",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Desk": "Desk",
+                        "Wireless Internet": "Wireless Internet",
+                        "Coffee machine": "Coffee machine",
+                        "Safety deposit box": "Safety deposit box",
+                        "Wake-up service": "Wake-up service",
+                        "Internet facilities": "Internet facilities",
+                        "Seating Area": "Seating Area",
+                        "Air conditioning": "Air conditioning",
+                        "Tea\/Coffee maker": "Tea\/Coffee maker",
+                        "TV": "TV",
+                        "Linen": "Linen",
+                        "iPod dock": "iPod dock",
+                        "Minibar": "Minibar",
+                        "Heating": "Heating",
+                        "Telephone": "Telephone",
+                        "Soundproofing": "Soundproofing"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "horizontal",
+                    "toggle": 0,
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_649413527c12c",
+                    "label": "Bathrooms amenities",
+                    "name": "bathrooms_amenities",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Luxe Toiletries": "Luxe Toiletries",
+                        "Marble Shower": "Marble Shower",
+                        "Cotton Bathrobe": "Cotton Bathrobe",
+                        "Bidet": "Bidet",
+                        "Toilet": "Toilet",
+                        "Slippers": "Slippers",
+                        "Hairdryer": "Hairdryer",
+                        "Toilet Paper": "Toilet Paper"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "horizontal",
+                    "toggle": 0,
+                    "return_format": "value"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "rooms-and-suites"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1687425945
+}

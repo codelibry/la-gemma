@@ -1,0 +1,88 @@
+section.hero-banner
+    //max-height: 1080px
+    .hero-banner
+        &__slider
+            .slider-item
+                display: block !important
+                position: relative
+                height: 0
+                padding-bottom: 56.25%
+                overflow: hidden
+                +max-screen($breakpoint-sm)
+                    min-height: 400px
+                    height: 100vh
+                    padding-bottom: 0
+                &__bg
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                &__logo
+                &__text
+                    position: absolute
+                    left: 0
+                    top: 50%
+                    width: 100%
+                    transform: translateY(-50%)
+                    color: #E5E3DA
+
+                    span
+                        display: block
+                        font-family: $font-family-secondary
+                        font-size: 46px
+                        text-align: center
+                        +max-screen($breakpoint-lg)
+                            font-size: 36px
+                        +max-screen($breakpoint-md)
+                            font-size: 28px
+                    br
+                        +max-screen($breakpoint-sm)
+                            display: none !important
+
+.home
+    section.hero-banner
+        .hero-banner
+            &__slider
+                .slider-item__text
+                    span, blockquote, h1
+                        line-height: 1.35
+                    span, blockquote
+                        display: block
+                        text-align: center
+                        font-weight: 300
+                        text-transform: uppercase
+                    span
+                        font-size: 50px
+                        +max-screen($breakpoint-lg)
+                            font-size: 30px
+                        +max-screen($breakpoint-md)
+                            font-size: 26px
+                        +max-screen($breakpoint-sm)
+                            font-size: 20px
+                    h1
+                        font-size: 120px
+                        text-align: center
+                        margin: -55px 0 20px -132px
+                        +max-screen($breakpoint-lg)
+                            font-size: 68px
+                            margin: -31px 0 20px -80px
+                        +max-screen($breakpoint-md)
+                            width: fit-content
+                            font-size: 60px
+                            margin: -28px 0 20px 27.8%
+                        +max-screen($breakpoint-sm)
+                            font-size: 46px
+                            margin: -19px 0 0 27%
+                    blockquote
+                        font-size: 30px
+                        +max-screen($breakpoint-lg)
+                            font-size: 22px
+                        +max-screen($breakpoint-md)
+                            font-size: 20px
+                        +max-screen($breakpoint-sm)
+                            font-size: 18px

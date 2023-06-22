@@ -1,0 +1,27 @@
+section.loop-posts
+    .loop-posts
+        &__wrap
+            padding-bottom: 52px
+            +max-screen($breakpoint-lg)
+                padding-bottom: 60px
+        &__filter
+            gap: 40px
+            margin-bottom: 30px
+            .filter-btn
+                position: relative
+                font-size: 19px
+                color: rgba(33, 57, 50, .46)
+                &:not(:last-of-type)
+                    &:after
+                        content: ''
+                        position: absolute
+                        bottom: 0
+                        right: -20px
+                        width: 1px
+                        height: calc(100% + 2px)
+                        background: $color-green
+                &:hover
+                    cursor: pointer
+                &.active
+                    color: #213932
+        &__list

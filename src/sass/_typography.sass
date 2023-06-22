@@ -328,11 +328,14 @@ body
 	.table-body
 		display: table-row-group
 
-h1,.h1
-	font-size: 55px
-	line-height: 65px
+h1, h2, h3, h4, h5, h6
 	font-family: $font-family-secondary
-	font-weight: 400
+
+h1,.h1
+	font-size: 80px
+	line-height: 1.35
+	font-family: $font-family-secondary
+	font-weight: 600
 	//+ipad
 	//	font-size: 96px
 	//+max-screen($breakpoint-lg)
@@ -341,11 +344,10 @@ h1,.h1
 		//font-size: rem(30px)
 	+max-screen($breakpoint-md)
 		font-size: 45px
-		line-height: 54px
 h2,.h2
-	font-size: 43px
-	line-height: 52px
-	font-weight: bold
+	font-size: 80px
+	line-height: 1.35
+	font-weight: 600
 	//+ipad
 	//	font-size: 43px
 	+max-screen($breakpoint-xl)
@@ -357,20 +359,17 @@ h2,.h2
 		font-size: 48px
 h3,.h3
 	font-size: 34px
-	line-height: 1.03em
-	font-weight: bold
-	+max-screen($breakpoint-lg)
+	line-height: 1.35
+	text-transform: uppercase
 	+max-screen($breakpoint-md)
 		font-size: 42px
-		//font-size: rem(24px)
 h4,.h4,.intro .content-block
 	font-size: 30px
-	line-height: 1.33em
-	font-weight: 400
-	+max-screen($breakpoint-lg)
+	line-height: 1.35
+	font-weight: 300
+	text-transform: uppercase
 	+max-screen($breakpoint-md)
 		font-size: 30px
-		//font-size: rem(22px)
 .h5,h5
 	font-size: 30px
 	line-height: 1.2em

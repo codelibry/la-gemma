@@ -18,8 +18,8 @@
             "layouts": {
                 "layout_6380cfe7e9aa0": {
                     "key": "layout_6380cfe7e9aa0",
-                    "name": "banner_section",
-                    "label": "Banner section",
+                    "name": "hero_banner",
+                    "label": "Hero banner",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -107,6 +107,80 @@
                                     "maxlength": "",
                                     "rows": 6,
                                     "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_649444c313b13": {
+                    "key": "layout_649444c313b13",
+                    "name": "page_banner",
+                    "label": "Page banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_649445a313b18",
+                            "label": "Page title",
+                            "name": "page_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_649444c313b14",
+                            "label": "Page banner list",
+                            "name": "page_banner_list",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_649445d913b19",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
                                 }
                             ]
                         }
@@ -789,6 +863,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "rooms-and-suites"
+            }
         ]
     ],
     "menu_order": 0,
@@ -800,5 +881,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687258505
+    "modified": 1687438831
 }

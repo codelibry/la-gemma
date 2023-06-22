@@ -7,7 +7,7 @@ header.header
 
     .header
         &__wrap
-            height: 153px
+            height: 218px
             display: flex
             justify-content: space-between
             align-items: flex-start
@@ -73,7 +73,7 @@ header.header
         &__logo
             position: absolute
             left: 50%
-            bottom: 0
+            top: 25px
             transform: translateX(-50%)
             &.logo-white
                 width: 83px
@@ -133,3 +133,9 @@ header.header
                 &:after
                     background: #E5E2D9
 
+// archive page
+.archive, .single
+    header.header
+        .header
+            &__wrap
+                border-bottom: 1px solid #1A352E

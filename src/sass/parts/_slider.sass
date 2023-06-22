@@ -1,0 +1,64 @@
+.slick-slider
+    .slick-dots
+        position: absolute
+        bottom: 41px
+        width: 100%
+        display: flex
+        justify-content: center
+        gap: 11px
+        +max-screen($breakpoint-lg)
+            bottom: 20px
+        li
+            width: 14px
+            height: 14px
+            border-radius: 50%
+            border: 1px solid #EFEEEC
+            &.slick-active
+                background: #EFEEEC
+            button
+                font-size: 0
+                width: 100%
+                height: 100%
+                border: none
+                background: transparent
+    .slick-arrow
+        width: 70px
+        height: 70px
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 50%
+        z-index: 10
+        transform: translateY(-50%)
+        border: none !important
+        background: none !important
+        font-size: 0 !important
+        transition: $default-transition
+
+        &:after, &:before
+            content: ''
+            position: absolute
+            display: block
+            width: 40px
+            height: 2px
+            background: #fff
+        &.slick-prev
+            left: 0
+            &:after
+                transform: rotate(60deg) translateX(20px)
+            &:before
+                transform: rotate(-60deg) translateX(19.5px)
+        &.slick-next
+            right: 0
+            &:after
+                transform: rotate(60deg) translateX(-20px)
+            &:before
+                transform: rotate(-60deg) translateX(-19.5px)
+
+        &.slick-disabled
+            opacity: 0
+
+.js-post-slider
+    .slick-slide
+        padding: 0 30px

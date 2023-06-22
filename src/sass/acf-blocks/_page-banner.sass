@@ -1,0 +1,27 @@
+section.page-banner
+    padding-top: 218px
+    padding-bottom: 53px
+    +max-screen($breakpoint-lg)
+        padding-top: 100px
+
+    .page-banner
+        &__title
+            margin: 40px 0 65px
+            text-align: center
+
+        &__banner
+            .slick-slide
+                width: 100%
+                > div
+                    position: relative
+                    width: 100%
+                    height: 0
+                    overflow: hidden
+                    padding-bottom: 40.68%
+                img
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
