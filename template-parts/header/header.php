@@ -1,11 +1,14 @@
 <?php
     $logo_white = get_field('logo_white', 'option');
     $logo_green = get_field('logo_green', 'option');
+    $logo_allure = get_field('logo_allure', 'option');
     
     $logo_icon = '';
     
     if (is_front_page() && $logo_white) {
         $logo_icon = $logo_white;
+    } elseif (is_page_template('template-pages/allure-page.php')) {
+        $logo_icon = $logo_allure;
     } elseif (!is_front_page() && $logo_green) {
         $logo_icon = $logo_green;
     }
@@ -28,9 +31,9 @@
                     ]);
                 ?>
             </nav>
-            <?php if($logo_icon) :?>
-                <div class="header__logo logo-white">
-                    <a href="<?php echo get_home_url();?>">
+            <?php if ($logo_icon) : ?>
+                <div class="header__logo">
+                    <a href="<?php echo get_home_url(); ?>">
                         <img src="<?php echo $logo_icon['url']; ?>"
                              alt="<?php echo $logo_icon['alt'] ?: $logo_icon['title']; ?>">
                     </a>
@@ -38,10 +41,12 @@
             <?php endif; ?>
 
             <div class="header__btn">
-                <a href="#" class="button button-<?php echo is_front_page() ? 'white-transparent' : 'green-transparent';?>">
+                <a href="#"
+                   class="button button-<?php echo is_front_page() || is_page_template('template-pages/allure-page.php') ? 'white-transparent' : 'green-transparent'; ?>">
                     <span>Language</span>
                 </a>
-                <a href="#" class="button button-<?php echo is_front_page() ? 'white' : 'green';?>">
+                <a href="#"
+                   class="button button-<?php echo is_front_page() || is_page_template('template-pages/allure-page.php') ? 'white' : 'green'; ?>">
                     Book now
                 </a>
             </div>

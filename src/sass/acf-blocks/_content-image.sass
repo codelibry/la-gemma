@@ -1,0 +1,47 @@
+section.content-image
+    padding: 55px 0 74px
+    background: $color-light-brown
+    +max-screen($breakpoint-lg)
+        padding: 60px 0
+    .content-image
+        &__wrap
+
+        &__img
+            flex: 1
+            max-width: 813px
+            width: 100%
+            &-wrap
+                position: relative
+                width: 100%
+                height: 0
+                overflow: hidden
+                padding-bottom: 123.61%
+                img
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    left: 0
+                    object-fit: cover
+        &__content
+            flex: 1
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            padding: 104px 20px 0
+        &__title
+            font-size: 101px
+            line-height: 1
+            span
+                display: block
+                font-size: 85px
+        &__subtitle
+            font-size: 30px
+        &__text
+            max-width: 695px
+            margin-top: 80px
+            color: #000000
+            font-size: 27px
+        &__btn
+            margin-top: 50px

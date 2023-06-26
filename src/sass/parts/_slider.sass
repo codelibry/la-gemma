@@ -8,6 +8,8 @@
         gap: 11px
         +max-screen($breakpoint-lg)
             bottom: 20px
+        .allure-page &
+            display: none !important
         li
             width: 14px
             height: 14px
@@ -22,7 +24,8 @@
                 border: none
                 background: transparent
     .slick-arrow
-        width: 70px
+        display: none !important
+        width: 40px
         height: 70px
         display: flex
         justify-content: center
@@ -35,7 +38,9 @@
         background: none !important
         font-size: 0 !important
         transition: $default-transition
-
+        .allure-page &
+            display: flex !important
+            justify-content: flex-start
         &:after, &:before
             content: ''
             position: absolute
@@ -43,18 +48,36 @@
             width: 40px
             height: 2px
             background: #fff
+            .allure-page &
+                background: #D9C499
         &.slick-prev
             left: 0
+            &:after, &:before
+                .allure-page &
+                    transform-origin: left
             &:after
                 transform: rotate(60deg) translateX(20px)
+                .allure-page &
+                    transform: rotate(45deg)
             &:before
                 transform: rotate(-60deg) translateX(19.5px)
+                .allure-page &
+                    transform: rotate(-45deg)
         &.slick-next
             right: 0
+            .allure-page &
+                right: 20px
+            &:after, &:before
+                .allure-page &
+                    transform-origin: right
             &:after
                 transform: rotate(60deg) translateX(-20px)
+                .allure-page &
+                    transform: rotate(45deg)
             &:before
                 transform: rotate(-60deg) translateX(-19.5px)
+                .allure-page &
+                    transform: rotate(-45deg)
 
         &.slick-disabled
             opacity: 0

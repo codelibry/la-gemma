@@ -10,7 +10,7 @@
     <section class="text-gallery">
         <div class="container">
             <div class="text-gallery__wrap d-flex flex-wrap align-items-center justify-content-between">
-                <div class="text-gallery__slider js-slider <?php echo $gallery_position === 'left' ? 'order-1' : 'order-1 order-lg-2'; ?>">
+                <div class="text-gallery__slider js-slider <?php echo $gallery_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
                     <?php foreach ($gallery as $image) : ?>
                         <div class="text-gallery__slider-item">
                             <img src="<?php echo $image['url']; ?>"
@@ -19,7 +19,7 @@
                     <?php endforeach; ?>
                 </div>
                 <?php if ($title && $text) : ?>
-                    <div class="text-gallery__content <?php echo $gallery_position === 'left' ? 'order-2' : 'order-2 order-lg-1'; ?>">
+                    <div class="text-gallery__content <?php echo $gallery_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
                         <div class="text-gallery__title">
                             <?php echo $title; ?>
                         </div>
@@ -28,7 +28,8 @@
                         </div>
                         <?php if ($button) : ?>
                             <div class="text-gallery__btn">
-                                <a href="<?php echo $button['url']; ?>" class="button button-green">
+                                <a href="<?php echo $button['url']; ?>"
+                                   class="button button-<?php echo is_page_template('template-pages/allure-page.php') ? 'brown' : 'green'; ?>">
                                     <?php echo $button['title']; ?>
                                 </a>
                             </div>
@@ -37,6 +38,7 @@
                 <?php endif; ?>
             </div>
         </div>
+        <div class="horizontal-line"></div>
     </section>
 <?php endif; ?>
 

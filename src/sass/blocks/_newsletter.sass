@@ -4,16 +4,19 @@ section.newsletter
     +max-screen($breakpoint-lg)
         padding: 60px 0
     .newsletter
-        &__wrap
         &__title
             text-align: center
             margin-bottom: 37px
-    &:after
-        content: ''
-        position: absolute
+    .form-submit
+        .button
+            border: 1px solid $color-green
+            background: $color-green
+            color: #fff
+            .allure-page &
+                border: 1px solid $color-brown
+                background: $color-brown
+                color: #fff
+    .horizontal-line
+        display: block
+        bottom: unset
         top: 0
-        left: 50%
-        transform: translateX(-50%)
-        width: 98.64%
-        height: 2px
-        background: $color-green

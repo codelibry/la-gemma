@@ -1,5 +1,7 @@
 .button
     display: inline-flex
+    justify-content: center
+    align-items: center
     font-size: 18px
     font-weight: 700
     line-height: 1.35
@@ -21,6 +23,15 @@
             border: 1px solid $color-green
             background: transparent
             color: $color-green
+    &-brown
+        border: 1px solid $color-brown
+        background: $color-brown
+        color: #fff
+        &-transparent
+            border: 1px solid $color-brown
+            background: transparent
+            color: $color-brown
+
 
 
 @keyframes fadeToTop

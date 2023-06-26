@@ -10,23 +10,23 @@
         <div class="container">
             <div class="subscribe-form__wrap row">
                 <?php if ($title && ($text_1 || $text_2)) : ?>
-                    <div class="col-lg-7 col-xl-8 d-flex flex-wrap subscribe-form__text">
-                        <div class="col-12 subscribe-form__title">
+                    <div class="subscribe-form__text col-lg-7 col-xl-8 d-flex flex-wrap">
+                        <div class="subscribe-form__title col-12">
                             <?php echo $title; ?>
                         </div>
                         <?php if ($text_1) : ?>
-                            <div class="col-12 col-xl-6 subscribe-form__text-left">
+                            <div class="subscribe-form__text-left col-12 col-xl-6">
                                 <?php echo $text_1; ?>
                             </div>
                         <?php endif; ?>
                         <?php if ($text_2) : ?>
-                            <div class="col-12 col-xl-6 subscribe-form__text-right">
+                            <div class="subscribe-form__text-right col-12 col-xl-6">
                                 <?php echo $text_2; ?>
                             </div>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
-                <div class="col-lg-5 col-xl-4 subscribe-form__form">
+                <div class="subscribe-form__form col-lg-5 col-xl-4">
                     <div class="subscribe-form__form-img">
                         <img src="<?php echo get_template_directory_uri() . '/assets/image/subscribe-form-img.png';?>" alt="form-image">
                     </div>

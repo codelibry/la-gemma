@@ -1,0 +1,65 @@
+section.about
+    padding: 62px 0 103px
+    +max-screen($breakpoint-lg)
+        padding: 60px 0
+    .about
+        &__wrap
+            position: relative
+        &__img
+            padding-left: 105px
+            width: calc(35.64% + 105px)
+            +max-screen($breakpoint-xl)
+                width: 50%
+            +max-screen($breakpoint-lg)
+                width: 100%
+            &-wrap
+                position: relative
+                width: 100%
+                height: 0
+                overflow: hidden
+                padding-bottom: 90.49%
+                img
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+        &__content
+            width: calc(100% - (35.64% + 105px))
+            max-width: calc(695px + 40px + 125px)
+            padding: 0
+            text-align: center
+            +max-screen($breakpoint-xl)
+                padding: 0 20px
+                width: 50%
+            +max-screen($breakpoint-lg)
+                width: 100%
+                margin: 40px auto 0
+            &.content-left
+                padding: 0 40px 0 125px
+            &.content-right
+                padding: 0 125px 0 40px
+        &__title
+            font-size: 35px
+            line-height: 1.35
+            color: #20201E
+            span
+                display: block
+                font-size: 25px
+        &__subtitle
+            font-size: 20px
+            font-weight: 300
+            color: #20201E
+        &__text
+            color: #000
+            font-size: 27px
+            margin: 39px auto 0
+            max-width: 695px
+        &__btn
+            margin-top: 39px
+            .button
+                font-size: 25px
+                padding: 7px 0
+                max-width: 305px
+                width: 100%

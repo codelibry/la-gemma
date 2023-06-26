@@ -1,79 +1,39 @@
 <?php
-    $column_1 = get_sub_field('column_1');
-    $column_2 = get_sub_field('column_2');
-    $column_3 = get_sub_field('column_3');
+    $title = get_sub_field('title');
+    $information_list = get_sub_field('information_list');
+
 ?>
 
-<?php if ($column_1 || $column_2 || $column_3) : ?>
+<?php if ($information_list) : ?>
     <section class="information">
+        <div class="horizontal-line"></div>
         <div class="container">
-            <div class="information__wrap row">
-                <?php if ($column_1) : ?>
-                    <ul class="information__list col-12 col-md-4">
-                        <?php foreach ($column_1 as $list_item) : ?>
-                            <?php
-                            $title = $list_item['title'];
-                            $text = $list_item['text'];
-                            ?>
-                            
-                            <li class="list-item">
-                                <?php if ($title) : ?>
-                                    <h4 class="list-item__title"><?php echo $title; ?></h4>
-                                <?php endif; ?>
-                                <?php if ($text) : ?>
-                                    <div class="list-item__text">
-                                        <?php echo $text; ?>
-                                    </div>
-                                <?php endif; ?>
-                            </li>
-                            
-                        <?php endforeach; ?>
-                    </ul>
+            <div class="information__wrap">
+                <?php if ($title) : ?>
+                    <div class="information__title">
+                        <h3><?php echo $title; ?></h3>
+                    </div>
                 <?php endif; ?>
-                <?php if ($column_2) : ?>
-                    <ul class="information__list col-12 col-md-4">
-                        <?php foreach ($column_2 as $list_item) : ?>
-                            <?php
-                            $title = $list_item['title'];
-                            $text = $list_item['text'];
-                            ?>
+                <ul class="information__list d-flex flex-wrap">
+                    <?php foreach ($information_list as $list_item) : ?>
+                        <?php
+                        $title = $list_item['title'];
+                        $text = $list_item['text'];
+                        ?>
 
-                            <li class="list-item">
-                                <?php if ($title) : ?>
-                                    <h4 class="list-item__title"><?php echo $title; ?></h4>
-                                <?php endif; ?>
-                                <?php if ($text) : ?>
-                                    <div class="list-item__text">
-                                        <?php echo $text; ?>
-                                    </div>
-                                <?php endif; ?>
-                            </li>
-
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
-                <?php if ($column_3) : ?>
-                    <ul class="information__list col-12 col-md-4">
-                        <?php foreach ($column_3 as $list_item) : ?>
-                            <?php
-                            $title = $list_item['title'];
-                            $text = $list_item['text'];
-                            ?>
-
-                            <li class="list-item">
-                                <?php if ($title) : ?>
-                                    <h4 class="list-item__title"><?php echo $title; ?></h4>
-                                <?php endif; ?>
-                                <?php if ($text) : ?>
-                                    <div class="list-item__text">
-                                        <?php echo $text; ?>
-                                    </div>
-                                <?php endif; ?>
-                            </li>
-
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
+                        <li class="list-item col-12 col-md-4">
+                            <?php if ($title) : ?>
+                                <h4 class="list-item__title"><?php echo $title; ?></h4>
+                            <?php endif; ?>
+                            <?php if ($text) : ?>
+                                <div class="list-item__text">
+                                    <?php echo $text; ?>
+                                </div>
+                            <?php endif; ?>
+                        </li>
+                    
+                    <?php endforeach; ?>
+                </ul>
             </div>
         </div>
     </section>

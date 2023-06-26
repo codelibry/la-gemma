@@ -67,6 +67,30 @@
             "mime_types": ""
         },
         {
+            "key": "field_649576fbdba05",
+            "label": "Logo allure",
+            "name": "logo_allure",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_648c7dfc20dd4",
             "label": "Footer",
             "name": "",
@@ -84,8 +108,32 @@
         },
         {
             "key": "field_648c7e1020dd5",
-            "label": "Footer logo",
-            "name": "footer_logo",
+            "label": "Footer logo light",
+            "name": "footer_logo_light",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6495ba2933f17",
+            "label": "Footer logo dark",
+            "name": "footer_logo_dark",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -345,5 +393,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687443529
+    "modified": 1687534137
 }

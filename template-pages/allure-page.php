@@ -1,5 +1,5 @@
 <?php
-//    Template Name: About Page
+//    Template Name: Allure Page
 //    Template Post Type: page
 ?>
 

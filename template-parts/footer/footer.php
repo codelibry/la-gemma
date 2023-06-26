@@ -1,7 +1,14 @@
 <?php
-    $footer_logo = get_field('footer_logo', 'option');
+    $footer_logo_light = get_field('footer_logo_light', 'option');
+    $footer_logo_dark = get_field('footer_logo_dark', 'option');
     $footer_info = get_field('footer_info', 'option');
     $footer_address = get_field('footer_address', 'option');
+    
+    if(!is_page_template('template-pages/lucas-page.php')) {
+        $footer_logo = $footer_logo_light;
+    } else {
+        $footer_logo = $footer_logo_dark;
+    }
 ?>
 
 <?php if(!is_front_page()) :?>

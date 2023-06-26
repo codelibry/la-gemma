@@ -12,5 +12,6 @@
                 <?php echo $footer_form;?>
             </div>
         </div>
+        <div class="horizontal-line"></div>
     </section>
 <?php endif; ?>

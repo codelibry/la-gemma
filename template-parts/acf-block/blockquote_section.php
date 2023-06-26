@@ -3,22 +3,21 @@
     $text = get_sub_field('text');
 ?>
 
-<?php if ($image || $text) : ?>
-    <section class="product-qualities">
+<?php if ($text) : ?>
+    <section class="blockquote">
         <div class="container">
-            <div class="product-qualities__wrap">
+            <div class="blockquote__wrap">
                 <?php if ($image) : ?>
-                    <div class="product-qualities__image">
+                    <div class="blockquote__img">
                         <img src="<?php echo $image['url']; ?>"
                              alt="<?php echo $image['alt'] ?: $image['title']; ?>">
                     </div>
                 <?php endif; ?>
-                <?php if ($text) : ?>
-                    <div class="product-qualities__text">
-                        <?php echo $text; ?>
-                    </div>
-                <?php endif; ?>
+                <div class="blockquote__content">
+                    <?php echo $text; ?>
+                </div>
             </div>
         </div>
     </section>
 <?php endif; ?>
+

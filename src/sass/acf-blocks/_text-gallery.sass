@@ -11,6 +11,8 @@ section.text-gallery
                 width: 50%
             +max-screen($breakpoint-lg)
                 width: 100%
+            .allure-page &
+                width: 50%
         &__slider-item
             position: relative
             width: 100%
@@ -25,16 +27,17 @@ section.text-gallery
                 height: 100%
                 object-fit: cover
         &__content
-            max-width: calc(525px + 40px + 100px)
-            width: calc(100% - 52.38%)
-            padding: 0 40px 0 100px
+            max-width: calc(555px + 20px + 103px)
+            //width: calc(100% - 52.38%)
             text-align: center
-            +max-screen($breakpoint-xl)
-                padding: 0 20px
+            .allure-page &
+                max-width: calc(695px)
                 width: 50%
-            +max-screen($breakpoint-lg)
-                width: 100%
-                margin: 40px auto 0
+                margin: 0 auto
+            &.content-left
+                padding: 0 20px 0 103px
+            &.content-right
+                padding: 0 103px 0 20px
         &__title
             font-size: 95px
             line-height: 0.84
@@ -42,6 +45,9 @@ section.text-gallery
                 font-size: 80px
             +max-screen($breakpoint-md)
                 font-size: 68px
+            .allure-page &
+                font-size: 35px
+                color: #20201E
             span
                 font-size: 120px
                 display: block
@@ -52,7 +58,48 @@ section.text-gallery
         &__text
             font-size: 25px
             margin-top: 32px
+            .allure-page &
+                font-size: 27px
+                color: #20201E
+                margin-top: 45px
         &__btn
             margin-top: 55px
             .button
                 font-size: 22px
+
+//.allure-page
+//    section.text-gallery
+//        padding: 62px 0 103px
+//        +max-screen($breakpoint-lg)
+//            padding: 60px 0
+//        .text-gallery
+//            &__slider
+//                padding-left: 105px
+//                width: calc(35.64% + 105px)
+//            &__slider-item
+//                padding-bottom: 90.49%
+//            &__content
+//                width: calc(100% - (35.64% + 105px))
+//                max-width: calc(695px + 40px + 125px)
+//                padding: 0
+//                &.content-left
+//                    padding: 0 40px 0 125px
+//                &.content-right
+//                    padding: 0 125px 0 40px
+//            &__title
+//                font-size: 35px
+//                line-height: 1.35
+//                color: #20201E
+//                span
+//                    font-size: 25px
+//            &__text
+//                color: #000
+//                font-size: 27px
+//                margin-top: 39px
+//            &__btn
+//                margin-top: 39px
+//                .button
+//                    font-size: 25px
+//                    padding: 7px 0
+//                    max-width: 305px
+//                    width: 100%

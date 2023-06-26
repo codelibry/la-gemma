@@ -22,15 +22,27 @@
 				border: none
 				border-bottom: 2px solid $color-green
 				padding: 0 8px
+				.allure-page &
+					border-bottom: 2px solid #D9C499
 				&::placeholder
 					text-align: center
 					color: rgba(69, 109, 99, .5)
+					.allure-page &
+						color: rgba(217, 196, 153, .9)
+
+
 	.form-term
 		display: block
 		font-size: 20px
 		font-weight: 300
 		text-align: center
 		margin-top: 33px
+		.allure-page &
+			color: #D9C499
+		a
+			color: $color-green
+			.allure-page &
+				color: #D9C499
 	.form-submit
 		display: flex
 		flex-direction: column

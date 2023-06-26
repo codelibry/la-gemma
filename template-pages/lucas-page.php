@@ -1,5 +1,5 @@
 <?php
-//    Template Name: About Page
+//    Template Name: Lucas Page
 //    Template Post Type: page
 ?>
 

@@ -6,7 +6,7 @@ function getSlider() {
     slider.each(function () {
         $(this).slick({
             infinite: true,
-            arrows: false,
+            arrows: true,
             dots: true,
             speed: 1000,
         });

@@ -1,33 +1,45 @@
 <?php
+    $image_position = get_sub_field('image_position');
     $image = get_sub_field('image');
+    $title = get_sub_field('title');
+    $subtitle = get_sub_field('subtitle');
     $text = get_sub_field('text');
     $button = get_sub_field('button');
 ?>
 
-<?php if ($image || $text) : ?>
+<?php if ($image && $title && $text) : ?>
     <section class="about">
         <div class="container">
-            <div class="about__wrap">
-                <?php if ($image) : ?>
-                    <div class="about__image">
+            <div class="about__wrap d-flex flex-wrap align-items-center justify-content-between">
+                <div class="about__img <?php echo $image_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
+                    <div class="about__img-wrap">
                         <img src="<?php echo $image['url']; ?>"
                              alt="<?php echo $image['alt'] ?: $image['title']; ?>">
                     </div>
-                <?php endif; ?>
-                
-                <?php if ($text) : ?>
+                </div>
+                <div class="about__content <?php echo $image_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
+                    <div class="about__title">
+                        <?php echo $title; ?>
+                    </div>
+                    <?php if ($subtitle) : ?>
+                        <div class="about__subtitle">
+                            <?php echo $subtitle; ?>
+                        </div>
+                    <?php endif; ?>
                     <div class="about__text">
                         <?php echo $text; ?>
-                        
-                        <?php if ($button) : ?>
-                            <div class="about__btn">
-                                <a href="<?php echo $button['url']; ?>"
-                                   class="button"> <?php echo $button['title']; ?></a>
-                            </div>
-                        <?php endif; ?>
                     </div>
-                <?php endif; ?>
+                    <?php if ($button) : ?>
+                        <div class="about__btn">
+                            <a href="<?php echo $button['url']; ?>"
+                               class="button button-<?php echo is_page_template('template-pages/allure-page.php') ? 'brown' : 'green'; ?>">
+                                <?php echo $button['title']; ?>
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </section>
 <?php endif; ?>
+
