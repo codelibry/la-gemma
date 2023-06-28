@@ -28,7 +28,7 @@
                 <?php endif; ?>
                 <div class="subscribe-form__form col-lg-5 col-xl-4">
                     <div class="subscribe-form__form-img">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/image/subscribe-form-img.png';?>" alt="form-image">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/image/subscribe-form-1.png';?>" alt="form-image">
                     </div>
                     <div class="subscribe-form__form-title">
                         <span>

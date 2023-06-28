@@ -1,0 +1,73 @@
+.menu-card
+    &:nth-of-type(odd):not(:first-of-type)
+        padding-top: 184px
+
+    &:nth-of-type(odd)
+        .menu-card__schedule
+            padding-top: 180px
+        .menu-card__btn
+            .button
+                font-size: 36px
+
+    &:nth-of-type(even)
+        padding-top: 71px
+        .menu-card__schedule
+            padding-top: 220px
+        .menu-card__btn
+            .button
+                font-size: 25px
+    .menu-card
+        &__img
+            &-wrap
+                position: relative
+                width: 100%
+                height: 0
+                overflow: hidden
+                img
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            &.image-left
+                padding-left: 73px
+                width: calc(41.94% + 73px)
+                .menu-card__img-wrap
+                    padding-bottom: 124.63%
+            &.image-right
+                padding-right: 117px
+                width: calc(38.61% + 117px)
+                .menu-card__img-wrap
+                    padding-bottom: 132.51%
+
+        &__content
+            max-width: calc(772px + 67px + 40px)
+            padding: 0
+            text-align: center
+            align-items: flex-end
+            &.content-left
+                padding: 0 40px 0 67px
+            &.content-right
+                padding: 0 67px 0 40px
+
+        &__title
+            font-size: 57px
+            line-height: 1.35
+
+        &__text
+            font-size: 32px
+            margin: 28px auto 0
+        &__btn
+            margin-top: 48px
+            .button
+                padding: 7px 0
+                max-width: 305px
+                width: 100%
+                border: 1px solid #F5F3EF
+                background: transparent
+                color: #F5F3EF
+        &__schedule
+            color: #F5F0DF
+            font-size: 25px
+            font-weight: 300

@@ -24,13 +24,26 @@ function getSlider() {
         });
     })
 
+    const followSlider = $('.js-follow-slider');
+
+    followSlider.each(function () {
+        $(this).slick({
+            infinite: false,
+            arrows: true,
+            dots: false,
+            speed: 1000,
+            slidesToShow: 3,
+        });
+    })
+
     setSliderArrowPosition();
+
 }
 
 $(window).on('resize', setSliderArrowPosition);
 
 function setSliderArrowPosition() {
-    const postSlider = $('.js-post-slider');
+    const postSlider = $('.js-post-slider, .js-follow-slider');
     const postSliderImg = postSlider.find('img');
     const postSliderImgHeight = postSliderImg.height();
     const postSliderArrows = postSlider.find('.slick-arrow');

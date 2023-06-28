@@ -8,6 +8,7 @@ require get_template_directory().'/inc/custom-post-types.php';
 require get_template_directory().'/inc/custom-taxonomies.php';
 
 require get_template_directory().'/inc/acf.php';
+require get_template_directory().'/inc/acf/acf-layout-thumbnails.php';
 require get_template_directory().'/inc/blocks.php';
 require get_template_directory().'/inc/theme-functions.php';
 require get_template_directory().'/inc/theme-shortcodes.php';

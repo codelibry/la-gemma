@@ -38,9 +38,10 @@
         background: none !important
         font-size: 0 !important
         transition: $default-transition
-        .allure-page &
+        .allure-page &, .lucas-page &
             display: flex !important
             justify-content: flex-start
+
         &:after, &:before
             content: ''
             position: absolute
@@ -53,35 +54,35 @@
         &.slick-prev
             left: 0
             &:after, &:before
-                .allure-page &
+                .allure-page &, .lucas-page &
                     transform-origin: left
             &:after
                 transform: rotate(60deg) translateX(20px)
-                .allure-page &
+                .allure-page &, .lucas-page &
                     transform: rotate(45deg)
             &:before
                 transform: rotate(-60deg) translateX(19.5px)
-                .allure-page &
+                .allure-page &, .lucas-page &
                     transform: rotate(-45deg)
         &.slick-next
             right: 0
             .allure-page &
                 right: 20px
             &:after, &:before
-                .allure-page &
+                .allure-page &, .lucas-page &
                     transform-origin: right
             &:after
                 transform: rotate(60deg) translateX(-20px)
-                .allure-page &
+                .allure-page &, .lucas-page &
                     transform: rotate(45deg)
             &:before
                 transform: rotate(-60deg) translateX(-19.5px)
-                .allure-page &
+                .allure-page &, .lucas-page &
                     transform: rotate(-45deg)
 
         &.slick-disabled
             opacity: 0
 
-.js-post-slider
+.js-post-slider, .js-follow-slider
     .slick-slide
         padding: 0 30px

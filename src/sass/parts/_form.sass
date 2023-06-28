@@ -9,53 +9,205 @@
 	display: none !important
 
 
-.wpcf7-form
-	.form-email
-		.wpcf7-form-control-wrap
-			display: block
-			max-width: 463px
-			margin: 0 auto
-			.wpcf7-email
-				width: 100%
-				font-size: 27px
-				background: transparent
-				border: none
-				border-bottom: 2px solid $color-green
-				padding: 0 8px
-				.allure-page &
-					border-bottom: 2px solid #D9C499
-				&::placeholder
-					text-align: center
-					color: rgba(69, 109, 99, .5)
-					.allure-page &
-						color: rgba(217, 196, 153, .9)
+//.wpcf7-form
+//	.form-email
+//		.wpcf7-form-control-wrap
+//			display: block
+//			max-width: 463px
+//			margin: 0 auto
+//			.wpcf7-email
+//				width: 100%
+//				font-size: 27px
+//				background: transparent
+//				border: none
+//				border-bottom: 2px solid $color-green
+//				padding: 0 8px
+//				.allure-page &
+//					border-bottom: 2px solid #D9C499
+//				.lucas-page &
+//					border-bottom: 2px solid #F5F0DF
+//				&::placeholder
+//					text-align: center
+//					color: rgba(69, 109, 99, .5)
+//					.allure-page &
+//						color: rgba(217, 196, 153, .9)
+//					.lucas-page &
+//						color: rgba(245, 240, 223, .5)
+//
+//
+//	.form-term
+//		display: block
+//		font-size: 20px
+//		font-weight: 300
+//		text-align: center
+//		margin-top: 33px
+//		.allure-page &
+//			color: #D9C499
+//		.lucas-page &
+//			color: #F5F0DF
+//		a
+//			color: $color-green
+//			.allure-page &
+//				color: #D9C499
+//			.lucas-page &
+//				color: #F5F0DF
+//	.form-submit
+//		display: flex
+//		flex-direction: column
+//		align-items: center
+//		.wpcf7-submit
+//			display: flex
+//			align-items: center
+//			justify-content: center
+//			font-size: 13px
+//			font-weight: 300
+//			width: 111px
+//			margin-top: 38px
+//			padding: 7px 0
 
 
-	.form-term
-		display: block
-		font-size: 20px
-		font-weight: 300
+.reservation-form
+	.wpcf7-form-control
+		width: 380px
+		height: 80px
+		padding: 0 21px
+		display: flex
+		align-items: center
+		justify-content: center
+		.lucas-page &
+			font-size: 32px
+			line-height: 1
+			color: #F5F0DF
+			background: transparent
+			border: 1px solid #F5F0DF
+			&::placeholder
+				font-size: 32px
+				line-height: 1
+				color: #F5F0DF
+	.form-title, .form-text
+		color: #F5F0DF
 		text-align: center
-		margin-top: 33px
-		.allure-page &
-			color: #D9C499
-		a
-			color: $color-green
-			.allure-page &
-				color: #D9C499
-	.form-submit
+	.form-title
+		font-size: 50px
+	.form-text
+		margin-top: 15px
+		font-size: 29px
+	.form-fields
+		margin-top: 86px
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		gap: 0 55px
+	.form-date-field
+		.wpcf7-form-control
+	.form-time-field
+		.wpcf7-form-control
+			option
+	.form-text-field
+		.wpcf7-form-control
+	.form-submit-field
+		margin-top: 80px
+		width: 100%
 		display: flex
 		flex-direction: column
 		align-items: center
-		.wpcf7-submit
-			display: flex
-			align-items: center
-			justify-content: center
-			font-size: 13px
+		gap: 7px
+		.wpcf7-form-control
+			max-width: 305px
+			width: 100%
+			height: 47px
+			font-size: 32px
+			color: #E5E3DA
+			background: #2D4C42
+			border: 1px solid #2D4C42
+			.lucas-page &
+				color: #FFFFFF
+				background: #C0AD89
+				border: 1px solid #FFFFFF
+			&:hover
+				cursor: pointer
+
+.subscribe-form
+	.wpcf7-form-control
+		max-width: 463px
+		padding: 3px 0px
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 27px
+		line-height: 1
+		color: #456D63
+		background: transparent
+		border: none
+		border-bottom: 2px solid #456D63
+		.allure-page &
+			color: #D9C499
+			border-bottom: 2px solid #D9C499
+		.lucas-page &
+			color: #F5F0DF
+			border-bottom: 2px solid #F5F0DF
+		&::placeholder
+			font-size: 27px
 			font-weight: 300
-			width: 111px
-			margin-top: 38px
-			padding: 7px 0
-	.wpcf7-spinner
-		display: block
-		margin: 5px auto 0
+			line-height: 1
+			color: rgba(69, 109, 99, .5)
+			text-align: center
+			.allure-page &
+				color: rgba(217, 196, 153, .5)
+			.lucas-page &
+				color: rgba(245, 240, 223, .5)
+	.form-title
+		font-size: 34px
+		color: #456D63
+		text-align: center
+		.allure-page &
+			color: #C1AD8A
+		.lucas-page &
+			color: #F5F0DF
+	.form-fields
+		margin-top: 50px
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+	.form-term
+		width: 100%
+		margin-top: 33px
+		font-size: 20px
+		font-weight: 300
+		color: #456D63
+		text-align: center
+		.allure-page &
+			color: #D9C499
+		.lucas-page &
+			color: #F5F0DF
+		a
+			color: #456D63
+			.allure-page &
+				color: #D9C499
+			.lucas-page &
+				color: #F5F0DF
+	.form-submit-field
+		margin-top: 38px
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		gap: 7px
+		.wpcf7-form-control
+			max-width: 111px
+			width: 100%
+			height: 30px
+			font-size: 13px
+			color: #E5E3DA
+			background: #2D4C42
+			border: 1px solid #2D4C42
+			.allure-page &
+				color: #F5F3EF
+				background: #D9C499
+				border: 1px solid #D9C499
+			.lucas-page &
+				color: #F5F3EF
+				background: #A6AB9C
+				border: 1px solid #A6AB9C
+			&:hover
+				cursor: pointer

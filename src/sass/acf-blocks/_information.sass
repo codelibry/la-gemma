@@ -4,6 +4,8 @@ section.information
         padding: 80px 0
     +max-screen($breakpoint-lg)
         padding: 60px 0
+    .lucas-page &
+        padding: 106px 0 78px
     .information
         &__wrap
         &__title
@@ -20,6 +22,9 @@ section.information
                 padding: 0
                 +max-screen($breakpoint-md)
                     flex: 0 0 100%
+                //.lucas-page &
+                //    max-width: 581px
+                //    margin: 0 auto
                 &:not(:last-of-type)
                     margin-bottom: 25px
                 &__title
@@ -30,6 +35,10 @@ section.information
                     +max-screen($breakpoint-lg)
                         font-size: 24px
                     +max-screen($breakpoint-md)
+                        text-align: center
+                    .lucas-page &
+                        color: #F5F0DF
+                        font-size: 28px
                         text-align: center
                 &__text
                     font-size: 25px
@@ -46,6 +55,9 @@ section.information
                         justify-content: center
                         gap: 0 20px
                         min-height: unset
+                    .lucas-page &
+                        color: #F5F0DF
+                        text-align: center
                     span
                         display: block
                     br

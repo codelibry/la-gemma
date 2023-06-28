@@ -50,20 +50,20 @@
     
     add_action('init', 'cptui_register_my_cpt_rooms_and_suites');
     
-    function cptui_register_my_cpt_treatments()
+    function cptui_register_my_cpt_menu()
     {
         
         /**
-         * Post Type: Treatments
+         * Post Type: Menu
          */
         
         $labels = array(
-            'name' => __('Treatments', 'la_gemma'),
-            'singular_name' => __('Treatments', 'la_gemma'),
+            'name' => __('Menu', 'la_gemma'),
+            'singular_name' => __('Menu', 'la_gemma'),
         );
         
         $args = array(
-            'label' => __('Treatments', 'la_gemma'),
+            'label' => __('Menu', 'la_gemma'),
             'labels' => $labels,
             'description' => '',
             'public' => true,
@@ -81,18 +81,16 @@
             'map_meta_cap' => true,
             'hierarchical' => false,
             'rewrite' => array(
-                'slug' => 'treatments',
+                'slug' => 'menu',
                 'with_front' => true,
             ),
             'query_var' => true,
-            'menu_icon' => 'dashicons-text-page',
+            'menu_icon' => 'dashicons-list-view',
             'supports' => array('title', 'editor', 'thumbnail'),
             'show_in_graphql' => false,
         );
         
-        register_post_type('treatment', $args);
+        register_post_type('menu', $args);
     }
     
-    add_action('init', 'cptui_register_my_cpt_treatments');
-
-
+    add_action('init', 'cptui_register_my_cpt_menu');

@@ -10,14 +10,14 @@
 <?php if ($image && $title && $text) : ?>
     <section class="about">
         <div class="container">
-            <div class="about__wrap d-flex flex-wrap align-items-center justify-content-between">
-                <div class="about__img <?php echo $image_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
+            <div class="about__wrap row d-flex align-items-center justify-content-between">
+                <div class="col-12 col-lg-6 about__img <?php echo $image_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
                     <div class="about__img-wrap">
                         <img src="<?php echo $image['url']; ?>"
                              alt="<?php echo $image['alt'] ?: $image['title']; ?>">
                     </div>
                 </div>
-                <div class="about__content <?php echo $image_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
+                <div class="col-12 col-lg-6 about__content <?php echo $image_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
                     <div class="about__title">
                         <?php echo $title; ?>
                     </div>
@@ -32,7 +32,7 @@
                     <?php if ($button) : ?>
                         <div class="about__btn">
                             <a href="<?php echo $button['url']; ?>"
-                               class="button button-<?php echo is_page_template('template-pages/allure-page.php') ? 'brown' : 'green'; ?>">
+                               class="button">
                                 <?php echo $button['title']; ?>
                             </a>
                         </div>
@@ -40,6 +40,7 @@
                 </div>
             </div>
         </div>
+        <div class="horizontal-line"></div>
     </section>
 <?php endif; ?>
 

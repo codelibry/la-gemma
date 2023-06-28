@@ -4,7 +4,7 @@ header.header
     top: 0
     left: 0
     width: 100%
-    .allure-page &
+    .allure-page &, .lucas-page &
         background: rgba(0, 0, 0, .39)
 
     .header
@@ -15,7 +15,7 @@ header.header
             align-items: flex-start
             +max-screen($breakpoint-lg)
                 height: 100px
-            .allure-page &
+            .allure-page &, .lucas-page &
                 height: 162px
 
         &__toggle
@@ -27,6 +27,8 @@ header.header
             margin-top: 36px
             +max-screen($breakpoint-lg)
                 font-size: 18px
+            .allure-page &, .lucas-page &
+                color: #F5F3EF
             &:after
                 content: ''
                 position: absolute
@@ -38,6 +40,8 @@ header.header
                 background: $color-green
                 transition: $default-transition
                 transform-origin: left
+                .allure-page &, .lucas-page &
+                    background: #F5F3EF
             &:hover
                 cursor: pointer
                 &:after
@@ -84,7 +88,18 @@ header.header
             +max-screen($breakpoint-lg)
                 width: auto
                 height: 90px
-
+            .allure-page &
+                top: 35px
+                width: 146px
+                height: 105px
+                +max-screen($breakpoint-lg)
+                    height: 75px
+            .lucas-page &
+                top: 27px
+                width: 197px
+                height: 93px
+                +max-screen($breakpoint-lg)
+                    height: 75px
             img
                 width: 100%
                 height: 100%
@@ -109,16 +124,6 @@ header.header
                 +max-screen($breakpoint-md)
                     font-size: 12px
                     line-height: 12px
-                &-white, &-green
-                    -webkit-background-clip: text
-                    color: transparent
-                    position: relative
-                    &:after
-                        content: ''
-                        position: absolute
-                        width: 100%
-                        height: 100%
-
 
 // if you are logged in
 .logged-in
@@ -140,16 +145,6 @@ header.header
         .header
             &__wrap
                 border-bottom: 1px solid #1A352E
-
-.allure-page
-    header.header
-        .header
-            &__logo
-                top: 35px
-                width: 146px
-                height: 105px
-                +max-screen($breakpoint-lg)
-                    height: 75px
 
 .page-id-646
     header.header

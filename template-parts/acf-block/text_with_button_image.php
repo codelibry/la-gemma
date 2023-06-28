@@ -31,7 +31,7 @@
                         <?php if ($button) : ?>
                             <div class="text-with-btn-image__btn">
                                 <a href="<?php echo $button['url']; ?>"
-                                   class="button button-<?php echo is_page_template('template-pages/allure-page.php') ? 'brown' : 'green'; ?>">
+                                   class="button">
                                     <?php echo $button['title']; ?>
                                 </a>
                             </div>
@@ -40,6 +40,7 @@
                 <?php endif; ?>
             </div>
         </div>
+        <div class="horizontal-line"></div>
     </section>
 <?php endif; ?>
 

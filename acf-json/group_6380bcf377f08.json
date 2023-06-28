@@ -91,6 +91,30 @@
             "mime_types": ""
         },
         {
+            "key": "field_649a978d4d0c0",
+            "label": "Logo lucas",
+            "name": "logo_lucas",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_648c7dfc20dd4",
             "label": "Footer",
             "name": "",
@@ -393,5 +417,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687534137
+    "modified": 1687852962
 }

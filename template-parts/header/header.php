@@ -2,6 +2,7 @@
     $logo_white = get_field('logo_white', 'option');
     $logo_green = get_field('logo_green', 'option');
     $logo_allure = get_field('logo_allure', 'option');
+    $logo_lucas = get_field('logo_lucas', 'option');
     
     $logo_icon = '';
     
@@ -9,6 +10,8 @@
         $logo_icon = $logo_white;
     } elseif (is_page_template('template-pages/allure-page.php')) {
         $logo_icon = $logo_allure;
+    } elseif (is_page_template('template-pages/lucas-page.php')) {
+        $logo_icon = $logo_lucas;
     } elseif (!is_front_page() && $logo_green) {
         $logo_icon = $logo_green;
     }
@@ -42,11 +45,11 @@
 
             <div class="header__btn">
                 <a href="#"
-                   class="button button-<?php echo is_front_page() || is_page_template('template-pages/allure-page.php') ? 'white-transparent' : 'green-transparent'; ?>">
+                   class="button button-<?php echo is_front_page() || is_page_template('template-pages/allure-page.php') || is_page_template('template-pages/lucas-page.php') ? 'white-transparent' : 'green-transparent'; ?>">
                     <span>Language</span>
                 </a>
                 <a href="#"
-                   class="button button-<?php echo is_front_page() || is_page_template('template-pages/allure-page.php') ? 'white' : 'green'; ?>">
+                   class="button button-<?php echo is_front_page() || is_page_template('template-pages/allure-page.php') || is_page_template('template-pages/lucas-page.php') ? 'white' : 'green'; ?>">
                     Book now
                 </a>
             </div>

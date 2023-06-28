@@ -7,7 +7,7 @@
 
 <?php if ($slides) : ?>
     <section class="products">
-        <div class="horizontal-line"></div>
+<!--        <div class="horizontal-line"></div>-->
         <div class="container">
             <div class="products__wrap d-flex flex-wrap align-items-center justify-content-between">
                 <div class="products__slider js-slider <?php echo $slider_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
