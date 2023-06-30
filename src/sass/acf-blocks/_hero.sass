@@ -4,6 +4,8 @@ section.hero
     max-height: 1464px
     overflow: hidden
     padding-bottom: 76.25%
+    +max-screen($breakpoint-md)
+        min-height: 600px
     .hero
         &__bg
             position: absolute
@@ -17,21 +19,56 @@ section.hero
                 height: 100%
                 object-fit: cover
         &__wrap
-            padding-top: calc(82px + 162px)
+            padding-top: 244px
             position: relative
             z-index: 5
+            .logged-in &
+                padding-top: calc(244px + 32px)
+                +max-screen($breakpoint-xl)
+                    padding-top: calc(244px + 32px)
+                +max-screen($breakpoint-lg)
+                    padding-top: calc(182px + 32px)
+                @media (max-width: 782px)
+                    padding-top: calc(162px + 46px)
         &__title
             font-size: 35px
             color: #0F1758
+            +max-screen($breakpoint-xxl)
+                font-size: calc((35px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((35px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 35px
+            +max-screen($breakpoint-md)
+                font-size: calc((35px / 100) * 70)
+            +max-screen($breakpoint-sm)
             span
                 font-size: 25px
                 display: block
-            h1
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((25px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((25px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: 25px
+                +max-screen($breakpoint-md)
+                    font-size: calc((25px / 100) * 70)
+                +max-screen($breakpoint-sm)
 
         &__text
-            max-width: 1330px
             margin: 35px auto 0
-            color: #101756
+            max-width: 1330px
             font-size: 45px
+            color: #101756
+            +max-screen($breakpoint-xxl)
+                font-size: calc((45px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((45px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 45px
+            +max-screen($breakpoint-md)
+                font-size: calc((45px / 100) * 70)
+            +max-screen($breakpoint-sm)
+                font-size: calc((45px / 100) * 60)
 
              

@@ -3,46 +3,104 @@ section.products
     .products
         &__wrap
             position: relative
+            +max-screen($breakpoint-lg)
+                flex-wrap: wrap
+            &.row
+                margin: 0
         &__slider
-            width: calc(43.05% + 20px)
-            padding-right: 20px
-        &__slider-item
-            position: relative
-            width: 100%
-            height: 0
-            overflow: hidden
-            padding-bottom: 81.16%
-            img
-                position: absolute
-                left: 0
-                top: 0
+            max-width: calc(776px + 20px)
+            width: calc(43.11% + 20px)
+            +max-screen($breakpoint-lg)
+                max-width: 776px
                 width: 100%
-                height: 100%
-                object-fit: cover
+            &-item
+                position: relative
+                width: 100%
+                height: 0
+                overflow: hidden
+                padding-bottom: 81.16%
+                img
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            &.slider-left
+                padding-left: 20px
+                +max-screen($breakpoint-xl)
+                    padding-left: 10px
+                +max-screen($breakpoint-lg)
+                    padding: 0
+            &.slider-right
+                padding-right: 20px
+                +max-screen($breakpoint-xl)
+                    padding-right: 10px
+                +max-screen($breakpoint-lg)
+                    padding: 0
         &__content
             text-align: center
             max-width: calc(663px + 135px + 20px)
-            width: 50%
-            //.allure-page &
-                
+            +max-screen($breakpoint-xxl)
+                max-width: calc(663px + ((135px / 100) * 50) + 40px)
+            +max-screen($breakpoint-xl)
+                max-width: calc(663px + 40px + 10px)
+            +max-screen($breakpoint-lg)
+                max-width: unset
+                margin-bottom: 30px
             &.content-left
-                padding: 0 20px 0 135px
+                padding-right: 40px
+                padding-left: 135px
+                +max-screen($breakpoint-xxl)
+                    padding-left: calc((135px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-left: 10px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
             &.content-right
-                padding: 0 135px 0 20px
+                padding-left: 40px
+                padding-right: 135px
+                +max-screen($breakpoint-xxl)
+                    padding-right: calc((135px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-right: 10px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
         &__title
             color: #0F1758
             font-size: 55px
+            +max-screen($breakpoint-xxl)
+                font-size: calc((55px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((55px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 55px
+            +max-screen($breakpoint-md)
+                font-size: calc((55px / 100) * 70)
             span
                 display: block
                 font-size: 30px
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((30px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((30px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: 30px
+                +max-screen($breakpoint-md)
+                    font-size: calc((30px / 100) * 70)
         &__text
             font-size: 27px
             color: #20201E
             margin-top: 45px
+            +max-screen($breakpoint-xxl)
+                font-size: calc((27px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((27px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 27px
     .horizontal-line
         display: block
         bottom: unset
         top: 0
-            //.allure-page &
-                
-                

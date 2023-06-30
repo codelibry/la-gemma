@@ -7,17 +7,27 @@ section.text-gallery
             position: relative
             +max-screen($breakpoint-lg)
                 flex-wrap: wrap
+            &.row
+                margin: 0
         &__slider
-            width: 52.38%
             max-width: 943px
+            width: 52.38%
             +max-screen($breakpoint-lg)
                 width: 100%
+            .allure-page &
+                max-width: 894px
+                width: 50%
+                +max-screen($breakpoint-lg)
+                    width: 100%
+
             &-item
                 position: relative
                 width: 100%
                 height: 0
                 overflow: hidden
                 padding-bottom: 72.74%
+                .allure-page &
+                    padding-bottom: 84.56%
                 img
                     position: absolute
                     left: 0
@@ -35,11 +45,15 @@ section.text-gallery
             +max-screen($breakpoint-lg)
                 max-width: unset
                 margin-top: 60px
-
             .allure-page &
-                max-width: calc(695px)
-                width: 50%
-                margin: 0 auto
+                max-width: calc(695px + 90px + 40px)
+                +max-screen($breakpoint-xxl)
+                    max-width: calc(695px + ((90px / 100) * 50) + 40px)
+                +max-screen($breakpoint-xl)
+                    max-width: calc(695px + 40px + 10px)
+                +max-screen($breakpoint-lg)
+                    max-width: unset
+                    margin-top: 30px
             &.content-left
                 padding-right: 40px
                 padding-left: 103px
@@ -50,6 +64,15 @@ section.text-gallery
                 +max-screen($breakpoint-lg)
                     padding-right: 0
                     padding-left: 0
+                .allure-page &
+                    padding-left: 90px
+                    +max-screen($breakpoint-xxl)
+                        padding-left: calc((90px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-left: 10px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
             &.content-right
                 padding-left: 40px
                 padding-right: 103px
@@ -60,6 +83,15 @@ section.text-gallery
                 +max-screen($breakpoint-lg)
                     padding-right: 0
                     padding-left: 0
+                .allure-page &
+                    padding-right: 90px
+                    +max-screen($breakpoint-xxl)
+                        padding-right: calc((90px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-right: 10px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
         &__title
             font-size: 120px
             line-height: 0.66
@@ -73,6 +105,14 @@ section.text-gallery
                 font-size: calc((120px / 100) * 70)
             +max-screen($breakpoint-sm)
                 font-size: calc((120px / 100) * 60)
+            .allure-page &
+                font-size: 35px
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((35px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((35px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: 35px
             span
                 display: block
                 font-size: 95px
@@ -87,11 +127,11 @@ section.text-gallery
                     font-size: calc((95px / 100) * 70)
                 +max-screen($breakpoint-sm)
                     font-size: calc((95px / 100) * 60)
-
-
         &__text
-            font-size: 25px
             margin-top: 32px
+            font-size: 25px
+            line-height: 1.28
+            font-weight: 300
             +max-screen($breakpoint-xxl)
                 font-size: calc((25px / 100) * 90)
             +max-screen($breakpoint-xl)
@@ -99,11 +139,22 @@ section.text-gallery
             +max-screen($breakpoint-lg)
                 font-size: 25px
             .allure-page &
+                margin-top: 25px
                 font-size: 27px
+                line-height: 1.33
                 color: #20201E
-                margin-top: 45px
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((27px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((27px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: 27px
         &__btn
             margin-top: 55px
+            .allure-page &
+                margin-top: 100px
+                +max-screen($breakpoint-lg)
+                    margin-top: 55px
             .button
                 font-size: 22px
                 min-width: 254px
@@ -112,6 +163,9 @@ section.text-gallery
                 background: $color-green
                 color: #fff
                 .allure-page &
+                    font-size: 25px
+                    min-width: 305px
+                    height: 47px
                     border: 1px solid $color-brown
                     background: $color-brown
                     color: #fff

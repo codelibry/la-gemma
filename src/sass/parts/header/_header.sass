@@ -15,10 +15,15 @@ header.header
             align-items: flex-start
             +max-screen($breakpoint-xl)
                 height: 162px
+                align-items: center
             +max-screen($breakpoint-lg)
                 height: 100px
             .allure-page &, .lucas-page &
                 height: 162px
+                +max-screen($breakpoint-lg)
+                    height: 100px
+            .archive &, .single &
+                border-bottom: 1px solid #1A352E
 
         &__toggle
             position: relative
@@ -27,9 +32,11 @@ header.header
             padding: 0 5px
             text-transform: uppercase
             margin-top: 36px
+            +max-screen($breakpoint-xl)
+                margin-top: 0
             +max-screen($breakpoint-lg)
                 font-size: 18px
-            .allure-page &, .lucas-page &
+            .home &, .allure-page &, .lucas-page &
                 color: #F5F3EF
             &:after
                 content: ''
@@ -42,7 +49,7 @@ header.header
                 background: $color-green
                 transition: $default-transition
                 transform-origin: left
-                .allure-page &, .lucas-page &
+                .home &, .allure-page &, .lucas-page &
                     background: #F5F3EF
             &:hover
                 cursor: pointer
@@ -98,14 +105,25 @@ header.header
                 top: 35px
                 width: 146px
                 height: 105px
-                +max-screen($breakpoint-lg)
+                +max-screen($breakpoint-xl)
+                    width: auto
                     height: 75px
+                +max-screen($breakpoint-lg)
+                    height: 55px
+                    top: 50%
+                    transform: translate(-50%, -50%)
             .lucas-page &
                 top: 27px
                 width: 197px
                 height: 93px
-                +max-screen($breakpoint-lg)
+                +max-screen($breakpoint-xl)
+                    width: auto
                     height: 75px
+                +max-screen($breakpoint-lg)
+                    height: 55px
+                    top: 50%
+                    transform: translate(-50%, -50%)
+
             img
                 width: 100%
                 height: 100%
@@ -136,11 +154,19 @@ header.header
                     font-size: calc((18px / 100) * 80)
                 +max-screen($breakpoint-md)
                     font-size: calc((18px / 100) * 70)
+                .home &, .allure-page &
+                    border: 1px solid #F5F3EF
+                    background: #F5F3EF
+                    color: #000
                 &.button-transparent
                     min-width: 121px
                     border: 1px solid $color-green
                     background: transparent
                     color: $color-green
+                    .home &, .allure-page &
+                        border: 1px solid #F5F3EF
+                        background: transparent
+                        color: #F5F3EF
 
 // if you are logged in
 .logged-in
@@ -148,21 +174,6 @@ header.header
         top: 32px
         @media (max-width: 782px)
             top: 46px
-
-// page styles
-.home, .allure-page
-    header.header
-        .header
-            &__toggle
-                color: #E5E2D9
-                &:after
-                    background: #E5E2D9
-
-.archive, .single
-    header.header
-        .header
-            &__wrap
-                border-bottom: 1px solid #1A352E
 
 .page-id-646
     header.header

@@ -1,5 +1,12 @@
 section.blockquote
     padding: 250px 0
+    overflow: hidden
+    +max-screen($breakpoint-xxl)
+        padding: 180px 0
+    +max-screen($breakpoint-xl)
+        padding: 120px 0
+    +max-screen($breakpoint-lg)
+        padding: 60px 0
     .blockquote
         &__wrap
         &__img
@@ -21,8 +28,28 @@ section.blockquote
                 margin-top: 47px
                 max-width: 1460px
                 margin: 47px auto 0
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((40px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((40px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: calc((40px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((40px / 100) * 60)
+                +max-screen($breakpoint-sm)
+                    font-size: calc((40px / 100) * 50)
             blockquote
                 p
                     font-size: 55px
                     margin: 0 auto
+                    +max-screen($breakpoint-xxl)
+                        font-size: calc((55px / 100) * 90)
+                    +max-screen($breakpoint-xl)
+                        font-size: calc((55px / 100) * 80)
+                    +max-screen($breakpoint-lg)
+                        font-size: calc((55px / 100) * 70)
+                    +max-screen($breakpoint-md)
+                        font-size: calc((55px / 100) * 60)
+                    +max-screen($breakpoint-sm)
+                        font-size: calc((55px / 100) * 50)
 

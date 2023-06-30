@@ -1,17 +1,28 @@
 section.information
+    position: relative
     padding: 150px 0
     +max-screen($breakpoint-xl)
         padding: 80px 0
     +max-screen($breakpoint-lg)
         padding: 60px 0
+    .allure-page &
+        padding: 73px 0
+        +max-screen($breakpoint-lg)
+            padding: 60px 0
     .lucas-page &
         padding: 106px 0 78px
+        +max-screen($breakpoint-lg)
+            padding: 60px 0
     .information
         &__wrap
         &__title
             margin-bottom: 37px
+            +max-screen($breakpoint-lg)
+                text-align: center
         &__list
             gap: 25px 0
+            .allure-page &
+                gap: 57px 0
             .list-item
                 &__title
                     font-size: 40px
@@ -39,6 +50,12 @@ section.information
                     +max-screen($breakpoint-lg)
                         font-size: 25px
                         margin-top: 5px
+                    .allure-page &
+                        font-size: 16px
+                        color: #000
+                        max-width: 416px
+                        +max-screen($breakpoint-lg)
+                            max-width: unset
                     .lucas-page &
                         color: #F5F0DF
                         text-align: center
@@ -51,18 +68,3 @@ section.information
         display: block
         bottom: unset
         top: 0
-
-.allure-page
-    section.information
-        position: relative
-        padding: 73px 0
-        +max-screen($breakpoint-lg)
-            padding: 60px 0
-        .information
-            &__list
-                gap: 57px 0
-                .list-item
-                    &__text
-                        font-size: 16px
-                        color: #000
-                        max-width: 416px

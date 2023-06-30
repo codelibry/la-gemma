@@ -9,8 +9,8 @@
     <section class="products">
 <!--        <div class="horizontal-line"></div>-->
         <div class="container">
-            <div class="products__wrap d-flex flex-wrap align-items-center justify-content-between">
-                <div class="products__slider js-slider <?php echo $slider_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
+            <div class="products__wrap d-flex align-items-center justify-content-center justify-content-lg-between">
+                <div class="products__slider js-slider <?php echo $slider_position === 'left' ? 'order-1 order-lg-2 slider-left' : 'order-2 order-lg-2 slider-right'; ?>">
                     <?php foreach ($slides as $image) : ?>
                         <div class="products__slider-item">
                             <img src="<?php echo $image['url']; ?>"
@@ -19,7 +19,7 @@
                     <?php endforeach; ?>
                 </div>
                 <?php if ($title && $text) : ?>
-                    <div class="products__content <?php echo $slider_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
+                    <div class="products__content <?php echo $slider_position === 'left' ? 'order-2 order-lg-1 content-right' : 'order-1 order-lg-1 content-left'; ?>">
                         <div class="products__title">
                             <?php echo $title; ?>
                         </div>

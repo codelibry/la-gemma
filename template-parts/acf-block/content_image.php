@@ -10,7 +10,7 @@
 <?php if ($image) : ?>
     <section class="content-image">
         <div class="container">
-            <div class="d-flex content-image__wrap">
+            <div class="content-image__wrap d-flex justify-content-center justify-content-lg-between">
                 <div class="content-image__img <?php echo $image_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
                     <div class="content-image__img-wrap">
                         <img src="<?php echo $image['url']; ?>"

@@ -10,12 +10,16 @@ section.about
             &.row
                 margin: 0
         &__img
-            padding-left: 105px
-            width: calc(35.64% + 105px)
+            display: flex
+            align-items: center
+            max-width: calc(663px + 68px + 40px)
+            width: 100%
+            +max-screen($breakpoint-xxl)
+                max-width: calc(663px + ((68px / 100) * 50) + 40px)
             +max-screen($breakpoint-xl)
-                width: 50%
+                max-width: calc(663px + 40px + 40px)
             +max-screen($breakpoint-lg)
-                width: 100%
+                max-width: 663px
             &-wrap
                 position: relative
                 width: 100%
@@ -34,25 +38,64 @@ section.about
             .lucas-page &
                 max-width: calc(35.77% + 83px + 20px)
             &.image-left
-                padding-right: 20px
+                padding-left: 68px
+                padding-right: 40px
+                +max-screen($breakpoint-xxl)
+                    padding-left: calc((68px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-left: 40px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
                 .lucas-page &
                     padding-left: 83px
             &.image-right
-                padding-left: 20px
+                padding-right: 68px
+                padding-left: 40px
+                +max-screen($breakpoint-xxl)
+                    padding-right: calc((68px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-right: 40px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
                 .lucas-page &
                     padding-right: 83px
         &__content
-            max-width: calc(695px + 40px + 125px)
-            padding: 0
             text-align: center
+            max-width: calc(695px + 102px + 40px)
+            width: 100%
+            +max-screen($breakpoint-xxl)
+                max-width: calc(695px + ((102px / 100) * 50) + 40px)
+            +max-screen($breakpoint-xl)
+                max-width: calc(695px + 40px + 40px)
+            +max-screen($breakpoint-lg)
+                max-width: unset
+                margin-top: 30px
             .lucas-page &
                 max-width: calc(740px + 20px + 94px)
             &.content-left
-                padding: 0 40px 0 125px
+                padding-right: 40px
+                padding-left: 102px
+                +max-screen($breakpoint-xxl)
+                    padding-left: calc((102px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-left: 40px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
                 .lucas-page &
                     padding: 0 20px 0 94px
             &.content-right
-                padding: 0 125px 0 40px
+                padding-left: 40px
+                padding-right: 102px
+                +max-screen($breakpoint-xxl)
+                    padding-right: calc((102px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-right: 40px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
                 .lucas-page &
                     padding: 0 94px 0 20px
         &__title
@@ -83,9 +126,9 @@ section.about
                 margin-top: 38px
             .button
                 font-size: 25px
-                padding: 7px 0
                 max-width: 305px
                 width: 100%
+                height: 47px
                 border: 1px solid $color-green
                 background: $color-green
                 color: #fff
