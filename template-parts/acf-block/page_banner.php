@@ -17,9 +17,12 @@
             <div class="page-banner__banner js-slider">
                 <?php foreach ($page_banner_list as $slide) : ?>
                     <?php $slide_img = $slide['image']; ?>
-
-                    <img src="<?php echo $slide_img['url']; ?>"
-                         alt="<?php echo $slide_img['alt'] ?: $slide_img['title']; ?>">
+                    <div class="slider-item">
+                        <div class="slider-item__bg">
+                            <img src="<?php echo $slide_img['url']; ?>"
+                                 alt="<?php echo $slide_img['alt'] ?: $slide_img['title']; ?>">
+                        </div>
+                    </div>
                 <?php endforeach; ?>
             </div>
         </div>

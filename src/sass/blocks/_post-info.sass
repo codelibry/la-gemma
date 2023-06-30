@@ -5,13 +5,28 @@ div.post-info
     .rooms-card
         &__wrap
             display: flex
+            +max-screen($breakpoint-lg)
+                flex-wrap: wrap
         &__img
             width: 52.58%
+            +max-screen($breakpoint-lg)
+                width: 100%
         &__content
             width: calc(100% - 52.58%)
             padding-left: 68px
+            +max-screen($breakpoint-xxl)
+                padding-left: calc((68px / 100) * 70)
+            +max-screen($breakpoint-xl)
+                padding-left: calc((68px / 100) * 60)
+            +max-screen($breakpoint-lg)
+                padding-left: 0
+                width: 100%
+                margin-top: 30px
         &__title
             margin-top: 0
+        &__text
+            +max-screen($breakpoint-lg)
+                max-width: unset
         &__btn
-            .button-green-transparent
+            .button-transparent
                 display: none !important

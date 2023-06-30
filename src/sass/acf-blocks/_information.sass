@@ -11,31 +11,18 @@ section.information
         &__title
             margin-bottom: 37px
         &__list
-            +max-screen($breakpoint-md)
-                display: flex
-                flex-wrap: wrap
-                justify-content: space-between
-            &:not(:last-of-type)
-                +max-screen($breakpoint-md)
-                    margin-bottom: 25px
+            gap: 25px 0
             .list-item
-                padding: 0
-                +max-screen($breakpoint-md)
-                    flex: 0 0 100%
-                //.lucas-page &
-                //    max-width: 581px
-                //    margin: 0 auto
-                &:not(:last-of-type)
-                    margin-bottom: 25px
                 &__title
                     font-size: 40px
                     text-transform: uppercase
+                    +max-screen($breakpoint-xxl)
+                        font-size: calc((40px / 100) * 80)
                     +max-screen($breakpoint-xl)
-                        font-size: 32px
+                        font-size: calc((40px / 100) * 60)
                     +max-screen($breakpoint-lg)
-                        font-size: 24px
-                    +max-screen($breakpoint-md)
-                        text-align: center
+                        font-size: 40px
+
                     .lucas-page &
                         color: #F5F0DF
                         font-size: 28px
@@ -44,24 +31,21 @@ section.information
                     font-size: 25px
                     margin-top: 20px
                     line-height: 1.8
+                    +max-screen($breakpoint-xxl)
+                        font-size: calc((25px / 100) * 90)
                     +max-screen($breakpoint-xl)
-                        font-size: 22px
+                        font-size: calc((25px / 100) * 80)
+                        margin-top: 12px
                     +max-screen($breakpoint-lg)
-                        font-size: 16px
-                        margin-top: 10px
-                    +max-screen($breakpoint-md)
-                        display: flex
-                        flex-wrap: wrap
-                        justify-content: center
-                        gap: 0 20px
-                        min-height: unset
+                        font-size: 25px
+                        margin-top: 5px
                     .lucas-page &
                         color: #F5F0DF
                         text-align: center
                     span
                         display: block
                     br
-                        +max-screen($breakpoint-md)
+                        +max-screen($breakpoint-lg)
                             display: none
     .horizontal-line
         display: block

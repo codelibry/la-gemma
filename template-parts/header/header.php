@@ -45,11 +45,11 @@
 
             <div class="header__btn">
                 <a href="#"
-                   class="button button-<?php echo is_front_page() || is_page_template('template-pages/allure-page.php') || is_page_template('template-pages/lucas-page.php') ? 'white-transparent' : 'green-transparent'; ?>">
+                   class="button button-transparent">
                     <span>Language</span>
                 </a>
                 <a href="#"
-                   class="button button-<?php echo is_front_page() || is_page_template('template-pages/allure-page.php') || is_page_template('template-pages/lucas-page.php') ? 'white' : 'green'; ?>">
+                   class="button">
                     Book now
                 </a>
             </div>

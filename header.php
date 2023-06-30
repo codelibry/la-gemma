@@ -6,6 +6,17 @@
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>"/>
     <?php wp_head(); ?>
     <meta name="google-site-verification" content="C52pH6EMLF5FjnGqlOst8sAvUjN3MHyMYjmB4K-oZFs"/>
+    <style>
+        html {
+            margin-top: 0 !important;
+        }
+
+        @media screen and ( max-width: 782px ) {
+            html {
+                margin-top: 0 !important;
+            }
+        }
+    </style>
 </head>
 
 <?php
@@ -34,6 +45,10 @@
         $body_classes = 'allure-page';
     } else if (is_page_template('template-pages/lucas-page.php')) {
         $body_classes = 'lucas-page';
+    } else if (is_page_template('template-pages/about-page.php')) {
+        $body_classes = 'about-page';
+    } else {
+        $body_classes = 'default-page';
     }
 ?>
 

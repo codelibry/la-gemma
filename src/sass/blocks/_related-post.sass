@@ -6,8 +6,13 @@ div.related-post
         &__wrap
         &__title
             margin-bottom: 74px
+            +max-screen($breakpoint-lg)
+                margin-bottom: 30px
         &__list
     .rooms-card
         .rooms-card
             &__dropdown
                 display: none !important
+            &__btn
+                .single-rooms-and-suites &
+                    margin-top: 57px

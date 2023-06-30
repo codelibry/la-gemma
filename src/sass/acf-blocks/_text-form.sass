@@ -1,0 +1,55 @@
+section.text-form
+    padding: 58px 0 55px
+    +max-screen($breakpoint-lg)
+        padding: 60px 0
+    .text-form
+        &__wrap
+            gap: 0 60px
+        &__content
+            flex: 1
+            &.row
+                padding: 0
+        &__title
+            font-size: 50px
+            text-transform: uppercase
+            +max-screen($breakpoint-xxl)
+                font-size: calc((50px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((50px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 50px
+            span
+                display: block
+                font-size: 30px
+                font-weight: 300
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((30px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((30px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: 30px
+        &__text
+            font-size: 25px
+            font-weight: 300
+            line-height: 1.28
+            margin-top: 58px
+            +max-screen($breakpoint-xxl)
+                font-size: calc((25px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((25px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 25px
+            &.col-left
+            &.col-right
+                +max-screen($breakpoint-xl)
+                    margin-top: 40px
+            p:not(:last-of-type)
+                margin-bottom: 20px
+        &__form
+            max-width: 572px
+            +max-screen($breakpoint-xl)
+                max-width: 470px
+            +max-screen($breakpoint-lg)
+                max-width: unset
+                margin: 30px auto 0
+                width: 100%

@@ -156,13 +156,14 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "30",
+                                        "width": "70",
                                         "class": "",
                                         "id": ""
                                     },
+                                    "acfe_save_meta": 0,
+                                    "uploader": "",
                                     "return_format": "array",
-                                    "preview_size": "medium",
-                                    "library": "all",
+                                    "preview_size": "large",
                                     "min_width": "",
                                     "min_height": "",
                                     "min_size": "",
@@ -170,8 +171,8 @@
                                     "max_height": "",
                                     "max_size": "",
                                     "mime_types": "",
-                                    "uploader": "",
-                                    "acfe_thumbnail": 0
+                                    "acfe_thumbnail": 0,
+                                    "library": "all"
                                 },
                                 {
                                     "key": "field_6489b6881349e",
@@ -200,6 +201,27 @@
                                     "acfe_thumbnail": 0
                                 },
                                 {
+                                    "key": "field_649c54e69388c",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_save_meta": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 5,
+                                    "new_lines": "",
+                                    "acfe_textarea_code": 0
+                                },
+                                {
                                     "key": "field_6380d0512392a",
                                     "label": "Text",
                                     "name": "text",
@@ -208,14 +230,15 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "40",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
+                                    "acfe_save_meta": 0,
                                     "default_value": "",
                                     "placeholder": "",
                                     "maxlength": "",
-                                    "rows": 6,
+                                    "rows": 5,
                                     "new_lines": "",
                                     "acfe_textarea_code": 0
                                 }
@@ -1400,8 +1423,8 @@
                 },
                 "layout_649181f91ffac": {
                     "key": "layout_649181f91ffac",
-                    "name": "subscribe_form",
-                    "label": "Subscribe form",
+                    "name": "text_form",
+                    "label": "Text | Form",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1413,30 +1436,17 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_save_meta": 0,
                             "default_value": "",
                             "placeholder": "",
                             "maxlength": "",
-                            "rows": 2,
+                            "rows": 4,
                             "new_lines": "",
                             "acfe_textarea_code": 0
-                        },
-                        {
-                            "key": "field_649183891ffb1",
-                            "label": "Form",
-                            "name": "form",
-                            "type": "acf_cf7",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            }
                         },
                         {
                             "key": "field_6491836f1ffaf",
@@ -1451,6 +1461,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_save_meta": 0,
                             "default_value": "",
                             "tabs": "all",
                             "media_upload": 1,
@@ -1470,11 +1481,27 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_save_meta": 0,
                             "default_value": "",
                             "tabs": "all",
                             "media_upload": 1,
                             "delay": 0,
                             "toolbar": "full"
+                        },
+                        {
+                            "key": "field_649183891ffb1",
+                            "label": "Form",
+                            "name": "form",
+                            "type": "acf_cf7",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_save_meta": 0
                         }
                     ],
                     "min": "",
@@ -1689,8 +1716,8 @@
                 },
                 "layout_649c2f494b3cb": {
                     "key": "layout_649c2f494b3cb",
-                    "name": "form",
-                    "label": "Form",
+                    "name": "form_section",
+                    "label": "Form section",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1767,5 +1794,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1687957352
+    "modified": 1688045508
 }

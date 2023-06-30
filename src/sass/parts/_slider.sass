@@ -38,7 +38,14 @@
         background: none !important
         font-size: 0 !important
         transition: $default-transition
-        .allure-page &, .lucas-page &
+        .default-page .loop-posts &
+            width: 62px
+            height: 124px
+            +max-screen($breakpoint-lg)
+                transform: translateY(-50%) scale(.7)
+            +max-screen($breakpoint-md)
+                transform: translateY(-50%) scale(.4)
+        .allure-page &, .lucas-page &, .default-page .loop-posts &
             display: flex !important
             justify-content: flex-start
 
@@ -49,34 +56,44 @@
             width: 40px
             height: 2px
             background: #fff
+            .default-page .loop-posts &
+                width: 62px
             .allure-page &
                 background: #D9C499
         &.slick-prev
             left: 0
+            .default-page .loop-posts &
+                left: 40px
+                +max-screen($breakpoint-lg)
+                    left: 30px
+            .allure-page &
+                left: 20px
             &:after, &:before
-                .allure-page &, .lucas-page &
-                    transform-origin: left
+                transform-origin: left
             &:after
-                transform: rotate(60deg) translateX(20px)
+                transform: rotate(60deg)
                 .allure-page &, .lucas-page &
                     transform: rotate(45deg)
             &:before
-                transform: rotate(-60deg) translateX(19.5px)
+                transform: rotate(-60deg)
                 .allure-page &, .lucas-page &
                     transform: rotate(-45deg)
         &.slick-next
             right: 0
+            .default-page .loop-posts &
+                right: 40px
+                +max-screen($breakpoint-lg)
+                    right: 30px
             .allure-page &
                 right: 20px
             &:after, &:before
-                .allure-page &, .lucas-page &
-                    transform-origin: right
+                transform-origin: right
             &:after
-                transform: rotate(60deg) translateX(-20px)
+                transform: rotate(60deg)
                 .allure-page &, .lucas-page &
                     transform: rotate(45deg)
             &:before
-                transform: rotate(-60deg) translateX(-19.5px)
+                transform: rotate(-60deg)
                 .allure-page &, .lucas-page &
                     transform: rotate(-45deg)
 
@@ -86,3 +103,5 @@
 .js-post-slider, .js-follow-slider
     .slick-slide
         padding: 0 30px
+        +max-screen($breakpoint-md)
+            padding: 0 15px

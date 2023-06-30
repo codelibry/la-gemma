@@ -38,16 +38,68 @@ function postFilter() {
                     dots: false,
                     speed: 1000,
                     slidesToShow: 1.823,
+                    responsive: [
+                        {
+                            breakpoint: 1735,
+                            settings: {
+                                slidesToShow: 1.823,
+                            }
+
+                        },
+                        {
+                            breakpoint: 1440,
+                            settings: {
+                                slidesToShow: 1.5,
+                            }
+
+                        },
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 1.25,
+                            }
+
+                        },
+                        {
+                            breakpoint: 769,
+                            settings: {
+                                slidesToShow: 1,
+                            }
+
+                        },
+                    ]
                 });
 
-                const postSlider = $('.js-post-slider');
-                const postSliderImg = postSlider.find('img');
-                const postSliderImgHeight = postSliderImg.height();
-                const postSliderArrows = postSlider.find('.slick-arrow');
-
-                postSliderArrows.css('top', (postSliderImgHeight / 2) + 'px');
+                setSliderArrowPosition();
+                toggleDropdown();
             }
         })
+    })
+}
+
+function setSliderArrowPosition() {
+    const postSlider = $('.js-post-slider, .js-follow-slider');
+    const postSliderImg = postSlider.find('img');
+    const postSliderImgHeight = postSliderImg.height();
+    const postSliderArrows = postSlider.find('.slick-arrow');
+
+    postSliderArrows.css('top', (postSliderImgHeight / 2) + 'px');
+}
+
+function toggleDropdown() {
+    const dropdownTitle = $('.js-dropdown-title');
+
+    dropdownTitle.click(function () {
+        const dropdown = $(this).closest('.js-dropdown');
+        const dropdownContent = dropdown.find('.js-dropdown-content');
+
+        if(dropdown.hasClass('open-dropdown')) {
+            dropdown.removeClass('open-dropdown');
+            dropdownContent.css('height', 0);
+        } else {
+            dropdown.addClass('open-dropdown');
+            dropdownContent.css('height', dropdownContent.prop('scrollHeight') + 'px');
+        }
     })
 }
 

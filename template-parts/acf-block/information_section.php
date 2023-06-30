@@ -14,19 +14,19 @@
                         <h3><?php echo $title; ?></h3>
                     </div>
                 <?php endif; ?>
-                <ul class="information__list d-flex flex-wrap">
+                <ul class="information__list row">
                     <?php foreach ($information_list as $list_item) : ?>
                         <?php
                         $title = $list_item['title'];
                         $text = $list_item['text'];
                         ?>
 
-                        <li class="list-item col-12 col-md-4">
+                        <li class="list-item col-12 col-lg-4">
                             <?php if ($title) : ?>
-                                <h4 class="list-item__title"><?php echo $title; ?></h4>
+                                <h4 class="list-item__title text-center text-lg-left"><?php echo $title; ?></h4>
                             <?php endif; ?>
                             <?php if ($text) : ?>
-                                <div class="list-item__text">
+                                <div class="list-item__text text-center text-lg-left">
                                     <?php echo $text; ?>
                                 </div>
                             <?php endif; ?>

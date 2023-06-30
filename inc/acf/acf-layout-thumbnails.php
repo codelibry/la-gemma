@@ -3,9 +3,9 @@
     /**
      * ACF Extended plugin + ACF PRO required
      */
-
-
-// Hero Section
+    
+    
+    // Hero section
     
     add_filter('acfe/flexible/thumbnail/layout=hero_section', 'hero_section_layout_thumbnail', 10, 3);
     function hero_section_layout_thumbnail($thumbnail, $field, $layout)
@@ -15,7 +15,7 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/hero-section-thumbnail.png';
     }
     
-    // Hero Banner
+    // Hero banner
     
     add_filter('acfe/flexible/thumbnail/layout=hero_banner', 'hero_banner_layout_thumbnail', 10, 3);
     function hero_banner_layout_thumbnail($thumbnail, $field, $layout)
@@ -25,7 +25,7 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/hero-banner-thumbnail.png';
     }
     
-    // Page Banner
+    // Page banner
     
     add_filter('acfe/flexible/thumbnail/layout=page_banner', 'page_banner_layout_thumbnail', 10, 3);
     function page_banner_layout_thumbnail($thumbnail, $field, $layout)
@@ -65,7 +65,7 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/text-gallery-thumbnail.png';
     }
     
-    // Products Slider
+    // Products slider
     
     add_filter('acfe/flexible/thumbnail/layout=products_slider', 'products_slider_layout_thumbnail', 10, 3);
     function products_slider_layout_thumbnail($thumbnail, $field, $layout)
@@ -75,7 +75,7 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/products-slider-thumbnail.png';
     }
     
-    // About Section
+    // About section
     
     add_filter('acfe/flexible/thumbnail/layout=about_section', 'about_section_layout_thumbnail', 10, 3);
     function about_section_layout_thumbnail($thumbnail, $field, $layout)
@@ -85,7 +85,7 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/about-section-thumbnail.png';
     }
     
-    // Menu List
+    // Menu list
     
     add_filter('acfe/flexible/thumbnail/layout=menu_list', 'menu_list_layout_thumbnail', 10, 3);
     function menu_list_layout_thumbnail($thumbnail, $field, $layout)
@@ -105,17 +105,17 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/content-image-thumbnail.png';
     }
     
-    // Subscribe Form
+    // Text Form
     
-    add_filter('acfe/flexible/thumbnail/layout=subscribe_form', 'subscribe_form_layout_thumbnail', 10, 3);
-    function subscribe_form_layout_thumbnail($thumbnail, $field, $layout)
+    add_filter('acfe/flexible/thumbnail/layout=text_form', 'text_form_layout_thumbnail', 10, 3);
+    function text_form_layout_thumbnail($thumbnail, $field, $layout)
     {
         
         // Must return an URL or Attachment ID
-        return get_template_directory_uri() . '/assets/image/layout-thumbnails/subscribe-form-thumbnail.png';
+        return get_template_directory_uri() . '/assets/image/layout-thumbnails/text-form-thumbnail.png';
     }
     
-    // Information Section
+    // Information section
     
     add_filter('acfe/flexible/thumbnail/layout=information_section', 'information_section_layout_thumbnail', 10, 3);
     function information_section_layout_thumbnail($thumbnail, $field, $layout)
@@ -125,7 +125,7 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/information-section-thumbnail.png';
     }
     
-    // Blockquote Section
+    // Blockquote section
     
     add_filter('acfe/flexible/thumbnail/layout=blockquote_section', 'blockquote_section_layout_thumbnail', 10, 3);
     function blockquote_section_layout_thumbnail($thumbnail, $field, $layout)
@@ -135,7 +135,7 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/blockquote-section-thumbnail.png';
     }
     
-    // Text Section
+    // Text section
     
     add_filter('acfe/flexible/thumbnail/layout=text_section', 'text_section_layout_thumbnail', 10, 3);
     function text_section_layout_thumbnail($thumbnail, $field, $layout)
@@ -145,7 +145,7 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/text-section-thumbnail.png';
     }
     
-    // Follow Slider
+    // Follow slider
     
     add_filter('acfe/flexible/thumbnail/layout=follow_slider', 'follow_slider_layout_thumbnail', 10, 3);
     function follow_slider_layout_thumbnail($thumbnail, $field, $layout)

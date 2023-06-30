@@ -13,6 +13,8 @@ header.header
             display: flex
             justify-content: space-between
             align-items: flex-start
+            +max-screen($breakpoint-xl)
+                height: 162px
             +max-screen($breakpoint-lg)
                 height: 100px
             .allure-page &, .lucas-page &
@@ -82,12 +84,16 @@ header.header
             position: absolute
             left: 50%
             top: 25px
-            transform: translateX(-50%)
             width: 83px
             height: 121px
-            +max-screen($breakpoint-lg)
+            transform: translateX(-50%)
+            +max-screen($breakpoint-xl)
                 width: auto
+                height: 105px
+            +max-screen($breakpoint-lg)
                 height: 90px
+                top: 50%
+                transform: translate(-50%, -50%)
             .allure-page &
                 top: 35px
                 width: 146px
@@ -109,25 +115,37 @@ header.header
             margin-top: 39px
             display: flex
             gap: 33px
-            +max-screen($breakpoint-lg)
+            +max-screen($breakpoint-xl)
                 gap: 20px
-            +max-screen($breakpoint-md)
+            +max-screen($breakpoint-xl)
                 margin-top: 0
                 flex-direction: column
-                gap: 10px
+                gap: 5px
                 align-self: center
             .button
-                +max-screen($breakpoint-lg)
-                    font-size: 15px
-                    line-height: 15px
-                    padding: 5px 10px
+                font-size: 18px
+                font-weight: 400
+                min-width: 105px
+                height: 32px
+                border: 1px solid $color-green
+                background: $color-green
+                color: #fff
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((18px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((18px / 100) * 80)
                 +max-screen($breakpoint-md)
-                    font-size: 12px
-                    line-height: 12px
+                    font-size: calc((18px / 100) * 70)
+                &.button-transparent
+                    min-width: 121px
+                    border: 1px solid $color-green
+                    background: transparent
+                    color: $color-green
 
 // if you are logged in
 .logged-in
     header.header
+        top: 32px
         @media (max-width: 782px)
             top: 46px
 

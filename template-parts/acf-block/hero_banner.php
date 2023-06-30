@@ -7,6 +7,7 @@
                 <?php
                 $background_image = $list_item['background_image'];
                 $logo = $list_item['logo'];
+                $title = $list_item['title'];
                 $text = $list_item['text'];
                 ?>
                 
@@ -17,19 +18,28 @@
                                  alt="<?php echo $background_image['alt'] ?: $background_image['title']; ?>">
                         </div>
                     <?php endif; ?>
-                    <?php if ($logo) : ?>
-                        <div class="slider-item__logo">
-                            <img src="<?php echo $logo['url']; ?>"
-                                 alt="<?php echo $logo['alt'] ?: $logo['title']; ?>">
-                        </div>
-                    <?php endif; ?>
-                    <?php if ($text) : ?>
-                        <div class="slider-item__text">
-                            <div class="container">
-                                <?php echo $text; ?>
+                    <div class="slider-item__content">
+                        <?php if ($logo) : ?>
+                            <div class="slider-item__logo">
+                                <img src="<?php echo $logo['url']; ?>"
+                                     alt="<?php echo $logo['alt'] ?: $logo['title']; ?>">
                             </div>
-                        </div>
-                    <?php endif; ?>
+                        <?php endif; ?>
+                        <?php if ($title) : ?>
+                            <div class="slider-item__title">
+                                <div class="container">
+                                    <?php echo $title; ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($text) : ?>
+                            <div class="slider-item__text">
+                                <div class="container">
+                                    <?php echo $text; ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
             
             <?php endforeach; ?>

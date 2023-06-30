@@ -9,8 +9,8 @@
 <?php if ($gallery) : ?>
     <section class="text-gallery">
         <div class="container">
-            <div class="text-gallery__wrap d-flex flex-wrap align-items-center justify-content-between">
-                <div class="text-gallery__slider js-slider <?php echo $gallery_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
+            <div class="text-gallery__wrap d-flex align-items-center justify-content-center justify-content-lg-between">
+                <div class="text-gallery__slider js-slider <?php echo $gallery_position === 'left' ? 'order-1 gallery-left' : 'order-1 order-lg-2 gallery-right'; ?>">
                     <?php foreach ($gallery as $image) : ?>
                         <div class="text-gallery__slider-item">
                             <img src="<?php echo $image['url']; ?>"
@@ -29,7 +29,7 @@
                         <?php if ($button) : ?>
                             <div class="text-gallery__btn">
                                 <a href="<?php echo $button['url']; ?>"
-                                   class="button button-<?php echo is_page_template('template-pages/allure-page.php') ? 'brown' : 'green'; ?>">
+                                   class="button">
                                     <?php echo $button['title']; ?>
                                 </a>
                             </div>

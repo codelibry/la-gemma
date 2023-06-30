@@ -35,7 +35,7 @@
                     <?php endif; ?>
                     <?php if ($button) : ?>
                         <div class="content-image__btn">
-                            <a href="<?php echo $button['url']; ?>" class="button button-brown">
+                            <a href="<?php echo $button['url']; ?>" class="button">
                                 <?php echo $button['title']; ?>
                             </a>
                         </div>

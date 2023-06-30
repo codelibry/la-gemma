@@ -78,8 +78,8 @@
             <?php endif; ?>
             <?php if ($permalink) : ?>
                 <div class="d-flex rooms-card__btn">
-                    <a href="<?php echo $permalink; ?>" class="button button-green-transparent"><?php _e('Details'); ?></a>
-                    <a href="<?php echo $permalink; ?>" class="button button-green"><?php _e('Book Room'); ?></a>
+                    <a href="<?php echo $permalink; ?>" class="button button-transparent"><?php _e('Details'); ?></a>
+                    <a href="<?php echo $permalink; ?>" class="button"><?php _e('Book Room'); ?></a>
                 </div>
             <?php endif; ?>
         </div>

@@ -5,59 +5,99 @@ section.text-gallery
     .text-gallery
         &__wrap
             position: relative
+            +max-screen($breakpoint-lg)
+                flex-wrap: wrap
         &__slider
             width: 52.38%
-            +max-screen($breakpoint-xl)
-                width: 50%
+            max-width: 943px
             +max-screen($breakpoint-lg)
                 width: 100%
-            .allure-page &
-                width: 50%
-        &__slider-item
-            position: relative
-            width: 100%
-            height: 0
-            overflow: hidden
-            padding-bottom: 72.74%
-            img
-                position: absolute
-                left: 0
-                top: 0
+            &-item
+                position: relative
                 width: 100%
-                height: 100%
-                object-fit: cover
+                height: 0
+                overflow: hidden
+                padding-bottom: 72.74%
+                img
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
         &__content
-            max-width: calc(555px + 20px + 103px)
-            //width: calc(100% - 52.38%)
+            max-width: calc(555px + 103px + 40px)
             text-align: center
+            +max-screen($breakpoint-xxl)
+                max-width: calc(555px + ((103px / 100) * 50) + 40px)
+            +max-screen($breakpoint-xl)
+                max-width: calc(555px + 40px + 10px)
+            +max-screen($breakpoint-lg)
+                max-width: unset
+                margin-top: 60px
+
             .allure-page &
                 max-width: calc(695px)
                 width: 50%
                 margin: 0 auto
             &.content-left
-                padding: 0 20px 0 103px
-            &.content-right
-                padding: 0 103px 0 20px
-        &__title
-            font-size: 95px
-            line-height: 0.84
-            +max-screen($breakpoint-xl)
-                font-size: 80px
-            +max-screen($breakpoint-md)
-                font-size: 68px
-            .allure-page &
-                font-size: 35px
-                color: #20201E
-            span
-                font-size: 120px
-                display: block
+                padding-right: 40px
+                padding-left: 103px
+                +max-screen($breakpoint-xxl)
+                    padding-left: calc((103px / 100) * 50)
                 +max-screen($breakpoint-xl)
-                    font-size: 101px
+                    padding-left: 10px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
+            &.content-right
+                padding-left: 40px
+                padding-right: 103px
+                +max-screen($breakpoint-xxl)
+                    padding-right: calc((103px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-right: 10px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
+        &__title
+            font-size: 120px
+            line-height: 0.66
+            +max-screen($breakpoint-xxl)
+                font-size: calc((120px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((120px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 120px
+            +max-screen($breakpoint-md)
+                font-size: calc((120px / 100) * 70)
+            +max-screen($breakpoint-sm)
+                font-size: calc((120px / 100) * 60)
+            span
+                display: block
+                font-size: 95px
+                line-height: 0.84
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((95px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((95px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: 95px
                 +max-screen($breakpoint-md)
-                    font-size: 86px
+                    font-size: calc((95px / 100) * 70)
+                +max-screen($breakpoint-sm)
+                    font-size: calc((95px / 100) * 60)
+
+
         &__text
             font-size: 25px
             margin-top: 32px
+            +max-screen($breakpoint-xxl)
+                font-size: calc((25px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((25px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 25px
             .allure-page &
                 font-size: 27px
                 color: #20201E
@@ -66,40 +106,17 @@ section.text-gallery
             margin-top: 55px
             .button
                 font-size: 22px
-
-//.allure-page
-//    section.text-gallery
-//        padding: 62px 0 103px
-//        +max-screen($breakpoint-lg)
-//            padding: 60px 0
-//        .text-gallery
-//            &__slider
-//                padding-left: 105px
-//                width: calc(35.64% + 105px)
-//            &__slider-item
-//                padding-bottom: 90.49%
-//            &__content
-//                width: calc(100% - (35.64% + 105px))
-//                max-width: calc(695px + 40px + 125px)
-//                padding: 0
-//                &.content-left
-//                    padding: 0 40px 0 125px
-//                &.content-right
-//                    padding: 0 125px 0 40px
-//            &__title
-//                font-size: 35px
-//                line-height: 1.35
-//                color: #20201E
-//                span
-//                    font-size: 25px
-//            &__text
-//                color: #000
-//                font-size: 27px
-//                margin-top: 39px
-//            &__btn
-//                margin-top: 39px
-//                .button
-//                    font-size: 25px
-//                    padding: 7px 0
-//                    max-width: 305px
-//                    width: 100%
+                min-width: 254px
+                height: 44px
+                border: 1px solid $color-green
+                background: $color-green
+                color: #fff
+                .allure-page &
+                    border: 1px solid $color-brown
+                    background: $color-brown
+                    color: #fff
+                .lucas-page &
+                    font-size: 36px
+                    border: 1px solid #F5F3EF
+                    background: transparent
+                    color: #F5F3EF

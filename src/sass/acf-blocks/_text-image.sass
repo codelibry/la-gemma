@@ -5,21 +5,25 @@ section.text-image
     .text-image
         &__wrap
             display: flex
+            &.row
+                margin: 0
         &__img
-            max-width: calc(682px + 72px + 20px)
             width: 100%
             display: flex
             align-items: center
+            max-width: calc(682px + 72px + 40px)
+            +max-screen($breakpoint-xxl)
+                max-width: calc(682px + ((72px / 100) * 50) + 40px)
+            +max-screen($breakpoint-xl)
+                max-width: calc(682px + 40px + 40px)
             +max-screen($breakpoint-lg)
-                justify-content: center
-            .allure-page &
-                max-width: calc(617px + 108px + 20px)
+                max-width: 682px
             &-wrap
                 position: relative
                 width: 100%
                 height: 0
-                padding-bottom: 92.96%
                 overflow: hidden
+                padding-bottom: 92.96%
                 .allure-page &
                     padding-bottom: 136.46%
                     margin-left: 0
@@ -30,36 +34,87 @@ section.text-image
                     width: 100%
                     height: 100%
                     object-fit: cover
+            .allure-page &
+                max-width: calc(617px + 108px + 40px)
             &.image-left
                 padding-left: 72px
-                padding-right: 20px
+                padding-right: 40px
+                +max-screen($breakpoint-xxl)
+                    padding-left: calc((72px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-left: 40px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
                 .allure-page &
                     padding-left: 108px
             &.image-right
                 padding-right: 72px
-                padding-left: 20px
+                padding-left: 40px
+                +max-screen($breakpoint-xxl)
+                    padding-right: calc((72px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-right: 40px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
+
                 .allure-page &
                     padding-right: 108px
-
         &__content
             display: flex
             flex-direction: column
             justify-content: center
             align-items: center
+            max-width: calc(599px + 195px + 40px)
+            +max-screen($breakpoint-xxl)
+                max-width: calc(599px + ((195px / 100) * 50) + 40px)
+            +max-screen($breakpoint-xl)
+                max-width: calc(599px + 40px + 40px)
             +max-screen($breakpoint-lg)
-                margin-top: 40px
+                max-width: unset
+                margin-top: 30px
             &.content-left
-
+                padding-right: 40px
+                padding-left: 195px
+                +max-screen($breakpoint-xxl)
+                    padding-left: calc((195px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-left: 40px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
             &.content-right
+                padding-left: 40px
+                padding-right: 195px
+                +max-screen($breakpoint-xxl)
+                    padding-right: calc((195px / 100) * 50)
+                +max-screen($breakpoint-xl)
+                    padding-right: 40px
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
         &__title
             color: #2D4C42
             font-size: 47px
+            +max-screen($breakpoint-xxl)
+                font-size: calc((47px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((47px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 47px
             .allure-page &
                 color: #0F1758
                 font-size: 55px
             span
                 font-size: 47px
                 font-style: italic
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((47px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((47px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: 47px
                 .allure-page &
                     display: block
                     font-style: normal
@@ -67,12 +122,17 @@ section.text-image
         &__text
             font-size: 31px
             color: #2D4C42
-            max-width: 600px
             margin: 86px auto 0
+            +max-screen($breakpoint-xxl)
+                font-size: calc((31px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((31px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: 31px
+                margin-top: 40px
             .allure-page &
                 font-size: 27px
                 color: #000000
-                max-width: 695px
                 margin: 14px auto 0
             p:not(:last-of-type)
                 margin-top: 20px
