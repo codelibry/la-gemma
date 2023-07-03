@@ -100,11 +100,11 @@ section.text-gallery
             +max-screen($breakpoint-xl)
                 font-size: calc((120px / 100) * 80)
             +max-screen($breakpoint-lg)
-                font-size: 120px
-            +max-screen($breakpoint-md)
                 font-size: calc((120px / 100) * 70)
+            +max-screen($breakpoint-md)
+                font-size: calc((120px / 100) * 50)
             +max-screen($breakpoint-sm)
-                font-size: calc((120px / 100) * 60)
+                font-size: calc((120px / 100) * 40)
             .allure-page &
                 font-size: 35px
                 +max-screen($breakpoint-xxl)
@@ -112,7 +112,11 @@ section.text-gallery
                 +max-screen($breakpoint-xl)
                     font-size: calc((35px / 100) * 80)
                 +max-screen($breakpoint-lg)
-                    font-size: 35px
+                    font-size: calc((35px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((35px / 100) * 60)
+                +max-screen($breakpoint-md)
+                    font-size: calc((35px / 100) * 50)
             span
                 display: block
                 font-size: 95px
@@ -122,11 +126,11 @@ section.text-gallery
                 +max-screen($breakpoint-xl)
                     font-size: calc((95px / 100) * 80)
                 +max-screen($breakpoint-lg)
-                    font-size: 95px
-                +max-screen($breakpoint-md)
                     font-size: calc((95px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((95px / 100) * 50)
                 +max-screen($breakpoint-sm)
-                    font-size: calc((95px / 100) * 60)
+                    font-size: calc((95px / 100) * 40)
         &__text
             margin-top: 32px
             font-size: 25px
@@ -137,7 +141,9 @@ section.text-gallery
             +max-screen($breakpoint-xl)
                 font-size: calc((25px / 100) * 80)
             +max-screen($breakpoint-lg)
-                font-size: 25px
+                font-size: calc((25px / 100) * 70)
+            +max-screen($breakpoint-md)
+                font-size: calc((25px / 100) * 60)
             .allure-page &
                 margin-top: 25px
                 font-size: 27px
@@ -148,7 +154,9 @@ section.text-gallery
                 +max-screen($breakpoint-xl)
                     font-size: calc((27px / 100) * 80)
                 +max-screen($breakpoint-lg)
-                    font-size: 27px
+                    font-size: calc((27px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((27px / 100) * 60)
         &__btn
             margin-top: 55px
             .allure-page &
@@ -169,7 +177,7 @@ section.text-gallery
                     border: 1px solid $color-brown
                     background: $color-brown
                     color: #fff
-                .lucas-page &
+                .lucas-page &, .single-menu &
                     font-size: 36px
                     border: 1px solid #F5F3EF
                     background: transparent

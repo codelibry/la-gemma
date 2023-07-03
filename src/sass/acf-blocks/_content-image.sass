@@ -64,7 +64,7 @@ section.content-image
             +max-screen($breakpoint-xl)
                 font-size: calc((101px / 100) * 80)
             +max-screen($breakpoint-lg)
-                font-size: 101px
+                font-size: calc((101px / 100) * 70)
             +max-screen($breakpoint-md)
                 font-size: calc((101px / 100) * 60)
             +max-screen($breakpoint-sm)
@@ -77,14 +77,18 @@ section.content-image
                 +max-screen($breakpoint-xl)
                     font-size: calc((85px / 100) * 80)
                 +max-screen($breakpoint-lg)
-                    font-size: 85px
+                    font-size: calc((85px / 100) * 70)
                 +max-screen($breakpoint-md)
                     font-size: calc((85px / 100) * 60)
-                +max-screen($breakpoint-sm)
-                    font-size: calc((85px / 100) * 50)
         &__subtitle
             font-size: 30px
             font-weight: 300
+            +max-screen($breakpoint-xxl)
+                font-size: calc((30px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((30px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: calc((30px / 100) * 70)
         &__text
             margin-top: 80px
             color: #000000
@@ -96,7 +100,9 @@ section.content-image
                 font-size: calc((27px / 100) * 80)
             +max-screen($breakpoint-lg)
                 margin-top: 40px
-                font-size: 27px
+                font-size: calc((27px / 100) * 70)
+            +max-screen($breakpoint-md)
+                font-size: calc((27px / 100) * 60)
         &__btn
             margin-top: 50px
             .button
@@ -110,7 +116,7 @@ section.content-image
                     border: 1px solid $color-brown
                     background: $color-brown
                     color: #fff
-                .lucas-page &
+                .lucas-page &, .single-menu &
                     border: 1px solid #F5F3EF
                     background: transparent
                     color: #F5F3EF

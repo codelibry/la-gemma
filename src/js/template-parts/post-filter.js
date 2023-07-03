@@ -24,9 +24,11 @@ function postFilter() {
             url: customjs_ajax_object.ajax_url,
             type: 'POST',
             data: data,
+            beforeSend: function () {
+                $('.loading-spinner').addClass('visible');
+            },
             success: function (res) {
                 $('#response').html(res);
-
             },
             error: function (res) {
                 console.warn(res)
@@ -72,6 +74,8 @@ function postFilter() {
 
                 setSliderArrowPosition();
                 toggleDropdown();
+
+                $('.loading-spinner').removeClass('visible');
             }
         })
     })

@@ -17,7 +17,11 @@ section.text-form
             +max-screen($breakpoint-xl)
                 font-size: calc((50px / 100) * 80)
             +max-screen($breakpoint-lg)
-                font-size: 50px
+                font-size: calc((50px / 100) * 70)
+            +max-screen($breakpoint-md)
+                font-size: calc((50px / 100) * 60)
+            +max-screen($breakpoint-sm)
+                font-size: calc((50px / 100) * 50)
             span
                 display: block
                 font-size: 30px
@@ -27,7 +31,9 @@ section.text-form
                 +max-screen($breakpoint-xl)
                     font-size: calc((30px / 100) * 80)
                 +max-screen($breakpoint-lg)
-                    font-size: 30px
+                    font-size: calc((30px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((50px / 100) * 60)
         &__text
             font-size: 25px
             font-weight: 300
@@ -38,7 +44,10 @@ section.text-form
             +max-screen($breakpoint-xl)
                 font-size: calc((25px / 100) * 80)
             +max-screen($breakpoint-lg)
-                font-size: 25px
+                font-size: calc((25px / 100) * 70)
+                margin-top: 40px
+            +max-screen($breakpoint-md)
+                font-size: calc((25px / 100) * 60)
             &.col-left
             &.col-right
                 +max-screen($breakpoint-xl)

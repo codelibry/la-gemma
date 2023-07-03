@@ -40,7 +40,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
             "key": "field_649039aa19b27",
@@ -64,7 +66,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
             "key": "field_649576fbdba05",
@@ -88,7 +92,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
             "key": "field_649a978d4d0c0",
@@ -112,7 +118,36 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0
+        },
+        {
+            "key": "field_64a29345dd729",
+            "label": "Logo lucas single",
+            "name": "logo_lucas_single",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "uploader": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "acfe_thumbnail": 0,
+            "library": "all"
         },
         {
             "key": "field_648c7dfc20dd4",
@@ -152,7 +187,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
             "key": "field_6495ba2933f17",
@@ -176,7 +213,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
             "key": "field_6492fc35bd982",
@@ -230,7 +269,8 @@
                     "append": "",
                     "maxlength": ""
                 }
-            ]
+            ],
+            "acfe_repeater_stylised_button": 0
         },
         {
             "key": "field_648c83c6e65ba",
@@ -327,9 +367,12 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "uploader": "",
+                    "acfe_thumbnail": 0
                 }
-            ]
+            ],
+            "acfe_repeater_stylised_button": 0
         },
         {
             "key": "field_6494577cbfecd",
@@ -417,5 +460,12 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687852962
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1688376153
 }

@@ -38,16 +38,19 @@
         background: none !important
         font-size: 0 !important
         transition: $default-transition
-        .default-page .loop-posts &
+        .default-page .loop-posts &, .single-menu &
             width: 62px
             height: 124px
             +max-screen($breakpoint-lg)
                 transform: translateY(-50%) scale(.7)
             +max-screen($breakpoint-md)
                 transform: translateY(-50%) scale(.4)
-        .allure-page &, .lucas-page &, .default-page .loop-posts &
+        .allure-page &, .lucas-page &, .single-menu &, .default-page .loop-posts &
             display: flex !important
-            justify-content: flex-start
+            .slick-prev
+                justify-content: flex-start
+            .slick-next
+                justify-content: flex-end
 
         &:after, &:before
             content: ''
@@ -66,19 +69,25 @@
                 left: 40px
                 +max-screen($breakpoint-lg)
                     left: 30px
+                +max-screen($breakpoint-md)
+                    left: 0
             .allure-page &
                 left: 0
                 +max-screen($breakpoint-lg)
                     left: 20px
+            .single-menu &
+                left: -5px
+                +max-screen($breakpoint-lg)
+                    left: -20px
             &:after, &:before
                 transform-origin: left
             &:after
                 transform: rotate(60deg)
-                .allure-page &, .lucas-page &
+                .allure-page &, .lucas-page &, .single-menu &
                     transform: rotate(45deg)
             &:before
                 transform: rotate(-60deg)
-                .allure-page &, .lucas-page &
+                .allure-page &, .lucas-page &, .single-menu &
                     transform: rotate(-45deg)
         &.slick-next
             right: 0
@@ -86,24 +95,38 @@
                 right: 40px
                 +max-screen($breakpoint-lg)
                     right: 30px
+                +max-screen($breakpoint-md)
+                    right: 0
             .allure-page &
                 right: 20px
+            .single-menu &
+                right: -5px
+                +max-screen($breakpoint-lg)
+                    right: -20px
             &:after, &:before
                 transform-origin: right
             &:after
                 transform: rotate(60deg)
-                .allure-page &, .lucas-page &
+                .allure-page &, .lucas-page &, .single-menu &
                     transform: rotate(45deg)
             &:before
                 transform: rotate(-60deg)
-                .allure-page &, .lucas-page &
+                .allure-page &, .lucas-page &, .single-menu &
                     transform: rotate(-45deg)
 
         &.slick-disabled
             opacity: 0
 
-.js-post-slider, .js-follow-slider
+.js-post-slider
     .slick-slide
         padding: 0 30px
         +max-screen($breakpoint-md)
             padding: 0 15px
+
+.js-follow-slider
+    .slick-slide
+        padding: 0 30px
+        +max-screen($breakpoint-md)
+            padding: 0 15px
+        +max-screen($breakpoint-sm)
+            padding: 0

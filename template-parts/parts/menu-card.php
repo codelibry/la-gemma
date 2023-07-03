@@ -13,7 +13,7 @@
     $schedule = get_field('schedule');
 ?>
 
-<div class="menu-card d-flex flex-wrap flex-lg-nowrap align-items-end justify-content-between">
+<div class="menu-card d-flex flex-wrap flex-lg-nowrap align-items-end justify-content-center justify-content-lg-between">
     <?php if($thumbnail) :?>
         <div class="menu-card__img <?php echo $image_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
             <div class="menu-card__img-wrap">

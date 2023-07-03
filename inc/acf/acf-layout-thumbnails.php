@@ -157,7 +157,7 @@
     
     // Form
     
-    add_filter('acfe/flexible/thumbnail/layout=form', 'form_layout_thumbnail', 10, 3);
+    add_filter('acfe/flexible/thumbnail/layout=form_section', 'form_layout_thumbnail', 10, 3);
     function form_layout_thumbnail($thumbnail, $field, $layout)
     {
         

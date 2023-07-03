@@ -63,6 +63,36 @@ function getSlider() {
             dots: false,
             speed: 1000,
             slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1.6,
+                    }
+
+                },
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 1.3,
+                    }
+
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+
+                },
+            ]
         });
     })
 

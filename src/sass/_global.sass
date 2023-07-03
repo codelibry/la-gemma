@@ -29,7 +29,29 @@
 	width: 98.64%
 	height: 2px
 	background: $border-color-green
-	.allure-page &, .lucas-page &
+	.allure-page &, .lucas-page &, .single-menu &
 		background: #EDE5D5
+
+.loading-spinner
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+	width: 100%
+	height: 100%
+	background: rgba(255,255,255,.5)
+	backdrop-filter: blur(2px)
+	display: flex
+	align-items: center
+	justify-content: center
+	opacity: 0
+	pointer-events: none
+	&.visible
+		opacity: 1
+		pointer-events: unset
+		svg, img
+			width: 100px
+			height: 100px
+
 
 

@@ -4,7 +4,7 @@
     $footer_info = get_field('footer_info', 'option');
     $footer_address = get_field('footer_address', 'option');
     
-    if(!is_page_template('template-pages/lucas-page.php')) {
+    if(!is_page_template('template-pages/lucas-page.php') && !is_singular('menu')) {
         $footer_logo = $footer_logo_light;
     } else {
         $footer_logo = $footer_logo_dark;

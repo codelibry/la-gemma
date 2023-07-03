@@ -9,7 +9,7 @@ section.information
         padding: 73px 0
         +max-screen($breakpoint-lg)
             padding: 60px 0
-    .lucas-page &
+    .lucas-page &, .single-menu &
         padding: 106px 0 78px
         +max-screen($breakpoint-lg)
             padding: 60px 0
@@ -28,16 +28,30 @@ section.information
                     font-size: 40px
                     text-transform: uppercase
                     +max-screen($breakpoint-xxl)
-                        font-size: calc((40px / 100) * 80)
+                        font-size: calc((40px / 100) * 90)
                     +max-screen($breakpoint-xl)
-                        font-size: calc((40px / 100) * 60)
+                        font-size: calc((40px / 100) * 80)
                     +max-screen($breakpoint-lg)
-                        font-size: 40px
+                        font-size: calc((40px / 100) * 70)
+                    +max-screen($breakpoint-md)
+                        font-size: calc((40px / 100) * 60)
+                    +max-screen($breakpoint-sm)
+                        font-size: calc((40px / 100) * 50)
 
-                    .lucas-page &
+                    .lucas-page &, .single-menu &
                         color: #F5F0DF
                         font-size: 28px
-                        text-align: center
+                        text-align: center !important
+                        +max-screen($breakpoint-xxl)
+                            font-size: calc((28px / 100) * 90)
+                        +max-screen($breakpoint-xl)
+                            font-size: calc((28px / 100) * 80)
+                        +max-screen($breakpoint-lg)
+                            font-size: calc((28px / 100) * 70)
+                        +max-screen($breakpoint-md)
+                            font-size: calc((28px / 100) * 60)
+                        +max-screen($breakpoint-sm)
+                            font-size: calc((28px / 100) * 50)
                 &__text
                     font-size: 25px
                     margin-top: 20px
@@ -48,17 +62,19 @@ section.information
                         font-size: calc((25px / 100) * 80)
                         margin-top: 12px
                     +max-screen($breakpoint-lg)
-                        font-size: 25px
+                        font-size: calc((25px / 100) * 70)
                         margin-top: 5px
+                    +max-screen($breakpoint-md)
+                        font-size: calc((25px / 100) * 60)
                     .allure-page &
                         font-size: 16px
                         color: #000
                         max-width: 416px
                         +max-screen($breakpoint-lg)
                             max-width: unset
-                    .lucas-page &
+                    .lucas-page &, .single-menu &
                         color: #F5F0DF
-                        text-align: center
+                        text-align: center !important
                     span
                         display: block
                     br

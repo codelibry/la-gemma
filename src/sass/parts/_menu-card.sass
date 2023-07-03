@@ -1,23 +1,52 @@
 .menu-card
     &:nth-of-type(odd):not(:first-of-type)
         padding-top: 184px
+        +max-screen($breakpoint-xxl)
+            padding-top: calc((184px / 100) * 50)
+        +max-screen($breakpoint-xl)
+            padding-top: calc((184px / 100) * 30)
+        +max-screen($breakpoint-lg)
+            padding-top: 60px
 
     &:nth-of-type(odd)
         .menu-card__schedule
             padding-top: 180px
+            +max-screen($breakpoint-xxl)
+                padding-top: calc((180px / 100) * 50)
+            +max-screen($breakpoint-xl)
+                padding-top: calc((180px / 100) * 30)
+            +max-screen($breakpoint-lg)
+                padding-top: 40px
         .menu-card__btn
             .button
+                max-width: 305px
+                width: 100%
+                height: 54px
                 font-size: 36px
 
     &:nth-of-type(even)
         padding-top: 71px
+        +max-screen($breakpoint-lg)
+            padding-top: 60px
         .menu-card__schedule
             padding-top: 220px
+            +max-screen($breakpoint-xxl)
+                padding-top: calc((220px / 100) * 50)
+            +max-screen($breakpoint-xl)
+                padding-top: calc((220px / 100) * 30)
+            +max-screen($breakpoint-lg)
+                padding-top: 40px
         .menu-card__btn
             .button
+                max-width: 305px
+                width: 100%
+                height: 47px
                 font-size: 25px
     .menu-card
         &__img
+            width: 100%
+            display: flex
+            align-items: center
             &-wrap
                 position: relative
                 width: 100%
@@ -31,39 +60,114 @@
                     height: 100%
                     object-fit: cover
             &.image-left
+                padding-right: 40px
                 padding-left: 73px
-                width: calc(41.94% + 73px)
+                max-width: calc(755px + 73px + 40px)
+                +max-screen($breakpoint-xxl)
+                    padding-left: calc((73px / 100) * 50)
+                    max-width: calc(755px + ((73px / 100) * 50) + 40px)
+                +max-screen($breakpoint-xl)
+                    padding-left: 40px
+                    max-width: calc(755px + 40px + 40px)
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
+                    max-width: 755px
                 .menu-card__img-wrap
                     padding-bottom: 124.63%
             &.image-right
+                padding-left: 40px
                 padding-right: 117px
-                width: calc(38.61% + 117px)
+                max-width: calc(695px + 117px + 40px)
+                +max-screen($breakpoint-xxl)
+                    padding-right: calc((117px / 100) * 50)
+                    max-width: calc(695px + ((117px / 100) * 50) + 40px)
+                +max-screen($breakpoint-xl)
+                    padding-right: 40px
+                    max-width: calc(695px + 40px + 40px)
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
+                    max-width: 695px
                 .menu-card__img-wrap
                     padding-bottom: 132.51%
 
         &__content
-            max-width: calc(772px + 67px + 40px)
-            padding: 0
             text-align: center
             align-items: flex-end
+            width: 100%
             &.content-left
-                padding: 0 40px 0 67px
+                padding-right: 40px
+                padding-left: 67px
+                max-width: calc(772px + 67px + 40px)
+                +max-screen($breakpoint-xxl)
+                    padding-left: calc((67px / 100) * 50)
+                    max-width: calc(772px + ((67px / 100) * 50) + 40px)
+                +max-screen($breakpoint-xl)
+                    padding-left: 40px
+                    max-width: calc(772px + 40px + 40px)
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
+                    max-width: unset
+                    margin-top: 30px
+                .menu-card__text
+                    font-size: 32px
+                    margin: 28px auto 0
+                    +max-screen($breakpoint-xxl)
+                        font-size: calc((32px / 100) * 90)
+                    +max-screen($breakpoint-xl)
+                        font-size: calc((32px / 100) * 80)
+                    +max-screen($breakpoint-lg)
+                        font-size: calc((32px / 100) * 70)
+                    +max-screen($breakpoint-md)
+                        font-size: calc((32px / 100) * 60)
             &.content-right
-                padding: 0 67px 0 40px
-
+                padding-left: 40px
+                padding-right: 101px
+                max-width: calc(684px + 101px + 40px)
+                +max-screen($breakpoint-xxl)
+                    padding-right: calc((101px / 100) * 50)
+                    max-width: calc(684px + ((101px / 100) * 50) + 40px)
+                +max-screen($breakpoint-xl)
+                    padding-right: 40px
+                    max-width: calc(684px + 40px + 40px)
+                +max-screen($breakpoint-lg)
+                    padding-right: 0
+                    padding-left: 0
+                    max-width: unset
+                    margin-top: 30px
+                .menu-card__text
+                    font-size: 28px
+                    margin: 47px auto 0
+                    +max-screen($breakpoint-xxl)
+                        font-size: calc((28px / 100) * 90)
+                    +max-screen($breakpoint-xl)
+                        font-size: calc((28px / 100) * 80)
+                    +max-screen($breakpoint-lg)
+                        font-size: calc((28px / 100) * 70)
+                    +max-screen($breakpoint-md)
+                        font-size: calc((28px / 100) * 60)
         &__title
             font-size: 57px
-            line-height: 1.35
-
+            line-height: 1.17
+            +max-screen($breakpoint-xxl)
+                font-size: calc((57px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((57px / 100) * 70)
+            +max-screen($breakpoint-lg)
+                font-size: calc((57px / 100) * 60)
+            +max-screen($breakpoint-md)
+                font-size: calc((57px / 100) * 50)
+            +max-screen($breakpoint-sm)
+                font-size: calc((57px / 100) * 40)
         &__text
-            font-size: 32px
-            margin: 28px auto 0
+            line-height: 1.33
+
         &__btn
             margin-top: 48px
             .button
-                padding: 7px 0
-                max-width: 305px
-                width: 100%
+                padding: 0 7px
                 border: 1px solid #F5F3EF
                 background: transparent
                 color: #F5F3EF
@@ -71,3 +175,9 @@
             color: #F5F0DF
             font-size: 25px
             font-weight: 300
+            +max-screen($breakpoint-xxl)
+                font-size: calc((25px / 100) * 90)
+            +max-screen($breakpoint-xl)
+                font-size: calc((25px / 100) * 80)
+            +max-screen($breakpoint-lg)
+                font-size: calc((25px / 100) * 70)

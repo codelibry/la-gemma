@@ -35,7 +35,7 @@
     
     if (is_page_template('template-pages/allure-page.php')) {
         $loader_logo = $logo_allure;
-    } elseif(is_page_template('template-pages/lucas-page.php')) {
+    } elseif(is_page_template('template-pages/lucas-page.php') || is_singular('menu')) {
         $loader_logo = $logo_lucas;
     } else {
         $loader_logo = $logo_white;
@@ -61,7 +61,7 @@
         background-color: <?php echo $allure_spa_background_color;?> !important;
     }
 
-    body.lucas-page {
+    body.lucas-page, body.single-menu {
         background-color: <?php echo $lucas_background_color;?> !important;
     }
 </style>
@@ -71,6 +71,10 @@
 <div class="loader">
     <img src="<?php echo $loader_logo['url'];?>" alt="Preloader logo"
          class="loader__logo">
+</div>
+
+<div class="loading-spinner">
+    <?php echo get_inline_svg('loader-spinner.svg'); ?>
 </div>
 
 <?php get_template_part('template-parts/header/header'); ?>

@@ -76,9 +76,11 @@ section.products
             +max-screen($breakpoint-xl)
                 font-size: calc((55px / 100) * 80)
             +max-screen($breakpoint-lg)
-                font-size: 55px
-            +max-screen($breakpoint-md)
                 font-size: calc((55px / 100) * 70)
+            +max-screen($breakpoint-md)
+                font-size: calc((55px / 100) * 60)
+            +max-screen($breakpoint-sm)
+                font-size: calc((55px / 100) * 50)
             span
                 display: block
                 font-size: 30px
@@ -87,9 +89,9 @@ section.products
                 +max-screen($breakpoint-xl)
                     font-size: calc((30px / 100) * 80)
                 +max-screen($breakpoint-lg)
-                    font-size: 30px
-                +max-screen($breakpoint-md)
                     font-size: calc((30px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((30px / 100) * 60)
         &__text
             font-size: 27px
             color: #20201E
@@ -99,7 +101,9 @@ section.products
             +max-screen($breakpoint-xl)
                 font-size: calc((27px / 100) * 80)
             +max-screen($breakpoint-lg)
-                font-size: 27px
+                font-size: calc((27px / 100) * 70)
+            +max-screen($breakpoint-md)
+                font-size: calc((27px / 100) * 60)
     .horizontal-line
         display: block
         bottom: unset

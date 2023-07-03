@@ -1,7 +1,19 @@
 section.text
     padding: 81px 0 72px
+    +max-screen($breakpoint-lg)
+        padding: 60px 0
     .text
         &__wrap
             blockquote
                 font-size: 100px
                 font-size: 700
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((100px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((100px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: calc((100px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((100px / 100) * 50)
+                +max-screen($breakpoint-sm)
+                    font-size: calc((100px / 100) * 40)

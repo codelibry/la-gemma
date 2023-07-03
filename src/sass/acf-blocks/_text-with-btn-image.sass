@@ -2,6 +2,10 @@ section.text-with-btn-image
     padding: 83px 0
     +max-screen($breakpoint-lg)
         padding: 60px 0
+    .single-menu &
+        padding: 53px 0 38px
+        +max-screen($breakpoint-lg)
+            padding: 60px 0
     .text-with-btn-image
         &__wrap
             display: flex
@@ -24,7 +28,7 @@ section.text-with-btn-image
                 height: 0
                 overflow: hidden
                 padding-bottom: 119.88%
-                .lucas-page &
+                .lucas-page &, .single-menu &
                     padding-bottom: 100%
                 img
                     position: absolute
@@ -33,8 +37,14 @@ section.text-with-btn-image
                     width: 100%
                     height: 100%
                     object-fit: cover
-            .lucas-page &
-                max-width: calc(43.77% + 49px + 20px)
+            .single-menu &
+                max-width: calc(778px + 54px + 40px)
+                +max-screen($breakpoint-xxl)
+                    max-width: calc(778px + ((54px / 100) * 50) + 40px)
+                +max-screen($breakpoint-xl)
+                    max-width: calc(778px + 40px + 40px)
+                +max-screen($breakpoint-lg)
+                    max-width: 778px
             &.image-left
                 padding-right: 40px
                 padding-left: 161px
@@ -46,9 +56,25 @@ section.text-with-btn-image
                     padding-right: 0
                     padding-left: 0
                 .lucas-page &
-                    padding-left: 49px
+                    padding-right: 49px
+                    +max-screen($breakpoint-xxl)
+                        padding-left: calc((49px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-left: 40px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
+                .single-menu &
+                    padding-left: 54px
+                    +max-screen($breakpoint-xxl)
+                        padding-left: calc((54px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-left: 40px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
             &.image-right
-                padding-left: 20px
+                padding-left: 40px
                 padding-right: 161px
                 +max-screen($breakpoint-xxl)
                     padding-right: calc((161px / 100) * 50)
@@ -59,6 +85,23 @@ section.text-with-btn-image
                     padding-left: 0
                 .lucas-page &
                     padding-right: 49px
+                    +max-screen($breakpoint-xxl)
+                        padding-right: calc((49px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-right: 40px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
+                .single-menu &
+                    padding-right: 54px
+                    +max-screen($breakpoint-xxl)
+                        padding-right: calc((54px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-right: 40px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
+
         &__content
             display: flex
             flex-direction: column
@@ -73,9 +116,26 @@ section.text-with-btn-image
                 max-width: unset
                 margin-top: 30px
             .lucas-page &
-                max-width: calc(797px + 61px + 20px)
+                max-width: calc(797px + 61px + 40px)
+                +max-screen($breakpoint-xxl)
+                    max-width: calc(797px + ((61px / 100) * 50) + 40px)
+                +max-screen($breakpoint-xl)
+                    max-width: calc(797px + 40px + 40px)
+                +max-screen($breakpoint-lg)
+                    max-width: unset
+                    margin-top: 30px
+            .single-menu &
+                max-width: calc(797px + 61px + 40px)
+                +max-screen($breakpoint-xxl)
+                    max-width: calc(797px + ((61px / 100) * 50) + 40px)
+                +max-screen($breakpoint-xl)
+                    max-width: calc(797px + 40px + 40px)
+                +max-screen($breakpoint-lg)
+                    max-width: unset
+                    margin-top: 30px
+
             &.content-left
-                padding-right: 20px
+                padding-right: 40px
                 padding-left: 173px
                 +max-screen($breakpoint-xxl)
                     padding-left: calc((173px / 100) * 50)
@@ -86,8 +146,24 @@ section.text-with-btn-image
                     padding-left: 0
                 .lucas-page &
                     padding-left: 61px
+                    +max-screen($breakpoint-xxl)
+                        padding-left: calc((61px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-left: 40px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
+                .single-menu &
+                    padding-left: 61px
+                    +max-screen($breakpoint-xxl)
+                        padding-left: calc((61px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-left: 40px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
             &.content-right
-                padding-left: 20px
+                padding-left: 40px
                 padding-right: 173px
                 +max-screen($breakpoint-xxl)
                     padding-right: calc((173px / 100) * 50)
@@ -98,6 +174,22 @@ section.text-with-btn-image
                     padding-left: 0
                 .lucas-page &
                     padding-right: 61px
+                    +max-screen($breakpoint-xxl)
+                        padding-right: calc((61px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-right: 40px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
+                .single-menu &
+                    padding-right: 61px
+                    +max-screen($breakpoint-xxl)
+                        padding-right: calc((61px / 100) * 50)
+                    +max-screen($breakpoint-xl)
+                        padding-right: 40px
+                    +max-screen($breakpoint-lg)
+                        padding-right: 0
+                        padding-left: 0
         &__title
             color: #0F1758
             font-size: 55px
@@ -106,10 +198,37 @@ section.text-with-btn-image
             +max-screen($breakpoint-xl)
                 font-size: calc((55px / 100) * 80)
             +max-screen($breakpoint-lg)
-                font-size: 47px
+                font-size: calc((55px / 100) * 70)
+            +max-screen($breakpoint-md)
+                font-size: calc((55px / 100) * 60)
+            +max-screen($breakpoint-sm)
+                font-size: calc((55px / 100) * 50)
             .lucas-page &
                 color: #FFFFFF
                 font-size: 57px
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((57px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((57px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: calc((57px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((57px / 100) * 60)
+                +max-screen($breakpoint-sm)
+                    font-size: calc((57px / 100) * 50)
+            .single-menu &
+                color: #FFFFFF
+                font-size: 57px
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((57px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((57px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: calc((57px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((57px / 100) * 60)
+                +max-screen($breakpoint-sm)
+                    font-size: calc((57px / 100) * 50)
             span
                 display: block
                 font-style: normal
@@ -120,7 +239,9 @@ section.text-with-btn-image
                 +max-screen($breakpoint-xl)
                     font-size: calc((30px / 100) * 80)
                 +max-screen($breakpoint-lg)
-                    font-size: 30px
+                    font-size: calc((30px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((30px / 100) * 60)
         &__text
             font-size: 27px
             color: #000000
@@ -130,11 +251,34 @@ section.text-with-btn-image
             +max-screen($breakpoint-xl)
                 font-size: calc((27px / 100) * 80)
             +max-screen($breakpoint-lg)
-                font-size: 27px
+                font-size: calc((27px / 100) * 70)
+            +max-screen($breakpoint-md)
+                font-size: calc((27px / 100) * 60)
             .lucas-page &
                 font-size: 32px
                 color: #FFFFFF
                 margin: 48px auto 0
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((32px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((32px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: calc((32px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((32px / 100) * 60)
+            .single-menu &
+                font-size: 32px
+                line-height: 1.34
+                color: #FFFFFF
+                margin: 48px auto 0
+                +max-screen($breakpoint-xxl)
+                    font-size: calc((32px / 100) * 90)
+                +max-screen($breakpoint-xl)
+                    font-size: calc((32px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    font-size: calc((32px / 100) * 70)
+                +max-screen($breakpoint-md)
+                    font-size: calc((32px / 100) * 60)
             p:not(:last-of-type)
                 margin-bottom: 20px
         &__btn
@@ -143,6 +287,8 @@ section.text-with-btn-image
                 margin-top: 55px
             .lucas-page &
                 margin-top: 33px
+            .single-menu &
+                margin-top: 35px
             .button
                 min-width: 348px
                 height: 47px
@@ -154,9 +300,11 @@ section.text-with-btn-image
                     border: 1px solid $color-brown
                     background: $color-brown
                     color: #fff
-                .lucas-page &
+                .lucas-page &, .single-menu &
                     font-size: 36px
+                    max-width: 305px
+                    width: 100%
+                    height: 54px
                     border: 1px solid #F5F3EF
                     background: transparent
                     color: #F5F3EF
-
