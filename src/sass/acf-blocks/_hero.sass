@@ -1,7 +1,7 @@
 section.hero
     position: relative
     height: 0
-    max-height: 1464px
+    max-height: 1372px
     overflow: hidden
     padding-bottom: 76.25%
     +max-screen($breakpoint-md)
@@ -31,6 +31,7 @@ section.hero
                 @media (max-width: 782px)
                     padding-top: calc(162px + 46px)
         &__title
+            font-family: $font-family-linotypedidot
             font-size: 35px
             color: #0F1758
             +max-screen($breakpoint-xxl)
@@ -44,6 +45,7 @@ section.hero
             +max-screen($breakpoint-sm)
                 font-size: calc((35px / 100) * 50)
             span
+                font-family: $font-family-linotypedidot
                 font-size: 25px
                 display: block
                 +max-screen($breakpoint-xxl)
@@ -56,7 +58,7 @@ section.hero
                     font-size: calc((25px / 100) * 60)
         &__text
             margin: 35px auto 0
-            max-width: 1330px
+            font-family: $font-family-linotypedidot
             font-size: 45px
             color: #101756
             +max-screen($breakpoint-xxl)
@@ -67,3 +69,6 @@ section.hero
                 font-size: calc((45px / 100) * 70)
             +max-screen($breakpoint-md)
                 font-size: calc((45px / 100) * 60)
+            br
+                @media screen and (max-width: 1200px)
+                    display: none !important

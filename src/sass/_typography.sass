@@ -22,8 +22,8 @@ body
 	::selection
 		color: $color-primary
 		background: transparent
-
 	&.allure-page
+		font-family: $font-family-futurapt
 		color: $color-brown
 	&.lucas-page, &.single-menu
 		color: #FFFFFF
@@ -334,14 +334,13 @@ body
 		display: table-row-group
 
 h1, h2, h3, h4, h5, h6
-	font-family: $font-family-secondary
+	font-family: $font-family-ogg
 
 h1,.h1
 	font-size: 80px
 	line-height: 1.35
 	font-weight: 600
-	font-family: $font-family-secondary
-	text-transform: uppercase
+	font-family: $font-family-ogg
 	+max-screen($breakpoint-xxl)
 		font-size: calc((80px / 100) * 90)
 	+max-screen($breakpoint-xl)
@@ -369,7 +368,6 @@ h2,.h2
 h3,.h3
 	font-size: 34px
 	line-height: 1.35
-	text-transform: uppercase
 	+max-screen($breakpoint-md)
 		font-size: 42px
 h4,.h4,.intro .content-block

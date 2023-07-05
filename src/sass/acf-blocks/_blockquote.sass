@@ -22,8 +22,11 @@ section.blockquote
                 height: 100%
         &__content
             position: relative
+            max-width: 1456px
+            margin: 0 auto
             z-index: 2
             p
+                font-family: $font-family-linotypedidot
                 font-size: 40px
                 margin-top: 47px
                 max-width: 1460px
@@ -38,6 +41,7 @@ section.blockquote
                     font-size: calc((40px / 100) * 60)
             blockquote
                 p
+                    font-family: $font-family-linotypedidot
                     font-size: 55px
                     margin: 0 auto
                     +max-screen($breakpoint-xxl)

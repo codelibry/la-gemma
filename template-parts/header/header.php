@@ -26,17 +26,6 @@
             <div class="header__toggle">
                 Menu
             </div>
-            <nav class="header__menu">
-                <?php
-                    wp_nav_menu([
-                        'menu' => 'header-menu',
-                        'depth' => 0,
-                        'container' => 'null',
-                        'menu_class' => 'menu',
-                        'echo' => true
-                    ]);
-                ?>
-            </nav>
             <?php if ($logo_icon) : ?>
                 <div class="header__logo">
                     <a href="<?php echo get_home_url(); ?>">
@@ -52,10 +41,51 @@
                     <span>Language</span>
                 </a>
                 <a href="#"
-                   class="button">
+                   class="button booking-btn">
                     Book now
                 </a>
             </div>
+            <div class="booking-form">
+                <form>
+                    <div class="form-fields">
+                        <div class="form-date-field">
+                            <label for="check-in">CHECK-IN</label>
+                            <input type="text" id="check-in" name="check-in" readonly placeholder="DD - MM - YYYY">
+                        </div>
+                        <div class="form-date-field">
+                            <label for="check-out">CHECK-OUT</label>
+                            <input type="text" id="check-out" name="check-out" readonly placeholder="DD - MM - YYYY">
+                        </div>
+                        <div class="form-calendar">
+                            <div class="form-number-field">
+                                <input type="number" step="1" id="guests" name="guests" placeholder="Guests">
+                            </div>
+                            <input type="text" id="datepicker" readonly>
+                        </div>
+
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" class="button" value="CHECK AVAILABILITY">
+                    </div>
+                </form>
+
+
+
+            </div>
         </div>
     </div>
+    <nav class="header__menu">
+        <?php
+            wp_nav_menu([
+                'menu' => 'header-menu',
+                'depth' => 0,
+                'container' => 'null',
+                'menu_class' => 'menu',
+                'echo' => true
+            ]);
+        ?>
+    </nav>
+
 </header>
+
+

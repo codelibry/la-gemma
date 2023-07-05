@@ -10,8 +10,8 @@ section.text-form
             &.row
                 padding: 0
         &__title
+            font-family: $font-family-ogg
             font-size: 50px
-            text-transform: uppercase
             +max-screen($breakpoint-xxl)
                 font-size: calc((50px / 100) * 90)
             +max-screen($breakpoint-xl)
@@ -24,6 +24,7 @@ section.text-form
                 font-size: calc((50px / 100) * 50)
             span
                 display: block
+                font-family: $font-family-base
                 font-size: 30px
                 font-weight: 300
                 +max-screen($breakpoint-xxl)

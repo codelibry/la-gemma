@@ -5,7 +5,7 @@
 =====================
 */
 
-function vi_load_scripts(){
+function la_gemma_load_scripts(){
     
     $js_path = get_template_directory().'/dist/main.min.js';
     $style_ver = get_stylesheet_directory().'/dist/main.min.css';
@@ -13,8 +13,9 @@ function vi_load_scripts(){
     wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', false , false , true);
     wp_enqueue_script( 'vendors', get_template_directory_uri() . '/dist/vendors.min.js', false , false , true);
     wp_enqueue_script( 'slick', get_template_directory_uri() . '/dist/slick.js', false , false , true);
+    wp_enqueue_script( 'flatpickr', 'https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css', array('jquery') , '1.0.10' , true);
     wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/main.min.js', array('jquery'), filemtime( $js_path ) , true);
-//	wp_enqueue_script( 'wow', get_template_directory_uri() . '/dist/wow.min.js', false , false , true);
+    
     //send PHP variables to JS
     wp_localize_script( 'main', 'customjs_ajax_object',
         array( 
@@ -27,6 +28,7 @@ function vi_load_scripts(){
 	/*theme css*/
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/dist/slick.css', array(), filemtime( $style_ver ), 'all');
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/dist/animate.css', array(), filemtime( $style_ver ), 'all');
+	wp_enqueue_style( 'flatpickr','https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css', array(), filemtime( $style_ver ), 'all');
     wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/main.min.css', array(), filemtime( $style_ver ), 'all');
 }
-add_action( 'wp_enqueue_scripts', 'vi_load_scripts' );
+add_action( 'wp_enqueue_scripts', 'la_gemma_load_scripts' );

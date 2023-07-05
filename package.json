@@ -37,6 +37,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap-4-grid": "^3.4.0",
+    "flatpickr": "^4.6.13",
     "gsap": "npm:@gsap/shockingly@^3.11.3",
     "lottie-web": "^5.7.11",
     "plyr": "^3.6.8",

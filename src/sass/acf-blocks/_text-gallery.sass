@@ -93,6 +93,7 @@ section.text-gallery
                         padding-right: 0
                         padding-left: 0
         &__title
+            font-family: $font-family-ogg
             font-size: 120px
             line-height: 0.66
             +max-screen($breakpoint-xxl)
@@ -106,7 +107,10 @@ section.text-gallery
             +max-screen($breakpoint-sm)
                 font-size: calc((120px / 100) * 40)
             .allure-page &
+                font-family: $font-family-linotypedidot
                 font-size: 35px
+                line-height: 1
+                color: #20201E
                 +max-screen($breakpoint-xxl)
                     font-size: calc((35px / 100) * 90)
                 +max-screen($breakpoint-xl)
@@ -164,12 +168,13 @@ section.text-gallery
                 +max-screen($breakpoint-lg)
                     margin-top: 55px
             .button
+                font-family: $font-family-ogg
                 font-size: 22px
+                color: #fff
                 min-width: 254px
                 height: 44px
                 border: 1px solid $color-green
                 background: $color-green
-                color: #fff
                 .allure-page &
                     font-size: 25px
                     min-width: 305px

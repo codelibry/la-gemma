@@ -7,8 +7,8 @@ section.hero-banner
                 height: 0
                 padding-bottom: 56.25%
                 overflow: hidden
-                +max-screen($breakpoint-md)
-                    min-height: 400px
+                +max-screen($breakpoint-lg)
+                    min-height: 600px
                     height: 100vh
                     padding-bottom: 0
                 &__bg
@@ -64,69 +64,113 @@ section.hero-banner
                         object-fit: cover
 
                 &__title
+                    font-family: $font-family-ogg
+                    font-size: 120px
+                    color: #E5E3DA
+                    text-align: center
+                    +max-screen($breakpoint-xxl)
+                        font-size: calc((120px / 100) * 90)
+                    +max-screen($breakpoint-xl)
+                        font-size: calc((120px / 100) * 80)
+                    +max-screen($breakpoint-lg)
+                        font-size: calc((120px / 100) * 70)
+                    +max-screen($breakpoint-md)
+                        font-size: calc((120px / 100) * 50)
+                    +max-screen($breakpoint-sm)
+                        font-size: calc((120px / 100) * 40)
+                    span
+                        display: block
+                        font-family: $font-family-base
+                        font-size: 50px
+                        font-weight: 300
+                        +max-screen($breakpoint-xxl)
+                            font-size: calc((50px / 100) * 90)
+                        +max-screen($breakpoint-xl)
+                            font-size: calc((50px / 100) * 80)
+                        +max-screen($breakpoint-lg)
+                            font-size: calc((50px / 100) * 70)
+                        +max-screen($breakpoint-md)
+                            font-size: calc((50px / 100) * 50)
+                        +max-screen($breakpoint-sm)
+                            font-size: calc((50px / 100) * 40)
+                        .home &
+                            margin-left: 70px
+                            +max-screen($breakpoint-xxl)
+                                margin-left: calc((70px / 100) * 90)
+                            +max-screen($breakpoint-xl)
+                                margin-left: calc((70px / 100) * 80)
+                            +max-screen($breakpoint-lg)
+                                margin-left: calc((70px / 100) * 70)
+                            +max-screen($breakpoint-md)
+                                margin-left: calc((70px / 100) * 50)
+                            +max-screen($breakpoint-sm)
+                                margin-left: calc((70px / 100) * 40)
+                    br
+                        +max-screen($breakpoint-sm)
+                            display: none !important
+                    .home &
+                        margin-left: -70px
+                        +max-screen($breakpoint-xxl)
+                            margin-left: calc((-70px / 100) * 90)
+                        +max-screen($breakpoint-xl)
+                            margin-left: calc((-70px / 100) * 80)
+                        +max-screen($breakpoint-lg)
+                            margin-left: calc((-70px / 100) * 70)
+                        +max-screen($breakpoint-md)
+                            margin-left: calc((-70px / 100) * 50)
+                        +max-screen($breakpoint-sm)
+                            margin-left: calc((-70px / 100) * 40)
                     .allure-page &
                         margin-top: 305px
-                        margin-left: 78px
+                        font-family: $font-family-linotypedidot
                         font-size: 101px
                         color: $color-brown
+                        text-align: left
                         +max-screen($breakpoint-xxl)
                             font-size: calc((101px / 100) * 90)
-                            margin-left: calc((78px / 100) * 90)
                         +max-screen($breakpoint-xl)
                             font-size: calc((101px / 100) * 80)
-                            margin-left: calc((78px / 100) * 80)
                         +max-screen($breakpoint-lg)
                             font-size: calc((101px / 100) * 70)
-                            margin-left: calc((78px / 100) * 70)
                         +max-screen($breakpoint-md)
                             font-size: calc((101px / 100) * 50)
-                            margin-left: calc((78px / 100) * 50)
                             margin-top: 230px
                         +max-screen($breakpoint-sm)
                             font-size: calc((101px / 100) * 40)
-                            margin-left: calc((78px / 100) * 40)
                         span
                             display: block
-                            margin-left: -78px
+                            font-family: $font-family-futurapt
                             font-size: 35px
                             font-weight: 300
                             +max-screen($breakpoint-xxl)
                                 font-size: calc((35px / 100) * 90)
-                                margin-left: calc((-78px / 100) * 90)
                             +max-screen($breakpoint-xl)
                                 font-size: calc((35px / 100) * 80)
-                                margin-left: calc((-78px / 100) * 80)
                             +max-screen($breakpoint-lg)
                                 font-size: calc((35px / 100) * 70)
-                                margin-left: calc((-78px / 100) * 70)
                             +max-screen($breakpoint-md)
                                 font-size: calc((35px / 100) * 50)
-                                margin-left: calc((-78px / 100) * 50)
                             +max-screen($breakpoint-sm)
                                 font-size: calc((35px / 100) * 40)
-                                margin-left: calc((-78px / 100) * 40)
-                        br
-                            +max-screen($breakpoint-sm)
-                                display: none !important
-                    .single-menu &
-                        span
-                            display: block
-                            font-size: 57px
-                            text-align: center
-                            +max-screen($breakpoint-xxl)
-                                font-size: calc((57px / 100) * 90)
-                            +max-screen($breakpoint-xl)
-                                font-size: calc((57px / 100) * 80)
-                            +max-screen($breakpoint-lg)
-                                font-size: calc((57px / 100) * 70)
-                            +max-screen($breakpoint-md)
-                                font-size: calc((57px / 100) * 60)
-                            +max-screen($breakpoint-sm)
-                                font-size: calc((57px / 100) * 50)
+                            .single-menu &
+                                font-family: $font-family-giveny
+                                font-size: 57px
+                                text-align: center
+                                +max-screen($breakpoint-xxl)
+                                    font-size: calc((57px / 100) * 90)
+                                +max-screen($breakpoint-xl)
+                                    font-size: calc((57px / 100) * 80)
+                                +max-screen($breakpoint-lg)
+                                    font-size: calc((57px / 100) * 70)
+                                +max-screen($breakpoint-md)
+                                    font-size: calc((57px / 100) * 60)
+                                +max-screen($breakpoint-sm)
+                                    font-size: calc((57px / 100) * 50)
 
                 &__text
+                    font-family: $font-family-ogg
                     font-size: 46px
-                    color: #FFFFFF
+                    color: #E5E3DA
                     line-height: 1.44
                     text-align: center
                     +max-screen($breakpoint-xxl)
@@ -137,11 +181,29 @@ section.hero-banner
                         font-size: calc((46px / 100) * 70)
                     +max-screen($breakpoint-md)
                         font-size: calc((46px / 100) * 60)
-
-                    .single-menu &
+                    blockquote
+                        font-family: $font-family-base
                         font-size: 30px
+                        font-weight: 300
+                        line-height: 1
+                        color: #E5E3DA
+                        +max-screen($breakpoint-xxl)
+                            font-size: calc((30px / 100) * 90)
+                        +max-screen($breakpoint-xl)
+                            font-size: calc((30px / 100) * 80)
+                        +max-screen($breakpoint-lg)
+                            font-size: calc((30px / 100) * 70)
+                        +max-screen($breakpoint-md)
+                            font-size: calc((30px / 100) * 60)
+
+                    .home &
+                        margin-top: 40px
+                    .single-menu &
+                        font-family: $font-family-base
+                        font-size: 30px
+                        font-weight: 300
                         line-height: 1.33
-                        margin-top: 14px
+                        margin-top: 45px
                         +max-screen($breakpoint-xxl)
                             font-size: calc((30px / 100) * 90)
                         +max-screen($breakpoint-xl)

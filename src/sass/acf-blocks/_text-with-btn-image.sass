@@ -191,8 +191,9 @@ section.text-with-btn-image
                         padding-right: 0
                         padding-left: 0
         &__title
-            color: #0F1758
+            font-family: $font-family-linotypedidot
             font-size: 55px
+            color: #0F1758
             +max-screen($breakpoint-xxl)
                 font-size: calc((55px / 100) * 90)
             +max-screen($breakpoint-xl)
@@ -217,8 +218,9 @@ section.text-with-btn-image
                 +max-screen($breakpoint-sm)
                     font-size: calc((57px / 100) * 50)
             .single-menu &
-                color: #FFFFFF
+                font-family: $font-family-giveny
                 font-size: 57px
+                color: #FFFFFF
                 +max-screen($breakpoint-xxl)
                     font-size: calc((57px / 100) * 90)
                 +max-screen($breakpoint-xl)
@@ -231,9 +233,10 @@ section.text-with-btn-image
                     font-size: calc((57px / 100) * 50)
             span
                 display: block
-                font-style: normal
+                font-family: $font-family-futurapt
                 font-size: 30px
                 font-weight: 300
+                font-style: normal
                 +max-screen($breakpoint-xxl)
                     font-size: calc((30px / 100) * 90)
                 +max-screen($breakpoint-xl)
@@ -244,6 +247,7 @@ section.text-with-btn-image
                     font-size: calc((30px / 100) * 60)
         &__text
             font-size: 27px
+            font-weight: 300
             color: #000000
             margin: 39px auto 0
             +max-screen($breakpoint-xxl)
@@ -297,10 +301,12 @@ section.text-with-btn-image
                 background: $color-green
                 color: #fff
                 .allure-page &
+                    font-family: $font-family-base
                     border: 1px solid $color-brown
                     background: $color-brown
                     color: #fff
                 .lucas-page &, .single-menu &
+                    font-family: $font-family-giveny
                     font-size: 36px
                     max-width: 305px
                     width: 100%

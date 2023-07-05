@@ -13,6 +13,7 @@ header.header
 
     .header
         &__wrap
+            position: relative
             height: 218px
             display: flex
             justify-content: space-between
@@ -31,6 +32,7 @@ header.header
 
         &__toggle
             position: relative
+            font-family: $font-family-ogg
             font-size: 20px
             color: $color-green
             padding: 0 5px
@@ -75,14 +77,22 @@ header.header
                 .menu-item.menu-item-has-children
                     > a
                         display: inline-block
+                        font-family: $font-family-ogg
                         font-size: 20px
+                        font-weight: 600
+                        color: #213932
                         margin-bottom: 21px
                         text-transform: uppercase
 
                     .menu-item:not(:last-of-type)
                         margin-bottom: 12px
+
+                    .menu-item:not(.menu-item-has-children)
                         > a
+                            font-family: $font-family-base
                             font-size: 19px
+                            font-weight: 300
+                            color: #213932
                 .menu-item.menu-item-has-children:not(:last-of-type)
                     &:after
                         content: ''
@@ -157,32 +167,46 @@ header.header
                 gap: 5px
                 align-self: center
             .button
-                font-size: 18px
-                font-weight: 400
+                font-family: $font-family-ogg
+                font-size: 17px
+                font-weight: 700
+                color: #fff
                 min-width: 105px
                 height: 32px
                 border: 1px solid $color-green
                 background: $color-green
-                color: #fff
                 +max-screen($breakpoint-xxl)
-                    font-size: calc((18px / 100) * 90)
+                    font-size: calc((17px / 100) * 90)
                 +max-screen($breakpoint-xl)
-                    font-size: calc((18px / 100) * 80)
+                    font-size: calc((17px / 100) * 80)
                 +max-screen($breakpoint-md)
-                    font-size: calc((18px / 100) * 70)
+                    font-size: calc((17px / 100) * 70)
                 .home &, .allure-page &, .lucas-page &, .single-menu &
                     border: 1px solid #F5F3EF
                     background: #F5F3EF
                     color: #000
                 &.button-transparent
                     min-width: 121px
+                    font-size: 18px
                     border: 1px solid $color-green
                     background: transparent
                     color: $color-green
+                    +max-screen($breakpoint-xxl)
+                        font-size: calc((18px / 100) * 90)
+                    +max-screen($breakpoint-xl)
+                        font-size: calc((18px / 100) * 80)
+                    +max-screen($breakpoint-md)
+                        font-size: calc((18px / 100) * 70)
                     .home &, .allure-page &, .lucas-page &, .single-menu &
                         border: 1px solid #F5F3EF
                         background: transparent
                         color: #F5F3EF
+                &.active
+                    border: 1px solid #E5E3DA
+                    background: #E5E3DA
+
+
+
 
 // if you are logged in
 .logged-in

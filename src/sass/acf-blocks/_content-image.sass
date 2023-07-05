@@ -58,6 +58,7 @@ section.content-image
                     padding-right: 0
                     padding-left: 0
         &__title
+            font-family: $font-family-linotypedidot
             font-size: 101px
             +max-screen($breakpoint-xxl)
                 font-size: calc((101px / 100) * 90)
@@ -81,6 +82,7 @@ section.content-image
                 +max-screen($breakpoint-md)
                     font-size: calc((85px / 100) * 60)
         &__subtitle
+            font-family: $font-family-base
             font-size: 30px
             font-weight: 300
             +max-screen($breakpoint-xxl)
@@ -113,6 +115,8 @@ section.content-image
                 background: $color-green
                 color: #fff
                 .allure-page &
+                    font-family: $font-family-base
+                    font-weight: 300
                     border: 1px solid $color-brown
                     background: $color-brown
                     color: #fff
