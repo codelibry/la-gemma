@@ -33,9 +33,10 @@ function showBookingForm () {
     const bookingBtn = $('.booking-btn');
     const bookingForm = $('.booking-form');
     const flatpickrSelect = $('.flatpickr-monthDropdown-months');
+    const guestsSelect = bookingForm.find('.form-select-field select');
 
     $(document).on('click', function (e) {
-        if(!bookingBtn.is(e.target) && !bookingForm.is(e.target) && !flatpickrSelect.is(e.target)) {
+        if(!bookingBtn.is(e.target) && !bookingForm.is(e.target) && !flatpickrSelect.is(e.target) && !guestsSelect.is(e.target)) {
             bookingBtn.removeClass('active');
             bookingForm.removeClass('form-visible');
         }
@@ -48,6 +49,27 @@ function showBookingForm () {
     });
 }
 
+function bookingFormSubmit () {
+    const form = $('#booking-form');
+
+    form.submit(function(event) {
+        event.preventDefault();
+
+        var url = 'https://be.synxis.com/?';
+
+        var arrive = $(this).find('[name="arrive"]').val();
+        var depart = $(this).find('[name="depart"]').val();
+        var adultChild = $(this).find('[name="guests"]').val();
+
+        var values = adultChild.split('-');
+        var adult = values[0];
+        var child = values[1];
+
+        url += 'adult=' + adult + '&arrive=' + arrive + '&chain=10205&child=' + child + '&config=gemma&currency=EUR&depart=' + depart + '&hotel=40864&level=hotel&locale=it-IT&rooms=1&theme=gemma'
+
+        window.location.href = url;
+    });
+}
 function setFlatpickrDayHeight() {
     const flatpickrDay = $('.flatpickr-day');
     flatpickrDay.height(flatpickrDay.width() + 'px');
@@ -70,4 +92,4 @@ function setFlatpickrDayClass() {
 $(window).on('resize', setFlatpickrDayHeight);
 $(document).on('click', setFlatpickrDayHeight)
 
-export {chooseBookingDate, showBookingForm}
+export {chooseBookingDate, showBookingForm, bookingFormSubmit}
