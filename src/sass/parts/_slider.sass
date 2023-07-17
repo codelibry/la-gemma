@@ -1,7 +1,7 @@
 .slick-slider
     .slick-dots
         position: absolute
-        bottom: 41px
+        bottom: 29px
         width: 100%
         display: flex
         justify-content: center
@@ -11,12 +11,19 @@
         .allure-page &
             display: none !important
         li
+            display: flex
+            align-items: center
+            justify-content: center
             width: 14px
             height: 14px
             border-radius: 50%
             border: 1px solid #EFEEEC
+            .lucas-page &
+                border: 1px solid #425339
             &.slick-active
                 background: #EFEEEC
+                .lucas-page &
+                    background: #425339
             button
                 font-size: 0
                 width: 100%

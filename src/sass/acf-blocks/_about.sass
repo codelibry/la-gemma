@@ -159,6 +159,7 @@ section.about
             .lucas-page &, .single-menu &
                 font-family: $font-family-giveny
                 font-size: 57px
+                line-height: 1
                 color: #fff
                 +max-screen($breakpoint-xxl)
                     font-size: calc((57px / 100) * 90)
@@ -170,10 +171,13 @@ section.about
                     font-size: calc((57px / 100) * 60)
                 +max-screen($breakpoint-sm)
                     font-size: calc((57px / 100) * 50)
+            h3
+                font-weight: 400
             span
                 display: block
                 font-family: $font-family-linotypedidot
                 font-size: 25px
+                font-weight: 400
                 +max-screen($breakpoint-xxl)
                     font-size: calc((25px / 100) * 90)
                 +max-screen($breakpoint-xl)
@@ -195,6 +199,7 @@ section.about
                 font-size: calc((20px / 100) * 70)
         &__text
             font-size: 27px
+            line-height: 1.29
             color: #000
             margin: 39px auto 0
             +max-screen($breakpoint-xxl)
@@ -208,9 +213,10 @@ section.about
             .lucas-page &,  .single-menu &
                 font-size: 32px
                 font-weight: 300
-                color: #fff
                 line-height: 1.25
-                margin: 30px auto 0
+                letter-spacing: 1.6px
+                color: #fff
+                margin: 51px auto 0
                 +max-screen($breakpoint-xxl)
                     font-size: calc((32px / 100) * 90)
                 +max-screen($breakpoint-xl)
@@ -236,7 +242,7 @@ section.about
                     font-weight: 300
                     border: 1px solid $color-brown
                     background: $color-brown
-                    color: #fff
+                    color: #F5F3EF
                 .lucas-page &, .single-menu &
                     max-width: 305px
                     width: 100%

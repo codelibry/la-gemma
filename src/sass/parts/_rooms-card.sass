@@ -20,11 +20,15 @@
         &__content
         &__title
             margin-top: 35px
+            h4
+                font-family: $font-family-base
+                letter-spacing: 1.71px
         &__text
             margin-top: 35px
             max-width: 628px
             a
                 font-size: 25px
+                line-height: 1.2
                 font-weight: 300
                 +max-screen($breakpoint-xxl)
                     font-size: calc((25px / 100) * 90)
@@ -66,7 +70,7 @@
                         font-size: calc((50px / 100) * 50)
                 svg
                     position: absolute
-                    bottom: 5px
+                    bottom: 20px
                     width: 46px
                     height: 17px
                     object-fit: cover
@@ -91,6 +95,7 @@
                 columns: 2
                 li
                     font-size: 20px
+                    line-height: 1.35
                     font-weight: 300
                     +max-screen($breakpoint-md)
                         font-size: 18px
@@ -106,7 +111,7 @@
                 height: 43px
                 border: 1px solid $color-green
                 background: $color-green
-                color: #fff
+                color: #E5E2D9
                 &.button-transparent
                     border: 1px solid $color-green
                     background: transparent
