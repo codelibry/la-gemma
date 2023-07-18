@@ -1,6 +1,8 @@
 .nice-select
     transition: .2s ease
     border-radius: 0 !important
+    position: relative
+    z-index: 10
     &.open
         border-bottom-color: transparent !important
     &:after
@@ -19,7 +21,6 @@
         box-shadow: none
         .home &, .allure-page &, .lucas-page &, .single-menu &
             border: 1px solid #f5f3ef
-
     .option
         font-size: 20px
         font-weight: 400
@@ -38,4 +39,6 @@
         &.selected
             font-weight: 400
             text-decoration: underline
+        &:first-of-type
+            display: none
 

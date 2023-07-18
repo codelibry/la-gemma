@@ -70,6 +70,9 @@
 			flex-direction: column
 			align-items: center
 			gap: 20px
+		.nice-select
+			.list
+				background: #425339 !important
 
 	.form-date-field, .form-time-field, .form-text-field
 		max-width: 380px
@@ -453,7 +456,10 @@
 		right: 8px
 		width: 35.21%
 		height: 36px
-		z-index: 5
+		.nice-select
+			.option
+				&:first-of-type
+					display: none
 	.form-calendar
 		margin-top: 44px
 		position: relative
@@ -468,6 +474,9 @@
 			padding: 0 8px
 			display: flex
 			justify-content: flex-start
+			position: relative
+			z-index: 10
+			width: 59.13%
 			.flatpickr-prev-month, .flatpickr-next-month, .numInputWrapper
 				display: none !important
 			.flatpickr-month
@@ -478,11 +487,11 @@
 				justify-content: center
 				left: 0
 				top: 0
-				width: 59.13%
+				width: 100%
 				padding: 0
 		.flatpickr-innerContainer
-			position: relative
-			z-index: -1
+			//position: relative
+			//z-index: 5
 		.flatpickr-rContainer
 			width: 100%
 		.flatpickr-weekdays

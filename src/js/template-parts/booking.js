@@ -60,7 +60,7 @@ function bookingFormSubmit () {
 
         var arrive = $(this).find('[name="arrive"]').val();
         var depart = $(this).find('[name="depart"]').val();
-        var adultChild = $(this).find('[name="guests"]').val();
+        var adultChild = $(this).find('.form-select-field .list .selected').data('value');
 
         var values = adultChild.split('-');
         var adult = values[0];
