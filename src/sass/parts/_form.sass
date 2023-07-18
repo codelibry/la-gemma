@@ -346,7 +346,7 @@
 
 .booking-form
 	position: absolute
-	top: calc(32px + 39px)
+	top: calc(32px + 31px)
 	right: 0
 	z-index: 100
 	max-width: 581px
@@ -356,14 +356,15 @@
 	opacity: 0
 	pointer-events: none
 	transition: $default-transition
+	box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.5)
 	+max-screen($breakpoint-xxl)
 		transform: scale(0.9)
 		transform-origin: top right
 	+max-screen($breakpoint-xl)
-		top: calc(32px + 39px + 5px + 39px)
+		top: calc(32px + 32px)
 		transform: scale(0.50)
 	+max-screen($breakpoint-lg)
-		top: calc(39px + 5px + 39px)
+		top: 84px
 		transform: scale(0.55)
 	+max-screen($breakpoint-md)
 		width: 627px
@@ -378,6 +379,44 @@
 	.form-fields
 		display: flex
 		flex-wrap: wrap
+		.nice-select
+			font-family: $font-family-ogg
+			font-size: 25px
+			text-align: center
+			color: #2D4C42
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			height: 36px
+			background: transparent
+			border: 1px solid rgba(45, 76, 66, .53)
+			position: relative
+			z-index: 10
+			.list
+				background: #e5e3da !important
+				border: 1px solid rgba(45, 76, 66, .53)
+				.option
+					font-size: 20px
+					background: #e5e3da !important
+					transition: $default-transition
+					color: #2D4C42
+					+max-screen($breakpoint-xl)
+						font-size: calc((20px / 100) * 90)
+					+max-screen($breakpoint-lg)
+						font-size: calc((20px / 100) * 80)
+					+max-screen($breakpoint-md)
+						font-size: calc((20px / 100) * 70)
+					+max-screen($breakpoint-sm)
+						font-size: calc((20px / 100) * 60)
+					&:hover
+						background: #e3d8af !important
+			&:after
+				width: 10px
+				height: 10px
+				top: unset
+			&:hover
+				background: transparent
 	.form-date-field
 		width: 50%
 		display: flex
@@ -385,14 +424,16 @@
 		label, input
 			max-width: 180px
 			width: 100%
+			color: #2D4C42
 		label
-			text-align: center
+			font-family: $font-family-gillsans
 			font-size: 17px
+			text-align: center
 			margin-bottom: 7px
 		input
-			padding-bottom: 4px
 			font-size: 20px
 			text-align: center
+			padding-bottom: 4px
 			border: none
 			border-bottom: 2px solid #2D4C42
 			background: transparent
@@ -413,21 +454,6 @@
 		width: 35.21%
 		height: 36px
 		z-index: 5
-		select
-			display: flex
-			justify-content: flex-start
-			align-items: center
-			width: 100%
-			height: 100%
-			font-size: 25px
-			text-align: center
-			background: transparent
-			border: 1px solid rgba(45, 76, 66, .5)
-			option
-				font-size: 25px
-			&::placeholder
-				font-size: 25px
-				text-align: center
 	.form-calendar
 		margin-top: 44px
 		position: relative
@@ -447,35 +473,16 @@
 			.flatpickr-month
 				overflow: unset
 			.flatpickr-current-month
-				left: 0
-				top: 0
 				display: flex
 				align-items: center
 				justify-content: center
+				left: 0
+				top: 0
 				width: 59.13%
-				height: 36px
 				padding: 0
-				font-family: $font-family-ogg
-				font-size: 25px
-				select.flatpickr-monthDropdown-months
-					width: 100%
-					height: 100%
-					padding: 0 7px
-					border: 1px solid rgba(45, 76, 66, .5)
-					text-align: center
-					font-size: 25px
-					&:hover
-						background: transparent
-				option.flatpickr-monthDropdown-months
-					font-size: 25px
-					+max-screen($breakpoint-xl)
-						font-size: calc((25px / 100) * 90)
-					+max-screen($breakpoint-lg)
-						font-size: calc((25px / 100) * 80)
-					+max-screen($breakpoint-md)
-						font-size: calc((25px / 100) * 70)
-					+max-screen($breakpoint-sm)
-						font-size: calc((25px / 100) * 60)
+		.flatpickr-innerContainer
+			position: relative
+			z-index: -1
 		.flatpickr-rContainer
 			width: 100%
 		.flatpickr-weekdays
@@ -486,9 +493,10 @@
 				display: flex
 				gap: 29px
 			.flatpickr-weekday
+				font-family: $font-family-gillsans
+				font-size: 17px
 				width: calc((100% / 7) - ((29px * 6) / 7))
 				flex: calc((100% / 7) - ((29px * 6) / 7))
-				font-size: 17px
 				color: #2D4C42
 				text-transform: uppercase
 		.flatpickr-days
@@ -573,6 +581,7 @@
 			height: 42px
 			font-family: $font-family-ogg
 			font-size: 21px
+			font-weight: 400
 			line-height: 1
 			color: #E5E3DA
 			background: #2D4C42

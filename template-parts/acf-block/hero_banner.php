@@ -39,9 +39,9 @@
                                 </div>
                             </div>
                         <?php endif; ?>
-<!--                        <div class="slider-btn">-->
-<!--                            <a href="#">BOOK NOW</a>-->
-<!--                        </div>-->
+                        <div class="slider-btn">
+                            <a href="#">BOOK NOW</a>
+                        </div>
                     </div>
                 </div>
             

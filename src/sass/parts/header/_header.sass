@@ -18,14 +18,14 @@ header.header
             display: flex
             justify-content: space-between
             align-items: flex-start
-            +max-screen($breakpoint-xl)
+            +max-screen($breakpoint-xxl)
                 height: 162px
-                align-items: center
-            +max-screen($breakpoint-lg)
+            +max-screen($breakpoint-xl)
                 height: 100px
+                align-items: center
             .allure-page &, .lucas-page &, .single-menu &
                 height: 162px
-                +max-screen($breakpoint-lg)
+                +max-screen($breakpoint-xl)
                     height: 100px
             .archive &, .single:not(.single-menu) &
                 border-bottom: 1px solid #1A352E
@@ -111,6 +111,7 @@ header.header
             +max-screen($breakpoint-xl)
                 width: auto
                 height: 105px
+                top: unset
             +max-screen($breakpoint-lg)
                 height: 90px
                 top: 50%
@@ -161,7 +162,8 @@ header.header
             gap: 33px
             +max-screen($breakpoint-xl)
                 gap: 20px
-            +max-screen($breakpoint-xl)
+                margin-top: 0
+            +max-screen($breakpoint-lg)
                 margin-top: 0
                 flex-direction: column
                 gap: 5px
@@ -189,21 +191,24 @@ header.header
                     min-width: 121px
                     font-size: 18px
                     border: 1px solid $color-green
-                    background: transparent
+                    border-radius: 0
                     color: $color-green
+                    background: transparent
                     +max-screen($breakpoint-xxl)
                         font-size: calc((18px / 100) * 90)
                     +max-screen($breakpoint-xl)
                         font-size: calc((18px / 100) * 80)
                     +max-screen($breakpoint-md)
                         font-size: calc((18px / 100) * 70)
+                    &:after
+                        display: none
                     .home &, .allure-page &, .lucas-page &, .single-menu &
                         border: 1px solid #F5F3EF
                         background: transparent
                         color: #F5F3EF
                 &.active
                     border: 1px solid #E5E3DA
-                    background: #E5E3DA
+                    //background: #E5E3DA
 
 
 

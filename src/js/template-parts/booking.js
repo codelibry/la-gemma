@@ -32,20 +32,21 @@ function chooseBookingDate() {
 function showBookingForm () {
     const bookingBtn = $('.booking-btn');
     const bookingForm = $('.booking-form');
-    const flatpickrSelect = $('.flatpickr-monthDropdown-months');
-    const guestsSelect = bookingForm.find('.form-select-field select');
+    const bookingSelect = bookingForm.find('select, .nice-select, .current');
 
-    $(document).on('click', function (e) {
-        if(!bookingBtn.is(e.target) && !bookingForm.is(e.target) && !flatpickrSelect.is(e.target) && !guestsSelect.is(e.target)) {
-            bookingBtn.removeClass('active');
-            bookingForm.removeClass('form-visible');
-        }
-    });
+    console.log(bookingSelect)
 
     bookingBtn.on('click', function (e) {
         e.preventDefault();
         bookingBtn.toggleClass('active');
         bookingForm.toggleClass('form-visible');
+    });
+
+    $(document).on('click', function (e) {
+        if(!bookingForm.is(e.target) && bookingForm.has(e.target).length === 0 && !bookingBtn.is(e.target)) {
+            bookingBtn.removeClass('active');
+            bookingForm.removeClass('form-visible');
+        }
     });
 }
 

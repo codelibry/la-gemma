@@ -36,10 +36,10 @@
             <?php endif; ?>
 
             <div class="header__btn">
-                <a href="#"
-                   class="button button-transparent">
-                    <span>Language</span>
-                </a>
+                <select id="language" name="language" class="button button-transparent">
+                    <option value="italian">Italian</option>
+                    <option value="english">English</option>
+                </select>
                 <a href="#"
                    class="button booking-btn">
                     Book now

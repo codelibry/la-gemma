@@ -10,6 +10,7 @@ import { chooseBookingDate, showBookingForm, bookingFormSubmit } from './templat
 
 // Animations
 import './animations/appearence';
+import './template-parts/nice-select';
 
 
 header();

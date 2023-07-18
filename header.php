@@ -68,10 +68,10 @@
 
 <body <?php body_class($body_classes); ?>>
 
-<div class="loader">
-    <img src="<?php echo $loader_logo['url'];?>" alt="Preloader logo"
-         class="loader__logo">
-</div>
+<!--<div class="loader">-->
+<!--    <img src="--><?php //echo $loader_logo['url'];?><!--" alt="Preloader logo"-->
+<!--         class="loader__logo">-->
+<!--</div>-->
 
 <div class="loading-spinner">
     <?php echo get_inline_svg('loader-spinner.svg'); ?>

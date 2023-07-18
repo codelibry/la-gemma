@@ -41,7 +41,10 @@
                     <span>
                         <?php _e('Facilities');?>
                     </span>
-                        <?php echo get_inline_svg('dropdown-arrow.svg');?>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="47.149" height="19.032" viewBox="0 0 47.149 19.032">
+                            <path id="Union_2" data-name="Union 2" d="M-2841.972,1488.986-2865,1472l23.028,16.985,22.934-16.915-22.934,16.915.146.108-.146-.108-.242.178Z" transform="translate(2865.594 -1471.196)" fill="none" stroke="#2d4c42" stroke-width="2"/>
+                        </svg>
+                        <!--                        --><?php //echo get_inline_svg('dropdown-arrow.svg');?>
                     </div>
                     <div class="rooms-card__dropdown-content js-dropdown-content">
                         <?php if ($rooms_amenities) : ?>

@@ -1,0 +1,41 @@
+.nice-select
+    transition: .2s ease
+    border-radius: 0 !important
+    &.open
+        border-bottom-color: transparent !important
+    &:after
+        width: 10px
+        height: 10px
+        top: unset
+    .list
+        width: 100%
+        margin-top: 0
+        margin-left: -1px
+        box-sizing: content-box
+        background: transparent !important
+        border: 1px solid $color-green
+        border-top-color: transparent !important
+        border-radius: 0
+        box-shadow: none
+        .home &, .allure-page &, .lucas-page &, .single-menu &
+            border: 1px solid #f5f3ef
+
+    .option
+        font-size: 20px
+        font-weight: 400
+        height: 31px
+        padding: 0 5px
+        text-align: center
+        text-transform: capitalize !important
+        +max-screen($breakpoint-xxl)
+            font-size: calc((20px / 100) * 90)
+        +max-screen($breakpoint-xl)
+            font-size: calc((20px / 100) * 80)
+        +max-screen($breakpoint-md)
+            font-size: calc((20px / 100) * 70)
+        &.focus, &.selected, &:hover
+            background: transparent !important
+        &.selected
+            font-weight: 400
+            text-decoration: underline
+
