@@ -34,8 +34,6 @@ function showBookingForm () {
     const bookingForm = $('.booking-form');
     const bookingSelect = bookingForm.find('select, .nice-select, .current');
 
-    console.log(bookingSelect)
-
     bookingBtn.on('click', function (e) {
         e.preventDefault();
         bookingBtn.toggleClass('active');

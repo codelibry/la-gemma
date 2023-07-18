@@ -1,6 +1,6 @@
 {
     "key": "group_64941173b960b",
-    "title": "Single Room",
+    "title": "Single Room & Suites",
     "fields": [
         {
             "key": "field_6494118b7c12a",
@@ -85,7 +85,12 @@
                     "toggle": 0,
                     "return_format": "value"
                 }
-            ]
+            ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         }
     ],
     "location": [
@@ -106,5 +111,12 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687425945
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1689705852
 }

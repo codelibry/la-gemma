@@ -19,7 +19,7 @@
         border-top-color: transparent !important
         border-radius: 0
         box-shadow: none
-        .home &, .allure-page &, .lucas-page &, .single-menu &
+        .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
             border: 1px solid #f5f3ef
     .option
         font-size: 20px
@@ -28,12 +28,16 @@
         padding: 0 5px
         text-align: center
         text-transform: capitalize !important
-        +max-screen($breakpoint-xxl)
-            font-size: calc((20px / 100) * 90)
         +max-screen($breakpoint-xl)
+            font-size: calc((20px / 100) * 90)
+        +max-screen($breakpoint-lg)
             font-size: calc((20px / 100) * 80)
         +max-screen($breakpoint-md)
             font-size: calc((20px / 100) * 70)
+        +max-screen($breakpoint-sm)
+            font-size: calc((20px / 100) * 60)
+        &:hover
+            background: #e3d8af !important
         &.focus, &.selected, &:hover
             background: transparent !important
         &.selected

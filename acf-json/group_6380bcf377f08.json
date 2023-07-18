@@ -124,8 +124,8 @@
         },
         {
             "key": "field_64a29345dd729",
-            "label": "Logo lucas single",
-            "name": "logo_lucas_single",
+            "label": "Logo Paulo Airaudo",
+            "name": "logo_paulo_airaudo",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -467,5 +467,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1688376153
+    "modified": 1689711658
 }

@@ -3,12 +3,12 @@
         $image_position = $args['image_position'];
     }
     
-    $title = get_the_title();
-    $text = get_the_content();
     $thumbnail = get_the_post_thumbnail_url();
     $thumbnailCaption = get_the_post_thumbnail_caption() ? : get_the_title();
     $permalink = get_the_permalink();
     
+    $title = get_field('title');
+    $description = get_field('description');
     $button = get_field('button');
     $schedule = get_field('schedule');
 ?>
@@ -29,9 +29,9 @@
                 <?php echo $title; ?>
             </div>
         <?php endif; ?>
-        <?php if($text) :?>
+        <?php if($description) :?>
             <div class="menu-card__text">
-                <?php echo $text; ?>
+                <?php echo $description; ?>
             </div>
         <?php endif; ?>
         

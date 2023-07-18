@@ -3,7 +3,7 @@
     $logo_green = get_field('logo_green', 'option');
     $logo_allure = get_field('logo_allure', 'option');
     $logo_lucas = get_field('logo_lucas', 'option');
-    $logo_lucas_single = get_field('logo_lucas_single', 'option');
+    $logo_paulo_airaudo = get_field('logo_paulo_airaudo', 'option');
     
     $logo_icon = '';
     
@@ -13,8 +13,8 @@
         $logo_icon = $logo_allure;
     } elseif (is_page_template('template-pages/lucas-page.php')) {
         $logo_icon = $logo_lucas;
-    } elseif (is_singular('menu')) {
-        $logo_icon = $logo_lucas_single;
+    } elseif (is_page_template('template-pages/paulo-airaudo-page.php')) {
+        $logo_icon = $logo_paulo_airaudo;
     } elseif (!is_front_page()) {
         $logo_icon = $logo_green;
     }
