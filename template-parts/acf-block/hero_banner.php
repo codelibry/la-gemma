@@ -13,9 +13,9 @@
                 ?>
                 
                 <div class="slider-item">
-                    <?php if ($background_image) : ?>
+                    <?php if ($background_image) :?>
                         <div class="slider-item__bg">
-                            <img src="<?php echo $background_image['url']; ?>"
+                            <img src="<?php echo $background_image['sizes']['1536x1536']; ?>"
                                  alt="<?php echo $background_image['alt'] ?: $background_image['title']; ?>">
                         </div>
                     <?php endif; ?>
