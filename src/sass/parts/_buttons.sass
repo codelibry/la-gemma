@@ -8,6 +8,17 @@
     text-transform: uppercase
     padding: 3px
     transition: $default-transition
+    &.button--transparent-text
+        background-color: $color-light
+        overflow: hidden
+        color: transparent
+        border: 0
+        span
+            background: url(../../../uploads/2023/06/home-slider-1.png)
+            background-size: auto
+            -webkit-text-fill-color: transparent
+            -webkit-background-clip: text
+            display: inline-block
 
 @keyframes fadeToTop
     to

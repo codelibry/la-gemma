@@ -36,7 +36,7 @@
             <?php endif; ?>
 
             <div class="header__btn">
-                <select id="language" name="language" class="button button-transparent">
+                <select id="language" name="language" class="button language-btn">
                     <option value="language" selected>Language</option>
                     <option value="italian">Italian</option>
                     <option value="english">English</option>

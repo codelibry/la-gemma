@@ -8,9 +8,15 @@ section.hero-banner
                 padding-bottom: 56.25%
                 overflow: hidden
                 +max-screen($breakpoint-lg)
-                    min-height: 600px
-                    height: 100vh
+                    min-height: 936px
+                    height: 100%
                     padding-bottom: 0
+                &__wrap
+                    +max-screen($breakpoint-lg)
+                        width: 100%
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
                 &__bg
                     position: absolute
                     top: 0
@@ -21,11 +27,16 @@ section.hero-banner
                         width: 100%
                         height: 100%
                         object-fit: cover
+                        .home &
+                            +max-screen($breakpoint-md)
+                                object-fit: none
                 &__content
                     position: absolute
                     left: 0
                     top: 38.33%
                     width: 100%
+                    +max-screen($breakpoint-lg)
+                        position: unset
                     .allure-page &
                         top: 0
                     .lucas-page &, .paulo-airaudo-page &
@@ -75,55 +86,13 @@ section.hero-banner
                     color: #E5E3DA
                     text-align: center
                     +max-screen($breakpoint-xxl)
-                        font-size: calc((120px / 100) * 90)
+                        font-size: calc((120px / 100) * 85)
                     +max-screen($breakpoint-xl)
-                        font-size: calc((120px / 100) * 80)
+                        font-size: calc((120px / 100) * 75)
                     +max-screen($breakpoint-lg)
-                        font-size: calc((120px / 100) * 70)
+                        font-size: calc((120px / 100) * 65)
                     +max-screen($breakpoint-md)
-                        font-size: calc((120px / 100) * 50)
-                    +max-screen($breakpoint-sm)
-                        font-size: calc((120px / 100) * 40)
-                    span
-                        display: block
-                        font-family: $font-family-base
-                        font-size: 50px
-                        font-weight: 300
-                        letter-spacing: 3.15px
-                        +max-screen($breakpoint-xxl)
-                            font-size: calc((50px / 100) * 90)
-                        +max-screen($breakpoint-xl)
-                            font-size: calc((50px / 100) * 80)
-                        +max-screen($breakpoint-lg)
-                            font-size: calc((50px / 100) * 70)
-                        +max-screen($breakpoint-md)
-                            font-size: calc((50px / 100) * 50)
-                        +max-screen($breakpoint-sm)
-                            font-size: calc((50px / 100) * 40)
-                        .home &
-                            margin-left: 70px
-                            +max-screen($breakpoint-xxl)
-                                margin-left: calc((70px / 100) * 90)
-                            +max-screen($breakpoint-xl)
-                                margin-left: calc((70px / 100) * 80)
-                            +max-screen($breakpoint-lg)
-                                margin-left: calc((70px / 100) * 70)
-                            +max-screen($breakpoint-md)
-                                margin-left: calc((70px / 100) * 50)
-                            +max-screen($breakpoint-sm)
-                                margin-left: calc((70px / 100) * 40)
-                        .allure-page &
-                            letter-spacing: unset
-                        .lucas-page &, .paulo-airaudo-page &
-                            font-family: $font-family-giveny
-                            font-size: 57px
-                            font-weight: 400
-                            letter-spacing: unset
-                            line-height: 1.17
-
-                    br
-                        +max-screen($breakpoint-sm)
-                            display: none !important
+                        font-size: 62px
                     .home &
                         margin-left: -70px
                         +max-screen($breakpoint-xxl)
@@ -131,11 +100,7 @@ section.hero-banner
                         +max-screen($breakpoint-xl)
                             margin-left: calc((-70px / 100) * 80)
                         +max-screen($breakpoint-lg)
-                            margin-left: calc((-70px / 100) * 70)
-                        +max-screen($breakpoint-md)
-                            margin-left: calc((-70px / 100) * 50)
-                        +max-screen($breakpoint-sm)
-                            margin-left: calc((-70px / 100) * 40)
+                            margin-left: 0
                     .allure-page &
                         margin-top: 305px
                         font-family: $font-family-linotypedidot
@@ -153,10 +118,35 @@ section.hero-banner
                             margin-top: 230px
                         +max-screen($breakpoint-sm)
                             font-size: calc((101px / 100) * 40)
-                        span
+                    span
+                        display: block
+                        font-family: $font-family-base
+                        font-size: 50px
+                        font-weight: 300
+                        letter-spacing: 3.15px
+                        +max-screen($breakpoint-xxl)
+                            font-size: calc((50px / 100) * 85)
+                        +max-screen($breakpoint-xl)
+                            font-size: calc((50px / 100) * 75)
+                        +max-screen($breakpoint-lg)
+                            font-size: calc((50px / 100) * 65)
+                        +max-screen($breakpoint-md)
+                            font-size: 29px
+                        .home &
+                            margin-left: 70px
+                            +max-screen($breakpoint-xxl)
+                                margin-left: calc((70px / 100) * 90)
+                            +max-screen($breakpoint-xl)
+                                margin-left: calc((70px / 100) * 80)
+                            +max-screen($breakpoint-lg)
+                                margin-left: 0
+                                margin-bottom: 20px
+                            +max-screen($breakpoint-md)
+                        .allure-page &
                             display: block
                             font-family: $font-family-futurapt
                             font-size: 35px
+                            letter-spacing: unset
                             font-weight: 300
                             +max-screen($breakpoint-xxl)
                                 font-size: calc((35px / 100) * 90)
@@ -168,20 +158,28 @@ section.hero-banner
                                 font-size: calc((35px / 100) * 50)
                             +max-screen($breakpoint-sm)
                                 font-size: calc((35px / 100) * 40)
-                            .lucas-page &, .paulo-airaudo-page &
-                                font-family: $font-family-giveny
-                                font-size: 57px
-                                text-align: center
-                                +max-screen($breakpoint-xxl)
-                                    font-size: calc((57px / 100) * 90)
-                                +max-screen($breakpoint-xl)
-                                    font-size: calc((57px / 100) * 80)
-                                +max-screen($breakpoint-lg)
-                                    font-size: calc((57px / 100) * 70)
-                                +max-screen($breakpoint-md)
-                                    font-size: calc((57px / 100) * 60)
-                                +max-screen($breakpoint-sm)
-                                    font-size: calc((57px / 100) * 50)
+
+                        .lucas-page &, .paulo-airaudo-page &
+                            font-family: $font-family-giveny
+                            font-size: 57px
+                            font-weight: 400
+                            letter-spacing: unset
+                            line-height: 1.17
+                            text-align: center
+                            +max-screen($breakpoint-xxl)
+                                font-size: calc((57px / 100) * 90)
+                            +max-screen($breakpoint-xl)
+                                font-size: calc((57px / 100) * 80)
+                            +max-screen($breakpoint-lg)
+                                font-size: calc((57px / 100) * 70)
+                            +max-screen($breakpoint-md)
+                                font-size: calc((57px / 100) * 60)
+                            +max-screen($breakpoint-sm)
+                                font-size: calc((57px / 100) * 50)
+
+                    br
+                        +max-screen($breakpoint-sm)
+                            display: none !important
 
                 &__content-text
                     font-family: $font-family-ogg
@@ -190,15 +188,15 @@ section.hero-banner
                     line-height: 1.44
                     letter-spacing: 0.09px
                     text-align: center
-
                     +max-screen($breakpoint-xxl)
-                        font-size: calc((46px / 100) * 90)
+                        font-size: calc((46px / 100) * 85)
                     +max-screen($breakpoint-xl)
-                        font-size: calc((46px / 100) * 80)
+                        font-size: calc((46px / 100) * 75)
                     +max-screen($breakpoint-lg)
-                        font-size: calc((46px / 100) * 70)
+                        font-size: calc((46px / 100) * 65)
                     +max-screen($breakpoint-md)
-                        font-size: calc((46px / 100) * 60)
+                        font-size: 40px
+
                     blockquote
                         font-family: $font-family-base
                         font-size: 30px
@@ -207,15 +205,18 @@ section.hero-banner
                         line-height: 1
                         color: #E5E3DA
                         +max-screen($breakpoint-xxl)
-                            font-size: calc((30px / 100) * 90)
+                            font-size: calc((30px / 100) * 85)
                         +max-screen($breakpoint-xl)
-                            font-size: calc((30px / 100) * 80)
+                            font-size: calc((30px / 100) * 75)
                         +max-screen($breakpoint-lg)
-                            font-size: calc((30px / 100) * 70)
+                            font-size: calc((30px / 100) * 65)
                         +max-screen($breakpoint-md)
-                            font-size: calc((30px / 100) * 60)
+                            font-size: 15px
+                            letter-spacing: 1.25px
                     .home &
                         margin-top: 40px
+                        +max-screen($breakpoint-xl)
+                            margin-top: 0
                     .lucas-page &, .paulo-airaudo-page &
                         font-family: $font-family-base
                         font-size: 30px
@@ -232,9 +233,26 @@ section.hero-banner
                         +max-screen($breakpoint-md)
                             font-size: calc((30px / 100) * 60)
                     br
-                        +max-screen($breakpoint-sm)
+                        +max-screen($breakpoint-md)
                             display: none !important
+
+                &__btn
+                    display: none
+                    justify-content: center
+                    margin-top: 23px
+                    +max-screen($breakpoint-lg)
+                        display: flex
+                    .booking-btn
+                        font-family: $font-family-ogg
+                        font-size: 17px
+                        font-weight: 700
+                        width: 105px
+                        height: 32px
+                        background: #F5F3EF
 
             .slick-arrow
                 .lucas-page &, .paulo-airaudo-page &
                     display: none !important
+            .slick-dots
+                +max-screen($breakpoint-lg)
+                    bottom: 72px
