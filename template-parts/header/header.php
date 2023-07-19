@@ -41,8 +41,9 @@
                     <option value="english">English</option>
                 </select>
                 <a href="#"
-                   class="button booking-btn">
-                    Book now
+                   class="button booking-btn button--transparent-text">
+                   <span>Book now</span>
+                    
                 </a>
             </div>
             <div class="booking-form">
@@ -95,4 +96,6 @@
 
 </header>
 
-
+<div class="">
+<a href="#" class="button booking-btn button--transparent-text">Book now</a>
+</div>

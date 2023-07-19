@@ -169,6 +169,7 @@ header.header
                 gap: 5px
                 align-self: center
             .button
+                position: relative
                 font-family: $font-family-ogg
                 font-size: 17px
                 font-weight: 700
@@ -183,10 +184,18 @@ header.header
                     font-size: calc((17px / 100) * 80)
                 +max-screen($breakpoint-md)
                     font-size: calc((17px / 100) * 70)
-                .home &, .allure-page &, .lucas-page &, .single-menu &
-                    border: 1px solid #F5F3EF
-                    background: #F5F3EF
-                    color: #000
+                &.button--transparent-text
+                    background-color: $color-light
+                    overflow: hidden
+                    color: transparent
+                    border: 0
+                    span
+                        background: url(../../../uploads/2023/06/home-slider-1.png)
+                        background-size: auto
+                        -webkit-text-fill-color: transparent
+                        -webkit-background-clip: text
+                        display: inline-block
+                        
                 &.button-transparent
                     min-width: 121px
                     font-size: 18px
