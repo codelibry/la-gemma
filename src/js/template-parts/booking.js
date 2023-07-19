@@ -37,15 +37,13 @@ function chooseBookingDate() {
             calendar.changeMonth(selectedMonth);
 
             const currentMonth = new Date().getMonth();
-            // const currentYear = new Date().getFullYear();
+            const currentYear = new Date().getFullYear();
 
             if (selectedMonth === currentMonth) {
-                // calendar.setDate(new Date(currentYear, currentMonth, currentDate.getDay()));
                 const today = new Date().getDate();
-                const currentYear = new Date().getFullYear();
                 calendar.setDate(new Date(currentYear, currentMonth, today));
             } else {
-                // calendar.setDate(new Date(currentYear, selectedMonth, 1));
+                calendar.setDate(new Date(currentYear, selectedMonth, 1));
             }
         });
 

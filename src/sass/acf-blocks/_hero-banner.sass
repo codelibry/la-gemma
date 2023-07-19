@@ -26,7 +26,8 @@ section.hero-banner
                     left: 0
                     top: 38.33%
                     width: 100%
-
+                    .allure-page &
+                        top: 0
                     .lucas-page &, .paulo-airaudo-page &
                         top: 38.51%
                         max-width: 707px
@@ -111,10 +112,13 @@ section.hero-banner
                                 margin-left: calc((70px / 100) * 50)
                             +max-screen($breakpoint-sm)
                                 margin-left: calc((70px / 100) * 40)
+                        .allure-page &
+                            letter-spacing: unset
                         .lucas-page &, .paulo-airaudo-page &
                             font-family: $font-family-giveny
                             font-size: 57px
                             font-weight: 400
+                            letter-spacing: unset
                             line-height: 1.17
 
                     br
