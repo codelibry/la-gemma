@@ -4,8 +4,10 @@ import flatpickr from "flatpickr";
 function chooseBookingDate() {
     const checkIn = $('#check-in');
     const checkOut = $('#check-out');
+    let currentDate = new Date();
 
-    flatpickr("#datepicker", {
+    const calendar = flatpickr("#datepicker", {
+        defaultDate: "today",
         mode: "range",
         dateFormat: "Y-m-d",
         inline: true,
@@ -24,6 +26,26 @@ function chooseBookingDate() {
                 setFlatpickrDayHeight();
             }
         }
+    });
+
+    $(document).ready(function() {
+        const niceSelectMonth = $('.nice-select.flatpickr-monthDropdown-months');
+        const niceSelectOption = niceSelectMonth.find('.option');
+
+        niceSelectOption.on('click', function() {
+            const selectedMonth = $(this).data('value');
+            calendar.changeMonth(selectedMonth);
+
+            const currentMonth = new Date().getMonth();
+            const currentYear = new Date().getFullYear();
+            if (selectedMonth === String(currentMonth)) {
+                calendar.setDate(new Date(currentYear, currentMonth, 1));
+            } else {
+                calendar.setDate(new Date(currentYear, selectedMonth, 1));
+            }
+        });
+
+        calendar.setDate(currentDate); // Встановлюємо поточну дату після ініціалізації
     });
 
     setFlatpickrDayHeight();
