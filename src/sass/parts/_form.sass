@@ -12,22 +12,26 @@
 	.wpcf7-form-control
 		width: 100%
 		height: 80px
-		padding: 0 21px
+		padding: 0 26px
 		display: flex
 		align-items: center
-		justify-content: center
+		justify-content: flex-start
 		margin: 0
-		.lucas-page &, .single-menu &
+		.lucas-page &, .paulo-airaudo-page &
+			font-family: $font-family-base
 			font-size: 29px
-			font-weight: 400
+			font-weight: 300 !important
 			line-height: 1
+			text-align: left
 			color: #F5F0DF
 			background: transparent
 			border: 1px solid #F5F0DF
 			&::placeholder
+				font-family: $font-family-base
 				font-size: 29px
-				font-weight: 400
+				font-weight: 300 !important
 				line-height: 1
+				text-align: left
 				color: #F5F0DF
 	.form-title, .form-text
 		color: #F5F0DF
@@ -58,9 +62,40 @@
 			font-size: calc((29px / 100) * 70)
 		+max-screen($breakpoint-md)
 			font-size: calc((29px / 100) * 60)
-		a
+
+		.phone
 			font-size: 29px
 			color: #F5F0DF
+			position: relative
+			&:hover
+				cursor: pointer
+			a
+				font-size: 29px
+				color: #F5F0DF
+				opacity: 0
+				pointer-events: none
+				transition: $default-transition
+			&.phone-show
+				a
+					opacity: 1
+					pointer-events: unset
+				&:after
+					opacity: 0
+					pointer-events: none
+			&:after
+				content: '***********'
+				font-size: 29px
+				color: #F5F0DF
+				position: absolute
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				transition: $default-transition
+
 	.form-fields
 		margin-top: 86px
 		display: flex
@@ -70,6 +105,20 @@
 			flex-direction: column
 			align-items: center
 			gap: 20px
+		.nice-select
+			.list
+				background: #425339 !important
+			.option
+				padding: 0 26px
+				font-size: 29px
+				font-weight: 300 !important
+				line-height: 1
+				text-align: left
+				display: flex
+				align-items: center
+				&:hover
+					background: #e3d8af !important
+
 
 	.form-date-field, .form-time-field, .form-text-field
 		max-width: 380px
@@ -91,10 +140,11 @@
 			width: 100%
 			height: 47px
 			font-size: 32px
+			justify-content: center
 			color: #E5E3DA
 			background: #2D4C42
 			border: 1px solid #2D4C42
-			.lucas-page &, .single-menu &
+			.lucas-page &, .paulo-airaudo-page &
 				font-family: $font-family-giveny
 				font-weight: 400
 				color: #FFFFFF
@@ -122,7 +172,7 @@
 			font-family: $font-family-futurapt
 			color: #D9C499
 			border-bottom: 2px solid #D9C499
-		.lucas-page &, .single-menu &
+		.lucas-page &, .paulo-airaudo-page &
 			font-family: $font-family-futurapt
 			color: #F5F0DF
 			border-bottom: 2px solid #F5F0DF
@@ -134,7 +184,7 @@
 			text-align: center
 			.allure-page &
 				color: rgba(217, 196, 153, .5)
-			.lucas-page &, .single-menu &
+			.lucas-page &, .paulo-airaudo-page &
 				color: rgba(245, 240, 223, .5)
 	.form-title
 		font-family: $font-family-ogg
@@ -161,7 +211,7 @@
 		.allure-page &
 			font-family: $font-family-linotypedidot
 			color: #C1AD8A
-		.lucas-page &, .single-menu &
+		.lucas-page &, .paulo-airaudo-page &
 			font-family: $font-family-linotypedidot
 			color: #F5F0DF
 	.form-fields
@@ -178,13 +228,13 @@
 		text-align: center
 		.allure-page &
 			color: #D9C499
-		.lucas-page &, .single-menu &
+		.lucas-page &, .paulo-airaudo-page &
 			color: #F5F0DF
 		a
 			color: #456D63
 			.allure-page &
 				color: #D9C499
-			.lucas-page &, .single-menu &
+			.lucas-page &, .paulo-airaudo-page &
 				color: #F5F0DF
 	.form-submit
 		margin-top: 45px
@@ -207,7 +257,7 @@
 				color: #F5F3EF
 				background: #D9C499
 				border: 1px solid #D9C499
-			.lucas-page &, .single-menu &
+			.lucas-page &, .paulo-airaudo-page &
 				font-family: $font-family-giveny
 				color: #F5F3EF
 				background: #A6AB9C
@@ -232,7 +282,7 @@
 		.allure-page &
 			color: #D9C499
 			border-bottom: 2px solid #D9C499
-		.lucas-page &, .single-menu &
+		.lucas-page &, .paulo-airaudo-page &
 			color: #F5F0DF
 			border-bottom: 2px solid #F5F0DF
 		&::placeholder
@@ -243,7 +293,7 @@
 			text-align: center
 			.allure-page &
 				color: rgba(217, 196, 153, .5)
-			.lucas-page &, .single-menu &
+			.lucas-page &, .paulo-airaudo-page &
 				color: rgba(245, 240, 223, .5)
 	.form-image
 		margin: 0 auto
@@ -293,7 +343,7 @@
 				font-size: calc((20px / 100) * 70)
 		.allure-page &
 			color: #C1AD8A
-		.lucas-page &, .single-menu &
+		.lucas-page &, .paulo-airaudo-page &
 			color: #F5F0DF
 	.form-fields
 		margin-top: 17px
@@ -309,13 +359,13 @@
 		text-align: center
 		.allure-page &
 			color: #D9C499
-		.lucas-page &, .single-menu &
+		.lucas-page &, .paulo-airaudo-page &
 			color: #F5F0DF
 		a
 			color: #456D63
 			.allure-page &
 				color: #D9C499
-			.lucas-page &, .single-menu &
+			.lucas-page &, .paulo-airaudo-page &
 				color: #F5F0DF
 	.form-submit
 		margin-top: 15px
@@ -337,7 +387,7 @@
 				color: #F5F3EF
 				background: #D9C499
 				border: 1px solid #D9C499
-			.lucas-page &, .single-menu &
+			.lucas-page &, .paulo-airaudo-page &
 				color: #F5F3EF
 				background: #A6AB9C
 				border: 1px solid #A6AB9C
@@ -453,7 +503,10 @@
 		right: 8px
 		width: 35.21%
 		height: 36px
-		z-index: 5
+		.nice-select
+			.option
+				&:first-of-type
+					display: none
 	.form-calendar
 		margin-top: 44px
 		position: relative
@@ -468,6 +521,9 @@
 			padding: 0 8px
 			display: flex
 			justify-content: flex-start
+			position: relative
+			z-index: 10
+			width: 59.13%
 			.flatpickr-prev-month, .flatpickr-next-month, .numInputWrapper
 				display: none !important
 			.flatpickr-month
@@ -478,11 +534,11 @@
 				justify-content: center
 				left: 0
 				top: 0
-				width: 59.13%
+				width: 100%
 				padding: 0
 		.flatpickr-innerContainer
-			position: relative
-			z-index: -1
+			//position: relative
+			//z-index: 5
 		.flatpickr-rContainer
 			width: 100%
 		.flatpickr-weekdays

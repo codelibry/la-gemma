@@ -3,7 +3,7 @@
     $logo_green = get_field('logo_green', 'option');
     $logo_allure = get_field('logo_allure', 'option');
     $logo_lucas = get_field('logo_lucas', 'option');
-    $logo_lucas_single = get_field('logo_lucas_single', 'option');
+    $logo_paulo_airaudo = get_field('logo_paulo_airaudo', 'option');
     
     $logo_icon = '';
     
@@ -13,8 +13,8 @@
         $logo_icon = $logo_allure;
     } elseif (is_page_template('template-pages/lucas-page.php')) {
         $logo_icon = $logo_lucas;
-    } elseif (is_singular('menu')) {
-        $logo_icon = $logo_lucas_single;
+    } elseif (is_page_template('template-pages/paulo-airaudo-page.php')) {
+        $logo_icon = $logo_paulo_airaudo;
     } elseif (!is_front_page()) {
         $logo_icon = $logo_green;
     }
@@ -37,6 +37,7 @@
 
             <div class="header__btn">
                 <select id="language" name="language" class="button button-transparent">
+                    <option value="language" selected>Language</option>
                     <option value="italian">Italian</option>
                     <option value="english">English</option>
                 </select>
@@ -60,7 +61,8 @@
                         <div class="form-calendar">
                             <div class="form-select-field">
                                 <select id="guests" name="guests">
-                                    <option value="1">1 Adult</option>
+                                    <option value="0" selected disabled>Guests</option>
+                                    <option value="1-0">1 Adult</option>
                                     <option value="1-1">1 Adult 1 Child</option>
                                     <option value="2-1">2 Adult 1 Child</option>
                                     <option value="2-2">2 Adult 2 Child</option>
@@ -68,9 +70,6 @@
                                     <option value="3-3">3 Adult 3 Child</option>
                                 </select>
                             </div>
-                            <!--                            <div class="form-number-field">-->
-                            <!--                                <input type="number" step="1" id="guests" name="guests" placeholder="Guests">-->
-                            <!--                            </div>-->
                             <input type="text" id="datepicker" readonly>
                         </div>
 

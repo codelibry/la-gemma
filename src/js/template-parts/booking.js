@@ -4,8 +4,10 @@ import flatpickr from "flatpickr";
 function chooseBookingDate() {
     const checkIn = $('#check-in');
     const checkOut = $('#check-out');
+    let currentDate = new Date();
 
-    flatpickr("#datepicker", {
+    const calendar = flatpickr("#datepicker", {
+        defaultDate: "today",
         mode: "range",
         dateFormat: "Y-m-d",
         inline: true,
@@ -26,6 +28,28 @@ function chooseBookingDate() {
         }
     });
 
+    $(document).ready(function() {
+        const niceSelectMonth = $('.nice-select.flatpickr-monthDropdown-months');
+        const niceSelectOption = niceSelectMonth.find('.option');
+
+        niceSelectOption.on('click', function() {
+            const selectedMonth = $(this).data('value');
+            calendar.changeMonth(selectedMonth);
+
+            const currentMonth = new Date().getMonth();
+            const currentYear = new Date().getFullYear();
+
+            if (selectedMonth === currentMonth) {
+                const today = new Date().getDate();
+                calendar.setDate(new Date(currentYear, currentMonth, today));
+            } else {
+                calendar.setDate(new Date(currentYear, selectedMonth, 1));
+            }
+        });
+
+        calendar.setDate(currentDate);
+    });
+
     setFlatpickrDayHeight();
 }
 
@@ -33,8 +57,6 @@ function showBookingForm () {
     const bookingBtn = $('.booking-btn');
     const bookingForm = $('.booking-form');
     const bookingSelect = bookingForm.find('select, .nice-select, .current');
-
-    console.log(bookingSelect)
 
     bookingBtn.on('click', function (e) {
         e.preventDefault();
@@ -60,7 +82,7 @@ function bookingFormSubmit () {
 
         var arrive = $(this).find('[name="arrive"]').val();
         var depart = $(this).find('[name="depart"]').val();
-        var adultChild = $(this).find('[name="guests"]').val();
+        var adultChild = $(this).find('.form-select-field .list .selected').data('value');
 
         var values = adultChild.split('-');
         var adult = values[0];

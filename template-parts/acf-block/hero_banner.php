@@ -6,6 +6,7 @@
             <?php foreach ($banner_list as $list_item) : ?>
                 <?php
                 $background_image = $list_item['background_image'];
+                $what_show = $list_item['what_show'];
                 $logo = $list_item['logo'];
                 $title = $list_item['title'];
                 $text = $list_item['text'];
@@ -18,31 +19,32 @@
                                  alt="<?php echo $background_image['alt'] ?: $background_image['title']; ?>">
                         </div>
                     <?php endif; ?>
-                    <div class="slider-item__content">
-                        <?php if ($logo) : ?>
-                            <div class="slider-item__logo">
-                                <img src="<?php echo $logo['url']; ?>"
-                                     alt="<?php echo $logo['alt'] ?: $logo['title']; ?>">
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($title) : ?>
-                            <div class="slider-item__title">
-                                <div class="container">
-                                    <?php echo $title; ?>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($text) : ?>
-                            <div class="slider-item__text">
-                                <div class="container">
-                                    <?php echo $text; ?>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                        <div class="slider-btn">
-                            <a href="#">BOOK NOW</a>
+                    
+                    <?php if ($what_show === 'logo' && $logo) : ?>
+                        <div class="slider-item__logo">
+                            <img src="<?php echo $logo['url']; ?>"
+                                 alt="<?php echo $logo['alt'] ?: $logo['title']; ?>">
                         </div>
-                    </div>
+                    <?php endif; ?>
+    
+                    <?php if ($what_show === 'content') : ?>
+                        <div class="slider-item__content">
+                            <?php if ($title) : ?>
+                                <div class="slider-item__content-title">
+                                    <div class="container">
+                                        <?php echo $title; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($text) : ?>
+                                <div class="slider-item__content-text">
+                                    <div class="container">
+                                        <?php echo $text; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             
             <?php endforeach; ?>

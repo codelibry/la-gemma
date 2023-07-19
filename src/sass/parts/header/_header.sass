@@ -8,7 +8,7 @@ header.header
         background: rgba(0, 0, 0, .39)
     .lucas-page &
         background: rgba(66, 83, 57, .29)
-    .single-menu &
+    .paulo-airaudo-page &
         background: rgba(255, 255, 255, .29)
 
     .header
@@ -23,7 +23,7 @@ header.header
             +max-screen($breakpoint-xl)
                 height: 100px
                 align-items: center
-            .allure-page &, .lucas-page &, .single-menu &
+            .allure-page &, .lucas-page &, .paulo-airaudo-page &
                 height: 162px
                 +max-screen($breakpoint-xl)
                     height: 100px
@@ -42,7 +42,7 @@ header.header
                 margin-top: 0
             +max-screen($breakpoint-lg)
                 font-size: 18px
-            .home &, .allure-page &, .lucas-page &, .single-menu &
+            .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
                 color: #F5F3EF
             &:after
                 content: ''
@@ -55,7 +55,7 @@ header.header
                 background: $color-green
                 transition: $default-transition
                 transform-origin: left
-                .home &, .allure-page &, .lucas-page &, .single-menu &
+                .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
                     background: #F5F3EF
             &:hover
                 cursor: pointer
@@ -80,6 +80,7 @@ header.header
                         font-family: $font-family-ogg
                         font-size: 20px
                         font-weight: 600
+                        letter-spacing: 0.6px
                         color: #213932
                         margin-bottom: 21px
                         text-transform: uppercase
@@ -92,6 +93,7 @@ header.header
                             font-family: $font-family-base
                             font-size: 19px
                             font-weight: 300
+                            letter-spacing: -0.42px
                             color: #213932
                 .menu-item.menu-item-has-children:not(:last-of-type)
                     &:after
@@ -132,17 +134,19 @@ header.header
                 width: 197px
                 height: 93px
                 +max-screen($breakpoint-xl)
+                    top: unset
                     width: auto
                     height: 75px
                 +max-screen($breakpoint-lg)
                     height: 55px
                     top: 50%
                     transform: translate(-50%, -50%)
-            .single-menu &
+            .paulo-airaudo-page &
                 top: 32px
                 width: 180px
                 height: 113px
                 +max-screen($breakpoint-xl)
+                    top: unset
                     width: auto
                     height: 75px
                 +max-screen($breakpoint-lg)
@@ -196,6 +200,10 @@ header.header
                         -webkit-background-clip: text
                         display: inline-block
                         
+                .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
+                    border: 1px solid #F5F3EF
+                    background: #F5F3EF
+                    color: #000
                 &.button-transparent
                     min-width: 121px
                     font-size: 18px
@@ -211,7 +219,7 @@ header.header
                         font-size: calc((18px / 100) * 70)
                     &:after
                         display: none
-                    .home &, .allure-page &, .lucas-page &, .single-menu &
+                    .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
                         border: 1px solid #F5F3EF
                         background: transparent
                         color: #F5F3EF

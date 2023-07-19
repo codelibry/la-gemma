@@ -175,21 +175,55 @@
                                     "library": "all"
                                 },
                                 {
+                                    "key": "field_64b6ea36303ac",
+                                    "label": "What show?",
+                                    "name": "what_show",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_save_meta": 0,
+                                    "choices": {
+                                        "logo": "Only logo",
+                                        "content": "Content"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "default_value": "",
+                                    "layout": "vertical",
+                                    "return_format": "value",
+                                    "save_other_choice": 0
+                                },
+                                {
                                     "key": "field_6489b6881349e",
                                     "label": "Logo",
                                     "name": "logo",
                                     "type": "image",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_64b6ea36303ac",
+                                                "operator": "==",
+                                                "value": "logo"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
-                                        "width": "30",
+                                        "width": "",
                                         "class": "",
                                         "id": ""
                                     },
+                                    "acfe_save_meta": 0,
+                                    "uploader": "",
                                     "return_format": "array",
                                     "preview_size": "medium",
-                                    "library": "all",
                                     "min_width": "",
                                     "min_height": "",
                                     "min_size": "",
@@ -197,8 +231,8 @@
                                     "max_height": "",
                                     "max_size": "",
                                     "mime_types": "",
-                                    "uploader": "",
-                                    "acfe_thumbnail": 0
+                                    "acfe_thumbnail": 0,
+                                    "library": "all"
                                 },
                                 {
                                     "key": "field_649c54e69388c",
@@ -207,7 +241,15 @@
                                     "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_64b6ea36303ac",
+                                                "operator": "==",
+                                                "value": "content"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "50",
                                         "class": "",
@@ -228,7 +270,15 @@
                                     "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_64b6ea36303ac",
+                                                "operator": "==",
+                                                "value": "content"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "50",
                                         "class": "",
@@ -1647,5 +1697,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1688371421
+    "modified": 1689710485
 }

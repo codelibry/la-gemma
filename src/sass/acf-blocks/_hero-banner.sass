@@ -26,44 +26,50 @@ section.hero-banner
                     left: 0
                     top: 38.33%
                     width: 100%
-                    .allure-page &, .lucas-page &
+                    .allure-page &
                         top: 0
-                    .single-menu &
+                    .lucas-page &, .paulo-airaudo-page &
                         top: 38.51%
                         max-width: 707px
                 &__logo
-                    margin: 145px auto 0
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    display: flex
+                    justify-content: center
                     .allure-page &
-                        width: 356px
-                        height: 255px
-                        +max-screen($breakpoint-xl)
-                            width: 300px
-                            height: auto
-                        +max-screen($breakpoint-lg)
-                            width: 250px
-                        +max-screen($breakpoint-md)
-                            width: 200px
-                        +max-screen($breakpoint-sm)
-                            width: 150px
-                    .lucas-page &, .single-menu &
-                        margin: 258px auto 0
-                        width: 361px
-                        height: 84px
-                        +max-screen($breakpoint-xl)
-                            width: 300px
-                            height: auto
-                        +max-screen($breakpoint-lg)
-                            width: 250px
-                        +max-screen($breakpoint-md)
-                            width: 200px
-                        +max-screen($breakpoint-sm)
-                            width: 150px
+                        top: 13.42%
+                    .lucas-page &, .paulo-airaudo-page &
+                        top: 23.88%
                     img
-                        width: 100%
-                        height: 100%
                         object-fit: cover
+                        .allure-page &
+                            width: 356px
+                            height: 255px
+                            +max-screen($breakpoint-xl)
+                                width: 300px
+                                height: auto
+                            +max-screen($breakpoint-lg)
+                                width: 250px
+                            +max-screen($breakpoint-md)
+                                width: 200px
+                            +max-screen($breakpoint-sm)
+                                width: 150px
+                        .lucas-page &, .paulo-airaudo-page &
+                            width: 361px
+                            height: 84px
+                            +max-screen($breakpoint-xl)
+                                width: 300px
+                                height: auto
+                            +max-screen($breakpoint-lg)
+                                width: 250px
+                            +max-screen($breakpoint-md)
+                                width: 200px
+                            +max-screen($breakpoint-sm)
+                                width: 150px
 
-                &__title
+                &__content-title
                     font-family: $font-family-ogg
                     font-size: 120px
                     color: #E5E3DA
@@ -106,10 +112,13 @@ section.hero-banner
                                 margin-left: calc((70px / 100) * 50)
                             +max-screen($breakpoint-sm)
                                 margin-left: calc((70px / 100) * 40)
-                        .single-menu &
+                        .allure-page &
+                            letter-spacing: unset
+                        .lucas-page &, .paulo-airaudo-page &
                             font-family: $font-family-giveny
                             font-size: 57px
                             font-weight: 400
+                            letter-spacing: unset
                             line-height: 1.17
 
                     br
@@ -159,7 +168,7 @@ section.hero-banner
                                 font-size: calc((35px / 100) * 50)
                             +max-screen($breakpoint-sm)
                                 font-size: calc((35px / 100) * 40)
-                            .single-menu &
+                            .lucas-page &, .paulo-airaudo-page &
                                 font-family: $font-family-giveny
                                 font-size: 57px
                                 text-align: center
@@ -174,7 +183,7 @@ section.hero-banner
                                 +max-screen($breakpoint-sm)
                                     font-size: calc((57px / 100) * 50)
 
-                &__text
+                &__content-text
                     font-family: $font-family-ogg
                     font-size: 46px
                     color: #E5E3DA
@@ -207,7 +216,7 @@ section.hero-banner
                             font-size: calc((30px / 100) * 60)
                     .home &
                         margin-top: 40px
-                    .single-menu &
+                    .lucas-page &, .paulo-airaudo-page &
                         font-family: $font-family-base
                         font-size: 30px
                         font-weight: 300
@@ -227,5 +236,5 @@ section.hero-banner
                             display: none !important
 
             .slick-arrow
-                .lucas-page &, .single-menu &
+                .lucas-page &, .paulo-airaudo-page &
                     display: none !important

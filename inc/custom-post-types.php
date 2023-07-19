@@ -86,7 +86,7 @@
             ),
             'query_var' => true,
             'menu_icon' => 'dashicons-list-view',
-            'supports' => array('title', 'editor', 'thumbnail'),
+            'supports' => array('title', 'thumbnail'),
             'show_in_graphql' => false,
         );
         

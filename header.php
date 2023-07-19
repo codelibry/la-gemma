@@ -35,7 +35,7 @@
     
     if (is_page_template('template-pages/allure-page.php')) {
         $loader_logo = $logo_allure;
-    } elseif(is_page_template('template-pages/lucas-page.php') || is_singular('menu')) {
+    } elseif (is_page_template('template-pages/lucas-page.php') || is_page_template('template-pages/paulo-airaudo-page.php')) {
         $loader_logo = $logo_lucas;
     } else {
         $loader_logo = $logo_white;
@@ -47,6 +47,8 @@
         $body_classes = 'lucas-page';
     } else if (is_page_template('template-pages/about-page.php')) {
         $body_classes = 'about-page';
+    } else if (is_page_template('template-pages/paulo-airaudo-page.php')) {
+        $body_classes = 'paulo-airaudo-page';
     } else {
         $body_classes = 'default-page';
     }
@@ -61,17 +63,17 @@
         background-color: <?php echo $allure_spa_background_color;?> !important;
     }
 
-    body.lucas-page, body.single-menu {
+    body.lucas-page, body.paulo-airaudo-page {
         background-color: <?php echo $lucas_background_color;?> !important;
     }
 </style>
 
 <body <?php body_class($body_classes); ?>>
 
-<!--<div class="loader">-->
-<!--    <img src="--><?php //echo $loader_logo['url'];?><!--" alt="Preloader logo"-->
-<!--         class="loader__logo">-->
-<!--</div>-->
+<div class="loader">
+    <img src="<?php echo $loader_logo['url']; ?>" alt="Preloader logo"
+         class="loader__logo">
+</div>
 
 <div class="loading-spinner">
     <?php echo get_inline_svg('loader-spinner.svg'); ?>
