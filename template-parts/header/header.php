@@ -94,7 +94,3 @@
     </nav>
 
 </header>
-
-<div class="">
-<a href="#" class="button booking-btn button--transparent-text">Book now</a>
-</div>
