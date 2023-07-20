@@ -1,5 +1,5 @@
 header.header
-    position: absolute
+    position: fixed
     z-index: 100
     top: 0
     left: 0
@@ -16,7 +16,6 @@ header.header
 
     &.header-fixed
         position: fixed
-        animation: fixedHeader .7s linear forwards
         background: #2d4c42
         .header
             &__toggle
@@ -34,9 +33,6 @@ header.header
             background: #d9c499
         .lucas-page &, .paulo-airaudo-page &
             background: #a6ab9c
-    &.header-unfixed
-        position: absolute
-        animation: unfixedHeader .6s linear forwards
 
     .header
         &__wrap
