@@ -43,7 +43,7 @@
                 </select>
                 <a href="#"
                    class="button booking-btn">
-                   <span>Book now</span>
+                   <span>Book</span>
                     
                 </a>
             </div>
