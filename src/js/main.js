@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 // Parts
-import { header } from './template-parts/header/header';
+import { toggleHeaderMenu, setHeaderPositionFixed } from './template-parts/header/header';
 import { getSlider } from './template-parts/slider';
 import { toggleDropdown } from './template-parts/dropdown';
 import { getFormAccept } from './template-parts/formAccept';
@@ -14,7 +14,8 @@ import './animations/appearence';
 import './template-parts/nice-select';
 
 
-header();
+toggleHeaderMenu();
+setHeaderPositionFixed();
 getSlider();
 toggleDropdown();
 getFormAccept();

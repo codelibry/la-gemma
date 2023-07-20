@@ -4,12 +4,39 @@ header.header
     top: 0
     left: 0
     width: 100%
+    transition: .4s ease
     .allure-page &
         background: rgba(0, 0, 0, .39)
+    .page-id-646 &
+        background: none
     .lucas-page &
         background: rgba(66, 83, 57, .29)
     .paulo-airaudo-page &
         background: rgba(255, 255, 255, .29)
+
+    &.header-fixed
+        position: fixed
+        animation: fixedHeader .7s linear forwards
+        background: #2d4c42
+        .header
+            &__toggle
+                color: #e5e3da
+            &__btn
+                .button
+                    &.language-btn
+                        border: 1px solid #e5e3da
+                        background: #e5e3da
+                        color: $color-green
+                    &.button--transparent-text
+                        background: #e5e3da
+
+        .allure-page &
+            background: #d9c499
+        .lucas-page &, .paulo-airaudo-page &
+            background: #a6ab9c
+    &.header-unfixed
+        position: absolute
+        animation: unfixedHeader .6s linear forwards
 
     .header
         &__wrap
@@ -190,7 +217,7 @@ header.header
                 .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
                     border: 1px solid $color-light
                     background: $color-light
-                    color: #000
+                    color: $color-green
                 &.booking-btn
                     +max-screen($breakpoint-lg)
                         display: none
@@ -226,7 +253,25 @@ header.header
 
 .page-id-646
     header.header
-        background: none !important
+        //background: none !important
         .header
             &__logo
                 display: none
+
+@keyframes fixedHeader
+    0%
+        transform: translateY(-100%)
+    100%
+        transform: translateY(0)
+
+
+@keyframes unfixedHeader
+    0%
+        background: #fff
+        transform: translateY(0)
+    50%
+        transform: translateY(-100%)
+    100%
+        transform: translateY(0)
+        //background: transparent
+        position: absolute
