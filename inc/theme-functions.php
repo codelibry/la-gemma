@@ -69,3 +69,29 @@
         endif;
         return '';
     }
+    
+    function change_menu_item_link_to_file($items, $args) {
+            foreach ($items as $item) {
+                $file_url = get_field('pdf_file', $item);
+                if ($file_url) {
+                    $item->url = $file_url;
+                    $item->target = '_blank'; // Це додається, якщо ви хочете, щоб файл відкривався у новому вікні/вкладці
+                    $item->xfn = 'download'; // Це додається, щоб вказати, що посилання є для завантаження
+                }
+        }
+        return $items;
+    }
+    add_filter('wp_nav_menu_objects', 'change_menu_item_link_to_file', 10, 2);
+    
+    function add_download_link_header($item_output, $item, $depth, $args) {
+        $file_url = get_field('pdf_file', $item);
+        if ($file_url) {
+            $item_output = str_replace('<a', '<a download href="' . esc_url($file_url) . '"', $item_output);
+        }
+        return $item_output;
+    }
+    add_filter('walker_nav_menu_start_el', 'add_download_link_header', 10, 4);
+
+
+
+

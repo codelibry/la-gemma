@@ -4,19 +4,24 @@ section.hero-banner
             .slider-item
                 display: block !important
                 position: relative
-                height: 0
-                padding-bottom: 56.25%
+                //height: 0
+                //padding-bottom: 56.25%
                 overflow: hidden
+                min-height: 600px
+                height: 100vh
                 +max-screen($breakpoint-lg)
-                    min-height: 936px
-                    height: 100%
-                    padding-bottom: 0
+                    min-height: 700px
+                    //padding-bottom: 0
                 &__wrap
-                    +max-screen($breakpoint-lg)
-                        width: 100%
-                        position: absolute
-                        top: 50%
-                        transform: translateY(-50%)
+                    position: absolute
+                    top: 50%
+                    width: 100%
+                    transform: translateY(-50%)
+                    .allure-page &
+                        top: 0
+                    .lucas-page &, .paulo-airaudo-page &
+                        top: 38.51%
+
                 &__bg
                     position: absolute
                     top: 0
@@ -31,16 +36,7 @@ section.hero-banner
                             +max-screen($breakpoint-md)
                                 object-fit: none
                 &__content
-                    position: absolute
-                    left: 0
-                    top: 38.33%
-                    width: 100%
-                    +max-screen($breakpoint-lg)
-                        position: unset
-                    .allure-page &
-                        top: 0
                     .lucas-page &, .paulo-airaudo-page &
-                        top: 38.51%
                         max-width: 707px
                 &__logo
                     position: absolute
