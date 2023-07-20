@@ -42,7 +42,7 @@
                     <option value="english">English</option>
                 </select>
                 <a href="#"
-                   class="button booking-btn button--transparent-text">
+                   class="button booking-btn">
                    <span>Book now</span>
                     
                 </a>

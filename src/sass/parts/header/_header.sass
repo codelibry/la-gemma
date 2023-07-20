@@ -201,19 +201,47 @@ header.header
                     font-size: calc((17px / 100) * 80)
                 +max-screen($breakpoint-md)
                     font-size: calc((17px / 100) * 70)
-                &.button--transparent-text
-                    background-color: $color-green
-                    overflow: hidden
-                    color: transparent
-                    border: 0
-                    span
-                        background: url(../../../uploads/2023/06/home-slider-1.png)
-                        background-size: auto
-                        -webkit-text-fill-color: transparent
-                        -webkit-background-clip: text
-                        display: inline-block
+                .home &
+                    &.booking-btn
+                        background-color: $color-light
+                        overflow: hidden
+                        color: transparent
+                        border: 0
+                        span
+                            background: url(../../../uploads/2023/06/home-slider-1.png)
+                            background-size: auto
+                            -webkit-text-fill-color: transparent
+                            -webkit-background-clip: text
+                            display: inline-block
                     .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
                         background-color: $color-light
+                .page-template-about-page &
+                    &.booking-btn
+                        background-color: $color-green
+                        overflow: hidden
+                        color: transparent
+                        border: 0
+                        span
+                            background: url(../../../uploads/2023/06/about-hero.png)
+                            background-size: auto
+                            -webkit-text-fill-color: transparent
+                            -webkit-background-clip: text
+                            display: inline-block
+                .allure-page &
+                    &.booking-btn
+                        background-color: $color-light
+                        overflow: hidden
+                        color: transparent
+                        border: 0
+                        span
+                            background: url(../../../uploads/2023/06/home-slider-2.png)
+                            background-size: auto
+                            -webkit-text-fill-color: transparent
+                            -webkit-background-clip: text
+                            display: inline-block
+                .paulo-airaudo-page &
+                    &.booking-btn
+                        color: black
                 .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
                     border: 1px solid $color-light
                     background: $color-light
