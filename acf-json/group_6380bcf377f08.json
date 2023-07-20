@@ -443,7 +443,7 @@
         },
         {
             "key": "field_64b906dee9c34",
-            "label": "Menus",
+            "label": "Menu",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -459,8 +459,8 @@
         },
         {
             "key": "field_64b906f4e9c35",
-            "label": "Menus PDF",
-            "name": "menus_pdf",
+            "label": "PDF file",
+            "name": "pdf_file",
             "type": "file",
             "instructions": "",
             "required": 0,
@@ -470,6 +470,7 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_save_meta": 0,
             "uploader": "",
             "return_format": "array",
             "min_size": "",
@@ -503,5 +504,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1689847575
+    "modified": 1689863005
 }

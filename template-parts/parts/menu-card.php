@@ -5,11 +5,11 @@
     
     $thumbnail = get_the_post_thumbnail_url();
     $thumbnailCaption = get_the_post_thumbnail_caption() ? : get_the_title();
-    $permalink = get_the_permalink();
     
     $title = get_field('title');
     $description = get_field('description');
     $button = get_field('button');
+    $pdf_file = get_field('pdf_file', 'option');
     $schedule = get_field('schedule');
 ?>
 
@@ -37,7 +37,7 @@
         
         <?php if ($button) : ?>
             <div class="menu-card__btn">
-                <a href="<?php echo $permalink;?>"
+                <a download href="<?php echo $pdf_file['url'];?>"
                    class="button">
                     <?php echo $button; ?>
                 </a>
