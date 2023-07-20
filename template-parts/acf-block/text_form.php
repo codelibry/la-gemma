@@ -1,4 +1,5 @@
 <?php
+    $section_id = get_sub_field('section_id');
     $title = get_sub_field('title');
     $text_1 = get_sub_field('text_1');
     $text_2 = get_sub_field('text_2');
@@ -6,7 +7,7 @@
 ?>
 
 <?php if ($form) : ?>
-    <section class="text-form" id="golden-key-club">
+    <section id="<?php echo $section_id;?>" class="text-form">
         <div class="container">
             <div class="text-form__wrap d-flex flex-column flex-lg-row align-items-center align-items-xl-start">
                 <?php if ($title && ($text_1 || $text_2)) : ?>
