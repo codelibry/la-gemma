@@ -47,10 +47,6 @@ header.header
             align-items: flex-start
             +max-screen($breakpoint-xl)
                 height: 114px
-            .allure-page &, .lucas-page &, .paulo-airaudo-page &
-                //height: 162px
-                //+max-screen($breakpoint-xl)
-                //    height: 114px
             .archive &, .single:not(.single-menu) &
                 border-bottom: 1px solid #1A352E
 
@@ -129,50 +125,47 @@ header.header
         &__logo
             position: absolute
             left: 50%
-            top: 28px
+            bottom: 51px
             width: 83px
             height: calc(min(121px, 6vw))
             transform: translateX(-50%)
+            +max-screen($breakpoint-xxl)
+                bottom: 20px
+            +max-screen($breakpoint-xl)
+                width: auto
+                height: 90px
             +max-screen($breakpoint-lg)
-                top: 55px
-                width: 83px
                 height: 59px
             .allure-page &
-                top: 35px
+                bottom: 22px
                 width: 146px
                 height: calc(min(105px, 5vw))
                 +max-screen($breakpoint-xl)
                     width: auto
-                    height: 75px
+                    height: 82px
                 +max-screen($breakpoint-lg)
-                    height: 55px
-                    top: 50%
-                    transform: translate(-50%, -50%)
+                    bottom: 14px
+                    height: 59px
             .lucas-page &
-                top: 27px
+                bottom: 42px
                 width: 197px
-                height: calc(min(93, 4.5vw))
+                height: calc(min(93px, 4.5vw))
                 +max-screen($breakpoint-xl)
-                    top: unset
+                    bottom: 16px
                     width: auto
-                    height: 75px
+                    height: 71px
                 +max-screen($breakpoint-lg)
-                    height: 55px
-                    top: 50%
-                    transform: translate(-50%, -50%)
+                    height: 49px
             .paulo-airaudo-page &
-                top: 32px
+                bottom: 17px
                 width: 180px
                 height: calc(min(113px, 5vw))
                 +max-screen($breakpoint-xl)
                     width: auto
-                    height: 75px
+                    height: 90px
                 +max-screen($breakpoint-lg)
-                    height: 55px
-                    top: 50%
-                    transform: translate(-50%, -50%)
-
-
+                    bottom: 0
+                    height: 68px
             img
                 width: 100%
                 height: 100%
