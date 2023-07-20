@@ -41,7 +41,7 @@ header.header
     .header
         &__wrap
             position: relative
-            height: 162px
+            height: calc(min(162px, 8vw))
             display: flex
             justify-content: space-between
             align-items: flex-start
@@ -131,7 +131,7 @@ header.header
             left: 50%
             top: 28px
             width: 83px
-            height: 121px
+            height: calc(min(121px, 6vw))
             transform: translateX(-50%)
             +max-screen($breakpoint-lg)
                 top: 55px
@@ -140,7 +140,7 @@ header.header
             .allure-page &
                 top: 35px
                 width: 146px
-                height: 105px
+                height: calc(min(105px, 5vw))
                 +max-screen($breakpoint-xl)
                     width: auto
                     height: 75px
@@ -151,7 +151,7 @@ header.header
             .lucas-page &
                 top: 27px
                 width: 197px
-                height: 93px
+                height: calc(min(93, 4.5vw))
                 +max-screen($breakpoint-xl)
                     top: unset
                     width: auto
@@ -163,9 +163,8 @@ header.header
             .paulo-airaudo-page &
                 top: 32px
                 width: 180px
-                height: 113px
+                height: calc(min(113px, 5vw))
                 +max-screen($breakpoint-xl)
-                    top: unset
                     width: auto
                     height: 75px
                 +max-screen($breakpoint-lg)
@@ -177,7 +176,7 @@ header.header
             img
                 width: 100%
                 height: 100%
-                object-fit: cover
+                object-fit: contain
 
         &__btn
             margin-top: 35px
