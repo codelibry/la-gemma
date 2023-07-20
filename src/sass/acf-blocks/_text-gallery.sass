@@ -19,6 +19,13 @@ section.text-gallery
                 width: 50%
                 +max-screen($breakpoint-lg)
                     width: 100%
+            &.desktop
+                +max-screen($breakpoint-lg)
+                    display: none
+            &.mobile
+                display: none
+                +max-screen($breakpoint-lg)
+                    display: block
 
             &-item
                 position: relative
