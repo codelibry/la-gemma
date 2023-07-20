@@ -14,19 +14,16 @@ header.header
     .header
         &__wrap
             position: relative
-            height: 218px
+            height: 162px
             display: flex
             justify-content: space-between
             align-items: flex-start
-            +max-screen($breakpoint-xxl)
-                height: 162px
             +max-screen($breakpoint-xl)
-                height: 100px
-                align-items: center
+                height: 114px
             .allure-page &, .lucas-page &, .paulo-airaudo-page &
-                height: 162px
-                +max-screen($breakpoint-xl)
-                    height: 100px
+                //height: 162px
+                //+max-screen($breakpoint-xl)
+                //    height: 114px
             .archive &, .single:not(.single-menu) &
                 border-bottom: 1px solid #1A352E
 
@@ -38,10 +35,9 @@ header.header
             padding: 0 5px
             text-transform: uppercase
             margin-top: 32px
-            +max-screen($breakpoint-xl)
-                margin-top: 0
             +max-screen($breakpoint-lg)
-                font-size: 18px
+                margin-top: 53px
+                font-size: 17px
             .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
                 color: #F5F3EF
             &:after
@@ -110,14 +106,10 @@ header.header
             width: 83px
             height: 121px
             transform: translateX(-50%)
-            +max-screen($breakpoint-xl)
-                width: auto
-                height: 105px
-                top: unset
             +max-screen($breakpoint-lg)
-                height: 90px
-                top: 50%
-                transform: translate(-50%, -50%)
+                top: 55px
+                width: 83px
+                height: 59px
             .allure-page &
                 top: 35px
                 width: 146px
@@ -161,17 +153,11 @@ header.header
                 object-fit: cover
 
         &__btn
-            margin-top: 32px
+            margin-top: 35px
             display: flex
             gap: 33px
-            +max-screen($breakpoint-xl)
-                gap: 20px
-                margin-top: 0
             +max-screen($breakpoint-lg)
-                margin-top: 0
-                flex-direction: column
-                gap: 5px
-                align-self: center
+                margin-top: 50px
             .button
                 position: relative
                 font-family: $font-family-ogg
@@ -204,19 +190,19 @@ header.header
                     border: 1px solid #F5F3EF
                     background: #F5F3EF
                     color: #000
-                &.button-transparent
-                    min-width: 121px
+                &.booking-btn
+                    +max-screen($breakpoint-lg)
+                        display: none
+                &.language-btn
                     font-size: 18px
+                    color: $color-green
+                    min-width: 121px
                     border: 1px solid $color-green
                     border-radius: 0
-                    color: $color-green
                     background: transparent
-                    +max-screen($breakpoint-xxl)
-                        font-size: calc((18px / 100) * 90)
-                    +max-screen($breakpoint-xl)
-                        font-size: calc((18px / 100) * 80)
-                    +max-screen($breakpoint-md)
-                        font-size: calc((18px / 100) * 70)
+                    +max-screen($breakpoint-lg)
+                        min-width: 103px
+                        height: 28px
                     &:after
                         display: none
                     .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &

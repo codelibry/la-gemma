@@ -3,6 +3,12 @@
     border-radius: 0 !important
     position: relative
     z-index: 10
+    &.language-btn
+        font-size: 18px
+        font-weight: 700
+        .option
+            font-size: 20px
+
     &.open
         border-bottom-color: transparent !important
     &:after
@@ -11,6 +17,7 @@
         top: unset
     .list
         width: 100%
+        padding: 3px 0 8px
         margin-top: 0
         margin-left: -1px
         box-sizing: content-box
@@ -22,12 +29,19 @@
         .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
             border: 1px solid #f5f3ef
     .option
+        display: flex
+        justify-content: center
+        align-items: center
         font-size: 20px
         font-weight: 400
-        height: 31px
+        line-height: 1 !important
+        color: rgba(229, 226, 217, .65)
+        min-height: 31px !important
+        height: 31px !important
         padding: 0 5px
         text-align: center
         text-transform: capitalize !important
+        transition: $default-transition
         +max-screen($breakpoint-xl)
             font-size: calc((20px / 100) * 90)
         +max-screen($breakpoint-lg)
@@ -37,10 +51,12 @@
         +max-screen($breakpoint-sm)
             font-size: calc((20px / 100) * 60)
         &:hover
-            background: #e3d8af !important
-        &.focus, &.selected, &:hover
+            color: rgba(229, 226, 217, 1)
+            background: rgba(0, 0, 0, .3)
+        &.focus, &.selected
             background: transparent !important
         &.selected
+            color: rgba(229, 226, 217, 1)
             font-weight: 400
             text-decoration: underline
         &:first-of-type

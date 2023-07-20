@@ -64,8 +64,8 @@ function showBookingForm () {
         bookingForm.toggleClass('form-visible');
     });
 
-    $(document).on('click', function (e) {
-        if(!bookingForm.is(e.target) && bookingForm.has(e.target).length === 0 && !bookingBtn.is(e.target)) {
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest(".booking-form").length && !$(event.target).hasClass('booking-btn') && !$(event.target).closest(".booking-btn").length) {
             bookingBtn.removeClass('active');
             bookingForm.removeClass('form-visible');
         }

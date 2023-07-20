@@ -3,6 +3,9 @@
     position: absolute
     right: 3.64%
     bottom: 2.92%
+    +max-screen($breakpoint-lg)
+        right: 53px
+        bottom: 107px
     &__icon
         width: 76px
         height: 76px
@@ -12,15 +15,15 @@
         align-items: center
         justify-content: center
         +max-screen($breakpoint-lg)
-            width: 40px
-            height: 40px
+            width: 53px
+            height: 53px
         img
             width: 48px
             height: 42px
             object-fit: cover
             +max-screen($breakpoint-lg)
-                width: 26px
-                height: auto
+                width: 33px
+                height: 29px
     &__text
         margin-top: 6px
         font-size: 20px
@@ -28,5 +31,5 @@
         text-transform: uppercase
         color: #DFDACD
         +max-screen($breakpoint-lg)
-            font-size: 12px
-            margin-top: 2px
+            font-size: 14px
+            margin-top: 4px
