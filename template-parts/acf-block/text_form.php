@@ -6,7 +6,7 @@
 ?>
 
 <?php if ($form) : ?>
-    <section class="text-form">
+    <section class="text-form" id="golden-key-club">
         <div class="container">
             <div class="text-form__wrap d-flex flex-column flex-lg-row align-items-center align-items-xl-start">
                 <?php if ($title && ($text_1 || $text_2)) : ?>
