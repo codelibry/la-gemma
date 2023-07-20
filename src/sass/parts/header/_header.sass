@@ -175,7 +175,7 @@ header.header
                 +max-screen($breakpoint-md)
                     font-size: calc((17px / 100) * 70)
                 &.button--transparent-text
-                    background-color: $color-light
+                    background-color: $color-green
                     overflow: hidden
                     color: transparent
                     border: 0
@@ -185,10 +185,11 @@ header.header
                         -webkit-text-fill-color: transparent
                         -webkit-background-clip: text
                         display: inline-block
-                        
+                    .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
+                        background-color: $color-light
                 .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
-                    border: 1px solid #F5F3EF
-                    background: #F5F3EF
+                    border: 1px solid $color-light
+                    background: $color-light
                     color: #000
                 &.booking-btn
                     +max-screen($breakpoint-lg)

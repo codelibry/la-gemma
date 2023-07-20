@@ -1,9 +1,10 @@
 <?php
+    $section_id = get_sub_field('section_id');
     $posts = get_sub_field('posts')
 ?>
 
 <?php if ($posts) : ?>
-    <section class="menu">
+    <section id="<?php echo $section_id;?>" class="menu" >
         <div class="container">
             <div class="menu__wrap">
                 <div class="menu__list">

@@ -1,9 +1,10 @@
 <?php
+    $section_id = get_sub_field('section_id');
     $form = get_sub_field('form');
 ?>
 
 <?php if ($form) : ?>
-    <section class="form">
+    <section id="<?php echo $section_id;?>" class="form" >
         <div class="container">
             <div class="form__wrap">
                 <?php echo $form;?>
