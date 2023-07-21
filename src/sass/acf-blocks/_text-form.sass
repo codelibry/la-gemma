@@ -109,10 +109,13 @@ section.text-form
                 margin: 30px auto 0
                 width: 100%
     .show-hidden-content
-        position: absolute
-        bottom: 39px
-        left: 50%
-        transform: translateX(-50%)
-        width: 46px
-        height: auto
-        z-index: 5
+        display: none
+        +max-screen($breakpoint-lg)
+            display: block
+            width: 46px
+            height: auto
+            position: absolute
+            bottom: 39px
+            left: 50%
+            transform: translateX(-50%)
+            z-index: 5
