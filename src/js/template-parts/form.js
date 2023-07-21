@@ -10,16 +10,29 @@ function showFormPhone() {
     })
 }
 
-function changeDateImputType() {
-    const input = $('.reservation-form .form-date-field input');
+function copyFormImage() {
+    const copyElement = $('.form-image__wrap img');
 
-    input.on('focus', function () {
-        console.log('focus')
-    })
-
-    input.on('blur', function () {
-        console.log('blur')
-    })
+    if (copyElement) {
+        copyElement.clone().appendTo('.text-form__img')
+    }
 }
 
-export {showFormPhone, changeDateImputType}
+function hiddenContent() {
+    const showHiddenContentBtn = $('.text-form .show-hidden-content');
+    const content = $('.text-form .text-form__wrap');
+
+    if(!content.height() < 679 && $(window).width() < 993) {
+        content.addClass('hidden-content');
+
+        showHiddenContentBtn.on('click', function () {
+            content.height(content.prop('scrollHeight') + 'px');
+            content.removeClass('hidden-content').addClass('visible-content');
+            showHiddenContentBtn.addClass('d-none')
+        })
+    }
+}
+
+document.on('resize', hiddenContent)
+
+export {showFormPhone, copyFormImage, hiddenContent}

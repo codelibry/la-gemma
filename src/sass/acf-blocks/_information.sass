@@ -4,7 +4,7 @@ section.information
     +max-screen($breakpoint-xl)
         padding: 80px 0
     +max-screen($breakpoint-lg)
-        padding: 60px 0
+        padding: 53px 0 39px
     .allure-page &
         padding: 73px 0
         +max-screen($breakpoint-lg)
@@ -27,6 +27,8 @@ section.information
 
         &__list
             gap: 35px 0
+            +max-screen($breakpoint-lg)
+                gap: 25px 0
             .allure-page &
                 gap: 57px 0
             .list-item
@@ -43,9 +45,8 @@ section.information
                     +max-screen($breakpoint-lg)
                         font-size: calc((40px / 100) * 70)
                     +max-screen($breakpoint-md)
-                        font-size: calc((40px / 100) * 60)
-                    +max-screen($breakpoint-sm)
-                        font-size: calc((40px / 100) * 50)
+                        font-size: 20px
+                        letter-spacing: 1.14px
                     .allure-page &
                         font-family: $font-family-linotypedidot
                     .lucas-page &, .paulo-airaudo-page &
@@ -78,9 +79,11 @@ section.information
                         margin-top: 12px
                     +max-screen($breakpoint-lg)
                         font-size: calc((25px / 100) * 70)
-                        margin-top: 5px
+                        margin-top: 10px
                     +max-screen($breakpoint-md)
-                        font-size: calc((25px / 100) * 60)
+                        font-size: 15px
+                        line-height: 1.66
+                        letter-spacing: 0.85
                     .allure-page &
                         font-family: $font-family-futurapt
                         font-size: 16px
@@ -99,7 +102,7 @@ section.information
                     span
                         display: block
                     br
-                        +max-screen($breakpoint-lg)
+                        +max-screen($breakpoint-md)
                             display: none
     .horizontal-line
         display: block

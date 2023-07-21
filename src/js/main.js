@@ -7,7 +7,7 @@ import { toggleDropdown } from './template-parts/dropdown';
 import { getFormAccept } from './template-parts/formAccept';
 import { postFilter } from './template-parts/post-filter';
 import { chooseBookingDate, showBookingForm, bookingFormSubmit } from './template-parts/booking';
-import { showFormPhone, changeDateImputType } from './template-parts/form';
+import { showFormPhone, copyFormImage, hiddenContent } from './template-parts/form';
 
 // Animations
 import './animations/appearence';
@@ -24,4 +24,5 @@ chooseBookingDate();
 showBookingForm();
 bookingFormSubmit();
 showFormPhone();
-changeDateImputType();
+copyFormImage();
+hiddenContent();

@@ -1,10 +1,27 @@
 section.text-form
     padding: 58px 0 55px
     +max-screen($breakpoint-lg)
-        padding: 60px 0
+        padding: 39px 0 66px
     .text-form
         &__wrap
             gap: 0 60px
+            position: relative
+            transition: $default-transition
+            &.hidden-content
+                height: 679px
+                overflow: hidden
+                &:after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    display: block
+                    width: 100%
+                    height: 133px
+                    background: transparent linear-gradient(0deg, #E5E3DAAC 0%, #E5E3DA74 90%, #E5E3DA4B 100%, #E5E3DA00 100%) 0% 0% no-repeat padding-box
+            &.visible-content
+                &:after
+                    display: none !important
         &__content
             flex: 1
             &.row
@@ -18,10 +35,12 @@ section.text-form
                 font-size: calc((50px / 100) * 80)
             +max-screen($breakpoint-lg)
                 font-size: calc((50px / 100) * 70)
+                text-align: center
+                margin-bottom: 30px
             +max-screen($breakpoint-md)
-                font-size: calc((50px / 100) * 60)
-            +max-screen($breakpoint-sm)
-                font-size: calc((50px / 100) * 50)
+                font-size: 35px
+                line-height: 1.14
+                letter-spacing: 1.12px
             span
                 display: block
                 font-family: $font-family-base
@@ -36,7 +55,24 @@ section.text-form
                 +max-screen($breakpoint-lg)
                     font-size: calc((30px / 100) * 70)
                 +max-screen($breakpoint-md)
-                    font-size: calc((50px / 100) * 60)
+                    font-size: 30px
+                    letter-spacing: 0.06px
+            br
+                display: none
+                +max-screen($breakpoint-md)
+                    display: block
+        &__img
+            position: relative
+            width: 286px
+            height: 135px
+            margin: 0 auto
+            img
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
         &__text
             font-size: 25px
             font-weight: 300
@@ -49,13 +85,19 @@ section.text-form
                 font-size: calc((25px / 100) * 80)
             +max-screen($breakpoint-lg)
                 font-size: calc((25px / 100) * 70)
-                margin-top: 40px
+                margin-top: 45px
             +max-screen($breakpoint-md)
-                font-size: calc((25px / 100) * 60)
+                font-size: 20px
+                line-height: 1.5
+                letter-spacing: 0.64px
             &.col-left
+                +max-screen($breakpoint-lg)
+                    margin-top: 45px
             &.col-right
                 +max-screen($breakpoint-xl)
                     margin-top: 40px
+                +max-screen($breakpoint-xl)
+                    margin-top: 30px
             p:not(:last-of-type)
                 margin-bottom: 30px
         &__form
@@ -66,3 +108,14 @@ section.text-form
                 max-width: unset
                 margin: 30px auto 0
                 width: 100%
+    .show-hidden-content
+        display: none
+        +max-screen($breakpoint-lg)
+            display: block
+            width: 46px
+            height: auto
+            position: absolute
+            bottom: 39px
+            left: 50%
+            transform: translateX(-50%)
+            z-index: 5

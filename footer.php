@@ -1,7 +1,7 @@
 		
 		</main>
         
-        <?php if(!is_front_page() && !is_page_template('template-pages/about-page.php')) :?>
+        <?php if(!is_front_page()) :?>
             <?php get_template_part('template-parts/blocks/newsletter'); ?>
         <?php endif; ?>
         

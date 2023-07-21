@@ -184,6 +184,9 @@
 		background: transparent
 		border: none
 		border-bottom: 2px solid #456D63
+		+max-screen($breakpoint-md)
+			max-width: 189px
+			font-size: 20px
 		.allure-page &
 			font-family: $font-family-futurapt
 			color: #D9C499
@@ -198,6 +201,8 @@
 			line-height: 1
 			color: rgba(69, 109, 99, .5)
 			text-align: center
+			+max-screen($breakpoint-md)
+				font-size: 20px
 			.allure-page &
 				color: rgba(217, 196, 153, .5)
 			.lucas-page &, .paulo-airaudo-page &
@@ -214,7 +219,7 @@
 		+max-screen($breakpoint-lg)
 			font-size: calc((34px / 100) * 70)
 		+max-screen($breakpoint-md)
-			font-size: calc((34px / 100) * 60)
+			font-size: 25px
 		span
 			display: block
 			font-size: 20px
@@ -235,6 +240,8 @@
 		display: flex
 		justify-content: center
 		flex-wrap: wrap
+		+max-screen($breakpoint-lg)
+			margin-top: 15px
 	.form-term
 		width: 100%
 		margin-top: 33px
@@ -242,6 +249,10 @@
 		font-weight: 300
 		color: #456D63
 		text-align: center
+		+max-screen($breakpoint-lg)
+			margin-top: 20px
+		+max-screen($breakpoint-md)
+			font-size: 10px
 		.allure-page &
 			color: #D9C499
 		.lucas-page &, .paulo-airaudo-page &
@@ -259,6 +270,8 @@
 		flex-direction: column
 		align-items: center
 		gap: 7px
+		+max-screen($breakpoint-lg)
+			margin-top: 39px
 		.wpcf7-form-control
 			max-width: 111px
 			width: 100%
@@ -342,6 +355,7 @@
 			font-size: calc((30px / 100) * 80)
 		+max-screen($breakpoint-lg)
 			font-size: calc((30px / 100) * 70)
+			margin-top: 0
 		+max-screen($breakpoint-md)
 			font-size: calc((30px / 100) * 60)
 		span
