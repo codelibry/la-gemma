@@ -10,9 +10,9 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="not-found d-flex flex-column align-items-center justify-content-center">
-					<h1 class="text--color--green">404</h1>
-					<span class="mb-4">Page not found</span>
-					<a href="/" class="button">back to home</a>
+					<h1 class="text--color--green"><?php _e('404','lagemmahotel');?></h1>
+					<span class="mb-4"><?php _e('Page not found','lagemmahotel');?></span>
+					<a href="/" class="button"><?php _e('Back to home','lagemmahotel');?></a>
 				</div>
 			</div>
 		</div>
