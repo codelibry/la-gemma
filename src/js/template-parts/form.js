@@ -33,4 +33,6 @@ function hiddenContent() {
     }
 }
 
+document.on('resize', hiddenContent)
+
 export {showFormPhone, copyFormImage, hiddenContent}
