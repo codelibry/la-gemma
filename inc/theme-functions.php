@@ -91,7 +91,3 @@
         return $item_output;
     }
     add_filter('walker_nav_menu_start_el', 'add_download_link_header', 10, 4);
-
-
-
-

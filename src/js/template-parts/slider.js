@@ -100,7 +100,7 @@ function getSlider() {
 
 }
 
-$(window).on('resize', setSliderArrowPosition);
+//$(window).on('resize', setSliderArrowPosition);
 
 function setSliderArrowPosition() {
     const postSlider = $('.js-post-slider, .js-follow-slider');
