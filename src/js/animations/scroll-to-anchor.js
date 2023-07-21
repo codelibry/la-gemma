@@ -3,12 +3,14 @@ import { gsap } from "gsap";
 
 
 function scrollToAnchor(){
-
     $('a[href^="#"]:not(.slider-arrow)').click(function(e){
         e.preventDefault();
-        let href = $(this).attr('href');
-        $('.header__side').removeClass('active');
-        $('html, body').animate({ scrollTop: $(href).offset().top}, 1700);
+        const href = $(this).attr('href');
+        const headerMenu = $('.header__menu');
+
+        headerMenu.removeClass('open');
+        $('body, html').removeClass('no-scroll');
+        $('html, body').animate({ scrollTop: $(href).offset().top - 140}, 1000);
     })
         
 }
