@@ -8,6 +8,7 @@ function chooseBookingDate() {
 
     const calendar = flatpickr("#datepicker", {
         defaultDate: "today",
+        minDate: "today",
         mode: "range",
         dateFormat: "Y-m-d",
         inline: true,
