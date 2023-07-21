@@ -1,52 +1,52 @@
 <?php
     if (isset($args)) {
         $image_position = $args['image_position'];
+        $menu_item = $args['menu_item'];
     }
     
-    $thumbnail = get_the_post_thumbnail_url();
-    $thumbnailCaption = get_the_post_thumbnail_caption() ? : get_the_title();
+    $menu_title = $menu_item['menu_title'];
+    $menu_description = $menu_item['menu_description'];
+    $menu_image = $menu_item['menu_image'];
+    $menu_button_text = $menu_item['menu_button_text'];
+    $menu_schedule = $menu_item['menu_schedule'];
     
-    $title = get_field('title');
-    $description = get_field('description');
-    $button = get_field('button');
     $pdf_file = get_field('pdf_file', 'option');
-    $schedule = get_field('schedule');
 ?>
 
 <div class="menu-card d-flex flex-wrap flex-lg-nowrap align-items-end justify-content-center justify-content-lg-between">
-    <?php if($thumbnail) :?>
+    <?php if($menu_image) :?>
         <div class="menu-card__img <?php echo $image_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
             <div class="menu-card__img-wrap">
-                <img src="<?php echo $thumbnail; ?>"
-                     alt="<?php echo $thumbnailCaption; ?>">
+                <img src="<?php echo $menu_image['url']; ?>"
+                     alt="<?php echo $menu_image['alt'] ? : $menu_image['title']; ?>">
             </div>
         </div>
     <?php endif; ?>
     
     <div class="menu-card__content <?php echo $image_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
-        <?php if($title) :?>
+        <?php if($menu_title) :?>
             <div class="menu-card__title">
-                <?php echo $title; ?>
+                <?php echo $menu_title; ?>
             </div>
         <?php endif; ?>
-        <?php if($description) :?>
+        <?php if($menu_description) :?>
             <div class="menu-card__text">
-                <?php echo $description; ?>
+                <?php echo $menu_description; ?>
             </div>
         <?php endif; ?>
         
-        <?php if ($button) : ?>
+        <?php if ($menu_button_text) : ?>
             <div class="menu-card__btn">
                 <a download href="<?php echo $pdf_file['url'];?>"
                    class="button">
-                    <?php echo $button; ?>
+                    <?php echo $menu_button_text; ?>
                 </a>
             </div>
         <?php endif; ?>
         
-        <?php if ($schedule) : ?>
+        <?php if ($menu_schedule) : ?>
             <div class="menu-card__schedule d-flex flex-column">
-                <?php echo $schedule; ?>
+                <?php echo $menu_schedule; ?>
             </div>
         <?php endif; ?>
     </div>
