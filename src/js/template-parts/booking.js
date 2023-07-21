@@ -114,14 +114,14 @@ function setFlatpickrDayClass() {
 }
 
 $(window).on('resize', setFlatpickrDayHeight);
-$(document).on('click', setFlatpickrDayHeight)
+$(document).on('click', setFlatpickrDayHeight);
 
 
 $(document).ready(function(){
     let bookingBtn = $('#sr-res-root');
     
     if (bookingBtn.length > 0) {
-        
+
         SevenroomsWidget.init({
             venueId: "lucasrestaurant",
             triggerId: "sr-res-root", // id of the dom element that will trigger this widget
@@ -132,6 +132,23 @@ $(document).ready(function(){
     }
 });
 
+// Move this to new file with WMPL
+$(document).ready(function(){
+    let wpmlSwitcher = $(".wpml-ls");
+    
+    wpmlSwitcher.on("click", function(){
+        $(this).toggleClass('active');
+    })
+});
+
+$(document).click(function(event) { 
+    var $target = $(event.target);
+    if(!$target.closest('.wpml-ls').length && 
+    $('.wpml-ls').hasClass("active")) {
+        $('.wpml-ls').removeClass('active');
+    }        
+});
+  
 
 
 export {chooseBookingDate, showBookingForm, bookingFormSubmit}

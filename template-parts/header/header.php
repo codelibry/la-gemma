@@ -35,12 +35,14 @@
                 </div>
             <?php endif; ?>
 
+            
             <div class="header__btn">
-                <select id="language" name="language" class="button language-btn">
+                <?php echo do_shortcode('[wpml_language_switcher type="custom" flags=1 native=1 translated=1][/wpml_language_switcher]');?>
+                <!-- <select id="language" name="language" class="button language-btn">
                     <option value="language" selected><?php _e('Language','lagemmahotel');?></option>
                     <option value="italian"><?php _e('Italian','lagemmahotel');?></option>
                     <option value="english"><?php _e('English','lagemmahotel');?></option>
-                </select>
+                </select> -->
                 <a href="#"
                    class="button booking-btn">
                    <span> <?php _e('Book now','lagemmahotel');?></span>
@@ -93,3 +95,4 @@
     </nav>
 
 </header>
+

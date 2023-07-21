@@ -37,3 +37,4 @@
     }
     
     add_action('wp_enqueue_scripts', 'la_gemma_load_scripts');
+

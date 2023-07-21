@@ -33,6 +33,6 @@ function hiddenContent() {
     }
 }
 
-document.on('resize', hiddenContent)
+//document.on('resize', hiddenContent)
 
 export {showFormPhone, copyFormImage, hiddenContent}

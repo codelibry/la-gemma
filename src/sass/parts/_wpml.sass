@@ -1,0 +1,49 @@
+.wpml-ls.wpml-ls-legacy-dropdown-click
+    width: auto
+    min-width: 121px
+    &.active
+        .wpml-ls-first-item 
+            & > a
+                border-bottom-color: transparent
+    ul
+        border-bottom: 0
+        background: transparent
+        color: #f5f3ef
+        border: 0
+    a.wpml-ls-item-toggle, 
+    .wpml-ls-link 
+        padding-right: 10px
+        text-align: center
+        &:hover
+            span
+                color: #f5f3ef
+                text-decoration: underline
+    .wpml-ls-display 
+        display: none
+    .wpml-ls-first-item 
+        &> a:hover 
+            span
+	            text-decoration: none
+    .wpml-ls-last-item 
+	    padding-bottom: 8px
+    .wpml-ls-flag
+        display: none
+    a.wpml-ls-item-toggle:after
+        display: none
+    span 
+        font-size: 18px
+        text-transform: uppercase
+        color: #f5f3ef
+        font-family: Ogg,sans-serif
+        font-weight: 700
+    a
+        background-color: transparent
+        &:hover,
+        &:focus
+            opacity: 1
+            background-color: transparent
+    .wpml-ls-current-language
+        &:hover
+            & > a   
+                background-color: transparent
+                color: #f5f3ef
