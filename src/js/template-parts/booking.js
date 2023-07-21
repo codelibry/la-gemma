@@ -116,4 +116,22 @@ function setFlatpickrDayClass() {
 $(window).on('resize', setFlatpickrDayHeight);
 $(document).on('click', setFlatpickrDayHeight)
 
+
+$(document).ready(function(){
+    let bookingBtn = $('#sr-res-root');
+    
+    if (bookingBtn.length > 0) {
+        
+        SevenroomsWidget.init({
+            venueId: "lucasrestaurant",
+            triggerId: "sr-res-root", // id of the dom element that will trigger this widget
+            type: "reservations", // either 'reservations' or 'waitlist' or 'events'
+            styleButton: false, // true if you are using the SevenRooms button
+            clientToken: "" //(Optional) Pass the api generated clientTokenId here
+        });
+    }
+});
+
+
+
 export {chooseBookingDate, showBookingForm, bookingFormSubmit}
