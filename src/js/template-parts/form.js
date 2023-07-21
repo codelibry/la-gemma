@@ -24,15 +24,16 @@ function hiddenContent() {
 
     if(!content.height() < 679 && $(window).width() < 993) {
         content.addClass('hidden-content');
+        showHiddenContentBtn.addClass('btn-visible');
 
         showHiddenContentBtn.on('click', function () {
             content.height(content.prop('scrollHeight') + 'px');
             content.removeClass('hidden-content').addClass('visible-content');
-            showHiddenContentBtn.addClass('d-none')
+            showHiddenContentBtn.addClass('d-none');
         })
     }
 }
 
-document.on('resize', hiddenContent)
+$(document).on('resize', hiddenContent)
 
 export {showFormPhone, copyFormImage, hiddenContent}
