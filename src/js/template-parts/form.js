@@ -31,9 +31,12 @@ function hiddenContent() {
             content.removeClass('hidden-content').addClass('visible-content');
             showHiddenContentBtn.addClass('d-none');
         })
+    } else if ($(window).width() > 993) {
+        showHiddenContentBtn.removeClass('btn-visible');
+        content.removeClass('hidden-content');
     }
 }
 
-$(document).on('resize', hiddenContent)
+$(window).on('resize', hiddenContent)
 
 export {showFormPhone, copyFormImage, hiddenContent}
