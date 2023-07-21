@@ -20,7 +20,7 @@
     }
 ?>
 
-<header class="header">
+<header class="header shadow-sm">
     <div class="container">
         <div class="header__wrap">
             <div class="header__toggle">

@@ -16,26 +16,31 @@ header.header
 
     &.header-fixed
         position: fixed
-        background: #2d4c42
+        background: #e5e3da
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important
         .header
             &__toggle
-                color: #e5e3da
+                color: $color-green !important
+                &:after
+                    background: $color-green !important
             &__btn
                 .button
                     padding-left: 8px
                     padding-right: 8px
                     &.language-btn
-                        border: 1px solid #e5e3da
-                        background: #e5e3da
-                        color: $color-green
-                    &.button--transparent-text
-                        background: #e5e3da
+                        border: 1px solid $color-green !important
+                        background: transparent !important
+                        color: $color-green !important
+                    &.booking-btn
+                        border: 1px solid #e5e3da !important
+                        background: $color-green !important
+                        color: #e5e3da !important
+                        span
+                            color: #e5e3da !important
+                            -webkit-text-fill-color: unset !important
 
-        .allure-page &
-            background: #d9c499
-        .lucas-page &, .paulo-airaudo-page &
-            background: #a6ab9c
-
+            &__wrap
+                border: none !important
     .header
         &__wrap
             position: relative
