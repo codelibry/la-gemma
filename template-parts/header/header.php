@@ -24,7 +24,7 @@
     <div class="container">
         <div class="header__wrap">
             <div class="header__toggle">
-                Menu
+                <?php _e('Menu','lagemmahotel');?>
             </div>
             <?php if ($logo_icon) : ?>
                 <div class="header__logo">
@@ -37,37 +37,36 @@
 
             <div class="header__btn">
                 <select id="language" name="language" class="button language-btn">
-                    <option value="language" selected>Language</option>
-                    <option value="italian">Italian</option>
-                    <option value="english">English</option>
+                    <option value="language" selected><?php _e('Language','lagemmahotel');?></option>
+                    <option value="italian"><?php _e('Italian','lagemmahotel');?></option>
+                    <option value="english"><?php _e('English','lagemmahotel');?></option>
                 </select>
                 <a href="#"
                    class="button booking-btn">
-                   <span>Book now</span>
-                    
+                   <span> <?php _e('Book now','lagemmahotel');?></span>
                 </a>
             </div>
             <div class="booking-form">
                 <form id="booking-form">
                     <div class="form-fields">
                         <div class="form-date-field">
-                            <label for="check-in">CHECK-IN</label>
+                            <label for="check-in"><?php _e('CHECK-IN','lagemmahotel');?></label>
                             <input type="text" id="check-in" name="arrive" readonly placeholder="DD - MM - YYYY">
                         </div>
                         <div class="form-date-field">
-                            <label for="check-out">CHECK-OUT</label>
+                            <label for="check-out"><?php _e('CHECK-OUT','lagemmahotel');?></label>
                             <input type="text" id="check-out" name="depart" readonly placeholder="DD - MM - YYYY">
                         </div>
                         <div class="form-calendar">
                             <div class="form-select-field">
                                 <select id="guests" name="guests">
-                                    <option value="0" selected disabled>Guests</option>
-                                    <option value="1-0">1 Adult</option>
-                                    <option value="1-1">1 Adult 1 Child</option>
-                                    <option value="2-1">2 Adult 1 Child</option>
-                                    <option value="2-2">2 Adult 2 Child</option>
-                                    <option value="3-2">3 Adult 2 Child</option>
-                                    <option value="3-3">3 Adult 3 Child</option>
+                                    <option value="0" selected disabled><?php _e('404','lagemmahotel');?>Guests</option>
+                                    <option value="1-0"><?php _e('1 Adult','lagemmahotel');?></option>
+                                    <option value="1-1"><?php _e('1 Adult 1 Child','lagemmahotel');?></option>
+                                    <option value="2-1"><?php _e('2 Adult 1 Child','lagemmahotel');?></option>
+                                    <option value="2-2"><?php _e('2 Adult 2 Child','lagemmahotel');?></option>
+                                    <option value="3-2"><?php _e('3 Adult 2 Child','lagemmahotel');?></option>
+                                    <option value="3-3"><?php _e('3 Adult 3 Child','lagemmahotel');?></option>
                                 </select>
                             </div>
                             <input type="text" id="datepicker" readonly>
