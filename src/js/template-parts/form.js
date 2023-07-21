@@ -22,6 +22,10 @@ function hiddenContent() {
     const showHiddenContentBtn = $('.text-form .show-hidden-content');
     const content = $('.text-form .text-form__wrap');
 
+    if (content.hasClass('visible-content')) {
+        content.height(content.prop('scrollHeight') + 'px');
+    }
+
     if(!content.height() < 679 && $(window).width() < 993) {
         content.addClass('hidden-content');
         showHiddenContentBtn.addClass('btn-visible');
@@ -34,6 +38,7 @@ function hiddenContent() {
     } else if ($(window).width() > 993) {
         showHiddenContentBtn.removeClass('btn-visible');
         content.removeClass('hidden-content');
+        content.height('fit-content');
     }
 }
 
