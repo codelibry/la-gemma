@@ -4,7 +4,11 @@
     &.active
         .wpml-ls-first-item 
             & > a
-                border-bottom-color: transparent
+                // border-bottom-color: transparent
+        .wpml-ls-current-language
+            padding-bottom: 0
+            .wpml-ls-item-toggle
+                border-bottom: 0
     ul
         border-bottom: 0
         background: transparent
@@ -20,12 +24,16 @@
                 text-decoration: underline
     .wpml-ls-display 
         display: none
-    .wpml-ls-first-item 
+    .wpml-ls-current-language 
         &> a:hover 
             span
 	            text-decoration: none
     .wpml-ls-last-item 
 	    padding-bottom: 8px
+    .wpml-ls-current-language
+        padding-bottom: 0
+        // .wpml-ls-item-toggle
+        //     border-bottom: 0
     .wpml-ls-flag
         display: none
     a.wpml-ls-item-toggle:after
