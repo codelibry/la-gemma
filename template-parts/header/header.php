@@ -49,6 +49,7 @@
                 </a>
             </div>
             <div class="booking-form">
+                <div class="close-form">X</div>
                 <form id="booking-form">
                     <div class="form-fields">
                         <div class="form-date-field">
