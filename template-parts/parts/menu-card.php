@@ -16,9 +16,9 @@
 <div class="menu-card d-flex flex-wrap flex-lg-nowrap align-items-end justify-content-center justify-content-lg-between">
     <?php if($menu_image) :?>
         <div class="menu-card__img <?php echo $image_position === 'left' ? 'order-1 image-left' : 'order-1 order-lg-2 image-right'; ?>">
-            <div class="menu-card__img-wrap">
+            <div class="menu-card__img-wrap parallax-img-wrapper">
                 <img src="<?php echo $menu_image['url']; ?>"
-                     alt="<?php echo $menu_image['alt'] ? : $menu_image['title']; ?>">
+                     alt="<?php echo $menu_image['alt'] ? : $menu_image['title']; ?>" class="parallax-img">
             </div>
         </div>
     <?php endif; ?>
