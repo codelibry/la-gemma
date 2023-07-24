@@ -4,6 +4,8 @@ section.loop-posts
             padding-bottom: 52px
             +max-screen($breakpoint-lg)
                 padding-bottom: 60px
+            +max-screen($breakpoint-md)
+                padding-bottom: 39px
         &__filter
             gap: 40px
             margin-bottom: 30px
@@ -13,6 +15,9 @@ section.loop-posts
                 font-size: 19px
                 letter-spacing: -0.42px
                 color: rgba(33, 57, 50, .46)
+                +max-screen($breakpoint-lg)
+                    font-size: 20px
+                    letter-spacing: -0.44px
                 &:not(:last-of-type)
                     &:after
                         content: ''
