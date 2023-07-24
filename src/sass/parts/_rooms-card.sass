@@ -18,14 +18,17 @@
                 height: 100%
                 object-fit: cover
         &__content
-        &__title
             margin-top: 35px
+            +max-screen($breakpoint-lg)
+                margin-top: 39px
+        &__title
             h4
                 font-family: $font-family-base
-                letter-spacing: 1.71px
         &__text
             margin-top: 35px
             max-width: 628px
+            +max-screen($breakpoint-lg)
+                margin-top: 10px
             a
                 font-size: 25px
                 line-height: 1.2
@@ -37,12 +40,17 @@
                 +max-screen($breakpoint-lg)
                     font-size: calc((25px / 100) * 70)
                 +max-screen($breakpoint-md)
-                    font-size: calc((25px / 100) * 60)
+                    font-size: 20px
+                    line-height: 1.5
         &__dropdown
             margin-top: 35px
+            +max-screen($breakpoint-md)
+                margin-top: 27px
             &.open-dropdown
                 .rooms-card__dropdown-title
                     margin-bottom: 48px
+                    +max-screen($breakpoint-md)
+                        margin-bottom: 40px
                     svg
                         transform: rotate(180deg)
             &-title
@@ -62,12 +70,13 @@
                         font-size: calc((50px / 100) * 90)
                     +max-screen($breakpoint-xl)
                         font-size: calc((50px / 100) * 80)
-                    +max-screen($breakpoint-lg)
+                    +max-screen($breakpoint-md)
                         font-size: calc((50px / 100) * 70)
                     +max-screen($breakpoint-md)
-                        font-size: calc((50px / 100) * 60)
-                    +max-screen($breakpoint-sm)
-                        font-size: calc((50px / 100) * 50)
+                        font-size: 22px
+                        margin-right: 0
+                        display: block
+                        text-align: center
                 svg
                     position: absolute
                     bottom: 20px
@@ -76,8 +85,9 @@
                     object-fit: cover
                     transition: $default-transition
                     +max-screen($breakpoint-md)
-                        width: 30px
-                        height: auto
+                        display: block
+                        position: unset
+                        margin: 19px auto 0
             &-content
                 height: 0
                 overflow: hidden
@@ -103,7 +113,10 @@
                         font-size: 16px
         &__btn
             margin-top: 36px
-            gap: 24px
+            gap: 0 24px
+            +max-screen($breakpoint-md)
+                justify-content: center
+                gap: 0 46px
             .button
                 font-size: 21px
                 font-weight: 300

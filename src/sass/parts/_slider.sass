@@ -128,12 +128,21 @@
     .slick-slide
         padding: 0 30px
         +max-screen($breakpoint-md)
-            padding: 0 15px
+            padding: 0 25px
+    .slick-dots
+        bottom: 0
+        li
+            border: 1px solid #425339
+            &.slick-active
+                background: #425339
+    .slick-track
+        +max-screen($breakpoint-md)
+            padding-bottom: 52px
 
 .js-follow-slider
     .slick-slide
         padding: 0 30px
         +max-screen($breakpoint-md)
-            padding: 0 15px
+            padding: 0 25px
         +max-screen($breakpoint-sm)
             padding: 0

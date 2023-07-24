@@ -341,16 +341,13 @@ h1,.h1
 	line-height: 1.35
 	font-weight: 600
 	font-family: $font-family-ogg
-	+max-screen($breakpoint-xxl)
-		font-size: calc((80px / 100) * 90)
-	+max-screen($breakpoint-xl)
-		font-size: calc((80px / 100) * 80)
 	+max-screen($breakpoint-lg)
-		font-size: calc((80px / 100) * 70)
-	+max-screen($breakpoint-md)
-		font-size: calc((80px / 100) * 60)
-	+max-screen($breakpoint-sm)
-		font-size: calc((80px / 100) * 50)
+		line-height: .75
+	span
+		+max-screen($breakpoint-lg)
+			display: block
+			font-size: 63px
+			line-height: .95
 h2,.h2
 	font-size: 80px
 	line-height: 1.35
@@ -372,11 +369,16 @@ h3,.h3
 		font-size: 42px
 h4,.h4,.intro .content-block
 	font-size: 30px
-	line-height: 1.35
 	font-weight: 300
+	line-height: 1.35
+	letter-spacing: 1.71px
 	text-transform: uppercase
 	+max-screen($breakpoint-md)
-		font-size: 30px
+		font-family: $font-family-gillsans
+		font-size: 20px
+		font-weight: 600
+		line-height: 2.65
+		letter-spacing: 1.14px
 .h5,h5
 	font-size: 30px
 	line-height: 1.2em

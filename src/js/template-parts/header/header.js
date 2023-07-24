@@ -27,10 +27,10 @@ function setHeaderPositionFixed() {
     const header = $('header.header');
 
     $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 100) {
+        if ($(window).scrollTop() > 30) {
             header.addClass('header-fixed');
             header.removeClass('header-unfixed');
-        } else if($(window).scrollTop() < 100 && header.hasClass('header-fixed')) {
+        } else if($(window).scrollTop() < 30 && header.hasClass('header-fixed')) {
             header.addClass('header-unfixed');
             header.removeClass('header-fixed');
         }

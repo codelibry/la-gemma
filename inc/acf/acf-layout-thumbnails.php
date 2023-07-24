@@ -155,12 +155,12 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/follow-slider-thumbnail.png';
     }
     
-    // Form
+    // Reservation form
     
-    add_filter('acfe/flexible/thumbnail/layout=form_section', 'form_layout_thumbnail', 10, 3);
-    function form_layout_thumbnail($thumbnail, $field, $layout)
+    add_filter('acfe/flexible/thumbnail/layout=reservation_form', 'reservation_form_layout_thumbnail', 10, 3);
+    function reservation_form_layout_thumbnail($thumbnail, $field, $layout)
     {
         
         // Must return an URL or Attachment ID
-        return get_template_directory_uri() . '/assets/image/layout-thumbnails/form-thumbnail.png';
+        return get_template_directory_uri() . '/assets/image/layout-thumbnails/reservation-form-thumbnail.png';
     }
