@@ -15,7 +15,11 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 3,
+            "acfe_save_meta": 0,
             "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
             "sub_fields": [
                 {
                     "key": "field_649412977c12b",
@@ -30,6 +34,8 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
+                    "acfe_save_meta": 0,
                     "choices": {
                         "Desk": "Desk",
                         "Wireless Internet": "Wireless Internet",
@@ -68,6 +74,8 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 3,
+                    "acfe_save_meta": 0,
                     "choices": {
                         "Luxe Toiletries": "Luxe Toiletries",
                         "Marble Shower": "Marble Shower",
@@ -86,8 +94,6 @@
                     "return_format": "value"
                 }
             ],
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
             "acfe_group_modal_close": 0,
             "acfe_group_modal_button": "",
             "acfe_group_modal_size": "large"
@@ -115,8 +121,9 @@
     "acfe_autosync": [
         "json"
     ],
+    "acfml_field_group_mode": "advanced",
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1689705852
+    "modified": 1690187133
 }
