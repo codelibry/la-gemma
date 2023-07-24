@@ -3,24 +3,52 @@
     min-width: 121px
     &.active
         .wpml-ls-first-item 
-            & > a
-                // border-bottom-color: transparent
+            //& > a
+            //    border: 0 1px 1px !important
         .wpml-ls-current-language
             padding-bottom: 0
             .wpml-ls-item-toggle
-                border-bottom: 0
+                border-bottom: 0 !important
+            .wpml-ls-sub-menu
+                border-top: 0 !important
     ul
         border-bottom: 0
         background: transparent
         color: #f5f3ef
         border: 0
+    .wpml-ls-sub-menu
+        border: 1px solid $color-green
+        a
+            border: 0 !important
+        .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
+            border: 1px solid #F5F3EF
+        .header-fixed &
+            border: 1px solid $color-green !important
+    a.wpml-ls-item-toggle
+        border: 1px solid $color-green
+        background: transparent
+        color: $color-green
+        .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
+            border: 1px solid #F5F3EF
+            background: transparent
+            color: #F5F3EF
+        .header-fixed &
+            border: 1px solid $color-green !important
+            background: transparent !important
+            color: $color-green !important
     a.wpml-ls-item-toggle, 
     .wpml-ls-link 
         padding-right: 10px
         text-align: center
+        span
+            color: $color-green
+            .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
+                color: #F5F3EF
+            .header-fixed &
+                color: $color-green !important
         &:hover
             span
-                color: #f5f3ef
+                //color: #f5f3ef
                 text-decoration: underline
     .wpml-ls-display 
         display: none
@@ -54,4 +82,4 @@
         &:hover
             & > a   
                 background-color: transparent
-                color: #f5f3ef
+                //color: #f5f3ef

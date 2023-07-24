@@ -7,10 +7,21 @@ function scrollToAnchor(){
         e.preventDefault();
         const href = $(this).attr('href');
         const headerMenu = $('.header__menu');
+        const headerHeight = $('header.header').height();
 
         headerMenu.removeClass('open');
         $('body, html').removeClass('no-scroll');
-        $('html, body').animate({ scrollTop: $(href).offset().top - 140}, 1000);
+        if($('body').hasClass('logged-in')) {
+            if ($(window).width() > 782) {
+                $('html, body').animate({ scrollTop: $(href).offset().top - headerHeight - 32}, 1000);
+            } else if($(window).width() > 600 && $(window).width() < 782) {
+                $('html, body').animate({ scrollTop: $(href).offset().top - headerHeight - 46}, 1000);
+            } else {
+                $('html, body').animate({ scrollTop: $(href).offset().top - headerHeight}, 1000);
+            }
+        } else {
+            $('html, body').animate({ scrollTop: $(href).offset().top - headerHeight}, 1000);
+        }
     })
         
 }
