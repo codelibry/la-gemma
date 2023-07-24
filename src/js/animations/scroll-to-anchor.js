@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 
 
 function scrollToAnchor(){
-    $('a[href^="#"]:not(.slider-arrow)').click(function(e){
+    $('a[href^="#"]:not(.slider-arrow, .booking-btn)').click(function(e){
         e.preventDefault();
         const href = $(this).attr('href');
         const headerMenu = $('.header__menu');

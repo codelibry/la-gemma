@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import flatpickr from "flatpickr";
 
+// function for transferring data from the calendar to inputs
 function chooseBookingDate() {
     const checkIn = $('#check-in');
     const checkOut = $('#check-out');
@@ -55,24 +56,45 @@ function chooseBookingDate() {
 }
 
 function showBookingForm () {
-    const bookingBtn = $('.booking-btn');
     const bookingForm = $('.booking-form');
+    const bookingBtn = $('.booking-btn');
     const bookingSelect = bookingForm.find('select, .nice-select, .current');
 
     bookingBtn.on('click', function (e) {
         e.preventDefault();
         bookingBtn.toggleClass('active');
         bookingForm.toggleClass('form-visible');
+        $('body').addClass('no-scroll');
     });
 
     $(document).on('click', function(event) {
         if (!$(event.target).closest(".booking-form").length && !$(event.target).hasClass('booking-btn') && !$(event.target).closest(".booking-btn").length) {
             bookingBtn.removeClass('active');
             bookingForm.removeClass('form-visible');
+            $('body').removeClass('no-scroll');
         }
     });
 }
 
+function closeBookingForm () {
+    const bookingForm = $('.booking-form');
+    const bookingBtn = $('.booking-btn');
+    const bookingCloseBtn = bookingForm.find('.close-form');
+
+    bookingCloseBtn.on('click', function () {
+        bookingBtn.removeClass('active');
+        bookingForm.removeClass('form-visible');
+    })
+
+    $(document).on('keydown', function (e) {
+        if (e.keyCode == 27) {
+            bookingBtn.removeClass('active');
+            bookingForm.removeClass('form-visible');
+        }
+    })
+}
+
+// custom form with redirect
 function bookingFormSubmit () {
     const form = $('#booking-form');
 
@@ -94,11 +116,14 @@ function bookingFormSubmit () {
         window.location.href = url;
     });
 }
+
+// set the height as the width
 function setFlatpickrDayHeight() {
     const flatpickrDay = $('.flatpickr-day');
     flatpickrDay.height(flatpickrDay.width() + 'px');
 }
 
+// set classes for flatpikr days
 function setFlatpickrDayClass() {
     const flatpickrDay = $('.flatpickr-day');
     const inRange = $('.inRange');
@@ -151,4 +176,4 @@ $(document).click(function(event) {
   
 
 
-export {chooseBookingDate, showBookingForm, bookingFormSubmit}
+export {chooseBookingDate, showBookingForm, closeBookingForm, bookingFormSubmit}

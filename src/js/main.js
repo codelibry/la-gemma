@@ -6,7 +6,7 @@ import {getSlider} from './template-parts/slider';
 import {toggleDropdown} from './template-parts/dropdown';
 import {getFormAccept} from './template-parts/formAccept';
 import {postFilter} from './template-parts/post-filter';
-import {chooseBookingDate, showBookingForm, bookingFormSubmit} from './template-parts/booking';
+import {chooseBookingDate, showBookingForm, closeBookingForm, bookingFormSubmit} from './template-parts/booking';
 import {showFormPhone, copyFormImage, hiddenContent} from './template-parts/form';
 
 // Animations
@@ -27,6 +27,7 @@ getFormAccept();
 postFilter();
 chooseBookingDate();
 showBookingForm();
+closeBookingForm();
 bookingFormSubmit();
 showFormPhone();
 copyFormImage();
