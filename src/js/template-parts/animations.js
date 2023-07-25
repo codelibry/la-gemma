@@ -8,8 +8,12 @@ function headerAnimation() {
     let timeline = gsap.timeline({defaults:{duration: .5 }});
     timeline
         .from(".header__toggle", { opacity: '0', delay: 2 , ease: 'power0' })
-        .from(".header__logo", { opacity: '0', ease: 'power4' })
-        .from(".header__btn", { opacity: '0', ease: 'power4' });
+        .from(".header__logo", { opacity: '0', ease: 'power0' })
+        .from(".header__btn", { opacity: '0', ease: 'power0' });
+
+    gsap.from(".slider-item__content-text", { opacity: '0', delay: 2 , ease: 'power0' });
+    gsap.from(".page-banner__banner", { y: '50%', opacity: 0, delay: 2 , ease: 'powe2' });
+    
 }
 
 function parrallax_images() {
