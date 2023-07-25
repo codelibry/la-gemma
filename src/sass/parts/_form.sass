@@ -482,7 +482,10 @@
 		margin: 40px auto calc(40px - 32px)
 	+max-screen($breakpoint-md)
 		max-width: unset
+		padding: 10px 14px
 		margin: 0
+		display: flex
+		align-items: center
 	.close-form
 		display: none
 		+max-screen($breakpoint-lg)
@@ -493,12 +496,14 @@
 			font-size: 40px
 			line-height: 1.1
 			letter-spacing: -0.88px
-		.logged-in &
 			+max-screen($breakpoint-md)
-				top: calc(46px + 16px)
-	.logged-in &
-		+max-screen($breakpoint-md)
-			padding: calc(97px + 46px) 14px 84px
+				top: 10px
+		//.logged-in &
+		//	+max-screen($breakpoint-md)
+		//		top: calc(46px + 16px)
+	//.logged-in &
+	//	+max-screen($breakpoint-md)
+	//		padding: calc(97px + 46px) 14px 84px
 	&.form-visible
 		opacity: 1
 		pointer-events: auto
@@ -510,7 +515,7 @@
 		display: flex
 		flex-wrap: wrap
 		+max-screen($breakpoint-md)
-			gap: 20px 0
+			gap: 5px 0
 		.nice-select
 			font-family: $font-family-ogg
 			font-size: 25px
@@ -605,10 +610,12 @@
 		top: 1px
 		right: 8px
 		width: 35.21%
+		z-index: 20
 		+max-screen($breakpoint-md)
 			margin-right: 42px
 			top: 0
-			right: 0
+			left: 57.21%
+			right: unset
 			width: 144px
 		&.open
 			.field-label
@@ -717,8 +724,7 @@
 			z-index: 10
 			width: 59.13%
 			+max-screen($breakpoint-md)
-				margin-left: 42px
-				width: 144px
+				width: 100%
 				padding: 0
 			.flatpickr-prev-month, .flatpickr-next-month, .numInputWrapper
 				display: none !important
@@ -732,6 +738,10 @@
 				top: 0
 				width: 100%
 				padding: 0
+				+max-screen($breakpoint-md)
+					width: 144px
+					right: 57.21%
+					left: unset
 				.flatpickr-monthDropdown-months
 					+max-screen($breakpoint-md)
 						padding-left: 0
@@ -769,6 +779,8 @@
 				gap: 18px 29px
 				+max-screen($breakpoint-lg)
 					gap: 20px 0
+				+max-screen($breakpoint-md)
+					gap: 0
 			.flatpickr-day
 				width: calc((100% / 7) - ((29px * 6) / 7))
 				flex: calc((100% / 7) - ((29px * 6) / 7))

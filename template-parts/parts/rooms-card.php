@@ -3,6 +3,7 @@
     $content = get_the_content();
     $permalink = get_the_permalink();
     $thumbnail_url = get_the_post_thumbnail_url();
+    $thumbnail_text = get_field('banner_title', get_the_ID());
     $thumbnail_caption = get_the_post_thumbnail_caption() ?: get_the_title();
     $facilities = get_field('facilities', get_the_ID());
 ?>
@@ -14,8 +15,16 @@
                 <a href="<?php echo $permalink;?>">
                     <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $thumbnail_caption; ?>">
                 </a>
+                <?php if($thumbnail_text) :?>
+                    <div class="rooms-card__img-text">
+                        <h4>
+                            <?php echo $thumbnail_text; ?>
+                        </h4>
+                    </div>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
+        
         <div class="rooms-card__content">
             <?php if ($title) : ?>
                 <div class="rooms-card__title">

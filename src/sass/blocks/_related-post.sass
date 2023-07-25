@@ -2,12 +2,16 @@ div.related-post
     padding: 91px 0
     +max-screen($breakpoint-lg)
         padding: 60px 0
+    +max-screen($breakpoint-md)
+        padding: 57px 0 39px
     .related-post
         &__wrap
         &__title
             margin-bottom: 74px
             +max-screen($breakpoint-lg)
-                margin-bottom: 30px
+                margin-bottom: 39px
+            +max-screen($breakpoint-md)
+                text-align: center
             h2
                 font-weight: 400
         &__list

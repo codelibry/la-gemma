@@ -64,14 +64,14 @@ function showBookingForm () {
         e.preventDefault();
         bookingBtn.toggleClass('active');
         bookingForm.toggleClass('form-visible');
-        $('body').addClass('no-scroll');
+        $('html, body').addClass('no-scroll');
     });
 
     $(document).on('click', function(event) {
-        if (!$(event.target).closest(".booking-form").length && !$(event.target).hasClass('booking-btn') && !$(event.target).closest(".booking-btn").length) {
+        if (!$(event.target).closest(".booking-form").length && !$(event.target).hasClass('booking-btn') && !$(event.target).closest(".booking-btn").length && $(window).width() < 769) {
             bookingBtn.removeClass('active');
             bookingForm.removeClass('form-visible');
-            $('body').removeClass('no-scroll');
+            $('html, body').removeClass('no-scroll');
         }
     });
 }
@@ -90,6 +90,7 @@ function closeBookingForm () {
         if (e.keyCode == 27) {
             bookingBtn.removeClass('active');
             bookingForm.removeClass('form-visible');
+            $('html, body').removeClass('no-scroll');
         }
     })
 }
@@ -165,7 +166,6 @@ function addAndSubtractNumber() {
             let currentValue = parseFloat(field.val());
 
             if (currentValue > 0) {
-                // Зменшуємо значення на 1
                 currentValue--;
             }
 

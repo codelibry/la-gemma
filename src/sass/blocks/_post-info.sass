@@ -4,13 +4,18 @@ div.post-info
         &__archive-link
             a
                 display: inline-flex
+                align-items: center
                 margin-bottom: 30px
                 font-family: $font-family-gillsans
                 font-size: 19px
                 line-height: 1.1
                 letter-spacing: -0.42px
+                color: #213932
                 padding-bottom: 5px
                 position: relative
+                +max-screen($breakpoint-md)
+                    margin-bottom: 24px
+                    font-size: 20px
                 &:after
                     content: ''
                     position: absolute
@@ -19,6 +24,9 @@ div.post-info
                     width: 100%
                     height: 1px
                     background: #2E4D43
+                &:before
+                    content: ''
+                    display: none
     .rooms-card
         &__wrap
             display: flex

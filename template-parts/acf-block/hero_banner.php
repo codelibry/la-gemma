@@ -45,13 +45,15 @@
                                     <?php endif; ?>
                                 </div>
                             <?php endif; ?>
-                            <div class="slider-item__btn">
-                                <a href="#" class="button booking-btn button--transparent-text">
+                            <?php if(!is_page_template('template-pages/about-page.php')) :?>
+                                <div class="slider-item__btn">
+                                    <a href="#" class="button booking-btn button--transparent-text">
                                     <span>
                                         <?php _e('Book now'); ?>
                                     </span>
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endif; ?>
