@@ -63,7 +63,7 @@
                         <div class="form-calendar">
                             <div class="form-select-field">
                                 <select id="guests" name="guests">
-                                    <option value="0" selected disabled><?php _e('404','lagemmahotel');?>Guests</option>
+                                    <option value="0" selected disabled><?php _e('Guests','lagemmahotel');?></option>
                                     <option value="1-0"><?php _e('1 Adult','lagemmahotel');?></option>
                                     <option value="1-1"><?php _e('1 Adult 1 Child','lagemmahotel');?></option>
                                     <option value="2-1"><?php _e('2 Adult 1 Child','lagemmahotel');?></option>
