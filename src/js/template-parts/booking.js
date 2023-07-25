@@ -105,11 +105,8 @@ function bookingFormSubmit () {
 
         var arrive = $(this).find('[name="arrive"]').val();
         var depart = $(this).find('[name="depart"]').val();
-        var adultChild = $(this).find('.form-select-field .list .selected').data('value');
-
-        var values = adultChild.split('-');
-        var adult = values[0];
-        var child = values[1];
+        var adult = $(this).find('[name="adult"]').val()
+        var child = $(this).find('[name="child"]').val()
 
         url += 'adult=' + adult + '&arrive=' + arrive + '&chain=10205&child=' + child + '&config=gemma&currency=EUR&depart=' + depart + '&hotel=40864&level=hotel&locale=it-IT&rooms=1&theme=gemma'
 
@@ -136,6 +133,45 @@ function setFlatpickrDayClass() {
         inRange.last().addClass('lastR');
     }
 
+}
+
+function showGuestDropdown () {
+    const formDropdown = $('.form-dropdown-fields');
+    const fieldLabel = formDropdown.find('.field-label');
+
+    fieldLabel.on('click', function () {
+        $(this).closest('.form-dropdown-fields').toggleClass('open');
+    })
+}
+
+function addAndSubtractNumber() {
+    const formDropdownFields = $('.form-dropdown-fields');
+    const fields = formDropdownFields.find('.field-content label');
+
+    fields.each(function () {
+        const field = $(this).find('input');
+        const incrementBtn = $(this).find('.plus');
+        const decrementBtn = $(this).find('.minus');
+
+        incrementBtn.on('click', function () {
+            let currentValue = parseFloat(field.val());
+
+            currentValue++;
+
+            field.val(currentValue);
+        })
+
+        decrementBtn.on('click', function () {
+            let currentValue = parseFloat(field.val());
+
+            if (currentValue > 0) {
+                // Зменшуємо значення на 1
+                currentValue--;
+            }
+
+            field.val(currentValue);
+        })
+    })
 }
 
 $(window).on('resize', setFlatpickrDayHeight);
@@ -176,4 +212,4 @@ $(document).click(function(event) {
   
 
 
-export {chooseBookingDate, showBookingForm, closeBookingForm, bookingFormSubmit}
+export {chooseBookingDate, showBookingForm, closeBookingForm, bookingFormSubmit, addAndSubtractNumber, showGuestDropdown}

@@ -498,6 +498,7 @@
 			border: 1px solid rgba(45, 76, 66, .53)
 			position: relative
 			z-index: 10
+			padding: 0
 			.list
 				background: #e5e3da !important
 				border: 1px solid rgba(45, 76, 66, .53)
@@ -572,6 +573,101 @@
 			.option
 				&:first-of-type
 					display: none
+	.form-dropdown-fields
+		position: absolute
+		top: 1px
+		right: 8px
+		width: 35.21%
+		+max-screen($breakpoint-md)
+			margin-right: 42px
+			top: 0
+			right: 0
+			width: 144px
+		&.open
+			.field-label
+				border-bottom: 0
+			.field-content
+				opacity: 1
+				pointer-events: auto
+		.field-label
+			font-family: $font-family-ogg
+			font-size: 25px
+			text-align: center
+			color: #2D4C42
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			height: 36px
+			background: transparent
+			border: 1px solid rgba(45, 76, 66, .53)
+			position: relative
+			z-index: 10
+			padding: 0
+			transition: $default-transition
+			&:after
+				border-bottom: 2px solid #999
+				border-right: 2px solid #999
+				content: ''
+				display: block
+				width: 10px
+				height: 10px
+				margin-top: -4px
+				pointer-events: none
+				position: absolute
+				right: 12px
+				top: unset
+				transform-origin: 66% 66%
+				transform: rotate(45deg)
+				transition: all 0.15s ease-in-out
+		.field-content
+			position: absolute
+			top: 36px
+			width: 100%
+			border: 1px solid rgba(45, 76, 66, .53)
+			border-top: 0
+			z-index: 10
+			background: #e5e3da
+			padding: 3px 5px 8px
+			opacity: 0
+			pointer-events: none
+			transition: $default-transition
+			.field-item
+				font-family: $font-family-ogg
+				font-size: 25px
+				color: #2D4C42
+				display: flex
+				align-items: center
+				height: 31px
+				.label
+					margin-right: auto
+					font-size: 20px
+					+max-screen($breakpoint-xl)
+						font-size: calc((20px / 100) * 90)
+					+max-screen($breakpoint-lg)
+						font-size: calc((20px / 100) * 80)
+					+max-screen($breakpoint-md)
+						font-size: calc((20px / 100) * 70)
+					+max-screen($breakpoint-sm)
+						font-size: calc((20px / 100) * 60)
+				input
+					background: transparent
+					border: none
+					width: 22px
+					height: auto
+					text-align: center
+					margin: 0 4px
+					font-weight: 600
+				.minus, .plus
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 20px
+					height: 20px
+					border-radius: 50%
+					background: #fff
+					font-weight: 600
+
 	.form-calendar
 		margin-top: 44px
 		position: relative
