@@ -4,6 +4,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 
+function headerAnimation() {
+    let timeline = gsap.timeline({defaults:{duration: .5 }});
+    timeline
+        .from(".header__toggle", { opacity: '0', delay: 2 , ease: 'power0' })
+        .from(".header__logo", { opacity: '0', ease: 'power4' })
+        .from(".header__btn", { opacity: '0', ease: 'power4' });
+}
+
 function parrallax_images() {
     $(".parallax-img-wrapper").each(function(){
         let img = $(this).find('.parallax-img');
@@ -30,4 +38,4 @@ function parrallax_images() {
     });
 }
 
-export {parrallax_images}
+export {parrallax_images , headerAnimation}

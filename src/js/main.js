@@ -8,7 +8,8 @@ import {getFormAccept} from './template-parts/formAccept';
 import {postFilter} from './template-parts/post-filter';
 import {chooseBookingDate, showBookingForm, closeBookingForm, bookingFormSubmit} from './template-parts/booking';
 import {showFormPhone, copyFormImage, hiddenContent} from './template-parts/form';
-import {parrallax_images} from './template-parts/parallax';
+import {parrallax_images , headerAnimation} from './template-parts/animations';
+
 
 // Animations
 import './animations/appearence';
@@ -34,3 +35,4 @@ showFormPhone();
 copyFormImage();
 hiddenContent();
 parrallax_images();
+headerAnimation();
