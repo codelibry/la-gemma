@@ -1,0 +1,76 @@
+section.content-image--allure
+    +max-screen($breakpoint-md)
+        padding-top: 0
+    .content-image
+        &__title
+            color: $color-brown
+            +max-screen($breakpoint-md)
+                font-size: 45px
+                line-height: calc(55 / 45)
+                text-align: center
+                color: $color-light-brown
+                span
+                    font-size: 35px
+        &__subtitle
+            color: $color-brown
+            text-align: center
+            +max-screen($breakpoint-md)
+                font-size: 15px
+                line-height: 17px
+                color: $color-light-brown
+        &__text
+            font-family: $font-family-futurapt
+            font-weight: 300
+            +max-screen($breakpoint-md)
+                margin-top: 0
+                width: 380px
+                max-width: 100%
+                font-size: 20px
+                line-height: 1.5
+        &__btn
+            margin-top: 61px
+            +max-screen($breakpoint-md)
+                margin-top: 39px
+            .button
+                height: auto
+                padding-top: 8px
+                padding-bottom: 5px
+                background-color: $color-brown
+                border-color: $color-brown
+                color: $color-light
+                font-weight: 300
+        &__img
+            width: calc(100% + 50px)
+            margin-left: -25px
+            margin-right: -25px
+            &-content
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                z-index: 10
+                +min-screen($breakpoint-md)
+                    display: none
+            &-wrap
+                +max-screen($breakpoint-md)
+                    padding-bottom: 150%                           
+                img
+                    +max-screen($breakpoint-sm)
+                        width: 140%
+                        height: 140%
+                        top: -30%
+                        left: -30%
+                &::after
+                    content: ""
+                    inset: 0
+                    width: 100%
+                    height: 100%
+                    background: black
+                    opacity: .15
+                    z-index: -1
+                    position: absolute
+        &__content
+            .content-image__title,
+            .content-image__subtitle
+                +max-screen($breakpoint-md)
+                    display: none

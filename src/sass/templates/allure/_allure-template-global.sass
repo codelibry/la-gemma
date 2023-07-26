@@ -1,6 +1,8 @@
 .page-template-allure-template
+    color: $color-brown
     .header__logo
-        display: none
+        +min-screen($breakpoint-lg)
+            display: none
     header.header
         .header
             &__toggle

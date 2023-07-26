@@ -1,0 +1,52 @@
+.copy-image
+    background-color: $color-light
+    &__img
+        max-width: 100%
+        width: 663px
+        &-wrapper
+            +min-screen($breakpoint-md)
+                padding-left: 150px
+                padding-right: 40px
+    &__content
+        text-align: center
+        &-wrapper
+            margin-left: auto
+            max-width: 813px
+    &__title
+        font-family: $font-family-linotypedidot
+        font-family: serif
+        font-size: 25px
+        line-height: calc(31 / 25)
+        color: #20201E
+
+        display: flex
+        flex-direction: column
+        span
+            font-size: 35px
+            line-height: calc (35 / 43)
+    &__content
+        margin-top: 39px
+        font-size: 27px
+        line-height: calc(35 / 27)
+        font-family: $font-family-futurapt
+        font-weight: 300
+        color: black
+        +max-screen($breakpoint-md)
+            font-size: 20px
+            line-height: 1.5
+    .button
+        margin-top: 48px
+        height: 47px
+        padding-top: 13px
+        padding-bottom: 7px
+        background-color: $color-brown
+        border-color: $color-brown
+        color: $color-light
+        font-weight: 300
+        font-family: $font-family-base
+        font-size: 25px
+        line-height: calc( 28/ 25)
+        min-width: 305px
+        text-align: center
+        +max-screen($breakpoint-md)
+            margin-top: 10px

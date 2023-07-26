@@ -12,6 +12,12 @@
         width: 22%
         max-width: 356px
         height: auto
+        +max-screen($breakpoint-lg)
+            display: none
+        &--mobile
+            display: block
+            +min-screen($breakpoint-lg)
+                display: none 
     &__content-wrapper
         display: flex
         flex-direction: column
