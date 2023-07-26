@@ -21,7 +21,7 @@
                         $text = $list_item['text'];
                         ?>
 
-                        <li class="list-item col-12 col-md-6 col-lg-4">
+                        <li class="list-item col-12 <?php echo is_page_template('template-pages/lucas-page.php') ? 'col-lg-4': 'col-md-6 col-lg-4';?>">
                             <?php if ($title) : ?>
                                 <h4 class="list-item__title text-left"><?php echo $title; ?></h4>
                             <?php endif; ?>

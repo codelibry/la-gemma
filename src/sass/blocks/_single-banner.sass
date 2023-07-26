@@ -1,0 +1,61 @@
+section.single-banner
+    padding: calc(min(162px, 8vw)) 0 53px
+    +max-screen($breakpoint-xl)
+        padding: 114px 0 53px
+    +max-screen($breakpoint-lg)
+        padding: 153px 0 30px
+    +max-screen($breakpoint-md)
+        padding: 153px 0 17px
+    .single-banner
+        &__wrap
+            position: relative
+        &__title
+            margin: 40px 0 65px
+            text-align: center
+            +max-screen($breakpoint-md)
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 100%
+                margin: 0
+                color: #E5E3DA
+                z-index: 10
+            h1
+                font-weight: 400
+                +max-screen($breakpoint-md)
+                    font-size: 45px
+                    line-height: .88
+                span
+                    position: relative
+                    +max-screen($breakpoint-lg)
+                        font-size: 63px
+                    +max-screen($breakpoint-md)
+                        display: flex
+                        justify-content: center
+                        font-size: 30px
+                        line-height: .75
+                    &:before
+                        content: '|'
+                        display: inline-flex
+                        +max-screen($breakpoint-md)
+                            display: none
+        &__banner
+            .slider-item
+                display: block !important
+                position: relative
+                height: 0
+                padding-bottom: 40.68%
+                overflow: hidden
+                +max-screen($breakpoint-sm)
+                    padding-bottom: 115%
+                &__bg
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover

@@ -38,136 +38,107 @@
 		text-align: center
 	.form-title
 		font-size: 50px
-		+max-screen($breakpoint-xxl)
-			font-size: calc((50px / 100) * 90)
-		+max-screen($breakpoint-xl)
-			font-size: calc((50px / 100) * 80)
-		+max-screen($breakpoint-lg)
-			font-size: calc((50px / 100) * 70)
-		+max-screen($breakpoint-md)
-			font-size: calc((50px / 100) * 60)
-		+max-screen($breakpoint-sm)
-			font-size: calc((50px / 100) * 50)
+		line-height: 1.16
 		.lucas-page &
 			font-family: $font-family-giveny
 	.form-text
-		margin-top: 15px
 		font-size: 29px
 		font-weight: 300
+		line-height: .87
+		margin-top: 15px
 		+max-screen($breakpoint-xxl)
 			font-size: calc((29px / 100) * 90)
 		+max-screen($breakpoint-xl)
 			font-size: calc((29px / 100) * 80)
 		+max-screen($breakpoint-lg)
 			font-size: calc((29px / 100) * 70)
+			margin-top: 39px
 		+max-screen($breakpoint-md)
-			font-size: calc((29px / 100) * 60)
+			font-size: 20px
+			line-height: 1.5
 
 		.phone
 			font-size: 29px
 			color: #F5F0DF
 			position: relative
+			display: inline-block
+			+max-screen($breakpoint-xxl)
+				font-size: calc((29px / 100) * 90)
+			+max-screen($breakpoint-xl)
+				font-size: calc((29px / 100) * 80)
+			+max-screen($breakpoint-lg)
+				font-size: calc((29px / 100) * 70)
+			+max-screen($breakpoint-md)
+				font-size: 20px
+				line-height: 1.5
 			&:hover
 				cursor: pointer
-			a
-				font-size: 29px
-				color: #F5F0DF
-				opacity: 0
-				pointer-events: none
-				transition: $default-transition
 			&.phone-show
 				a
 					opacity: 1
 					pointer-events: unset
-				&:after
+					position: unset
+				span
 					opacity: 0
 					pointer-events: none
-			&:after
-				content: '***********'
-				font-size: 29px
-				color: #F5F0DF
-				position: absolute
+					position: absolute
+			a
 				display: flex
 				align-items: center
 				justify-content: flex-start
-				width: 100%
-				height: 100%
+				font-size: 29px
+				color: #F5F0DF
+				position: absolute
 				top: 0
 				left: 0
+				width: 100%
+				height: 100%
+				opacity: 0
 				transition: $default-transition
-
-	.form-fields
-		margin-top: 86px
-		display: flex
-		justify-content: center
-		gap: 0 55px
-		+max-screen($breakpoint-lg)
-			flex-direction: column
-			align-items: center
-			gap: 20px
-		.nice-select
-			.list
-				background: #425339 !important
-			.option
-				padding: 0 26px
+				pointer-events: none
+				+max-screen($breakpoint-xxl)
+					font-size: calc((29px / 100) * 90)
+				+max-screen($breakpoint-xl)
+					font-size: calc((29px / 100) * 80)
+				+max-screen($breakpoint-lg)
+					font-size: calc((29px / 100) * 70)
+				+max-screen($breakpoint-md)
+					font-size: 20px
+					line-height: 1.5
+			span
 				font-size: 29px
-				font-weight: 300 !important
-				line-height: 1
-				text-align: left
-				display: flex
-				align-items: center
-				&:hover
-					background: #e3d8af !important
-
-
-	.form-date-field, .form-time-field, .form-text-field
-		max-width: 380px
-		width: 100%
-	.form-time-field
-		.wpcf7-form-control
-			option
-				color: #000
-	.form-text-field
+				color: #F5F0DF
+				transition: $default-transition
+				+max-screen($breakpoint-xxl)
+					font-size: calc((29px / 100) * 90)
+				+max-screen($breakpoint-xl)
+					font-size: calc((29px / 100) * 80)
+				+max-screen($breakpoint-lg)
+					font-size: calc((29px / 100) * 70)
+				+max-screen($breakpoint-md)
+					font-size: 20px
+					line-height: 1.5
 	.form-submit
 		margin-top: 30px
 		width: 100%
 		display: flex
 		flex-direction: column
 		align-items: center
-		gap: 7px
-		.wpcf7-form-control
+		+max-screen($breakpoint-lg)
+			margin-top: 41px
+		.button
+			font-family: $font-family-giveny
+			font-size: 32px
+			font-weight: 400
+			color: #FFFFFF
+			background: #C0AD89
+			border: 1px solid #FFFFFF
 			max-width: 305px
 			width: 100%
 			height: 47px
-			font-size: 32px
 			justify-content: center
-			color: #E5E3DA
-			background: #2D4C42
-			border: 1px solid #2D4C42
-			.lucas-page &, .paulo-airaudo-page &
-				font-family: $font-family-giveny
-				font-weight: 400
-				color: #FFFFFF
-				background: #C0AD89
-				border: 1px solid #FFFFFF
 			&:hover
 				cursor: pointer
-	.button
-        font-size: 32px
-        font-family: $font-family-giveny
-        font-weight: 400
-        color: #fff
-        background: #c0ad89
-        border: 1px solid #fff
-        width: 276px
-        padding-left: 17px
-        padding-right: 17px
-        padding-top: 5px
-        padding-bottom: 5px
-        max-width: 100%
-        min-height: 47px
-	#sr-res-root
-		cursor: pointer
 
 .subscribe-form
 	.wpcf7-form-control
@@ -467,7 +438,10 @@
 		margin: 40px auto calc(40px - 32px)
 	+max-screen($breakpoint-md)
 		max-width: unset
+		padding: 10px 14px
 		margin: 0
+		display: flex
+		align-items: center
 	.close-form
 		display: none
 		+max-screen($breakpoint-lg)
@@ -478,12 +452,14 @@
 			font-size: 40px
 			line-height: 1.1
 			letter-spacing: -0.88px
-		.logged-in &
 			+max-screen($breakpoint-md)
-				top: calc(46px + 16px)
-	.logged-in &
-		+max-screen($breakpoint-md)
-			padding: calc(97px + 46px) 14px 84px
+				top: 10px
+		//.logged-in &
+		//	+max-screen($breakpoint-md)
+		//		top: calc(46px + 16px)
+	//.logged-in &
+	//	+max-screen($breakpoint-md)
+	//		padding: calc(97px + 46px) 14px 84px
 	&.form-visible
 		opacity: 1
 		pointer-events: auto
@@ -495,7 +471,7 @@
 		display: flex
 		flex-wrap: wrap
 		+max-screen($breakpoint-md)
-			gap: 20px 0
+			gap: 5px 0
 		.nice-select
 			font-family: $font-family-ogg
 			font-size: 25px
@@ -510,6 +486,7 @@
 			border: 1px solid rgba(45, 76, 66, .53)
 			position: relative
 			z-index: 10
+			padding: 0
 			.list
 				background: #e5e3da !important
 				border: 1px solid rgba(45, 76, 66, .53)
@@ -584,6 +561,103 @@
 			.option
 				&:first-of-type
 					display: none
+	.form-dropdown-fields
+		position: absolute
+		top: 1px
+		right: 8px
+		width: 35.21%
+		z-index: 20
+		+max-screen($breakpoint-md)
+			margin-right: 42px
+			top: 0
+			left: 57.21%
+			right: unset
+			width: 144px
+		&.open
+			.field-label
+				border-bottom: 0
+			.field-content
+				opacity: 1
+				pointer-events: auto
+		.field-label
+			font-family: $font-family-ogg
+			font-size: 25px
+			text-align: center
+			color: #2D4C42
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			height: 36px
+			background: transparent
+			border: 1px solid rgba(45, 76, 66, .53)
+			position: relative
+			z-index: 10
+			padding: 0
+			transition: $default-transition
+			&:after
+				border-bottom: 2px solid #999
+				border-right: 2px solid #999
+				content: ''
+				display: block
+				width: 10px
+				height: 10px
+				margin-top: -4px
+				pointer-events: none
+				position: absolute
+				right: 12px
+				top: unset
+				transform-origin: 66% 66%
+				transform: rotate(45deg)
+				transition: all 0.15s ease-in-out
+		.field-content
+			position: absolute
+			top: 36px
+			width: 100%
+			border: 1px solid rgba(45, 76, 66, .53)
+			border-top: 0
+			z-index: 10
+			background: #e5e3da
+			padding: 3px 5px 8px
+			opacity: 0
+			pointer-events: none
+			transition: $default-transition
+			.field-item
+				font-family: $font-family-ogg
+				font-size: 25px
+				color: #2D4C42
+				display: flex
+				align-items: center
+				height: 31px
+				.label
+					margin-right: auto
+					font-size: 20px
+					+max-screen($breakpoint-xl)
+						font-size: calc((20px / 100) * 90)
+					+max-screen($breakpoint-lg)
+						font-size: calc((20px / 100) * 80)
+					+max-screen($breakpoint-md)
+						font-size: calc((20px / 100) * 70)
+					+max-screen($breakpoint-sm)
+						font-size: calc((20px / 100) * 60)
+				input
+					background: transparent
+					border: none
+					width: 22px
+					height: auto
+					text-align: center
+					margin: 0 4px
+					font-weight: 600
+				.minus, .plus
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 20px
+					height: 20px
+					border-radius: 50%
+					background: #fff
+					font-weight: 600
+
 	.form-calendar
 		margin-top: 44px
 		position: relative
@@ -606,8 +680,7 @@
 			z-index: 10
 			width: 59.13%
 			+max-screen($breakpoint-md)
-				margin-left: 42px
-				width: 144px
+				width: 100%
 				padding: 0
 			.flatpickr-prev-month, .flatpickr-next-month, .numInputWrapper
 				display: none !important
@@ -621,6 +694,10 @@
 				top: 0
 				width: 100%
 				padding: 0
+				+max-screen($breakpoint-md)
+					width: 144px
+					right: 57.21%
+					left: unset
 				.flatpickr-monthDropdown-months
 					+max-screen($breakpoint-md)
 						padding-left: 0
@@ -658,6 +735,8 @@
 				gap: 18px 29px
 				+max-screen($breakpoint-lg)
 					gap: 20px 0
+				+max-screen($breakpoint-md)
+					gap: 0
 			.flatpickr-day
 				width: calc((100% / 7) - ((29px * 6) / 7))
 				flex: calc((100% / 7) - ((29px * 6) / 7))

@@ -9,6 +9,7 @@ function getSlider() {
             arrows: true,
             dots: true,
             speed: 1000,
+            slidesToShow: 1
         });
     })
 

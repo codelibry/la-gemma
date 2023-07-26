@@ -3,14 +3,34 @@
     $terms = get_the_terms(get_the_ID(), $taxonomy);
     $term_slug = $terms[0]->slug;
     $term_object = get_term_by('slug', $term_slug, $taxonomy);
+    
+    $banner_title = get_field('banner_title');
+    $banner_images = get_field('banner_images');
 ?>
 
 <?php get_header(); ?>
 
-<?php if (have_rows('blocks')) : ?>
-    <?php while (have_rows('blocks')) : the_row() ?>
-        <?php get_template_part('template-parts/acf-block/' . get_row_layout()); ?>
-    <?php endwhile; ?>
+<?php if ($banner_title && $banner_images) : ?>
+    <section class="single-banner">
+        <div class="container">
+            <div class="single-banner__wrap">
+                <div class="single-banner__title">
+                    <h1><?php echo $banner_title; ?></h1>
+                </div>
+                <div class="single-banner__banner js-slider">
+                    <?php foreach ($banner_images as $image) : ?>
+                        <?php $img = $image['image']; ?>
+                        <div class="slider-item">
+                            <div class="slider-item__bg">
+                                <img src="<?php echo $img['url']; ?>"
+                                     alt="<?php echo $img['alt'] ?: $img['title']; ?>">
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </section>
 <?php endif; ?>
 
     <div class="post-info">

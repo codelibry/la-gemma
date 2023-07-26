@@ -24,7 +24,7 @@
     <div class="container">
         <div class="header__wrap">
             <div class="header__toggle">
-                <?php _e('Menu','lagemmahotel');?>
+                <?php _e('Menu', 'lagemmahotel'); ?>
             </div>
             <?php if ($logo_icon) : ?>
                 <div class="header__logo">
@@ -58,18 +58,11 @@
                     </a>
                 </div>
             <?php endif; ?>
-
-            
             <div class="header__btn">
-                <?php echo do_shortcode('[wpml_language_switcher type="custom" flags=1 native=1 translated=1][/wpml_language_switcher]');?>
-                <!-- <select id="language" name="language" class="button language-btn">
-                    <option value="language" selected><?php _e('Language','lagemmahotel');?></option>
-                    <option value="italian"><?php _e('Italian','lagemmahotel');?></option>
-                    <option value="english"><?php _e('English','lagemmahotel');?></option>
-                </select> -->
+                <?php echo do_shortcode('[wpml_language_switcher type="custom" flags=1 native=1 translated=1][/wpml_language_switcher]'); ?>
                 <a href="#"
                    class="button booking-btn">
-                   <span> <?php _e('Book now','lagemmahotel');?></span>
+                    <span> <?php _e('Book now', 'lagemmahotel'); ?></span>
                 </a>
             </div>
             <div class="booking-form">
@@ -77,24 +70,34 @@
                 <form id="booking-form">
                     <div class="form-fields">
                         <div class="form-date-field">
-                            <label for="check-in"><?php _e('CHECK-IN','lagemmahotel');?></label>
+                            <label for="check-in"><?php _e('CHECK-IN', 'lagemmahotel'); ?></label>
                             <input type="text" id="check-in" name="arrive" readonly placeholder="DD - MM - YYYY">
                         </div>
                         <div class="form-date-field">
-                            <label for="check-out"><?php _e('CHECK-OUT','lagemmahotel');?></label>
+                            <label for="check-out"><?php _e('CHECK-OUT', 'lagemmahotel'); ?></label>
                             <input type="text" id="check-out" name="depart" readonly placeholder="DD - MM - YYYY">
                         </div>
                         <div class="form-calendar">
-                            <div class="form-select-field">
-                                <select id="guests" name="guests">
-                                    <option value="0" selected disabled><?php _e('Guests','lagemmahotel');?></option>
-                                    <option value="1-0"><?php _e('1 Adult','lagemmahotel');?></option>
-                                    <option value="1-1"><?php _e('1 Adult 1 Child','lagemmahotel');?></option>
-                                    <option value="2-1"><?php _e('2 Adult 1 Child','lagemmahotel');?></option>
-                                    <option value="2-2"><?php _e('2 Adult 2 Child','lagemmahotel');?></option>
-                                    <option value="3-2"><?php _e('3 Adult 2 Child','lagemmahotel');?></option>
-                                    <option value="3-3"><?php _e('3 Adult 3 Child','lagemmahotel');?></option>
-                                </select>
+                            <div class="form-dropdown-fields">
+                                <div class="field-label">
+                                    <span>
+                                        <?php _e('Guests'); ?>
+                                    </span>
+                                </div>
+                                <div class="field-content">
+                                    <label class="field-item adult">
+                                        <span class="label"><?php _e('Adult'); ?></span>
+                                        <span class="minus">-</span>
+                                        <input type="number" name="adult" disabled value="0">
+                                        <span class="plus">+</span>
+                                    </label>
+                                    <label class="field-item child">
+                                        <span class="label"><?php _e('Сhild'); ?></span>
+                                        <span class="minus">-</span>
+                                        <input type="number" name="child" disabled value="0">
+                                        <span class="plus">+</span>
+                                    </label>
+                                </div>
                             </div>
                             <input type="text" id="datepicker" readonly>
                         </div>
@@ -117,6 +120,7 @@
                 'echo' => true
             ]);
         ?>
+        <div class="header__close">X</div>
     </nav>
 
 </header>

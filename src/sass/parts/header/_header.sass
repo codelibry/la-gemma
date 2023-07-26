@@ -85,7 +85,7 @@ header.header
                     transform: scaleX(0)
 
         &__menu
-            position: absolute
+            position: fixed
             left: 0
             top: -100vh
             height: 100vh
@@ -93,6 +93,9 @@ header.header
             padding: 53px 62px 53px 43px
             overflow-y: auto
             transition: .6s ease
+            +max-screen($breakpoint-md)
+                width: 100%
+                padding: 67px 28px 75px 24px
             &.open
                 top: 0
             .menu
@@ -125,6 +128,16 @@ header.header
                         height: .5px
                         background: #213932
                         margin: 41.5px 0 47.5px
+        &__close
+            display: none
+            +max-screen($breakpoint-md)
+                display: block
+                position: absolute
+                top: 16px
+                right: 24px
+                font-size: 40px
+                line-height: 1.1
+                letter-spacing: -0.88px
         &__logo
             position: absolute
             left: 50%

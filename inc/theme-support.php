@@ -48,3 +48,18 @@
     }
     
     add_theme_support('post-thumbnails');
+    
+    function custom_language_switcher( $content ) {
+        $desktop_view = '<span class="full-lang">[wpml_language_selector dropdown=0]</span>';
+        $mobile_view  = '<span class="short-lang">[wpml_language_selector type=native]</span>';
+        
+        ob_start();
+        
+        echo '<div class="language-switcher-desktop">' . do_shortcode( $desktop_view ) . '</div>';
+        
+        echo '<div class="language-switcher-mobile">' . do_shortcode( $mobile_view ) . '</div>';
+        
+        $output = ob_get_clean();
+        return $output . $content;
+    }
+    add_filter( 'the_content', 'custom_language_switcher' );

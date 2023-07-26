@@ -15,11 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
-            "acfe_save_meta": 0,
             "layout": "block",
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
             "sub_fields": [
                 {
                     "key": "field_649412977c12b",
@@ -34,8 +30,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 3,
-                    "acfe_save_meta": 0,
                     "choices": {
                         "Desk": "Desk",
                         "Wireless Internet": "Wireless Internet",
@@ -74,8 +68,6 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 3,
-                    "acfe_save_meta": 0,
                     "choices": {
                         "Luxe Toiletries": "Luxe Toiletries",
                         "Marble Shower": "Marble Shower",
@@ -94,9 +86,96 @@
                     "return_format": "value"
                 }
             ],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
             "acfe_group_modal_close": 0,
             "acfe_group_modal_button": "",
             "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_64bfdd847930b",
+            "label": "Single banner",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64bfddf67930c",
+            "label": "Banner title",
+            "name": "banner_title",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "key": "field_64bfdcb87930a",
+            "label": "Banner images",
+            "name": "banner_images",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "acfe_repeater_stylised_button": 0,
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add image",
+            "sub_fields": [
+                {
+                    "key": "field_64bfde4d7930d",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "uploader": "",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "acfe_thumbnail": 0,
+                    "library": "all"
+                }
+            ]
         }
     ],
     "location": [
@@ -121,9 +200,8 @@
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "advanced",
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1690187133
+    "modified": 1690296132
 }
