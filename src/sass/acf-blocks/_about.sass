@@ -5,7 +5,7 @@ section.about
     .lucas-page &, .paulo-airaudo-page &
         padding: 0
         +max-screen($breakpoint-lg)
-            padding: 60px 0
+            padding: 0 0 46px
     .about
         &__wrap
             position: relative
@@ -22,6 +22,7 @@ section.about
                 max-width: calc(663px + 40px + 40px)
             +max-screen($breakpoint-lg)
                 max-width: 663px
+                flex: 0 0 calc(100% + 50px)
             &-wrap
                 position: relative
                 width: 100%
@@ -30,6 +31,15 @@ section.about
                 padding-bottom: 90.49%
                 .lucas-page &, .paulo-airaudo-page &
                     padding-bottom: 126.55%
+                    max-width: calc(644px + 83px + 40px)
+                +max-screen($breakpoint-xxl)
+                    max-width: calc(644px + ((83px / 100) * 50) + 40px)
+                +max-screen($breakpoint-xl)
+                    max-width: calc(644px + 40px + 40px)
+                +max-screen($breakpoint-lg)
+                    max-width: 682px
+                +max-screen($breakpoint-md)
+                    padding-bottom: 143.12%
                 img
                     position: absolute
                     left: 0
@@ -37,14 +47,7 @@ section.about
                     width: 100%
                     height: 100%
                     object-fit: cover
-            .lucas-page &, .paulo-airaudo-page &
-                max-width: calc(644px + 83px + 40px)
-                +max-screen($breakpoint-xxl)
-                    max-width: calc(644px + ((83px / 100) * 50) + 40px)
-                +max-screen($breakpoint-xl)
-                    max-width: calc(644px + 40px + 40px)
-                +max-screen($breakpoint-lg)
-                    max-width: 682px
+
             &.image-left
                 padding-left: 68px
                 padding-right: 40px
@@ -102,7 +105,7 @@ section.about
                     max-width: calc(740px + 40px + 40px)
                 +max-screen($breakpoint-lg)
                     max-width: unset
-                    margin-top: 30px
+                    margin-top: -59px
             &.content-left
                 padding-right: 40px
                 padding-left: 102px
@@ -159,18 +162,8 @@ section.about
             .lucas-page &, .paulo-airaudo-page &
                 font-family: $font-family-giveny
                 font-size: 57px
-                line-height: 1
+                line-height: 1.17
                 color: #fff
-                +max-screen($breakpoint-xxl)
-                    font-size: calc((57px / 100) * 90)
-                +max-screen($breakpoint-xl)
-                    font-size: calc((57px / 100) * 80)
-                +max-screen($breakpoint-lg)
-                    font-size: calc((57px / 100) * 70)
-                +max-screen($breakpoint-md)
-                    font-size: calc((57px / 100) * 60)
-                +max-screen($breakpoint-sm)
-                    font-size: calc((57px / 100) * 50)
             h3
                 font-weight: 400
             span
@@ -186,6 +179,10 @@ section.about
                     font-size: calc((25px / 100) * 70)
                 +max-screen($breakpoint-lg)
                     font-size: calc((25px / 100) * 60)
+            br
+                display: none
+                +max-screen($breakpoint-lg)
+                    display: block
         &__subtitle
             font-size: 20px
             font-weight: 300
@@ -223,12 +220,12 @@ section.about
                     font-size: calc((32px / 100) * 80)
                 +max-screen($breakpoint-lg)
                     font-size: calc((32px / 100) * 70)
+                    margin: 28px auto 0
                 +max-screen($breakpoint-md)
-                    font-size: calc((32px / 100) * 60)
+                    font-size: 20px
+                    letter-spacing: 1px
         &__btn
             margin-top: 39px
-            .lucas-page &, .paulo-airaudo-page &
-                margin-top: 38px
             .button
                 font-size: 25px
                 max-width: 305px

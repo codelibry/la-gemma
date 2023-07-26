@@ -4,15 +4,15 @@ section.information
     +max-screen($breakpoint-xl)
         padding: 80px 0
     +max-screen($breakpoint-lg)
-        padding: 53px 0 39px
+        padding: 39px 0
     .allure-page &
         padding: 73px 0
         +max-screen($breakpoint-lg)
-            padding: 60px 0
+            padding: 39px 0
     .lucas-page &, .paulo-airaudo-page &
         padding: 106px 0 78px
         +max-screen($breakpoint-lg)
-            padding: 60px 0
+            padding: 39px 0
     .information
         &__wrap
         &__title
@@ -31,6 +31,8 @@ section.information
                 gap: 25px 0
             .allure-page &
                 gap: 57px 0
+            .lucas-page &
+                gap: 39px 0
             .list-item
                 &__title
                     font-family: $font-family-ogg
@@ -53,6 +55,7 @@ section.information
                         font-family: $font-family-giveny
                         color: #F5F0DF
                         font-size: 28px
+                        line-height: 1.32
                         letter-spacing: unset
                         text-align: center !important
                         +max-screen($breakpoint-xxl)
@@ -60,11 +63,7 @@ section.information
                         +max-screen($breakpoint-xl)
                             font-size: calc((28px / 100) * 80)
                         +max-screen($breakpoint-lg)
-                            font-size: calc((28px / 100) * 70)
-                        +max-screen($breakpoint-md)
-                            font-size: calc((28px / 100) * 60)
-                        +max-screen($breakpoint-sm)
-                            font-size: calc((28px / 100) * 50)
+                            font-size: 28px
                 &__text
                     font-family: $font-family-ogg
                     font-size: 25px
@@ -99,6 +98,21 @@ section.information
                         letter-spacing: unset
                         color: #F5F0DF
                         text-align: center !important
+                        +max-screen($breakpoint-xxl)
+                            font-size: calc((25px / 100) * 90)
+                        +max-screen($breakpoint-xl)
+                            font-size: calc((25px / 100) * 80)
+                            margin-top: 12px
+                        +max-screen($breakpoint-lg)
+                            font-size: calc((25px / 100) * 70)
+                            margin-top: 10px
+                        +max-screen($breakpoint-md)
+                            font-size: 20px
+                            line-height: 1.5
+                        +max-screen($breakpoint-lg)
+                        +max-screen($breakpoint-md)
+
+
                     span
                         display: block
                     br

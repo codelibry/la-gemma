@@ -23,6 +23,11 @@
                 <img src="<?php echo $menu_image['url']; ?>"
                      alt="<?php echo $menu_image['alt'] ? : $menu_image['title']; ?>" class="parallax-img">
             </div>
+            <?php if($menu_title) :?>
+                <div class="menu-card__img-text">
+                    <?php echo $menu_title; ?>
+                </div>
+            <?php endif; ?>
         </div>
     <?php endif; ?>
     

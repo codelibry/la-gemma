@@ -38,30 +38,24 @@
 		text-align: center
 	.form-title
 		font-size: 50px
-		+max-screen($breakpoint-xxl)
-			font-size: calc((50px / 100) * 90)
-		+max-screen($breakpoint-xl)
-			font-size: calc((50px / 100) * 80)
-		+max-screen($breakpoint-lg)
-			font-size: calc((50px / 100) * 70)
-		+max-screen($breakpoint-md)
-			font-size: calc((50px / 100) * 60)
-		+max-screen($breakpoint-sm)
-			font-size: calc((50px / 100) * 50)
+		line-height: 1.16
 		.lucas-page &
 			font-family: $font-family-giveny
 	.form-text
-		margin-top: 15px
 		font-size: 29px
 		font-weight: 300
+		line-height: .87
+		margin-top: 15px
 		+max-screen($breakpoint-xxl)
 			font-size: calc((29px / 100) * 90)
 		+max-screen($breakpoint-xl)
 			font-size: calc((29px / 100) * 80)
 		+max-screen($breakpoint-lg)
 			font-size: calc((29px / 100) * 70)
+			margin-top: 39px
 		+max-screen($breakpoint-md)
-			font-size: calc((29px / 100) * 60)
+			font-size: 20px
+			line-height: 1.5
 
 		.phone
 			font-size: 29px
@@ -75,7 +69,8 @@
 			+max-screen($breakpoint-lg)
 				font-size: calc((29px / 100) * 70)
 			+max-screen($breakpoint-md)
-				font-size: calc((29px / 100) * 60)
+				font-size: 20px
+				line-height: 1.5
 			&:hover
 				cursor: pointer
 			&.phone-show
@@ -108,7 +103,8 @@
 				+max-screen($breakpoint-lg)
 					font-size: calc((29px / 100) * 70)
 				+max-screen($breakpoint-md)
-					font-size: calc((29px / 100) * 60)
+					font-size: 20px
+					line-height: 1.5
 			span
 				font-size: 29px
 				color: #F5F0DF
@@ -120,81 +116,29 @@
 				+max-screen($breakpoint-lg)
 					font-size: calc((29px / 100) * 70)
 				+max-screen($breakpoint-md)
-					font-size: calc((29px / 100) * 60)
-
-
-	.form-fields
-		margin-top: 86px
-		display: flex
-		justify-content: center
-		gap: 0 55px
-		+max-screen($breakpoint-lg)
-			flex-direction: column
-			align-items: center
-			gap: 20px
-		.nice-select
-			.list
-				background: #425339 !important
-			.option
-				padding: 0 26px
-				font-size: 29px
-				font-weight: 300 !important
-				line-height: 1
-				text-align: left
-				display: flex
-				align-items: center
-				&:hover
-					background: #e3d8af !important
-
-
-	.form-date-field, .form-time-field, .form-text-field
-		max-width: 380px
-		width: 100%
-	.form-time-field
-		.wpcf7-form-control
-			option
-				color: #000
-	.form-text-field
+					font-size: 20px
+					line-height: 1.5
 	.form-submit
 		margin-top: 30px
 		width: 100%
 		display: flex
 		flex-direction: column
 		align-items: center
-		gap: 7px
-		.wpcf7-form-control
+		+max-screen($breakpoint-lg)
+			margin-top: 41px
+		.button
+			font-family: $font-family-giveny
+			font-size: 32px
+			font-weight: 400
+			color: #FFFFFF
+			background: #C0AD89
+			border: 1px solid #FFFFFF
 			max-width: 305px
 			width: 100%
 			height: 47px
-			font-size: 32px
 			justify-content: center
-			color: #E5E3DA
-			background: #2D4C42
-			border: 1px solid #2D4C42
-			.lucas-page &, .paulo-airaudo-page &
-				font-family: $font-family-giveny
-				font-weight: 400
-				color: #FFFFFF
-				background: #C0AD89
-				border: 1px solid #FFFFFF
 			&:hover
 				cursor: pointer
-	.button
-        font-size: 32px
-        font-family: $font-family-giveny
-        font-weight: 400
-        color: #fff
-        background: #c0ad89
-        border: 1px solid #fff
-        width: 276px
-        padding-left: 17px
-        padding-right: 17px
-        padding-top: 5px
-        padding-bottom: 5px
-        max-width: 100%
-        min-height: 47px
-	#sr-res-root
-		cursor: pointer
 
 .subscribe-form
 	.wpcf7-form-control

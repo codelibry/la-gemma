@@ -10,13 +10,14 @@ section.hero-banner
                 min-height: 600px
                 height: 100vh
                 +max-screen($breakpoint-lg)
-                    min-height: 700px
-                    //padding-bottom: 0
-                .home &
-                    +max-screen($breakpoint-lg)
-                        min-height: 520px
-                    +max-screen($breakpoint-md)
-                        min-height: 450px
+                    min-height: 520px
+                +max-screen($breakpoint-md)
+                    min-height: 450px
+                //.home &
+                //    +max-screen($breakpoint-lg)
+                //        min-height: 520px
+                //    +max-screen($breakpoint-md)
+                //        min-height: 450px
                 &__wrap
                     position: absolute
                     top: 50%
@@ -29,8 +30,8 @@ section.hero-banner
                     .page-id-646 &
                         margin-top: 145px
                     .lucas-page &
-                        top: 258px
-                        transform: translateY(0)
+                        top: 50%
+                        transform: translateY(-50%)
                     .paulo-airaudo-page &
                         top: 60%
                         transform: translateY(-50%)
@@ -50,7 +51,6 @@ section.hero-banner
                                 object-position: 80%
                 &__content
                     .allure-page &
-
                     .lucas-page &, .paulo-airaudo-page &
                         max-width: 730px
                 &__logo
@@ -71,21 +71,10 @@ section.hero-banner
                     .lucas-page &, .paulo-airaudo-page &
                         width: 361px
                         height: 84px
-                        +max-screen($breakpoint-xl)
-                            width: 300px
-                            height: auto
-                        +max-screen($breakpoint-lg)
-                            width: 250px
-                        +max-screen($breakpoint-md)
-                            width: 200px
-                        +max-screen($breakpoint-sm)
-                            width: 150px
                     img
                         width: 100%
                         height: 100%
                         object-fit: cover
-
-
                 &__content-title
                     font-family: $font-family-ogg
                     font-size: 120px
@@ -249,6 +238,8 @@ section.hero-banner
                     margin-top: 23px
                     +max-screen($breakpoint-lg)
                         display: flex
+                    .lucas-page &
+                        margin: auto
                     .booking-btn
                         padding: 0
                         font-family: $font-family-ogg
@@ -257,10 +248,12 @@ section.hero-banner
                         width: 105px
                         height: 32px
                         background: #F5F3EF
-
             .slick-arrow
                 .lucas-page &, .paulo-airaudo-page &
                     display: none !important
             .slick-dots
                 +max-screen($breakpoint-lg)
                     bottom: 72px
+                .lucas-page &
+                    +max-screen($breakpoint-lg)
+                        bottom: 26px

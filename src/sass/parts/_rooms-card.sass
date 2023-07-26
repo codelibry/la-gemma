@@ -18,6 +18,33 @@
                 width: 100%
                 height: 100%
                 object-fit: cover
+            .single-rooms-and-suites .post-info &
+                +max-screen($breakpoint-lg)
+                    display: none
+        &__gallery
+            display: none
+            max-width: 100%
+            position: relative
+            .single-rooms-and-suites .post-info &
+                +max-screen($breakpoint-lg)
+                    display: flex
+            .slider-item
+                display: block !important
+                position: relative
+                height: 0
+                overflow: hidden
+                padding-bottom: 74.86%
+                &__wrap
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+
         &__img-text
             text-align: center
             position: absolute

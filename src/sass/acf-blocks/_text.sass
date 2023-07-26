@@ -1,13 +1,14 @@
 section.text
     padding: 81px 0 72px
     +max-screen($breakpoint-lg)
-        padding: 60px 0
+        padding: 39px 0
     .text
         &__wrap
             blockquote
                 //max-width: 1370px
                 margin: 0 auto
                 font-size: 100px
+                line-height: 1.18
                 font-weight: 700
                 +max-screen($breakpoint-xxl)
                     font-size: calc((100px / 100) * 75)
@@ -18,12 +19,12 @@ section.text
                 +max-screen($breakpoint-lg)
                     font-size: calc((100px / 100) * 40)
                 +max-screen($breakpoint-md)
-                    //font-size: calc((100px / 100) * 45)
-                +max-screen($breakpoint-sm)
-                    //font-size: calc((100px / 100) * 40)
+                    font-size: 50px
                 .lucas-page &
                     font-family: $font-family-denver
                     letter-spacing: 4px
+                    +max-screen($breakpoint-md)
+                        letter-spacing: 2px
                 .paulo-airaudo-page &
                     max-width: 1551px
                     font-family: $font-family-denver

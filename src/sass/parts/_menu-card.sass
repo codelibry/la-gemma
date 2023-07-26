@@ -1,4 +1,6 @@
 .menu-card
+    +max-screen($breakpoint-lg)
+        border-bottom: 2px solid #EDE5D5
     &:nth-of-type(odd):not(:first-of-type)
         padding-top: 184px
         +max-screen($breakpoint-xxl)
@@ -6,9 +8,10 @@
         +max-screen($breakpoint-xl)
             padding-top: calc((184px / 100) * 30)
         +max-screen($breakpoint-lg)
-            padding-top: 60px
-
+            padding: 39px 0
     &:nth-of-type(odd)
+        +max-screen($breakpoint-lg)
+            padding: 39px 0
         .menu-card__schedule
             padding-top: 180px
             +max-screen($breakpoint-xxl)
@@ -16,7 +19,7 @@
             +max-screen($breakpoint-xl)
                 padding-top: calc((180px / 100) * 30)
             +max-screen($breakpoint-lg)
-                padding-top: 40px
+                padding-top: 39px
         .menu-card__btn
             .button
                 max-width: 305px
@@ -27,7 +30,7 @@
     &:nth-of-type(even)
         padding-top: 71px
         +max-screen($breakpoint-lg)
-            padding-top: 60px
+            padding: 39px 0
         .menu-card__schedule
             padding-top: 220px
             +max-screen($breakpoint-xxl)
@@ -35,7 +38,7 @@
             +max-screen($breakpoint-xl)
                 padding-top: calc((220px / 100) * 30)
             +max-screen($breakpoint-lg)
-                padding-top: 40px
+                padding-top: 39px
         .menu-card__btn
             .button
                 max-width: 305px
@@ -45,6 +48,7 @@
 
     .menu-card
         &__img
+            position: relative
             width: 100%
             display: flex
             align-items: center
@@ -53,6 +57,8 @@
                 width: 100%
                 height: 0
                 overflow: hidden
+                +max-screen($breakpoint-md)
+                    padding-bottom: 132.63% !important
                 img
                     position: absolute
                     left: 0
@@ -62,6 +68,22 @@
                     object-fit: cover
                     +max-screen($breakpoint-lg)
                         top: 0%
+            &-text
+                display: none
+                +max-screen($breakpoint-lg)
+                    font-family: $font-family-giveny
+                    font-size: 57px
+                    line-height: 1.17
+                    text-align: center
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 100%
+                    height: 100%
+                    position: absolute
+                    top: 0
+                    left: 0
+                    z-index: 5
             &.image-left
                 padding-right: 40px
                 padding-left: 73px
@@ -78,6 +100,8 @@
                     max-width: 755px
                 .menu-card__img-wrap
                     padding-bottom: 124.63%
+                    +max-screen($breakpoint-lg)
+                        padding-bottom: 124.63%
             &.image-right
                 padding-left: 40px
                 padding-right: 117px
@@ -94,11 +118,15 @@
                     max-width: 695px
                 .menu-card__img-wrap
                     padding-bottom: 132.51%
+                    +max-screen($breakpoint-lg)
+                        padding-bottom: 124.63%
 
         &__content
             text-align: center
             align-items: flex-end
             width: 100%
+            +max-screen($breakpoint-lg)
+                margin-top: 39px !important
             &.content-left
                 padding-right: 40px
                 padding-left: 67px
@@ -113,7 +141,6 @@
                     padding-right: 0
                     padding-left: 0
                     max-width: unset
-                    margin-top: 30px
                 .menu-card__text
                     font-size: 32px
                     line-height: 1.15
@@ -125,6 +152,7 @@
                         font-size: calc((32px / 100) * 80)
                     +max-screen($breakpoint-lg)
                         font-size: calc((32px / 100) * 70)
+                        margin: 0
                     +max-screen($breakpoint-md)
                         font-size: calc((32px / 100) * 60)
             &.content-right
@@ -141,7 +169,6 @@
                     padding-right: 0
                     padding-left: 0
                     max-width: unset
-                    margin-top: 30px
                 .menu-card__text
                     font-size: 28px
                     line-height: 1.14
@@ -153,35 +180,34 @@
                         font-size: calc((28px / 100) * 80)
                     +max-screen($breakpoint-lg)
                         font-size: calc((28px / 100) * 70)
+                        margin: 0
                     +max-screen($breakpoint-md)
                         font-size: calc((28px / 100) * 60)
         &__title
             font-size: 57px
             line-height: 1.17
-            +max-screen($breakpoint-xxl)
-                font-size: calc((57px / 100) * 90)
-            +max-screen($breakpoint-xl)
-                font-size: calc((57px / 100) * 70)
             +max-screen($breakpoint-lg)
-                font-size: calc((57px / 100) * 60)
-            +max-screen($breakpoint-md)
-                font-size: calc((57px / 100) * 50)
-            +max-screen($breakpoint-sm)
-                font-size: calc((57px / 100) * 40)
+                display: none
             .lucas-page &
                 font-family: $font-family-giveny
         &__text
             line-height: 1.33
             font-weight: 300
-
+            +max-screen($breakpoint-lg)
+                font-size: 20px
+                line-height: 1.5
         &__btn
             margin-top: 48px
+            +max-screen($breakpoint-lg)
+                margin-top: 39px
             .button
                 font-weight: 400
                 padding: 0 7px
                 border: 1px solid #F5F3EF
                 background: transparent
                 color: #F5F3EF
+                +max-screen($breakpoint-lg)
+                    font-size: 36px
                 .lucas-page &
                     font-family: $font-family-giveny
         &__schedule
@@ -195,6 +221,9 @@
                 font-size: calc((25px / 100) * 80)
             +max-screen($breakpoint-lg)
                 font-size: calc((25px / 100) * 70)
+            +max-screen($breakpoint-md)
+                font-size: 25px
+                line-height: 1.12
 
 .parallax-img
     top: 40% !important
