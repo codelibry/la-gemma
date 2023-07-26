@@ -3,7 +3,10 @@
     $gallery = get_sub_field('gallery');
     $title = get_sub_field('title');
     $text = get_sub_field('text');
-    $button = get_sub_field('button');
+    $default_link_or_download_file = get_sub_field('default_link_or_download_file');
+    $link = get_sub_field('link');
+    $download_file = get_sub_field('download_file');
+    $button_text = get_sub_field('button_text');
 ?>
 
 <?php if ($gallery) : ?>
@@ -34,11 +37,21 @@
                         <div class="text-gallery__text">
                             <?php echo $text; ?>
                         </div>
-                        <?php if ($button) : ?>
+    
+                        <?php if($default_link_or_download_file === 'default' && $link) :?>
                             <div class="text-gallery__btn">
-                                <a href="<?php echo $button['url']; ?>"
+                                <a href="<?php echo $link['url']; ?>"
                                    class="button">
-                                    <?php echo $button['title']; ?>
+                                    <?php echo $link['title']; ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+    
+                        <?php if($default_link_or_download_file === 'download' && $download_file && $button_text) :?>
+                            <div class="text-gallery__btn">
+                                <a download href="<?php echo $download_file['url'];?>"
+                                   class="button">
+                                    <?php echo $button_text; ?>
                                 </a>
                             </div>
                         <?php endif; ?>

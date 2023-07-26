@@ -7,6 +7,9 @@
     $menu_title = $menu_item['menu_title'];
     $menu_description = $menu_item['menu_description'];
     $menu_image = $menu_item['menu_image'];
+    $default_link_or_download_file = $menu_item['default_link_or_download_file'];
+    $menu_default_link = $menu_item['menu_default_link'];
+    $menu_download_file = $menu_item['menu_download_file'];
     $menu_button_text = $menu_item['menu_button_text'];
     $menu_schedule = $menu_item['menu_schedule'];
     
@@ -35,9 +38,18 @@
             </div>
         <?php endif; ?>
         
-        <?php if ($menu_button_text) : ?>
+        <?php if($default_link_or_download_file === 'default' && $menu_default_link) :?>
+                <div class="menu-card__btn">
+                    <a href="<?php echo $menu_default_link['url'];?>"
+                       class="button">
+                        <?php echo $menu_default_link['title']; ?>
+                    </a>
+                </div>
+        <?php endif; ?>
+    
+        <?php if($default_link_or_download_file === 'download' && $menu_download_file && $menu_button_text) :?>
             <div class="menu-card__btn">
-                <a download href="<?php echo $pdf_file['url'];?>"
+                <a download href="<?php echo $menu_download_file['url'];?>"
                    class="button">
                     <?php echo $menu_button_text; ?>
                 </a>

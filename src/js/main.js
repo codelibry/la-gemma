@@ -20,7 +20,7 @@ import {parrallax_images, headerAnimation} from './template-parts/animations';
 
 // Animations
 import './animations/appearence';
-import {scrollToHash, scrollToAnchor} from './animations/scroll-to-anchor';
+import {scrollToHash, scrollToAnchor, scrollToExistSection} from './animations/scroll-to-anchor';
 
 // Template parts
 import './template-parts/nice-select';
@@ -28,6 +28,7 @@ import './template-parts/nice-select';
 
 scrollToHash();
 scrollToAnchor();
+scrollToExistSection();
 headerMenu();
 setHeaderPositionFixed();
 getSlider();

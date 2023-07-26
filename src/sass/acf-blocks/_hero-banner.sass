@@ -12,6 +12,11 @@ section.hero-banner
                 +max-screen($breakpoint-lg)
                     min-height: 700px
                     //padding-bottom: 0
+                .home &
+                    +max-screen($breakpoint-lg)
+                        min-height: 520px
+                    +max-screen($breakpoint-md)
+                        min-height: 450px
                 &__wrap
                     position: absolute
                     top: 50%
@@ -245,6 +250,7 @@ section.hero-banner
                     +max-screen($breakpoint-lg)
                         display: flex
                     .booking-btn
+                        padding: 0
                         font-family: $font-family-ogg
                         font-size: 17px
                         font-weight: 700
