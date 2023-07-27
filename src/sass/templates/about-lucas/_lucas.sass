@@ -1,0 +1,51 @@
+.lucas-page.about-lucas 
+    section.hero-banner 
+        .hero-banner
+            &__slider 
+                .slider-item
+                    &__wrap
+                        +min-screen($breakpoint-lg)
+                            top: calc(min(162px, 8vw) + 96px)
+                            transform: translateY(0)
+
+                    &__btn
+                        +max-screen($breakpoint-lg)
+                            margin-top: 200px
+                    &__bg
+                        img
+                            +max-screen($breakpoint-lg)
+                                object-position: 20% 50%
+    section.copy-image
+        background-color: #425339
+        .copy-image
+            &__title
+                font-family: $font-family-giveny
+                font-size: 57px
+                line-height: calc(67 / 57)
+                margin-bottom: 51px
+                color: white
+                br
+                    +min-screen($breakpoint-lg)
+                        display: none
+            &__content
+                font-size: 32px
+                line-height: calc(40 / 32)
+                color: white
+                +max-screen($breakpoint-lg)
+                    margin-top: 28px
+        .button
+            border: 1px solid #FFFFFF
+            font-family: $font-family-giveny
+            font-size: 36px
+            line-height: calc(42 / 36)
+            color: white
+            background-color: transparent
+            height: 54px
+            +max-screen($breakpoint-lg)
+                margin-top: 39px
+    section.menu
+        .menu-card
+            &__content.content-right 
+                .menu-card__text
+                    font-size: 20px
+                    line-height: 1.5
