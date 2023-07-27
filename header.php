@@ -52,6 +52,10 @@
     } else {
         $body_classes = 'default-page';
     }
+
+    $customClasses = get_field('custom_classes');
+
+    $body_classes .= ' ' . $customClasses;
 ?>
 
 <style>
