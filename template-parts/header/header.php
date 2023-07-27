@@ -30,7 +30,7 @@
                 <div class="header__logo">
                     <a href="<?php echo get_home_url(); ?>">
                     
-                        <?php if (is_page_template('template-pages/allure-template.php')) : ?>
+                        <?php if (is_page_template('template-pages/allure-template.php' || is_page_template('template-parts/page-template-allure-page.php'))) : ?>
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59.215" height="59.215" viewBox="0 0 59.215 59.215">
                                 <defs>
                                     <clipPath id="clip-path">
