@@ -514,7 +514,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-pages\/allure-template.php"
+                "value": "template-pages\/template-allure.php"
             }
         ]
     ],
@@ -535,5 +535,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1690452207
+    "modified": 1690466481
 }

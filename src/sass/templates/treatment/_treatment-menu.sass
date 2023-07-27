@@ -1,0 +1,42 @@
+.treatment-menu
+    .copy-image
+        &__title
+            +max-screen($breakpoint-lg)
+                font-size: 35px
+                line-height: calc(35 / 43)
+                span
+                    font-size: 25px
+                    line-height: calc(31 / 25)
+        &__subtitle
+            +max-screen($breakpoint-lg)
+                margin-top: 8px
+        &__content
+            .copy-image__content
+                +max-screen($breakpoint-lg)
+                    margin-bottom: 29px
+    section.text-gallery
+        +max-screen($breakpoint-lg)
+            padding-top: 39px
+            padding-bottom: 39px
+        .text-gallery
+            &__content
+                +max-screen($breakpoint-lg)
+                    margin-top: 0
+                    .text-gallery__title
+                        display: none
+            &__text
+                +max-screen($breakpoint-lg)
+                    font-size: 20px
+                    line-height: 1.5
+            &__btn
+                +max-screen($breakpoint-lg)
+                    margin-top: 39px
+                .button
+                    padding-top: 10px
+                    padding-bottom: 7px
+            &__slider
+                +max-screen($breakpoint-lg)
+                    margin-top: 0 !important
+        .horizontal-line
+            display: block
+

@@ -31,6 +31,9 @@
                                 <div class="text-gallery__slider-item">
                                     <img src="<?php echo $image['url']; ?>"
                                          alt="<?php echo $image['alt'] ?: $image['title']; ?>">
+                                    <div class="text-gallery__slider-img-title">
+                                        <?php echo $title;?>
+                                    </div>
                                 </div>
                             <?php endforeach; ?>
                         </div>

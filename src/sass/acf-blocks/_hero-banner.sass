@@ -27,6 +27,8 @@ section.hero-banner
                         top: 0
                         margin-top: 305px
                         transform: translateY(0)
+                        +max-screen($breakpoint-md)
+                            margin-top: 247px
                     .page-id-646 &
                         margin-top: 145px
                     .lucas-page &
@@ -107,18 +109,17 @@ section.hero-banner
                         +max-screen($breakpoint-xl)
                             font-size: calc((101px / 100) * 80)
                         +max-screen($breakpoint-lg)
-                            font-size: calc((101px / 100) * 70)
-                        +max-screen($breakpoint-md)
-                            font-size: calc((101px / 100) * 50)
-                            margin-top: 230px
+                            font-size: 50px
+                            line-height: calc(62 / 50)
                         +max-screen($breakpoint-sm)
-                            font-size: calc((101px / 100) * 40)
+                            font-size: 40px
                     span
                         display: block
                         font-family: $font-family-base
                         font-size: 50px
                         font-weight: 300
                         letter-spacing: 3.15px
+                        margin-bottom: 10px
                         +max-screen($breakpoint-xxl)
                             font-size: calc((50px / 100) * 85)
                         +max-screen($breakpoint-xl)
@@ -183,7 +184,7 @@ section.hero-banner
                     line-height: 1.44
                     letter-spacing: 0.09px
                     text-align: center
-                    font-weight: 600
+                    // font-weight: 600
                     +max-screen($breakpoint-xxl)
                         font-size: calc((46px / 100) * 85)
                     +max-screen($breakpoint-xl)
@@ -238,6 +239,7 @@ section.hero-banner
                     margin-top: 23px
                     +max-screen($breakpoint-lg)
                         display: flex
+                        margin-top: 160px
                     .lucas-page &
                         margin: auto
                     .booking-btn
@@ -248,6 +250,7 @@ section.hero-banner
                         width: 105px
                         height: 32px
                         background: #F5F3EF
+                    
             .slick-arrow
                 .lucas-page &, .paulo-airaudo-page &
                     display: none !important
