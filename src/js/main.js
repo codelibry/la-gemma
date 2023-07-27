@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 // Parts
-import {toggleHeaderMenu, setHeaderPositionFixed} from './template-parts/header/header';
+import {toggleHeaderMenu, setHeaderPositionFixed, headerMenu} from './template-parts/header/header';
 import {wpmlSwitcherMobile } from './template-parts/header/wpml';
 import {getSlider} from './template-parts/slider';
 import {toggleDropdown} from './template-parts/dropdown';
