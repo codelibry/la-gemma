@@ -1,0 +1,41 @@
+section.blockquote--allure
+    position: relative
+    background-color: $color-light
+    margin-bottom: 0
+    +max-screen($breakpoint-md)
+        display: none
+    .container
+        max-width: 1456px
+    .blockquote
+        .container
+            max-width: 1456px
+        &__img
+            width: 100%
+            // height: 0
+            // padding-bottom: 100%
+            // &-wrapper
+            //     position: absolute
+            //     top: 0
+            //     width: 687px
+            //     max-width: 100%
+            //     margin-left: auto
+            //     margin-right: auto
+        &__img-bg
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            object-fit: contain
+            height: 80% !important
+        &__content
+            font-family: $font-family-linotypedidot
+            color: $color-brown
+            font-size: calc(min(3vw, 55px))
+            text-align: center
+            line-height: calc(68 / 55)
+            +max-screen($breakpoint-xxl)
+                max-width: 80%
+            &-footer
+                margin-top: 52px
+                font-size: calc(min(2.5vw, 40px))
+        

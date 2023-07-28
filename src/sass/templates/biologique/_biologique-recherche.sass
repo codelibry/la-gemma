@@ -1,0 +1,85 @@
+.biologique-recherche
+    .text-image
+        position: relative
+        .horizontal-line
+            display: block !important
+        &__img
+            +max-screen($breakpoint-lg)
+                order: 1 !important
+            &-title
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                text-align: center
+
+                font-family: $font-family-linotypedidot
+                font-size: 40px
+                line-height:  calc( 50 / 40)
+
+                color: $color-blue
+                span
+                    font-family: $font-family-futurapt
+                    font-size: 30px
+                    line-height: calc(38 / 30)
+                    font-weight: 300
+                +min-screen($breakpoint-lg)
+                    display: none
+        &__content
+            +max-screen($breakpoint-lg)
+                margin-top: 39px !important
+        &__title
+            +max-screen($breakpoint-lg)
+                display: none
+        &__text
+            +max-screen($breakpoint-lg)
+                margin-top: 0 !important
+                font-size: 20px !important
+                line-height: 1.5 !important
+                max-width: 75%
+    .text-with-btn-image
+        +max-screen($breakpoint-lg)
+            padding-top: 39px
+            padding-bottom: 39px
+        &__title
+            +max-screen($breakpoint-lg)
+                display: none
+        &__content
+            +max-screen($breakpoint-lg)
+                margin-top: 39px !important
+        &__text
+            +max-screen($breakpoint-lg)
+                margin-top: 0 !important
+                font-size: 20px !important
+                line-height: 1.5 !important
+                max-width: 75%
+        &__btn
+            +max-screen($breakpoint-lg)
+                margin-top: 39px !important
+            .button
+                padding-top: 10px
+                padding-bottom: 5px
+    section.products
+        +max-screen($breakpoint-lg)
+            padding-top: 39px
+            padding-bottom: 39px
+        .products
+            &__title
+                font-family: $font-family-linotypedidot
+                font-size: 40px
+                line-height:  calc( 50 / 40)
+
+                color: $color-blue
+
+                margin-top: 25px
+                +max-screen(420px)
+                    font-size: 30px
+                span
+                    font-family: $font-family-futurapt
+                    font-size: 30px
+                    line-height: calc(38 / 30)
+                    font-weight: 300
+            &__text
+                margin-top: 39px
+                font-size: 20px
+                line-height: 1.5 

@@ -13,6 +13,13 @@
                     <div class="text-image__img-wrap parallax-img-wrapper">
                         <img src="<?php echo $image['url']; ?>"
                              alt="<?php echo $image['alt'] ?: $image['title']; ?>" class="parallax-img">
+
+                        <?php if($title) :?>
+                            <div class="text-image__img-title">
+                                <?php echo $title;?>
+                            </div>
+                        <?php endif; ?>
+                        
                     </div>
                 </div>
                 <?php if($title || $text) :?>

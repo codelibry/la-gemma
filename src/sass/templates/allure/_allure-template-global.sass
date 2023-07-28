@@ -1,0 +1,20 @@
+.page-template-allure-template
+    color: $color-brown
+    .header__logo
+        +min-screen($breakpoint-lg)
+            display: none
+    header.header
+        .header
+            &__toggle
+                color: $color-light
+                +max-screen($breakpoint-lg)
+                    color: $color-brown
+                &::after
+                    background-color: $color-light
+                    +max-screen($breakpoint-lg)
+                        background-color: $color-brown
+            &__btn 
+                .button
+                        border: 1px solid $color-light
+                        background: $color-light
+                        color: #4a341f

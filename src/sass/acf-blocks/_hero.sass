@@ -73,3 +73,51 @@ section.hero
             br
                 @media screen and (max-width: 1200px)
                     display: none !important
+section.hero--static
+    min-height: 100vh
+    .hero
+        &__title
+            +max-screen($breakpoint-lg)
+                display: none
+        &__text
+            +max-screen($breakpoint-lg)
+                display: none
+        &__button-wrapper
+            display: flex
+            justify-content: center
+            .button
+                min-width: 105px
+                background-color: $color-light
+                min-height: 32px
+                padding-left: 10px
+                padding-right: 10px
+                margin-top: 90px
+                span
+                    color: #c5c6ca
+                    font-size: 17px
+                    font-family: $font-family-ogg
+        &__bg
+            img
+                object-position: 15% 50%
+
+.header-spa
+    font-family: $font-family-linotypedidot
+    font-size: 50px
+    line-height: calc( 62 / 50)
+    color: $color-brown
+    text-align: left
+    display: flex
+    flex-direction: column
+    +min-screen($breakpoint-lg)
+        display: none
+    +max-screen(420px)
+        font-size: 45px
+    & > span
+        font-family: $font-family-futurapt
+        color: $color-brown
+        font-size: 25px
+        line-height: calc( 25 / 33)
+        margin-bottom: 10px
+    .booking-btn
+
+    
