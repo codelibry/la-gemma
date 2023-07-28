@@ -17,7 +17,7 @@
         </div>
     </div>
     </div>
-    <div class="horizontal-line"></div>
+<!--    <div class="horizontal-line"></div>-->
 </section>
 
 

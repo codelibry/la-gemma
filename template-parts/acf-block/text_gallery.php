@@ -13,7 +13,7 @@
     <section class="text-gallery">
         <div class="container">
             <div class="text-gallery__wrap d-flex align-items-center justify-content-center justify-content-lg-between">
-                <div class="text-gallery__slider js-slider desktop <?php echo $gallery_position === 'left' ? 'order-1 gallery-left' : 'order-1 order-lg-2 gallery-right'; ?>">
+                <div class="text-gallery__slider js-slider-no-arrow desktop <?php echo $gallery_position === 'left' ? 'order-1 gallery-left' : 'order-1 order-lg-2 gallery-right'; ?>">
                     <?php foreach ($gallery as $image) : ?>
                         <div class="text-gallery__slider-item parallax-img-wrapper">
                             <img src="<?php echo $image['url']; ?>"
