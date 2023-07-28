@@ -76,7 +76,7 @@ if ($image) :
 
                         <div class="content-image__btn" >
                             <a href="<?php echo $link['url'];?>" target="<?php echo esc_attr( $link_target ); ?>" class="button">
-                                <?php echo esc_html( $link_title ); ?></a>
+                                <?php echo esc_html( $link['title'] ); ?></a>
                         </div>
                     </div>
             
