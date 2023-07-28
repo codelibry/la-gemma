@@ -201,11 +201,13 @@ section.hero-banner
                         letter-spacing: 2.49px
                         line-height: 1
                         color: #E5E3DA
+                        margin-top: 8px
                         +max-screen($breakpoint-xxl)
                             font-size: calc((30px / 100) * 85)
                         +max-screen($breakpoint-xl)
                             font-size: calc((30px / 100) * 75)
                         +max-screen($breakpoint-lg)
+                            margin-top: 8px
                             font-size: calc((30px / 100) * 65)
                         +max-screen($breakpoint-md)
                             font-size: 15px
@@ -240,6 +242,8 @@ section.hero-banner
                     +max-screen($breakpoint-lg)
                         display: flex
                         margin-top: 160px
+                        .home &
+                            margin-top: 23px
                     .lucas-page &
                         margin: auto
                     .booking-btn
@@ -250,6 +254,7 @@ section.hero-banner
                         width: 105px
                         height: 32px
                         background: #F5F3EF
+                    
                     
             .slick-arrow
                 .lucas-page &, .paulo-airaudo-page &
