@@ -331,8 +331,8 @@
                             "collapsed": "",
                             "min": 0,
                             "max": 0,
-                            "layout": "block",
-                            "button_label": "",
+                            "layout": "",
+                            "button_label": "Add banner",
                             "sub_fields": [
                                 {
                                     "key": "field_64c11d156f213",
@@ -421,12 +421,21 @@
                                     "type": "image",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_64c11dfb2127f",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
                                         "id": ""
                                     },
+                                    "acfe_save_meta": 0,
                                     "uploader": "",
                                     "return_format": "array",
                                     "preview_size": "medium",
@@ -439,6 +448,114 @@
                                     "mime_types": "",
                                     "acfe_thumbnail": 0,
                                     "library": "all"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_modal_edit_size": false,
+                    "acfe_flexible_category": false
+                },
+                "layout_64c14ae32d601": {
+                    "key": "layout_64c14ae32d601",
+                    "name": "banner_with_text",
+                    "label": "Banner with text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64c14ae32d602",
+                            "label": "Banner list",
+                            "name": "banner_list",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_save_meta": 0,
+                            "acfe_repeater_stylised_button": 0,
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add banner",
+                            "sub_fields": [
+                                {
+                                    "key": "field_64c14ae32d603",
+                                    "label": "Background image",
+                                    "name": "background_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_save_meta": 0,
+                                    "uploader": "",
+                                    "return_format": "array",
+                                    "preview_size": "large",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "acfe_thumbnail": 0
+                                },
+                                {
+                                    "key": "field_64c14b012d607",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "acfe_textarea_code": 0
+                                },
+                                {
+                                    "key": "field_64c14b4b2d608",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "acfe_textarea_code": 0
                                 }
                             ]
                         }
@@ -2167,5 +2284,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1690377764
+    "modified": 1690389377
 }
