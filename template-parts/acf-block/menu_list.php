@@ -19,5 +19,6 @@
                 </div>
             </div>
         </div>
+        <div class="horizontal-line"></div>
     </section>
 <?php endif; ?>

@@ -26,7 +26,7 @@
                         <div class="text-gallery__title">
                             <?php echo $title; ?>
                         </div>
-                        <div class="text-gallery__slider js-slider mobile <?php echo $gallery_position === 'left' ? 'order-1 gallery-left' : 'order-1 order-lg-2 gallery-right'; ?>">
+                        <div class="text-gallery__slider js-slider-no-arrow mobile <?php echo $gallery_position === 'left' ? 'order-1 gallery-left' : 'order-1 order-lg-2 gallery-right'; ?>">
                             <?php foreach ($gallery as $image) : ?>
                                 <div class="text-gallery__slider-item">
                                     <img src="<?php echo $image['url']; ?>"
