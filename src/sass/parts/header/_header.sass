@@ -43,6 +43,10 @@ header.header
 
             &__wrap
                 border: none !important
+            &__logo
+                svg *
+                    .paulo-airaudo-page &
+                        fill: $color-green
     .header
         &__wrap
             position: relative
@@ -140,7 +144,7 @@ header.header
             line-height: 1.1
             letter-spacing: -0.88px
             .admin-bar &
-                top: 55px
+                top: 35px
                 
         &__logo
             position: absolute
@@ -176,6 +180,11 @@ header.header
                     height: 71px
                 +max-screen($breakpoint-lg)
                     height: 49px
+            
+                svg *
+                    .paulo-airaudo-page &
+                        fill: $color-green
+
             .paulo-airaudo-page &
                 bottom: 17px
                 width: 180px
