@@ -3,6 +3,9 @@
     .header__logo
         +min-screen($breakpoint-lg)
             display: none
+    .slider-item__title
+        span
+            margin-bottom: 8px
     header.header
         .header
             &__toggle
@@ -20,6 +23,10 @@
                         color: #4a341f
     section.information 
         .information
+            &__title
+                +max-screen($breakpoint-lg)
+                    text-align: left
+                    font-size: 25px
             &__list 
                 .list-item__text
                     font-family: $font-family-futurapt
