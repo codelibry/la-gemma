@@ -25,7 +25,11 @@ function headerMenu(){
 
     headerParentMenuItem.on('click', function (e) {
         e.preventDefault();
-    })
+    });
+
+    $(document).on('scroll', function () {
+        headerMenu.removeClass('open');
+    });
 }
 
 function setHeaderPositionFixed() {

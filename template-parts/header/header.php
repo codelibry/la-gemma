@@ -120,7 +120,11 @@
                 'echo' => true
             ]);
         ?>
-        <div class="header__close">X</div>
+        <div class="header__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="46" viewBox="0 0 28 46">
+            <text id="X" fill="#213932" font-size="40" font-family="GillSans-Light, Gill Sans" font-weight="300" letter-spacing="-0.022em"><tspan x="0" y="36">X</tspan></text>
+            </svg>
+        </div>
     </nav>
 
 </header>
