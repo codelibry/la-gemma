@@ -131,15 +131,17 @@ header.header
                         background: #213932
                         margin: 41.5px 0 47.5px
         &__close
-            display: none
-            +max-screen($breakpoint-md)
-                display: block
-                position: absolute
-                top: 16px
-                right: 24px
-                font-size: 40px
-                line-height: 1.1
-                letter-spacing: -0.88px
+            cursor: pointer
+            display: block
+            position: absolute
+            top: 16px
+            right: 24px
+            font-size: 40px
+            line-height: 1.1
+            letter-spacing: -0.88px
+            .admin-bar &
+                top: 55px
+                
         &__logo
             position: absolute
             left: 50%
