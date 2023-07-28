@@ -11,7 +11,7 @@ section.banner-with-text
                 +max-screen($breakpoint-lg)
                     min-height: 520px
                 +max-screen($breakpoint-md)
-                    min-height: 450px
+                    min-height: 490px
                 &__wrap
                     position: relative
                     width: 100%
@@ -22,6 +22,8 @@ section.banner-with-text
                     justify-content: center
                     z-index: 5
                     padding: 0 25px
+                    .allure-page &
+                        align-items: flex-start
                     .paulo-airaudo-page &
                         align-items: flex-start
                         +max-screen($breakpoint-lg)
@@ -70,7 +72,6 @@ section.banner-with-text
                             font-size: calc((101px / 100) * 70)
                         +max-screen($breakpoint-md)
                             font-size: calc((101px / 100) * 50)
-                            margin-top: 230px
                         +max-screen($breakpoint-sm)
                             font-size: calc((101px / 100) * 40)
                     .lucas-page &, .paulo-airaudo-page &
@@ -133,7 +134,7 @@ section.banner-with-text
                     line-height: 1.44
                     letter-spacing: 0.09px
                     text-align: center
-                    font-weight: 600
+                    font-weight: 400
                     +max-screen($breakpoint-xxl)
                         font-size: calc((46px / 100) * 85)
                     +max-screen($breakpoint-xl)
@@ -142,6 +143,8 @@ section.banner-with-text
                         font-size: calc((46px / 100) * 65)
                     +max-screen($breakpoint-md)
                         font-size: 40px
+                        line-height: .95
+                        letter-spacing: 0.08px
                     .home &
                         margin-top: 40px
                         +max-screen($breakpoint-xl)
@@ -168,6 +171,11 @@ section.banner-with-text
                     display: none
                     +max-screen($breakpoint-lg)
                         display: flex
+                    .allure-page &
+                        position: absolute
+                        bottom: 25%
+                        left: 50%
+                        transform: translate(-50%, 50%)
                     .lucas-page &, .paulo-airaudo-page &
                         position: absolute
                         bottom: 25%

@@ -30,7 +30,6 @@
                                     </div>
                                 <?php endif; ?>
                                 
-                                
                                 <?php if (!is_page_template('template-pages/about-page.php')) : ?>
                                     <div class="slider-item__btn">
                                         <a href="#" class="button booking-btn button--transparent-text">
