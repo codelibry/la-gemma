@@ -44,9 +44,11 @@ header.header
             &__wrap
                 border: none !important
             &__logo
-                svg *
-                    .paulo-airaudo-page &
-                        fill: $color-green
+                svg 
+                    max-height: 100%
+                    *
+                        .paulo-airaudo-page &
+                            fill: $color-green
                 .logo-fixed
                     display: block
                     +min-screen($breakpoint-lg)

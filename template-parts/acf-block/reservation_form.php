@@ -1,7 +1,7 @@
 <section id="reservation-form" class="reservation-form">
     <div class="container">
         <div class="form__wrap">
-            <div class="form-title">
+            <div class="form-title font-family-giveny">
                 <?php _e('MAKE A RESERVATION', 'lagemmahotel'); ?>
             </div>
             <div class="form-text">
