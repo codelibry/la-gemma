@@ -16,8 +16,8 @@
 <?php if ($query->have_posts()) : ?>
     
     <section class="loop-posts">
-        <div class="loop-posts__wrap">
-            <ul class="d-flex loop-posts__filter js-filter container">
+        <div class="loop-posts__wrap container">
+            <ul class="d-flex loop-posts__filter js-filter">
                 <?php $terms = get_terms(['taxonomy' => $taxonomy, 'hide_empty' => true]); ?>
                 <li class="filter-btn active"
                     data-post-type="<?php echo $post_type; ?>"
