@@ -1,28 +1,35 @@
 <?php $banner_list = get_sub_field('banner_list'); ?>
 
 <?php if ($banner_list) : ?>
-    <section class="banner-with-logo">
-        <div class="banner-with-logo__wrap">
-            <div class="banner-with-logo__slider js-slider-no-arrow">
+    <section class="banner-with-text">
+        <div class="banner-with-text__wrap">
+            <div class="banner-with-text__slider js-slider-no-arrow">
                 <?php foreach ($banner_list as $list_item) : ?>
                     <?php
                     $background_image = $list_item['background_image'];
-                    $logo = $list_item['logo'];
+                    $title = $list_item['title'];
+                    $text = $list_item['text'];
                     ?>
-            
+                    
                     <?php if ($background_image) : ?>
                         <div class="slider-item">
                             <div class="slider-item__bg">
                                 <img src="<?php echo $background_image['url']; ?>"
                                      alt="<?php echo $background_image['alt'] ?: $background_image['title']; ?>">
                             </div>
-                    
+
                             <div class="slider-item__wrap">
-                                <div class="slider-item__logo">
-                                    <img src="<?php echo $logo['url']; ?>"
-                                         alt="<?php echo $logo['alt'] ?: $logo['title']; ?>">
-                                </div>
-                        
+                                <?php if ($title) : ?>
+                                    <div class="slider-item__title">
+                                        <?php echo $title; ?>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($text) : ?>
+                                    <div class="slider-item__text">
+                                        <?php echo $text; ?>
+                                    </div>
+                                <?php endif; ?>
+                                
                                 <?php if (!is_page_template('template-pages/about-page.php')) : ?>
                                     <div class="slider-item__btn">
                                         <a href="#" class="button booking-btn button--transparent-text">
@@ -35,7 +42,7 @@
                             </div>
                         </div>
                     <?php endif; ?>
-        
+                
                 <?php endforeach; ?>
             </div>
         </div>

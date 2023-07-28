@@ -1,6 +1,4 @@
 import $ from 'jquery';
-import {gsap} from "gsap";
-
 
 function scrollToAnchor() {
     $('a[href^="#"]:not(.slider-arrow, .booking-btn)').click(function (e) {
@@ -23,17 +21,40 @@ function scrollToAnchor() {
             $('html, body').animate({scrollTop: $(href).offset().top - headerHeight}, 1000);
         }
     })
-
 }
 
 function scrollToHash() {
-    let hash = window.location.hash.substr(1);
-    if (hash && $('#' + hash).length) {
-        $('html, body').animate({scrollTop: $('#' + hash).offset().top}, 1700);
-        $(window).on('carouselInited', function () {
-            $('html, body').animate({scrollTop: $('#' + hash).offset().top}, 1700);
-        })
-    }
+    $(document).on('ready', function () {
+        let hash = window.location.hash.substr(1);
+        const headerHeight = $('header.header').height();
+        if (hash && $('#' + hash).length) {
+            if ($('body').hasClass('logged-in')) {
+                if ($(window).width() > 782) {
+                    $('html, body').animate({scrollTop: $('#' + hash).offset().top - headerHeight - 32}, 1000);
+                } else if ($(window).width() > 600 && $(window).width() < 782) {
+                    $('html, body').animate({scrollTop: $('#' + hash).offset().top - headerHeight - 46}, 1000);
+                } else {
+                    $('html, body').animate({scrollTop: $('#' + hash).offset().top - headerHeight}, 1000);
+                }
+            } else {
+                $('html, body').animate({scrollTop: $('#' + hash).offset().top - headerHeight}, 1000);
+            }
+
+            $(window).on('carouselInited', function () {
+                if ($('body').hasClass('logged-in')) {
+                    if ($(window).width() > 782) {
+                        $('html, body').animate({scrollTop: $('#' + hash).offset().top - headerHeight - 32}, 1000);
+                    } else if ($(window).width() > 600 && $(window).width() < 782) {
+                        $('html, body').animate({scrollTop: $('#' + hash).offset().top - headerHeight - 46}, 1000);
+                    } else {
+                        $('html, body').animate({scrollTop: $('#' + hash).offset().top - headerHeight}, 1000);
+                    }
+                } else {
+                    $('html, body').animate({scrollTop: $('#' + hash).offset().top - headerHeight}, 1000);
+                }
+            })
+        }
+    })
 }
 
 function scrollToExistSection() {
@@ -45,6 +66,8 @@ function scrollToExistSection() {
         const href = $('#' + elementId);
         const headerMenu = $('.header__menu');
         const headerHeight = $('header.header').height();
+
+        console.log($(href).offset().top);
 
         headerMenu.removeClass('open');
         $('body, html').removeClass('no-scroll');
@@ -61,7 +84,7 @@ function scrollToExistSection() {
         }
     }
 
-    $('.header .menu-item a').on('click', function(event) {
+    $('.header .menu-item a').on('click', function (event) {
         event.preventDefault();
 
         const linkWithAnchor = $(this).attr('href');

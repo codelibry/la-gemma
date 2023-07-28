@@ -14,7 +14,7 @@
             <div class="page-banner__title">
                 <h1><?php echo $page_title; ?></h1>
             </div>
-            <div class="page-banner__banner js-slider">
+            <div class="page-banner__banner js-slider-no-arrow">
                 <?php foreach ($page_banner_list as $slide) : ?>
                     <?php $slide_img = $slide['image']; ?>
                     <div class="slider-item">

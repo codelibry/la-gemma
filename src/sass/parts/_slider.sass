@@ -31,9 +31,8 @@
                 border: none
                 background: transparent
     .slick-arrow
-        display: none !important
         width: 40px
-        height: 70px
+        height: 124px
         display: flex
         justify-content: center
         align-items: center
@@ -42,90 +41,43 @@
         z-index: 10
         transform: translateY(-50%)
         border: none !important
-        background: none !important
+        background-image: url("../assets/icons/slider-arrow.png")
+        background-position: center
+        background-size: cover
         font-size: 0 !important
         transition: $default-transition
-        .default-page .loop-posts &, .paulo-airaudo-page &, .single-rooms-and-suites .related-post &
-            width: 62px
-            height: 124px
-            +max-screen($breakpoint-lg)
-                transform: translateY(-50%) scale(.7)
+        .allure-page &
+            width: 39px
+            height: 69px
+            background-image: url("../assets/icons/product-slider-arrow.png")
             +max-screen($breakpoint-md)
-                transform: translateY(-50%) scale(.4)
-        .allure-page &, .lucas-page &, .paulo-airaudo-page &, .default-page .loop-posts &, .single-rooms-and-suites .related-post &
-            display: flex !important
-            .slick-prev
-                justify-content: flex-start
-            .slick-next
-                justify-content: flex-end
-
-        &:after, &:before
-            content: ''
-            position: absolute
-            display: block
-            width: 40px
-            height: 2px
-            background: #fff
-            .default-page .loop-posts &, .single-rooms-and-suites .related-post &
-                width: 62px
-            .allure-page &
-                background: #D9C499
+                width: 18px
+                height: 32px
+        .paulo-airaudo-page &
+            width: 23px
+            height: 59px
+            background-image: url("../assets/icons/follow-slider-arrow.png")
         &.slick-prev
-            left: 62px
-            .default-page .loop-posts &
-                left: 40px
-                +max-screen($breakpoint-lg)
-                    left: 30px
-                +max-screen($breakpoint-md)
-                    left: 0
+            left: 30px
+            transform: translateY(-50%) rotate(180deg)
             .allure-page &
                 left: 0
-                +max-screen($breakpoint-lg)
-                    left: 20px
             .paulo-airaudo-page &
-                left: -5px
-                +max-screen($breakpoint-lg)
-                    left: -20px
-            &:after, &:before
-                transform-origin: left
-            &:after
-                transform: rotate(60deg)
-                .allure-page &, .lucas-page &, .paulo-airaudo-page &
-                    transform: rotate(45deg)
-            &:before
-                transform: rotate(-60deg)
-                .allure-page &, .lucas-page &, .paulo-airaudo-page &
-                    transform: rotate(-45deg)
+                left: 30px
         &.slick-next
-            right: 62px
-            .default-page .loop-posts &
-                right: 40px
-                +max-screen($breakpoint-lg)
-                    right: 30px
-                +max-screen($breakpoint-md)
-                    right: 0
+            right: 30px
             .allure-page &
                 right: 20px
-            .paulo-airaudo-page &
-                right: -5px
                 +max-screen($breakpoint-lg)
-                    right: -20px
-            &:after, &:before
-                transform-origin: right
-            &:after
-                transform: rotate(60deg)
-                .allure-page &, .lucas-page &, .paulo-airaudo-page &
-                    transform: rotate(45deg)
-            &:before
-                transform: rotate(-60deg)
-                .allure-page &, .lucas-page &, .paulo-airaudo-page &
-                    transform: rotate(-45deg)
+                    right: 0
+            .paulo-airaudo-page &
+                right: 30px
 
         &.slick-disabled
             opacity: 0
 
 
-.banner-with-logo
+.banner-with-logo, .banner-with-text
     .js-slider
         .slider-item
             display: block !important
@@ -150,6 +102,23 @@
                     .home &
                         +max-screen($breakpoint-md)
                             object-position: 80%
+        .slick-arrow
+            .lucas-page &, .paulo-airaudo-page &
+                display: none !important
+        .slick-dots
+            +max-screen($breakpoint-lg)
+                bottom: 72px
+            .lucas-page &, .paulo-airaudo-page &
+                +max-screen($breakpoint-lg)
+                    bottom: 26px
+            li
+                border: 1px solid #EFEEEC
+                .lucas-page &, .paulo-airaudo-page &
+                    border: 1px solid #425339
+                &.slick-active
+                    background: #EFEEEC
+                    .lucas-page &, .paulo-airaudo-page &
+                        background: #425339
 
 .js-post-slider
     .slick-slide

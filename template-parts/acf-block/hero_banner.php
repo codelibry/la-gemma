@@ -2,7 +2,7 @@
 
 <?php if ($banner_list) : ?>
     <section class="hero-banner">
-        <div class="hero-banner__slider js-slider">
+        <div class="hero-banner__slider js-slider-no-arrow">
             <?php foreach ($banner_list as $list_item) : ?>
                 <?php
                 $background_image = $list_item['background_image'];

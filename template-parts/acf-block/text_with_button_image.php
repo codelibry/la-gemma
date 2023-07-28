@@ -6,7 +6,7 @@
     $button = get_sub_field('button');
 ?>
 
-<?php if ($image) : ?>
+<?php if ($image && ($title || $text)) : ?>
     <section class="text-with-btn-image">
         <div class="container">
             <div class="row d-flex justify-content-center justify-content-lg-between text-with-btn-image__wrap">
@@ -20,29 +20,32 @@
                             </div>
                         <?php endif; ?>
                     </div>
+                    <?php if ($title) : ?>
+                        <div class="text-with-btn-image__img-text">
+                            <?php echo $title; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <?php if ($title || $text || $button) : ?>
-                    <div class="col-12 col-lg-6 text-center text-with-btn-image__content <?php echo $image_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
-                        <?php if ($title) : ?>
-                            <div class="text-with-btn-image__title">
-                                <?php echo $title; ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($text) : ?>
-                            <div class="text-with-btn-image__text">
-                                <?php echo $text; ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($button) : ?>
-                            <div class="text-with-btn-image__btn">
-                                <a href="<?php echo $button['url']; ?>"
-                                   class="button">
-                                    <?php echo $button['title']; ?>
-                                </a>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>
+                <div class="col-12 col-lg-6 text-center text-with-btn-image__content <?php echo $image_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
+                    <?php if ($title) : ?>
+                        <div class="text-with-btn-image__title">
+                            <?php echo $title; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($text) : ?>
+                        <div class="text-with-btn-image__text">
+                            <?php echo $text; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($button) : ?>
+                        <div class="text-with-btn-image__btn">
+                            <a href="<?php echo $button['url']; ?>"
+                               class="button">
+                                <?php echo $button['title']; ?>
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
         <div class="horizontal-line"></div>

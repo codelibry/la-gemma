@@ -35,7 +35,14 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "all"
+                "value": "rooms-and-suites"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
             }
         ]
     ],
@@ -55,5 +62,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1690369285
+    "modified": 1690388688
 }
