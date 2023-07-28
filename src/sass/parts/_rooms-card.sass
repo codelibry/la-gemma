@@ -23,11 +23,12 @@
                     display: none
         &__gallery
             display: none
-            max-width: 100%
-            position: relative
+
             .single-rooms-and-suites .post-info &
                 +max-screen($breakpoint-lg)
-                    display: flex
+                    display: block
+                    max-width: 100%
+                    width: 100%
             .slider-item
                 display: block !important
                 position: relative
@@ -74,6 +75,8 @@
             +max-screen($breakpoint-lg)
                 margin-top: 39px
         &__title
+            h4
+                line-height: 1.4
             .single-rooms-and-suites .related-post &
                 +max-screen($breakpoint-md)
                     display: none
@@ -182,4 +185,3 @@
                     border: 1px solid $color-green
                     background: transparent
                     color: $color-green
-

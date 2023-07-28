@@ -17,7 +17,7 @@
                 <div class="single-banner__title">
                     <h1><?php echo $banner_title; ?></h1>
                 </div>
-                <div class="single-banner__banner js-slider">
+                <div class="single-banner__banner js-slider-no-arrow">
                     <?php foreach ($banner_images as $image) : ?>
                         <?php $img = $image['image']; ?>
                         <div class="slider-item">

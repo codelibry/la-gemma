@@ -27,7 +27,7 @@
         <?php endif; ?>
         
         <?php if ($gallery) : ?>
-            <div class="rooms-card__gallery js-slider">
+            <div class="rooms-card__gallery js-slider-no-arrow">
                 <?php foreach ($gallery as $image) : ?>
                     <div class="slider-item">
                         <div class="slider-item__wrap">

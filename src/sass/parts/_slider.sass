@@ -41,22 +41,20 @@
         z-index: 10
         transform: translateY(-50%)
         border: none !important
-        background-image: url("../assets/icons/slider-arrow.png")
-        background-position: center
-        background-size: cover
+        background:  center / cover no-repeat url("../assets/icons/slider-arrow.svg") transparent
         font-size: 0 !important
         transition: $default-transition
         .allure-page &
             width: 39px
             height: 69px
-            background-image: url("../assets/icons/product-slider-arrow.png")
+            background:  center / cover no-repeat url("../assets/icons/product-slider-arrow.svg") transparent
             +max-screen($breakpoint-md)
                 width: 18px
                 height: 32px
         .paulo-airaudo-page &
             width: 23px
             height: 59px
-            background-image: url("../assets/icons/follow-slider-arrow.png")
+            background:  center / cover no-repeat url("../assets/icons/follow-slider-arrow.svg") transparent
         &.slick-prev
             left: 30px
             transform: translateY(-50%) rotate(180deg)
