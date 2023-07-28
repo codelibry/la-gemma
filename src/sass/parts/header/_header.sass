@@ -47,6 +47,19 @@ header.header
                 svg *
                     .paulo-airaudo-page &
                         fill: $color-green
+                .logo-fixed
+                    display: block
+                    +min-screen($breakpoint-lg)
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                    svg
+                        width: 90px
+                        height: 90px
+                img
+                    .biologique-recherche &,
+                    .treatment-menu &
+                        display: none
     .header
         &__wrap
             position: relative
@@ -184,6 +197,8 @@ header.header
                 svg *
                     .paulo-airaudo-page &
                         fill: $color-green
+            .logo-fixed
+                display: none
 
             .paulo-airaudo-page &
                 bottom: 17px
@@ -301,13 +316,6 @@ header.header
         &.header-fixed
             @media (max-width: 600px)
                 top: 0
-
-.page-id-646
-    header.header
-        //background: none !important
-        .header
-            &__logo
-                display: none
 
 @keyframes fixedHeader
     0%

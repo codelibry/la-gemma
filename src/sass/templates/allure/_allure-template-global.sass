@@ -3,6 +3,14 @@
     .header__logo
         +min-screen($breakpoint-lg)
             display: none
+    .header-fixed
+        .header__logo
+            +min-screen($breakpoint-lg)
+                display: flex
+                align-items: center
+                svg
+                    height: 90px
+                    width: 90px
     .slider-item__title
         span
             margin-bottom: 8px
