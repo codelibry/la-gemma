@@ -1605,13 +1605,40 @@
                                     "library": "all"
                                 },
                                 {
+                                    "key": "field_64ca1b7b610da",
+                                    "label": "Add button?",
+                                    "name": "add_button",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
                                     "key": "field_64c0e76a1802a",
                                     "label": "Default link or download file?",
                                     "name": "default_link_or_download_file",
                                     "type": "radio",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_64ca1b7b610da",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "30",
                                         "class": "",
@@ -1639,6 +1666,11 @@
                                     "conditional_logic": [
                                         [
                                             {
+                                                "field": "field_64ca1b7b610da",
+                                                "operator": "==",
+                                                "value": "1"
+                                            },
+                                            {
                                                 "field": "field_64c0e76a1802a",
                                                 "operator": "==",
                                                 "value": "default"
@@ -1662,6 +1694,11 @@
                                     "required": 0,
                                     "conditional_logic": [
                                         [
+                                            {
+                                                "field": "field_64ca1b7b610da",
+                                                "operator": "==",
+                                                "value": "1"
+                                            },
                                             {
                                                 "field": "field_64c0e76a1802a",
                                                 "operator": "==",
@@ -1691,6 +1728,11 @@
                                     "required": 0,
                                     "conditional_logic": [
                                         [
+                                            {
+                                                "field": "field_64ca1b7b610da",
+                                                "operator": "==",
+                                                "value": "1"
+                                            },
                                             {
                                                 "field": "field_64c0e76a1802a",
                                                 "operator": "==",
@@ -2284,5 +2326,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1690389377
+    "modified": 1690967036
 }
