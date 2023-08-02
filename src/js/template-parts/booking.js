@@ -68,7 +68,7 @@ function showBookingForm () {
     });
 
     $(document).on('click', function(event) {
-        if (!$(event.target).closest(".booking-form").length && !$(event.target).hasClass('booking-btn') && !$(event.target).closest(".booking-btn").length && $(window).width() < 769) {
+        if (!$(event.target).closest(".booking-form").length && !$(event.target).hasClass('booking-btn') && !$(event.target).closest(".booking-btn").length) {
             bookingBtn.removeClass('active');
             bookingForm.removeClass('form-visible');
             $('html, body').removeClass('no-scroll');
@@ -84,6 +84,7 @@ function closeBookingForm () {
     bookingCloseBtn.on('click', function () {
         bookingBtn.removeClass('active');
         bookingForm.removeClass('form-visible');
+        $('html, body').removeClass('no-scroll');
     })
 
     $(document).on('keydown', function (e) {
