@@ -39,7 +39,7 @@ $author = get_field('bloquote_author');
                             <?php echo $bloquote;?> 
 
                             <div class="allure-hero__bloquote-footer">
-                                <?php echo'- ' . $author;?>
+                                <?php echo $author;?>
                             </div>
 
                         </div>
