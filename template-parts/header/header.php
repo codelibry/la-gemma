@@ -105,7 +105,7 @@
                 </div>
             <?php endif; ?>
             <div class="header__btn">
-                <?php echo do_shortcode('[wpml_language_switcher type="custom" flags=1 native=1 translated=1][/wpml_language_switcher]'); ?>
+<!--                --><?php //echo do_shortcode('[wpml_language_switcher type="custom" flags=1 native=1 translated=1][/wpml_language_switcher]'); ?>
                 <a href="#"
                    class="button booking-btn">
                     <span> <?php _e('Book now', 'lagemmahotel'); ?></span>
