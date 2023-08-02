@@ -133,15 +133,15 @@
                                 <div class="field-content">
                                     <label class="field-item adult">
                                         <span class="label"><?php _e('Adult'); ?></span>
-                                        <span class="minus">-</span>
+                                        <span class="minus"></span>
                                         <input type="number" name="adult" disabled value="0">
-                                        <span class="plus">+</span>
+                                        <span class="plus"></span>
                                     </label>
                                     <label class="field-item child">
                                         <span class="label"><?php _e('Сhild'); ?></span>
-                                        <span class="minus">-</span>
+                                        <span class="minus"></span>
                                         <input type="number" name="child" disabled value="0">
-                                        <span class="plus">+</span>
+                                        <span class="plus"></span>
                                     </label>
                                 </div>
                             </div>
