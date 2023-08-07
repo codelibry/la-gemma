@@ -30,12 +30,14 @@
         $query = new WP_Query($args);
         
         if ($query->have_posts()) :?>
-            <div class="loop-posts__list js-post-slider">
-                <?php while ($query->have_posts()) :$query->the_post(); ?>
-                    <?php get_template_part('template-parts/parts/rooms-card');?>
-                <?php endwhile; ?>
-        
-                <?php wp_reset_postdata(); ?>
+            <div class="container">
+                <div class="loop-posts__list js-post-slider">
+                    <?php while ($query->have_posts()) :$query->the_post(); ?>
+                        <?php get_template_part('template-parts/parts/rooms-card'); ?>
+                    <?php endwhile; ?>
+                    
+                    <?php wp_reset_postdata(); ?>
+                </div>
             </div>
         <?php endif;
         

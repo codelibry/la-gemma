@@ -22,45 +22,48 @@ function getSlider() {
         slidesToShow: 1
     });
 
-    postSlider.slick({
-        infinite: false,
-        arrows: true,
-        dots: false,
-        speed: 1000,
-        slidesToShow: 1.823,
-        responsive: [
-            {
-                breakpoint: 1735,
-                settings: {
-                    slidesToShow: 1.823,
-                }
+    if ($(window).width() > 769) {
+        postSlider.slick({
+            infinite: false,
+            arrows: true,
+            dots: false,
+            speed: 1000,
+            slidesToShow: 1.823,
+            responsive: [
+                {
+                    breakpoint: 1735,
+                    settings: {
+                        slidesToShow: 1.823,
+                    }
 
-            },
-            {
-                breakpoint: 1440,
-                settings: {
-                    slidesToShow: 1.5,
-                }
+                },
+                {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 1.5,
+                    }
 
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1.25,
-                }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1.25,
+                    }
 
-            },
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 1,
-                    arrows: false,
-                    dots: true
-                }
+                },
+                // {
+                //     breakpoint: 769,
+                //     settings: {
+                //         slidesToShow: 1,
+                //         arrows: false,
+                //         dots: true
+                //     }
+                //
+                // },
+            ]
+        });
+    }
 
-            },
-        ]
-    });
 
     followSlider.slick({
         infinite: false,

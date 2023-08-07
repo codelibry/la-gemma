@@ -1,14 +1,33 @@
 section.loop-posts
+    padding-top: 200px
+    padding-bottom: 52px
+    +max-screen($breakpoint-xl)
+        padding-top: 114px
+    +max-screen($breakpoint-lg)
+        padding-bottom: 60px
+    +max-screen($breakpoint-md)
+        padding-bottom: 39px
     .loop-posts
         &__wrap
-            padding-bottom: 52px
-            +max-screen($breakpoint-lg)
-                padding-bottom: 60px
-            +max-screen($breakpoint-md)
-                padding-bottom: 39px
         &__filter
-            gap: 40px
-            margin-bottom: 30px
+            position: sticky
+            z-index: 50
+            top: calc(min(8vw - 1px, 100%))
+            padding: 15px 0
+            background: #e5e3da
+            +max-screen($breakpoint-xl)
+                top: 113px
+            .logged-in &
+                top: calc(min(8vw + 32px, 100%))
+                +max-screen($breakpoint-xl)
+                    top: calc(114px + 31px)
+                @media (max-width: 782px)
+                    top: calc(114px + 45px)
+                @media (max-width: 600px)
+                    top: 113px
+            .filter-list
+                gap: 40px
+
             .filter-btn
                 position: relative
                 font-family: $font-family-gillsans
@@ -32,6 +51,10 @@ section.loop-posts
                 &.active
                     color: #213932
         &__list
+            +max-screen($breakpoint-md)
+                display: flex
+                flex-direction: column
+                gap: 30px
             .rooms-card
                 .rooms-card
                     &__btn

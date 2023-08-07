@@ -76,7 +76,10 @@
                 margin-top: 39px
         &__title
             h4
+                font-size: 24px
                 line-height: 1.4
+                +max-screen($breakpoint-md)
+                    font-size: 20px
             .single-rooms-and-suites .related-post &
                 +max-screen($breakpoint-md)
                     display: none
@@ -86,15 +89,9 @@
             +max-screen($breakpoint-lg)
                 margin-top: 10px
             a
-                font-size: 25px
+                font-size: 22px
                 line-height: 1.2
                 font-weight: 300
-                +max-screen($breakpoint-xxl)
-                    font-size: calc((25px / 100) * 90)
-                +max-screen($breakpoint-xl)
-                    font-size: calc((25px / 100) * 80)
-                +max-screen($breakpoint-lg)
-                    font-size: calc((25px / 100) * 70)
                 +max-screen($breakpoint-md)
                     font-size: 20px
                     line-height: 1.5
@@ -102,52 +99,55 @@
             margin-top: 35px
             +max-screen($breakpoint-md)
                 margin-top: 27px
-            &.open-dropdown
-                .rooms-card__dropdown-title
-                    margin-bottom: 48px
-                    +max-screen($breakpoint-md)
-                        margin-bottom: 40px
-                    svg
-                        transform: rotate(180deg)
+            //&.open-dropdown
+            //    .rooms-card__dropdown-title
+            //        margin-bottom: 48px
+            //        +max-screen($breakpoint-md)
+            //            margin-bottom: 40px
+            //        svg
+            //            transform: rotate(180deg)
             &-title
                 position: relative
                 margin-bottom: 41px
                 text-transform: uppercase
                 transition: $default-transition
+                margin-bottom: 48px
                 +max-screen($breakpoint-md)
-                    margin-bottom: 0
+                    //margin-bottom: 0
+                    margin-bottom: 40px
                 &:hover
                     cursor: pointer
                 span
                     font-family: $font-family-ogg
-                    font-size: 50px
+                    font-size: 40px
                     margin-right: 33px
                     +max-screen($breakpoint-xxl)
-                        font-size: calc((50px / 100) * 90)
+                        font-size: calc((40px / 100) * 90)
                     +max-screen($breakpoint-xl)
-                        font-size: calc((50px / 100) * 80)
+                        font-size: calc((40px / 100) * 80)
                     +max-screen($breakpoint-md)
-                        font-size: calc((50px / 100) * 70)
+                        font-size: calc((40px / 100) * 70)
                     +max-screen($breakpoint-md)
                         font-size: 22px
                         margin-right: 0
                         display: block
                         text-align: center
                 svg
-                    position: absolute
-                    bottom: 20px
-                    width: 46px
-                    height: 17px
-                    object-fit: cover
-                    transition: $default-transition
-                    +max-screen($breakpoint-md)
-                        display: block
-                        position: unset
-                        margin: 19px auto 0
+                    display: none
+                //    position: absolute
+                //    bottom: 20px
+                //    width: 46px
+                //    height: 17px
+                //    object-fit: cover
+                //    transition: $default-transition
+                //    +max-screen($breakpoint-md)
+                //        display: block
+                //        position: unset
+                //        margin: 19px auto 0
             &-content
-                height: 0
-                overflow: hidden
-                transition: $default-transition
+                //height: 0
+                //overflow: hidden
+                //transition: $default-transition
         &__facilities
             &:not(:first-of-type)
                 margin-top: 40px
@@ -176,8 +176,8 @@
             .button
                 font-size: 21px
                 font-weight: 300
-                min-width: 147px
-                height: 43px
+                min-width: 135px
+                height: 39px
                 border: 1px solid $color-green
                 background: $color-green
                 color: #E5E2D9
