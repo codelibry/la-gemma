@@ -75,22 +75,27 @@ header.header
                 border-bottom: 1px solid #1A352E
 
         &__toggle
-            position: relative
             font-family: $font-family-ogg
             font-size: 20px
             color: $color-green
-            padding: 0 5px
             text-transform: uppercase
-            margin-top: 32px
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 32px
+            padding: 0 5px
+            margin-top: 35px
             +max-screen($breakpoint-lg)
-                margin-top: 53px
+                margin-top: 50px
+                height: 28px
                 font-size: 17px
             .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
                 color: #F5F3EF
             &:after
                 content: ''
                 position: absolute
-                bottom: -4px
+                bottom: 0
                 left: 0
                 display: block
                 width: 100%
@@ -242,6 +247,8 @@ header.header
                     font-size: calc((17px / 100) * 90)
                 +max-screen($breakpoint-xl)
                     font-size: calc((17px / 100) * 80)
+                +max-screen($breakpoint-lg)
+                    height: 28px
                 +max-screen($breakpoint-md)
                     font-size: calc((17px / 100) * 70)
                 .home &
@@ -291,7 +298,7 @@ header.header
                     color: $color-green
                 &.booking-btn
                     +max-screen($breakpoint-lg)
-                        display: none
+                        //display: none
                 &.language-btn
                     font-size: 18px
                     color: $color-green
@@ -301,7 +308,6 @@ header.header
                     background: transparent
                     +max-screen($breakpoint-lg)
                         min-width: 103px
-                        height: 28px
                     &:after
                         display: none
                     .home &, .allure-page &, .lucas-page &, .paulo-airaudo-page &
