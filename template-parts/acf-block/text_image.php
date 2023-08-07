@@ -10,9 +10,9 @@
         <div class="container">
             <div class="row d-flex justify-content-center justify-content-lg-between text-image__wrap">
                 <div class="col-12 col-lg-6 text-image__img <?php echo $image_position === 'left' ? 'order-2 order-lg-1 image-left' : 'order-2 image-right'; ?>">
-                    <div class="text-image__img-wrap parallax-img-wrapper">
+                    <div class="text-image__img-wrap">
                         <img src="<?php echo $image['url']; ?>"
-                             alt="<?php echo $image['alt'] ?: $image['title']; ?>" class="parallax-img">
+                             alt="<?php echo $image['alt'] ?: $image['title']; ?>">
 
                         <?php if($title) :?>
                             <div class="text-image__img-title">
