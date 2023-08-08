@@ -1,17 +1,24 @@
 section.newsletter
     position: relative
     padding: 65px 0 42px
-    .page-template-template-allure &
-        background-color: $color-light
+    background: $color-green
     +max-screen($breakpoint-lg)
         padding: 34px 0 37px
+    .page-template-template-allure &
+        background-color: $color-light
     .about-page &
         //display: none
         +max-screen($breakpoint-lg)
             padding: 60px 0
+    .allure-page &,
+    .page-template-template-allure &
+        background: #D9C499
+    .lucas-page &, .paulo-airaudo-page &
+        background: #A6AB9C
 
     .horizontal-line
-        display: block
+        //display: block
+        display: none
         bottom: unset
         top: 0
     

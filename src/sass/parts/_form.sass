@@ -151,39 +151,46 @@
 		font-family: $font-family-gillsans
 		font-size: 27px
 		line-height: 1
-		color: #456D63
+		//color: #456D63
+		color: #E5E3DA
 		background: transparent
 		border: none
-		border-bottom: 2px solid #456D63
+		//border-bottom: 2px solid #456D63
+		border-bottom: 2px solid #E5E3DA
 		+max-screen($breakpoint-md)
 			max-width: 189px
 			font-size: 20px
-		.allure-page &,
-		.page-template-template-allure &
-			font-family: $font-family-futurapt
-			color: #D9C499
-			border-bottom: 2px solid #D9C499
+		//.allure-page &,
+		//.page-template-template-allure &
+		//	font-family: $font-family-futurapt
+		//	color: #D9C499
+		//	border-bottom: 2px solid #D9C499
 		.lucas-page &, .paulo-airaudo-page &
 			font-family: $font-family-futurapt
-			color: #F5F0DF
-			border-bottom: 2px solid #F5F0DF
+			//color: #F5F0DF
+			color: #425339
+			//border-bottom: 2px solid #F5F0DF
+			border-bottom: 2px solid #425339
 		&::placeholder
 			font-size: 27px
 			font-weight: 300
 			line-height: 1
-			color: rgba(69, 109, 99, .5)
+			//color: rgba(69, 109, 99, .5)
+			color: rgba(229, 227, 218, .5)
 			text-align: center
 			+max-screen($breakpoint-md)
 				font-size: 20px
-			.allure-page &,
-			.page-template-template-allure &
-				color: rgba(217, 196, 153, .5)
+			//.allure-page &,
+			//.page-template-template-allure &
+			//	color: rgba(217, 196, 153, .5)
 			.lucas-page &, .paulo-airaudo-page &
-				color: rgba(245, 240, 223, .5)
+				//color: rgba(245, 240, 223, .5)
+				color: rgba(66, 83, 57, .5)
 	.form-title
 		font-family: $font-family-ogg
 		font-size: 34px
-		color: #456D63
+		//color: #456D63
+		color: #E5E3DA
 		text-align: center
 		+max-screen($breakpoint-xxl)
 			font-size: calc((34px / 100) * 90)
@@ -193,6 +200,14 @@
 			font-size: calc((34px / 100) * 70)
 		+max-screen($breakpoint-md)
 			font-size: 25px
+		.allure-page &,
+		.page-template-template-allure &
+			font-family: $font-family-linotypedidot
+			//color: #C1AD8A
+		.lucas-page &, .paulo-airaudo-page &
+			font-family: $font-family-linotypedidot
+			//color: #F5F0DF
+			color: #425339
 		span
 			display: block
 			font-size: 20px
@@ -202,13 +217,6 @@
 				font-size: calc((20px / 100) * 80)
 			+max-screen($breakpoint-lg)
 				font-size: calc((20px / 100) * 70)
-		.allure-page &,
-		.page-template-template-allure &
-			font-family: $font-family-linotypedidot
-			color: #C1AD8A
-		.lucas-page &, .paulo-airaudo-page &
-			font-family: $font-family-linotypedidot
-			color: #F5F0DF
 	.form-fields
 		margin-top: 50px
 		display: flex
@@ -221,24 +229,28 @@
 		margin-top: 33px
 		font-size: 20px
 		font-weight: 300
-		color: #456D63
+		//color: #456D63
+		color: #E5E3DA
 		text-align: center
 		+max-screen($breakpoint-lg)
 			margin-top: 20px
 		+max-screen($breakpoint-md)
 			font-size: 10px
-		.allure-page &,
-		.page-template-template-allure &
-			color: #D9C499
+		//.allure-page &,
+		//.page-template-template-allure &
+		//	color: #D9C499
 		.lucas-page &, .paulo-airaudo-page &
-			color: #F5F0DF
+			//color: #F5F0DF
+			color: #425339
 		a
-			color: #456D63
-			.allure-page &,
-			.page-template-template-allure &
-				color: #D9C499
+			//color: #456D63
+			color: #E5E3DA
+			//.allure-page &,
+			//.page-template-template-allure &
+			//	color: #D9C499
 			.lucas-page &, .paulo-airaudo-page &
-				color: #F5F0DF
+				//color: #F5F0DF
+				color: #425339
 	.form-submit
 		margin-top: 45px
 		width: 100%
@@ -257,17 +269,22 @@
 			font-weight: 300
 			color: #E5E3DA
 			background: #2D4C42
-			border: 1px solid #2D4C42
+			//border: 1px solid #2D4C42
+			border: 1px solid #E5E3DA
 			.allure-page &,
 			.page-template-template-allure &
-				color: #F5F3EF
-				background: #D9C499
-				border: 1px solid #D9C499
+				color: #E5E3DA
+				background: #d9c499
+				border: 1px solid #E5E3DA
 			.lucas-page &, .paulo-airaudo-page &
 				font-family: $font-family-giveny
-				color: #F5F3EF
-				background: #A6AB9C
-				border: 1px solid #A6AB9C
+				padding: 5px 3px 3px
+				//color: #F5F3EF
+				color: #425339
+				//background: #A6AB9C
+				background: #a6ab9c
+				//border: 1px solid #A6AB9C
+				border: 1px solid #425339
 			&:hover
 				cursor: pointer
 
