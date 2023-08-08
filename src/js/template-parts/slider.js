@@ -33,21 +33,28 @@ function getSlider() {
                 {
                     breakpoint: 1735,
                     settings: {
-                        slidesToShow: 2.369,
+                        slidesToShow: 2.14,
                     }
 
                 },
                 {
                     breakpoint: 1440,
                     settings: {
-                        slidesToShow: 1.5,
+                        slidesToShow: 2,
                     }
 
                 },
+                // {
+                //     breakpoint: 1200,
+                //     settings: {
+                //         slidesToShow: 1.75,
+                //     }
+                //
+                // },
                 {
                     breakpoint: 992,
                     settings: {
-                        slidesToShow: 1.25,
+                        slidesToShow: 1.34,
                     }
 
                 },

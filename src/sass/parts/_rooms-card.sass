@@ -78,16 +78,22 @@
             h4
                 font-size: 24px
                 line-height: 1.4
+                +max-screen($breakpoint-xxl)
+                    min-height: calc((24px * 1.4) * 2)
                 +max-screen($breakpoint-md)
                     font-size: 20px
+                    min-height: unset
             .single-rooms-and-suites .related-post &
                 +max-screen($breakpoint-md)
                     display: none
         &__text
             margin-top: 35px
             max-width: 628px
+            min-height: calc((22px * 1.2) * 4)
             +max-screen($breakpoint-lg)
                 margin-top: 10px
+            +max-screen($breakpoint-md)
+                min-height: unset
             a
                 font-size: 22px
                 line-height: 1.2
