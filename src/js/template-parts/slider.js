@@ -28,12 +28,12 @@ function getSlider() {
             arrows: true,
             dots: false,
             speed: 1000,
-            slidesToShow: 1.823,
+            slidesToShow: 2.369,
             responsive: [
                 {
                     breakpoint: 1735,
                     settings: {
-                        slidesToShow: 1.823,
+                        slidesToShow: 2.369,
                     }
 
                 },
