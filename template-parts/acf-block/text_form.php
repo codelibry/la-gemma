@@ -13,7 +13,9 @@
                 <?php if ($title && ($text_1 || $text_2)) : ?>
                     <div class="text-form__content row">
                         <div class="text-form__title col-12">
-                            <?php echo $title; ?>
+                            <h2>
+                                <?php echo $title; ?>
+                            </h2>
                         </div>
                         <div class="text-form__img d-flex d-lg-none"></div>
                         <?php if ($text_1) : ?>

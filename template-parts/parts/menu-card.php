@@ -35,7 +35,9 @@
     <div class="menu-card__content <?php echo $image_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
         <?php if($menu_title) :?>
             <div class="menu-card__title">
-                <?php echo $menu_title; ?>
+                <h3 class="h2">
+                    <?php echo $menu_title; ?>
+                </h3>
             </div>
         <?php endif; ?>
         <?php if($menu_description) :?>

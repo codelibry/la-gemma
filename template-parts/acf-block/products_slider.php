@@ -21,7 +21,9 @@
                 <?php if ($title && $text) : ?>
                     <div class="products__content <?php echo $slider_position === 'left' ? 'order-2 order-lg-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
                         <div class="products__title">
-                            <?php echo $title; ?>
+                            <h2>
+                                <?php echo $title; ?>
+                            </h2>
                         </div>
                         <div class="products__text">
                             <?php echo $text; ?>

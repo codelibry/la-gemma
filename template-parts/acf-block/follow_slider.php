@@ -9,7 +9,9 @@
             <div class="follow-slider__wrap">
                 <?php if ($title) : ?>
                     <div class="follow-slider__title">
-                        <?php echo $title; ?>
+                        <h2>
+                            <?php echo $title; ?>
+                        </h2>
                     </div>
                 <?php endif; ?>
                 <div class="follow-slider__slider js-follow-slider">

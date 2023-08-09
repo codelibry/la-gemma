@@ -26,7 +26,9 @@
                     <div class="col-12 col-lg-6 text-center text-image__content <?php echo $image_position === 'left' ? 'order-1 order-lg-2 content-right' : 'order-1 content-left'; ?>">
                         <?php if($title) :?>
                             <div class="text-image__title">
-                                <?php echo $title;?>
+                                <h2>
+                                    <?php echo $title;?>
+                                </h2>
                             </div>
                         <?php endif; ?>
                         <?php if($text) :?>

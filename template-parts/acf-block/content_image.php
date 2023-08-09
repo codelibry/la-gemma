@@ -19,7 +19,7 @@
                 </div>
                 <div class="text-center content-image__content <?php echo $image_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
                     <?php if ($title) : ?>
-                        <div class="content-image__title">
+                        <div class="content-image__title h2">
                             <?php echo $title;?>
                         </div>
                     <?php endif; ?>

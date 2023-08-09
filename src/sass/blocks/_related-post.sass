@@ -15,9 +15,12 @@ div.related-post
             +max-screen($breakpoint-md)
                 text-align: center
             h2
-                font-size: 48px
                 font-weight: 400
         &__list
+            +max-screen($breakpoint-md)
+                display: flex
+                flex-direction: column
+                gap: 30px
     .rooms-card
         .rooms-card
             &__dropdown

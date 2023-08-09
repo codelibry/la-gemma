@@ -146,6 +146,7 @@
                             "max": 0,
                             "layout": "block",
                             "button_label": "",
+                            "acfe_repeater_stylised_button": 0,
                             "sub_fields": [
                                 {
                                     "key": "field_6380d06b2392b",
@@ -292,8 +293,7 @@
                                     "new_lines": "",
                                     "acfe_textarea_code": 0
                                 }
-                            ],
-                            "acfe_repeater_stylised_button": 0
+                            ]
                         }
                     ],
                     "min": "",
@@ -541,7 +541,7 @@
                                     "key": "field_64c14b4b2d608",
                                     "label": "Text",
                                     "name": "text",
-                                    "type": "textarea",
+                                    "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -550,12 +550,12 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 0,
                                     "default_value": "",
-                                    "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": 4,
-                                    "new_lines": "",
-                                    "acfe_textarea_code": 0
+                                    "tabs": "all",
+                                    "media_upload": 1,
+                                    "delay": 0,
+                                    "toolbar": "full"
                                 }
                             ]
                         }
@@ -614,6 +614,7 @@
                             "max": 0,
                             "layout": "block",
                             "button_label": "",
+                            "acfe_repeater_stylised_button": 0,
                             "sub_fields": [
                                 {
                                     "key": "field_649445d913b19",
@@ -641,8 +642,7 @@
                                     "uploader": "",
                                     "acfe_thumbnail": 0
                                 }
-                            ],
-                            "acfe_repeater_stylised_button": 0
+                            ]
                         }
                     ],
                     "min": "",
@@ -2087,6 +2087,7 @@
                             "max": 0,
                             "layout": "block",
                             "button_label": "",
+                            "acfe_repeater_stylised_button": 0,
                             "sub_fields": [
                                 {
                                     "key": "field_64899e5454955",
@@ -2128,8 +2129,7 @@
                                     "new_lines": "",
                                     "acfe_textarea_code": 0
                                 }
-                            ],
-                            "acfe_repeater_stylised_button": 0
+                            ]
                         }
                     ],
                     "min": "",
@@ -2323,8 +2323,9 @@
     "acfe_autosync": [
         "json"
     ],
+    "acfml_field_group_mode": "advanced",
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1690967036
+    "modified": 1691594262
 }

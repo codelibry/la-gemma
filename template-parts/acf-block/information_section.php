@@ -11,7 +11,7 @@
             <div class="information__wrap">
                 <?php if ($title) : ?>
                     <div class="information__title">
-                        <h3><?php echo $title; ?></h3>
+                        <h2 class="h5"><?php echo $title; ?></h2>
                     </div>
                 <?php endif; ?>
                 <ul class="information__list row">
@@ -23,7 +23,7 @@
 
                         <li class="list-item col-12 <?php echo is_page_template('template-pages/lucas-page.php') ? 'col-lg-4': 'col-md-6 col-lg-4';?>">
                             <?php if ($title) : ?>
-                                <h4 class="list-item__title text-left"><?php echo $title; ?></h4>
+                                <h5 class="list-item__title text-left h3"><?php echo $title; ?></h5>
                             <?php endif; ?>
                             <?php if ($text) : ?>
                                 <div class="list-item__text text-left">

@@ -208,100 +208,26 @@ section.text-with-btn-image
                         padding-right: 0
                         padding-left: 0
         &__title
-            font-family: $font-family-linotypedidot
-            font-size: 55px
-            line-height: 1.32
-            color: #0F1758
-            +max-screen($breakpoint-xxl)
-                font-size: calc((55px / 100) * 90)
-            +max-screen($breakpoint-xl)
-                font-size: calc((55px / 100) * 80)
-            +max-screen($breakpoint-lg)
-                font-size: calc((55px / 100) * 70)
-            +max-screen($breakpoint-md)
-                font-size: calc((55px / 100) * 60)
-            +max-screen($breakpoint-sm)
-                font-size: calc((55px / 100) * 50)
-            .lucas-page &
-                color: #FFFFFF
-                font-size: 57px
-                +max-screen($breakpoint-xxl)
-                    font-size: calc((57px / 100) * 90)
-                +max-screen($breakpoint-xl)
-                    font-size: calc((57px / 100) * 80)
-                +max-screen($breakpoint-lg)
-                    font-size: calc((57px / 100) * 70)
-                +max-screen($breakpoint-md)
-                    font-size: calc((57px / 100) * 60)
-                +max-screen($breakpoint-sm)
-                    font-size: calc((57px / 100) * 50)
+            h2
+                font-family: $font-family-linotypedidot
+            .lucas-page &, .paulo-airaudo-page &
+                h2
+                    color: #FFFFFF
             .paulo-airaudo-page &
-                font-family: $font-family-giveny
-                font-size: 57px
-                color: #FFFFFF
-                +max-screen($breakpoint-xxl)
-                    font-size: calc((57px / 100) * 90)
-                +max-screen($breakpoint-xl)
-                    font-size: calc((57px / 100) * 80)
                 +max-screen($breakpoint-lg)
                     display: none
+                h2
+                    font-family: $font-family-giveny
+
             span
                 display: block
                 font-family: $font-family-futurapt
-                font-size: 30px
-                line-height: 1
-                font-weight: 300
-                font-style: normal
-                +max-screen($breakpoint-xxl)
-                    font-size: calc((30px / 100) * 90)
-                +max-screen($breakpoint-xl)
-                    font-size: calc((30px / 100) * 80)
-                +max-screen($breakpoint-lg)
-                    font-size: calc((30px / 100) * 70)
-                +max-screen($breakpoint-md)
-                    font-size: calc((30px / 100) * 60)
         &__text
-            font-size: 27px
-            font-weight: 300
-            line-height: 1.29
             color: #000000
             margin: 39px auto 0
-            +max-screen($breakpoint-xxl)
-                font-size: calc((27px / 100) * 90)
-            +max-screen($breakpoint-xl)
-                font-size: calc((27px / 100) * 80)
-            +max-screen($breakpoint-lg)
-                font-size: calc((27px / 100) * 70)
-            +max-screen($breakpoint-md)
-                font-size: calc((27px / 100) * 60)
-            .lucas-page &
-                font-size: 32px
+            .lucas-page &, .paulo-airaudo-page &
                 color: #FFFFFF
                 margin: 48px auto 0
-                +max-screen($breakpoint-xxl)
-                    font-size: calc((32px / 100) * 90)
-                +max-screen($breakpoint-xl)
-                    font-size: calc((32px / 100) * 80)
-                +max-screen($breakpoint-lg)
-                    font-size: calc((32px / 100) * 70)
-                +max-screen($breakpoint-md)
-                    font-size: calc((32px / 100) * 60)
-            .paulo-airaudo-page &
-                font-size: 32px
-                line-height: 1.15
-                letter-spacing: 1.6px
-                color: #FFFFFF
-                margin: 48px auto 0
-                +max-screen($breakpoint-xxl)
-                    font-size: calc((32px / 100) * 90)
-                +max-screen($breakpoint-xl)
-                    font-size: calc((32px / 100) * 80)
-                +max-screen($breakpoint-lg)
-                    margin: 39px auto 0
-                +max-screen($breakpoint-md)
-                    font-size: 20px
-                    line-height: 1.5
-                    letter-spacing: 1px
             p:not(:last-of-type)
                 margin-bottom: 20px
         &__btn

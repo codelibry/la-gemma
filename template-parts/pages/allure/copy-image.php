@@ -23,7 +23,9 @@ if ($image) :
 
                     <?php if ($title) : ?>
                         <div class="copy-image__title" >
-                            <?php echo $title; ?>
+                            <h2>
+                                <?php echo $title; ?>
+                            </h2>
                         </div>
                     <?php endif; ?>
 
@@ -36,7 +38,7 @@ if ($image) :
                     <?php if ($link) : 
                         $link_url = $link['url'];
                         $link_title = $link['title'];
-                        $link_target = $link['target'] ? $link['target'] : '_self';?>
+                        $link_target = $link['target'] ? : '_self';?>
                         
                         <a href="<?php echo $link['url'];?>" target="<?php echo esc_attr( $link_target ); ?>" class="button">
                             <?php echo esc_html( $link_title ); ?></a>

@@ -23,11 +23,6 @@
                         +min-screen($breakpoint-lg)
                             position: absolute
                             top: calc(min(162px, 8vw) + 96px)
-                            // transform: translateY(0)
-
-                    // &__btn
-                    //     +max-screen($breakpoint-lg)
-                    //         margin-top: 200px
                     &__bg
                         img
                             +max-screen($breakpoint-lg)
@@ -37,21 +32,23 @@
         background-color: #425339
         .copy-image
             &__title
-                font-family: $font-family-giveny
-                font-size: 57px
-                line-height: calc(67 / 57)
                 margin-bottom: 51px
-                color: white
-                br
-                    +min-screen($breakpoint-lg)
-                        display: none
+                +max-screen($breakpoint-lg)
+                    margin-bottom: 28px
+                h2
+                    font-family: $font-family-giveny
+                    //font-size: 57px
+                    //line-height: calc(67 / 57)
+                    color: white
+                    br
+                        +min-screen($breakpoint-lg)
+                            display: none
             &__content
                 color: white
-                +min-screen($breakpoint-lg)
-                    font-size: 32px
-                    line-height: calc(40 / 32)
-                +max-screen($breakpoint-lg)
-                    margin-top: 28px
+                //+min-screen($breakpoint-lg)
+                //    font-size: 32px
+                //    line-height: calc(40 / 32)
+
         .button
             border: 1px solid #FFFFFF
             font-family: $font-family-giveny

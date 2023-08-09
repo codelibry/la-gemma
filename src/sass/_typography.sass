@@ -5,16 +5,22 @@ body
 	font-family: $font-family-base
 	font-size: $default-font-size
 	font-weight: 400
-	line-height: 1 !important
+	line-height: 1
 	font-style: normal
-	line-height: $default-line-height
+	line-height: $text-line-height
+	letter-spacing: .8px
 	color: $default-text-color
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	-webkit-backface-visibility: hidden
 	-webkit-tap-highlight-color: transparent
-	+min-screen($breakpoint-xxl)
-		font-size: $large-font-size
+	+max-screen($breakpoint-xxl)
+		font-size: $medium-font-size
+	+max-screen($breakpoint-lg)
+		line-height: 1.5
+		letter-spacing: .64px
+	+max-screen($breakpoint-sm)
+		font-size: $small-font-size
 
 	::-moz-selection
 		color: $color-primary
@@ -23,7 +29,7 @@ body
 		color: $color-primary
 		background: transparent
 	&.allure-page
-		font-family: $font-family-futurapt
+		//font-family: $font-family-futurapt
 		color: $color-brown
 	&.lucas-page, &.paulo-airaudo-page
 		color: #FFFFFF
@@ -254,7 +260,7 @@ body
 		overflow: hidden
 	code
 		margin: 12px 0
-		line-height: $default-line-height
+		line-height: $text-line-height
 		padding: 2px 4px
 		border: 1px solid #dde4e9
 		background-color: #F6F6F6
@@ -335,72 +341,60 @@ body
 	.table-body
 		display: table-row-group
 
-h1, h2, h3, h4, h5, h6
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
 	font-family: $font-family-ogg
+	line-height: $title-line-height
+	font-weight: 400
+	+max-screen($breakpoint-lg)
+		line-height: 1.05
 
 h1,.h1
 	font-size: 80px
-	line-height: 1.35
-	font-weight: 600
-	font-family: $font-family-ogg
-	+max-screen($breakpoint-lg)
-		line-height: .75
 	span
 		+max-screen($breakpoint-lg)
 			display: block
 			font-size: 63px
 			line-height: .95
 h2,.h2
-	font-size: 80px
-	line-height: 1.35
-	font-weight: 600
-	+max-screen($breakpoint-xxl)
-		font-size: calc((80px / 100) * 90)
-	+max-screen($breakpoint-xl)
-		font-size: calc((80px / 100) * 80)
+	font-size: 50px
 	+max-screen($breakpoint-lg)
-		font-size: calc((80px / 100) * 70)
-	+max-screen($breakpoint-md)
+		font-size: 35px
+	i
+		font-family: $font-family-ogg-italic
 		font-size: 45px
-		line-height: .88
+		letter-spacing: 0.09px
+		+max-screen($breakpoint-lg)
+			display: flex
+			font-size: 30px
+			letter-spacing: 0.06px
+	span
+		display: block
+		font-family: $font-family-base
+		font-size: 30px
+
 h3,.h3
-	font-size: 34px
-	line-height: 1.35
-	+max-screen($breakpoint-md)
-		font-size: 42px
+	font-size: 42px
+	//+max-screen($breakpoint-lg)
+	//	font-size: 36px
+
 h4,.h4,.intro .content-block
-	font-family: $font-family-base
+	font-size: 35px
+
+.h5,h5
 	font-size: 30px
-	font-weight: 300
-	line-height: 1.35
-	letter-spacing: 1.71px
-	text-transform: uppercase
-	+max-screen($breakpoint-md)
-		font-family: $font-family-gillsans
+	+max-screen($breakpoint-lg)
 		font-size: 20px
-		font-weight: 700
-		line-height: 2.65
-		letter-spacing: 1.14px
+
 	span
 		+max-screen($breakpoint-lg)
 			display: block
 			font-size: 63px
 			line-height: .95
-.h5,h5
-	font-size: 30px
-	line-height: 1.2em
-	font-weight: 400
-	+max-screen($breakpoint-lg)
-	+max-screen($breakpoint-md)
-		font-size: 24px
-		//font-size: rem(18px)
+
 h6,.h6
-	font-size: 24px
-	line-height: 1.25em
-	font-weight: 400
-	+max-screen($breakpoint-md)
-		font-size: 18px
-		//font-size: rem(16px)
+	font-size: 25px
+	text-transform: uppercase
+
 .p1
 	font-size: 24px
 	line-height: 1.08em

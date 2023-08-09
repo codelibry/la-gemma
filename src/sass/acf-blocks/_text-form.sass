@@ -28,50 +28,20 @@ section.text-form
             &.row
                 padding: 0
         &__title
-            font-family: $font-family-ogg
-            //font-size: 50px
-            font-size: 48px
-            +max-screen($breakpoint-xxl)
-                //font-size: calc((50px / 100) * 90)
-                font-size: calc((48px / 100) * 90)
-            +max-screen($breakpoint-xl)
-                //font-size: calc((50px / 100) * 80)
-                font-size: calc((48px / 100) * 80)
-            +max-screen($breakpoint-lg)
-                //font-size: calc((50px / 100) * 70)
-                font-size: calc((48px / 100) * 70)
-                text-align: center
-                margin-bottom: 30px
-            +max-screen($breakpoint-md)
-                //font-size: 35px
-                font-size: 33px
-                line-height: 1.14
-                letter-spacing: 1.12px
-            span
-                display: block
-                font-family: $font-family-base
-                //font-size: 30px
-                font-size: 28px
-                font-weight: 300
-                letter-spacing: 1.71px
-                margin-bottom: 14px
-                +max-screen($breakpoint-xxl)
-                    //font-size: calc((30px / 100) * 90)
-                    font-size: calc((28px / 100) * 90)
-                +max-screen($breakpoint-xl)
-                    //font-size: calc((30px / 100) * 80)
-                    font-size: calc((28px / 100) * 80)
+            h2
                 +max-screen($breakpoint-lg)
-                    //font-size: calc((30px / 100) * 70)
-                    font-size: calc((28px / 100) * 70)
-                +max-screen($breakpoint-md)
-                    //font-size: 30px
-                    font-size: 28px
-                    letter-spacing: 0.06px
-            br
-                display: none
-                +max-screen($breakpoint-md)
-                    display: block
+                    text-align: center
+                    margin-bottom: 30px
+
+                span
+                    letter-spacing: 1.71px
+                    +max-screen($breakpoint-lg)
+                        letter-spacing: 0.06px
+                        margin-bottom: 14px
+                br
+                    display: none
+                    +max-screen($breakpoint-md)
+                        display: block
         &__img
             position: relative
             width: 286px
@@ -85,33 +55,17 @@ section.text-form
                 height: 100%
                 object-fit: cover
         &__text
-            //font-size: 25px
-            font-size: 23px
-            font-weight: 300
             line-height: 1.28
             letter-spacing: 0.8px
             margin-top: 41px
-            +max-screen($breakpoint-xxl)
-                //font-size: calc((25px / 100) * 90)
-                font-size: calc((23px / 100) * 90)
-            +max-screen($breakpoint-xl)
-                //font-size: calc((25px / 100) * 80)
-                font-size: calc((23px / 100) * 80)
             +max-screen($breakpoint-lg)
-                //font-size: calc((25px / 100) * 70)
-                font-size: calc((23px / 100) * 70)
-                margin-top: 45px
-            +max-screen($breakpoint-md)
-                //font-size: 20px
-                font-size: 18px
                 line-height: 1.5
                 letter-spacing: 0.64px
+                margin-top: 45px
             &.col-left
                 +max-screen($breakpoint-lg)
                     margin-top: 45px
             &.col-right
-                +max-screen($breakpoint-xl)
-                    margin-top: 40px
                 +max-screen($breakpoint-xl)
                     margin-top: 30px
             p:not(:last-of-type)

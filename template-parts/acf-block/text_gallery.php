@@ -23,7 +23,7 @@
                 </div>
                 <?php if ($title && $text) : ?>
                     <div class="text-gallery__content <?php echo $gallery_position === 'left' ? 'order-2 content-right' : 'order-2 order-lg-1 content-left'; ?>">
-                        <div class="text-gallery__title">
+                        <div class="text-gallery__title h2">
                             <?php echo $title; ?>
                         </div>
                         <div class="text-gallery__slider js-slider-no-arrow mobile <?php echo $gallery_position === 'left' ? 'order-1 gallery-left' : 'order-1 order-lg-2 gallery-right'; ?>">

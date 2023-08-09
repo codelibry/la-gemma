@@ -5,18 +5,22 @@
     .copy-image
         &__title
             +max-screen($breakpoint-lg)
-                font-size: 35px
-                line-height: calc(35 / 43)
+                //font-size: 35px
+                //line-height: calc(35 / 43)
                 span
-                    font-size: 25px
-                    line-height: calc(31 / 25)
+                    //font-size: 25px
+                    //line-height: calc(31 / 25)
         &__subtitle
+            margin-top: 13px
+            margin-bottom: 30px
             +max-screen($breakpoint-lg)
                 margin-top: 8px
         &__content
-            .copy-image__content
-                +max-screen($breakpoint-lg)
-                    margin-bottom: 29px
+            margin-top: 30px
+        .button
+            margin-top: 48px
+            //+max-screen($breakpoint-md)
+            //    margin-top: 10px
     section.text-gallery
         +max-screen($breakpoint-lg)
             padding-top: 39px

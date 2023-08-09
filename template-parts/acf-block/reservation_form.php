@@ -2,7 +2,9 @@
     <div class="container">
         <div class="form__wrap">
             <div class="form-title font-family-giveny">
-                <?php _e('MAKE A RESERVATION', 'lagemmahotel'); ?>
+                <h2>
+                    <?php _e('MAKE A RESERVATION', 'lagemmahotel'); ?>
+                </h2>
             </div>
             <div class="form-text">
                 <?php _e('We accept reservations online for up to 6 people, for parties of 7 or more please call us on', 'lagemmahotel'); ?>

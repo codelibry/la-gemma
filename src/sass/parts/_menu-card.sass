@@ -143,19 +143,7 @@
                     padding-left: 0
                     max-width: unset
                 .menu-card__text
-                    font-size: 32px
-                    line-height: 1.15
-                    letter-spacing: 1.6px
-                    margin: 28px auto 0
-                    +max-screen($breakpoint-xxl)
-                        font-size: calc((32px / 100) * 90)
-                    +max-screen($breakpoint-xl)
-                        font-size: calc((32px / 100) * 80)
-                    +max-screen($breakpoint-lg)
-                        font-size: calc((32px / 100) * 70)
-                        margin: 0
-                    +max-screen($breakpoint-md)
-                        font-size: calc((32px / 100) * 60)
+
             &.content-right
                 padding-left: 40px
                 padding-right: 101px
@@ -171,32 +159,15 @@
                     padding-left: 0
                     max-width: unset
                 .menu-card__text
-                    font-size: 28px
-                    line-height: 1.14
-                    letter-spacing: 1.4px
-                    margin: 47px auto 0
-                    +max-screen($breakpoint-xxl)
-                        font-size: calc((28px / 100) * 90)
-                    +max-screen($breakpoint-xl)
-                        font-size: calc((28px / 100) * 80)
-                    +max-screen($breakpoint-lg)
-                        font-size: calc((28px / 100) * 70)
-                        margin: 0
-                    +max-screen($breakpoint-md)
-                        font-size: calc((28px / 100) * 60)
+
         &__title
-            font-size: 57px
-            line-height: 1.17
+            font-family: $font-family-giveny
             +max-screen($breakpoint-lg)
                 display: none
-            .lucas-page &
-                font-family: $font-family-giveny
         &__text
-            line-height: 1.33
-            font-weight: 300
+            margin: 28px auto 0
             +max-screen($breakpoint-lg)
-                font-size: 20px
-                line-height: 1.5
+                margin: 0
         &__btn
             margin-top: 48px
             +max-screen($breakpoint-lg)

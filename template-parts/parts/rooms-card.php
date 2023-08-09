@@ -18,9 +18,9 @@
                 </a>
                 <?php if ($thumbnail_text) : ?>
                     <div class="rooms-card__img-text">
-                        <h4>
+                        <h5>
                             <?php echo $thumbnail_text; ?>
-                        </h4>
+                        </h5>
                     </div>
                 <?php endif; ?>
             </div>
@@ -42,9 +42,9 @@
         <div class="rooms-card__content">
             <?php if ($title) : ?>
                 <div class="rooms-card__title">
-                    <h4>
+                    <h6>
                         <?php echo $title; ?>
-                    </h4>
+                    </h6>
                 </div>
             <?php endif; ?>
             <?php if ($content) : ?>

@@ -75,13 +75,11 @@
             +max-screen($breakpoint-lg)
                 margin-top: 39px
         &__title
-            h4
-                font-size: 24px
-                line-height: 1.4
-                +max-screen($breakpoint-xxl)
+            h6
+                font-family: $font-family-base
+                +max-screen(1540px)
                     min-height: calc((24px * 1.4) * 2)
                 +max-screen($breakpoint-md)
-                    font-size: 20px
                     min-height: unset
             .single-rooms-and-suites .related-post &
                 +max-screen($breakpoint-md)
@@ -95,12 +93,6 @@
             +max-screen($breakpoint-md)
                 min-height: unset
             a
-                font-size: 22px
-                line-height: 1.2
-                font-weight: 300
-                +max-screen($breakpoint-md)
-                    font-size: 20px
-                    line-height: 1.5
         &__dropdown
             margin-top: 35px
             +max-screen($breakpoint-md)
