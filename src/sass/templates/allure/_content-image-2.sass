@@ -14,11 +14,13 @@
         text-align: center
         max-width: 695px
         margin-top: 30px
+        +max-screen($breakpoint-lg)
+            margin: 30px auto 0
         &-wrapper
             margin-left: auto
             max-width: 813px
             +max-screen($breakpoint-lg)
-            margin: 0 auto
+                margin: 0 auto
     &__title
         //font-family: $font-family-linotypedidot
         //font-family: serif

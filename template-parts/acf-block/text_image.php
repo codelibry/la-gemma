@@ -16,7 +16,9 @@
 
                         <?php if($title) :?>
                             <div class="text-image__img-title">
-                                <?php echo $title;?>
+                                <h2>
+                                    <?php echo $title;?>
+                                </h2>
                             </div>
                         <?php endif; ?>
                         
