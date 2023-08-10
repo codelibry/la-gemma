@@ -36,9 +36,9 @@
     <div class="post-info">
         <div class="container">
             <div class="post-info__wrap">
-                <div class="post-info__archive-link">
-                    <a href="<?php echo get_term_link($term_object->term_id); ?>"><?php _e('See All ' . $term_object->name); ?></a>
-                </div>
+<!--                <div class="post-info__archive-link">-->
+<!--                    <a href="--><?php //echo get_term_link($term_object->term_id); ?><!--">--><?php //_e('See All ' . $term_object->name); ?><!--</a>-->
+<!--                </div>-->
                 <?php get_template_part('template-parts/parts/rooms-card'); ?>
             </div>
         </div>
