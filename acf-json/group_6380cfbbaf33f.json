@@ -176,64 +176,26 @@
                                     "library": "all"
                                 },
                                 {
-                                    "key": "field_64b6ea36303ac",
-                                    "label": "What show?",
-                                    "name": "what_show",
-                                    "type": "radio",
+                                    "key": "field_6380d0512392a",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "33",
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 0,
                                     "acfe_save_meta": 0,
-                                    "choices": {
-                                        "logo": "Only logo",
-                                        "content": "Content"
-                                    },
-                                    "allow_null": 0,
-                                    "other_choice": 0,
                                     "default_value": "",
-                                    "layout": "vertical",
-                                    "return_format": "value",
-                                    "save_other_choice": 0
-                                },
-                                {
-                                    "key": "field_6489b6881349e",
-                                    "label": "Logo",
-                                    "name": "logo",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_64b6ea36303ac",
-                                                "operator": "==",
-                                                "value": "logo"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "acfe_save_meta": 0,
-                                    "uploader": "",
-                                    "return_format": "array",
-                                    "preview_size": "medium",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": "",
-                                    "acfe_thumbnail": 0,
-                                    "library": "all"
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 3,
+                                    "new_lines": "",
+                                    "acfe_textarea_code": 0
                                 },
                                 {
                                     "key": "field_649c54e69388c",
@@ -242,54 +204,40 @@
                                     "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_64b6ea36303ac",
-                                                "operator": "==",
-                                                "value": "content"
-                                            }
-                                        ]
-                                    ],
+                                    "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "50",
+                                        "width": "33",
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 0,
                                     "acfe_save_meta": 0,
                                     "default_value": "",
                                     "placeholder": "",
                                     "maxlength": "",
-                                    "rows": 5,
+                                    "rows": 3,
                                     "new_lines": "",
                                     "acfe_textarea_code": 0
                                 },
                                 {
-                                    "key": "field_6380d0512392a",
-                                    "label": "Text",
-                                    "name": "text",
+                                    "key": "field_64d4ec8e13cbe",
+                                    "label": "Subtitle",
+                                    "name": "subtitle",
                                     "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_64b6ea36303ac",
-                                                "operator": "==",
-                                                "value": "content"
-                                            }
-                                        ]
-                                    ],
+                                    "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "50",
+                                        "width": "33",
                                         "class": "",
                                         "id": ""
                                     },
+                                    "wpml_cf_preferences": 0,
                                     "acfe_save_meta": 0,
                                     "default_value": "",
                                     "placeholder": "",
                                     "maxlength": "",
-                                    "rows": 5,
+                                    "rows": 3,
                                     "new_lines": "",
                                     "acfe_textarea_code": 0
                                 }
@@ -2327,5 +2275,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1691594262
+    "modified": 1691675867
 }

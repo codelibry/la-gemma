@@ -25,6 +25,26 @@
         return get_template_directory_uri() . '/assets/image/layout-thumbnails/hero-banner-thumbnail.png';
     }
     
+    // Banner with logo
+    
+    add_filter('acfe/flexible/thumbnail/layout=banner_with_logo', 'banner_with_logo_layout_thumbnail', 10, 3);
+    function banner_with_logo_layout_thumbnail($thumbnail, $field, $layout)
+    {
+        
+        // Must return an URL or Attachment ID
+        return get_template_directory_uri() . '/assets/image/layout-thumbnails/banner-with-logo-thumbnail.png';
+    }
+    
+    // Banner with text
+    
+    add_filter('acfe/flexible/thumbnail/layout=banner_with_text', 'banner_with_text_layout_thumbnail', 10, 3);
+    function banner_with_text_layout_thumbnail($thumbnail, $field, $layout)
+    {
+        
+        // Must return an URL or Attachment ID
+        return get_template_directory_uri() . '/assets/image/layout-thumbnails/banner-with-text-thumbnail.png';
+    }
+    
     // Page banner
     
     add_filter('acfe/flexible/thumbnail/layout=page_banner', 'page_banner_layout_thumbnail', 10, 3);
