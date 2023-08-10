@@ -114,6 +114,9 @@
 		+max-screen($breakpoint-md)
 			max-width: 189px
 			font-size: 20px
+		.allure-page &, .page-template-template-allure &
+			color:  $color-blue
+			border-bottom: 2px solid $color-blue
 		.lucas-page &, .paulo-airaudo-page &
 			font-family: $font-family-futurapt
 			color: #425339
@@ -126,6 +129,8 @@
 			text-align: center
 			+max-screen($breakpoint-md)
 				font-size: 20px
+			.allure-page &, .page-template-template-allure &
+				color:  rgba(15, 23, 88, .5)
 			.lucas-page &, .paulo-airaudo-page &
 				color: rgba(66, 83, 57, .5)
 	.form-title
@@ -137,6 +142,7 @@
 		.allure-page &,
 		.page-template-template-allure &
 			font-family: $font-family-linotypedidot
+			color:  $color-blue
 		.lucas-page &, .paulo-airaudo-page &
 			font-family: $font-family-linotypedidot
 			color: #425339
@@ -168,20 +174,16 @@
 			margin-top: 20px
 		+max-screen($breakpoint-md)
 			font-size: 10px
-		//.allure-page &,
-		//.page-template-template-allure &
-		//	color: #D9C499
+		.allure-page &, .page-template-template-allure &
+			color:  $color-blue
 		.lucas-page &, .paulo-airaudo-page &
 			//color: #F5F0DF
 			color: #425339
 		a
-			//color: #456D63
 			color: #E5E3DA
-			//.allure-page &,
-			//.page-template-template-allure &
-			//	color: #D9C499
+			.allure-page &, .page-template-template-allure &
+				color:  $color-blue
 			.lucas-page &, .paulo-airaudo-page &
-				//color: #F5F0DF
 				color: #425339
 	.form-submit
 		margin-top: 45px
@@ -205,9 +207,9 @@
 			border: 1px solid #E5E3DA
 			.allure-page &,
 			.page-template-template-allure &
-				color: #E5E3DA
+				color: $color-blue
 				background: #d9c499
-				border: 1px solid #E5E3DA
+				border: 1px solid $color-blue
 			.lucas-page &, .paulo-airaudo-page &
 				font-family: $font-family-giveny
 				padding: 5px 3px 3px
