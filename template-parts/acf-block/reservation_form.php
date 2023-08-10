@@ -10,7 +10,7 @@
                 <?php _e('We accept reservations online for up to 6 people, for parties of 7 or more please call us on', 'lagemmahotel'); ?>
                 <span class="phone">
                     <span>***********</span>
-                    <a href="tel:+38 (000) 000 00 00">+38 (000) 000 00 00</a>
+                    <a href="tel:+39 055 010 5200">+39 055 010 5200</a>
                 </span>
             </div>
             <div class="form-submit">
