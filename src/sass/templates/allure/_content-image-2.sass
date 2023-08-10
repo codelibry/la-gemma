@@ -4,6 +4,9 @@
         max-width: 100%
         width: 663px
         &-wrapper
+            +max-screen($breakpoint-lg)
+                display: flex
+                justify-content: center
             //+min-screen($breakpoint-md)
             //    padding-left: 150px
             //    padding-right: 40px
@@ -14,6 +17,8 @@
         &-wrapper
             margin-left: auto
             max-width: 813px
+            +max-screen($breakpoint-lg)
+            margin: 0 auto
     &__title
         //font-family: $font-family-linotypedidot
         //font-family: serif
