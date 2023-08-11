@@ -209,21 +209,22 @@ section.text-with-btn-image
                         padding-left: 0
         &__title
             h2
-                font-family: $font-family-linotypedidot
-            .lucas-page &, .paulo-airaudo-page &
-                h2
-                    color: #FFFFFF
-            .paulo-airaudo-page &
-                +max-screen($breakpoint-lg)
-                    display: none
-                h2
-                    font-family: $font-family-giveny
+                .allure-page &
+                    font-family: $font-family-linotypedidot
+                    color: #101756
+                span
+                    display: block
+                    .allure-page &
+                        font-family: $font-family-futurapt
 
-            span
-                display: block
-                font-family: $font-family-futurapt
+                .lucas-page &, .paulo-airaudo-page &
+                    color: #FFFFFF
+                .paulo-airaudo-page &
+                    font-family: $font-family-giveny
+                    +max-screen($breakpoint-lg)
+                        display: none
         &__text
-            color: #c7ad85
+            color: #000
             margin: 39px auto 0
             .lucas-page &, .paulo-airaudo-page &
                 color: #FFFFFF
