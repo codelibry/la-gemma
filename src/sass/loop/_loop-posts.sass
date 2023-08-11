@@ -51,11 +51,16 @@ section.loop-posts
                 &.active
                     color: #213932
         &__list
+            display: flex
+            flex-wrap: wrap
+            gap: 50px 30px
             +max-screen($breakpoint-md)
-                display: flex
                 flex-direction: column
                 gap: 30px
             .rooms-card
+                width: calc((100% / 2) - (30px / 2))
+                +max-screen($breakpoint-md)
+                    width: 100%
                 .rooms-card
                     &__btn
                         .button

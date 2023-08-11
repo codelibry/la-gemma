@@ -41,7 +41,7 @@
         </div>
         <div class="loop-posts__response" id="response">
             <div class="container">
-                <div class="loop-posts__list js-post-slider">
+                <div class="loop-posts__list">
                     <?php while ($query->have_posts()) :$query->the_post(); ?>
                         <?php get_template_part('template-parts/parts/rooms-card'); ?>
                     <?php endwhile; ?>
