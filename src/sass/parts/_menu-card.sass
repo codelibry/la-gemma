@@ -13,13 +13,13 @@
         +max-screen($breakpoint-lg)
             padding: 39px 0
         .menu-card__schedule
-            padding-top: 180px
-            +max-screen($breakpoint-xxl)
-                padding-top: calc((180px / 100) * 50)
-            +max-screen($breakpoint-xl)
-                padding-top: calc((180px / 100) * 30)
-            +max-screen($breakpoint-lg)
-                padding-top: 39px
+            //padding-top: 180px
+            //+max-screen($breakpoint-xxl)
+            //    padding-top: calc((180px / 100) * 50)
+            //+max-screen($breakpoint-xl)
+            //    padding-top: calc((180px / 100) * 30)
+            //+max-screen($breakpoint-lg)
+            //    padding-top: 39px
         .menu-card__btn
             .button
                 //max-width: 305px
@@ -32,13 +32,13 @@
         +max-screen($breakpoint-lg)
             padding: 39px 0
         .menu-card__schedule
-            padding-top: 220px
-            +max-screen($breakpoint-xxl)
-                padding-top: calc((220px / 100) * 50)
-            +max-screen($breakpoint-xl)
-                padding-top: calc((220px / 100) * 30)
-            +max-screen($breakpoint-lg)
-                padding-top: 39px
+            //padding-top: 220px
+            //+max-screen($breakpoint-xxl)
+            //    padding-top: calc((220px / 100) * 50)
+            //+max-screen($breakpoint-xl)
+            //    padding-top: calc((220px / 100) * 30)
+            //+max-screen($breakpoint-lg)
+            //    padding-top: 39px
         .menu-card__btn
             .button
                 //max-width: 305px
@@ -123,8 +123,11 @@
                         padding-bottom: 124.63%
 
         &__content
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
             text-align: center
-            align-items: flex-end
             width: 100%
             +max-screen($breakpoint-lg)
                 margin-top: 39px !important
@@ -162,6 +165,7 @@
 
         &__title
             font-family: $font-family-giveny
+            margin-top: auto
             +max-screen($breakpoint-lg)
                 display: none
         &__text
@@ -169,6 +173,9 @@
             +max-screen($breakpoint-lg)
                 margin: 0
         &__btn
+            display: flex
+            justify-content: center
+            width: 100%
             margin-top: 48px
             +max-screen($breakpoint-lg)
                 margin-top: 39px
@@ -191,12 +198,14 @@
             font-size: 25px
             font-weight: 300
             line-height: 1.32
+            margin-top: auto
             +max-screen($breakpoint-xxl)
                 font-size: calc((25px / 100) * 90)
             +max-screen($breakpoint-xl)
                 font-size: calc((25px / 100) * 80)
             +max-screen($breakpoint-lg)
                 font-size: calc((25px / 100) * 70)
+                margin-top: 39px
             +max-screen($breakpoint-md)
                 font-size: 25px
                 line-height: 1.12
