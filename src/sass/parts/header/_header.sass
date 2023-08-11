@@ -176,20 +176,22 @@ header.header
         &__logo
             position: absolute
             left: 50%
-            bottom: calc(min(51px, 1.5vw))
+            top: 50%
+            //bottom: calc(min(51px, 1.5vw))
             //width: 83px
             width: auto
             height: calc(min(133.1px, 6vw))
-            transform: translateX(-50%)
+            //transform: translateX(-50%)
+            transform: translate(-50%, -50%)
             +max-screen($breakpoint-xxl)
-                bottom: 20px
+                //bottom: 20px
             +max-screen($breakpoint-xl)
                 //width: auto
                 height: 99px
             +max-screen($breakpoint-lg)
                 height: 64.9px
             .allure-page &
-                bottom: 22px
+                //bottom: 22px
                 //width: 146px
                 width: auto
                 height: calc(min(115.5px, 5vw))
@@ -197,15 +199,15 @@ header.header
                     //width: auto
                     height: 90.2px
                 +max-screen($breakpoint-lg)
-                    bottom: 14px
+                    //bottom: 14px
                     height: 64.9px
             .lucas-page &
-                bottom: 42px
+                //bottom: 42px
                 //width: 197px
                 width: auto
                 height: calc(min(102.3px, 4.5vw))
                 +max-screen($breakpoint-xl)
-                    bottom: 16px
+                    //bottom: 16px
                     //width: auto
                     height: 78.1px
                 +max-screen($breakpoint-lg)
@@ -215,7 +217,7 @@ header.header
                     .paulo-airaudo-page &
                         fill: $color-green
             .paulo-airaudo-page &
-                bottom: 17px
+                //bottom: 17px
                 //width: 180px
                 width: auto
                 height: calc(min(122.3px, 5vw))
@@ -223,7 +225,7 @@ header.header
                     //width: auto
                     height: 99px
                 +max-screen($breakpoint-lg)
-                    bottom: 0
+                    //bottom: 0
                     height: 74.8px
             .logo-fixed
                 display: none
