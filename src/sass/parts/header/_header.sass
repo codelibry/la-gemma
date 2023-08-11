@@ -34,12 +34,24 @@ header.header
                         background: transparent !important
                         color: $color-green !important
                     &.booking-btn
-                        border: 1px solid #e5e3da !important
+                        border: 1px solid $color-green !important
                         background: $color-green !important
                         color: #e5e3da !important
+                        .home &
+                            +max-screen($breakpoint-md)
+                                border: none !important
+                                background: transparent !important
+                        &:after
+                            .home &
+                                +max-screen($breakpoint-md)
+                                    background: $color-green !important
                         span
                             color: #e5e3da !important
                             -webkit-text-fill-color: unset !important
+                            .home &
+                                +max-screen($breakpoint-md)
+                                    background: none !important
+                                    color: $color-green !important
 
             &__wrap
                 border: none !important
@@ -251,14 +263,8 @@ header.header
                 height: 32px
                 border: 1px solid $color-green
                 background: $color-green
-                //+max-screen($breakpoint-xxl)
-                //    font-size: calc((17px / 100) * 90)
-                //+max-screen($breakpoint-xl)
-                //    font-size: calc((17px / 100) * 80)
                 +max-screen($breakpoint-lg)
                     height: 28px
-                //+max-screen($breakpoint-md)
-                //    font-size: calc((17px / 100) * 70)
                 .home &
                     &.booking-btn
                         background-color: $color-light
@@ -275,16 +281,40 @@ header.header
                         background-color: $color-light
                 .page-template-about-page &
                     &.booking-btn
+                        position: relative
                         background-color: $color-green
                         overflow: hidden
                         color: transparent
                         border: 0
+                        &:after
+                            content: ''
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            width: 100%
+                            height: 1px
+                            background: $color-light
+                            transition: $default-transition
+                            transform-origin: left
+                            display: none
+                            +max-screen($breakpoint-md)
+                                display: block
+                        +max-screen($breakpoint-md)
+                            margin-right: -15px
+                            padding: 5px 5px 3px
+                            border: none
+                            background: transparent
                         span
                             background: url(../../../uploads/2023/06/about-hero.png)
                             background-size: auto
                             -webkit-text-fill-color: transparent
                             -webkit-background-clip: text
                             display: inline-block
+                            +max-screen($breakpoint-md)
+                                font-weight: 400
+                                background: none
+                                color: $color-light
+                                -webkit-text-fill-color: unset
                 .allure-page &
                     &.booking-btn
                         background-color: $color-light
